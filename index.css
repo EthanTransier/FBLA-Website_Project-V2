@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    font-family: kanit-regular;
+    font-size: 25px;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black
+}
+.atPageLink {
+    text-decoration: underline;
+}
+.headerLinksContainer {
+    display: flex;
+    gap: 20px;
+    font-family: kanit-light;
+}
+.headerLogo {
+    position:relative;
+    height: 100px;
+    width: auto;
+}
+.headerOrderLink {
+    background-color: red;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: red;
+}
+@font-face {
+    font-family: kanit-regular;
+    src: url(./kanit/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: kanit-light;
+    src: url(./kanit/Kanit-Light.ttf);
+}

@@ -1,0 +1,5 @@
+/* makes the basis for the grid page */
+#orderGrid {
+    display: flex;
+}
+

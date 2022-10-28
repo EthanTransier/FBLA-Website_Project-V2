@@ -9,7 +9,6 @@ header {
     font-family: kanit-regular;
     font-size: 25px;
     color: black;
-    
 }
 a {
     text-decoration: none;
@@ -33,6 +32,9 @@ a {
     border-width: 5px;
     border-radius: 5px;
     border-color: red;
+}
+.dragonSpanTitle {
+    color: red;
 }
 @font-face {
     font-family: kanit-regular;

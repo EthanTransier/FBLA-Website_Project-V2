@@ -103,3 +103,19 @@ a {
     height:200px;
     text-align: center;
 }
+#Location{
+    display: flex;
+}
+.locotext{
+    font-size: 60px;
+}
+.addi{
+    font-size: 40px;
+}
+ul{
+    list-style: none;
+    justify-content: start;
+}
+frame{
+    justify-content: flex-end;
+}

@@ -46,119 +46,33 @@ a {
     font-family: kanit-light;
     src: url(./kanit/Kanit-Light.ttf);
 }
-/* makes the basis for the grid page */
-#orderGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(10,200px);
+
+.foodTypes {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+    align-items: center;
 }
-/* .APP{
-    grid-area: app;
-    grid-row: 1/2;
-    grid-column: 1/4;
+
+.boxes {
+    height: 300px;
+    width:240px;
+    border: 1px solid black;
 }
-.FC{
-    grid-area: fc;
-    grid-row: 2/3;
-    grid-column: 1/2;
+
+.boxTitles {
+    display: flex;
+    align-content: center;
+    height: 300px;
+    width: 240px;
 }
-.GC{
-    grid-area: gc;
-    grid-row: 2/3;
-    grid-column: 2/3;
+
+.foodTitles {
+    font-size: 50px;
+    text-align: center;
+    width: 240px;
 }
-.WR{
-    grid-area: wr;
-    grid-row: 2/3;
-    grid-column: 3/4;
+
+hr {
+    color: black;
 }
-.DM{
-    grid-area: dm;
-    grid-row: 2/3;
-    grid-column: 4/5;
-}
-.WT{
-    grid-area: wt;
-    grid-row: 3/4;
-    grid-column: 1/2;
-}
-.SR{
-    grid-area: sr;
-    grid-row: 3/4;
-    grid-column: 2/3;
-}
-.ENT{
-    grid-area: ent;
-    grid-row: 4/5;
-    grid-column: 1/4;
-}
-.CM{
-    grid-area: cm;
-    grid-row: 5/6;
-    grid-column: 1/2;
-}
-.FR{
-    grid-area: fr;
-    grid-row: 5/6;
-    grid-column: 2/3;
-}
-.CFR{
-    grid-area: cfr;
-    grid-row: 5/6;
-    grid-column: 3/4;
-}
-.CS{
-    grid-area: cs;
-    grid-row: 5/6;
-    grid-column: 4/5;
-}
-.TC{
-    grid-area: tc;
-    grid-row: 6/7;
-    grid-column: 1/2;
-}
-.OC{
-    grid-area: oc;
-    grid-row: 6/7;
-    grid-column: 2/3;
-}
-.HWS{
-    grid-area: hws;
-    grid-row: 6/7;
-    grid-column: 3/4;
-}
-.BPAS{
-    grid-area: bpas;
-    grid-row: 6/7;
-    grid-column: 4/5;
-}
-.BB{
-    grid-area: BB;
-    grid-row: 7/8;
-    grid-column: 1/2;
-}
-.SD{
-    grid-area: sd;
-    grid-row: 8/9;
-    grid-column: 1/4;
-}
-.CU{
-    grid-area: cu;
-    grid-row: 9/10;
-    grid-column: 1/2;
-}
-.CR{
-    grid-area: cr;
-    grid-row: 9/10;
-    grid-column: 2/3;
-}
-.SV{
-    grid-area: sv;
-    grid-row: 9/10;
-    grid-column: 3/4;
-}
-.FS{
-    grid-area: fs;
-    grid-row: 9/10;
-    grid-column: 4/5;
-} */

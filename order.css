@@ -52,7 +52,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(10,200px);
 }
-.APP{
+/* .APP{
     grid-area: app;
     grid-row: 1/2;
     grid-column: 1/4;
@@ -161,4 +161,4 @@ a {
     grid-area: fs;
     grid-row: 9/10;
     grid-column: 4/5;
-}
+} */

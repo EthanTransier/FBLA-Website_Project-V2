@@ -44,3 +44,62 @@ a {
     font-family: kanit-light;
     src: url(./kanit/Kanit-Light.ttf);
 }
+
+#homeIMG {
+    width: 100%;
+    align-content: center;
+}
+
+#popFoods {
+    display: grid;
+    gap: 15px;
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 300px 300px;
+    grid-template-areas: 
+    "pop1 pop3"
+    "pop2 pop4";
+    justify-content: center;
+}
+
+#pop1 {
+    grid-area: pop1;
+    width: 300px;
+    height:280px;
+    border: 2px solid none;
+    text-align:center;
+}
+
+#pop2 {
+    grid-area: pop2;
+    width: 300px;
+    height: 280px;
+    border: 2px solid none;
+    text-align: center;
+}
+
+#pop3 {
+    grid-area: pop3;
+    width: 300px;
+    height:280px;
+    border: 2px solid none;
+    text-align: center;
+}
+
+#pop4 {
+    grid-area: pop4;
+    width: 300px;
+    height: 280px;
+    border: 2px solid none;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.popIMG {
+    padding-top: 5%;
+    width: 200px;
+    height:200px;
+    text-align: center;
+}

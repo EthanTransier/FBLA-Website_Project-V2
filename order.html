@@ -1,82 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="order.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="order.css" />
     <title>Jī lóng Grill</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
-        <!-- Container for the title of the Resteraunt -->
-        <img src="./images/chineseLogo.webp" alt="Logo for chinese resteraunt" class="headerLogo">
-        <div class="titleContainer">
-            <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      <!-- Container for the title of the Resteraunt -->
+      <img
+        src="./images/chineseLogo.webp"
+        alt="Logo for chinese resteraunt"
+        class="headerLogo"
+      />
+      <div class="titleContainer">
+        <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      </div>
+      <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerLinksContainer">
+        <!-- Container for the link that goes to the home page -->
+        <div class="homeLinkContainer atPageLink">
+          <a href="index.html">Home</a>
         </div>
-        <!-- Container for the links to the different pages of the website inside the header -->
-        <div class="headerLinksContainer">
-            <!-- Container for the link that goes to the home page -->
-            <div class="homeLinkContainer atPageLink">
-                <a href="index.html">Home</a>
-            </div>
-            <!-- Container for the link that goes to the menu page -->
-            <div class="menuLinkContainer">
-                <a href="menu.html">Menu</a>
-            </div>
-            <!-- Container for the link that goes to the Hiring page -->
-            <div class="jobs.html">
-                <a href="jobs.html">Join Us</a>
-            </div>
+        <!-- Container for the link that goes to the menu page -->
+        <div class="menuLinkContainer">
+          <a href="menu.html">Menu</a>
         </div>
-        <!-- Container for the search bar for the header -->
-        <div class="searchBarContainer">
-            <input type="search" class="headerSearchBar">
+        <!-- Container for the link that goes to the Hiring page -->
+        <div class="jobs.html">
+          <a href="jobs.html">Join Us</a>
         </div>
-        <!-- Container for the button / link that takes you to the Ordering page -->
-        <div class="orderLinkContainer">
-            <a href="order.html" class="headerOrderLink">Order Now</a>
-        </div>
+      </div>
+      <!-- Container for the search bar for the header -->
+      <div class="searchBarContainer">
+        <input type="search" class="headerSearchBar" />
+      </div>
+      <!-- Container for the button / link that takes you to the Ordering page -->
+      <div class="orderLinkContainer">
+        <a href="order.html" class="headerOrderLink">Order Now</a>
+      </div>
     </header>
 
     <!-- Makes the grid for the order page -->
     <div id="orderGrid">
-        <div id="apps">
-        <h1>Appetizers:</h1>
-        <p>Fried Chicken</p>
-        <p>Grilled Chicken Strips</p>
-        <p>White Rice</p>
-        <p>Dumplings</p>
-        <p>Wontons</p>
-        <p>Spring Rolls</p>
-        </div>
+      <div id="apps">
+        <h1 class="APP">Appetizers:</h1>
+        <p class="FC">Fried Chicken</p>
+        <p class="GC">Grilled Chicken Strips</p>
+        <p class="WR">White Rice</p>
+        <p class="DM">Dumplings</p>
+        <p class="WT">Wontons</p>
+        <p class="SR">Spring Rolls</p>
+      </div>
 
-        <br>
+      <br />
 
-        <div id="entrees">
-        <h1>Entrees:</h1>
-        <p>Chow Mein</p>
-        <p>Fried Rice</p>
-        <p>Chicken Fried Rice</p>
-        <p>Chup Suey:</p>
-        <p>Tso's Chicken</p>
-        <p>Orange Chicken</p>
-        <p>Honey Walnut Shrimp</p>
-        <p>Black Pepper Angus Steak</p>
-        <p>Beef & Broccoli</p>
-        </div>
+      <div id="entrees">
+        <h1 class="ENT">Entrees:</h1>
+        <p class="CM">Chow Mein</p>
+        <p class="FR">Fried Rice</p>
+        <p class="CFR">Chicken Fried Rice</p>
+        <p class="CS">Chup Suey:</p>
+        <p class="TC">Tso's Chicken</p>
+        <p class="OC">Orange Chicken</p>
+        <p class="HWS">Honey Walnut Shrimp</p>
+        <p class="BPAS">Black Pepper Angus Steak</p>
+        <p class="BB">Beef & Broccoli</p>
+      </div>
 
-        <br>
+      <br />
 
-        <div id="sides">
-        <h1>Sides:</h1>
-        <p>Croutons</p>
-        <p>Crab Ragoons</p>
-        <p>Steamed Veggtables</p>
-        <p>Fried Shrimp</p>
-        </div>
+      <div id="sides">
+        <h1 class="SD">Sides:</h1>
+        <p class="CU">Croutons</p>
+        <p class="CR">Crab Ragoons</p>
+        <p class="SV">Steamed Veggtables</p>
+        <p class="FS">Fried Shrimp</p>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

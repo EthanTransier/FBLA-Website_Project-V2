@@ -56,15 +56,8 @@ a {
 
 .boxes {
     height: 300px;
-    width:240px;
+    width:220px;
     border: 1px solid black;
-}
-
-.boxTitles {
-    display: flex;
-    align-content: center;
-    height: 300px;
-    width: 240px;
 }
 
 .foodTitles {
@@ -75,4 +68,16 @@ a {
 
 hr {
     color: black;
+    border: 1px solid black;
+}
+
+.addCart {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    border-radius: 0px;
+    border: 0px solid black;
+    color: white;
+    background-color: red;
+    text-align: center;
 }

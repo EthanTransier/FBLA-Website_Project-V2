@@ -1,5 +1,83 @@
-/* makes the basis for the grid page */
-#orderGrid {
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: kanit-regular;
+    font-size: 25px;
+    color: black;
+    background-color: rgb(177, 177, 177);
+}
+a {
+    text-decoration: none;
+    color: black
+}
+.atPageLink {
+    text-decoration: underline;
+}
+.headerLinksContainer {
+    display: flex;
+    gap: 20px;
+    font-family: kanit-light;
+}
+.headerLogo {
+    position:relative;
+    height: 100px;
+    width: auto;
+}
+.headerOrderLink {
+    background-color: red;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: red;
+}
+.dragonSpanTitle {
+    color: red;
+}
+@font-face {
+    font-family: kanit-regular;
+    src: url(./kanit/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: kanit-light;
+    src: url(./kanit/Kanit-Light.ttf);
 }
 
+.foodTypes {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.boxes {
+    height: 300px;
+    width:220px;
+    border: 1px solid black;
+}
+
+.foodTitles {
+    font-size: 50px;
+    text-align: center;
+    width: 240px;
+}
+
+hr {
+    color: black;
+    border: 1px solid black;
+}
+
+.addCart {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    border-radius: 0px;
+    border: 0px solid black;
+    color: white;
+    background-color: red;
+    text-align: center;
+}

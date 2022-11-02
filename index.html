@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jī lóng Grill</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
-        <!-- Container for the title of the Resteraunt -->
-        <img src="./images/chineseLogo.webp" alt="Logo for chinese resteraunt" class="headerLogo">
-        <div class="titleContainer">
-            <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      <!-- Container for the title of the Resteraunt -->
+      <img
+        src="./images/chineseLogo.webp"
+        alt="Logo for chinese resteraunt"
+        class="headerLogo"
+      />
+      <div class="titleContainer">
+        <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      </div>
+      <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerLinksContainer">
+        <!-- Container for the link that goes to the home page -->
+        <div class="homeLinkContainer atPageLink">
+          <a href="index.html">Home</a>
         </div>
-        <!-- Container for the links to the different pages of the website inside the header -->
-        <div class="headerLinksContainer">
-            <!-- Container for the link that goes to the home page -->
-            <div class="homeLinkContainer">
-                <a href="index.html" class="homeLink">Home</a>
-            </div>
-            <!-- Container for the link that goes to the menu page -->
-            <div class="menuLinkContainer">
-                <a href="menu.html" class="menuLink">Menu</a>
-            </div>
-            <!-- Container for the link that goes to the Hiring page -->
-            <div class="jobsLinkContainer">
-                <a href="jobs.html" class="jobsLink">Join Us</a>
-            </div>
+        <!-- Container for the link that goes to the menu page -->
+        <div class="menuLinkContainer">
+          <a href="menu.html">Menu</a>
         </div>
-        <!-- Container for the search bar for the header -->
-        <div class="searchBarContainer">
-            <input type="search" class="headerSearchBar">
+        <!-- Container for the link that goes to the Hiring page -->
+        <div class="jobs.html">
+          <a href="jobs.html">Join Us</a>
         </div>
-        <!-- Container for the button / link that takes you to the Ordering page -->
-        <div class="orderLinkContainer">
-            <a href="order.html" class="headerOrderLink">Order Now</a>
-        </div>
+      </div>
+      <!-- Container for the search bar for the header -->
+      <div class="searchBarContainer">
+        <input type="search" class="headerSearchBar" />
+      </div>
+      <!-- Container for the button / link that takes you to the Ordering page -->
+      <div class="orderLinkContainer">
+        <a href="order.html" class="headerOrderLink">Order Now</a>
+      </div>
     </header>
-</body>
+
+    <!-- creates the home page image -->
+    <img id="homeIMG" alt="Chinese food" src="food10.png" /><br /><br />
+
+    <!-- popular food title -->
+    <h1 class="center">Popular Foods</h1>
+    <br /><br />
+
+    <!-- popular food grid -->
+    <div id="popFoods">
+      <div id="pop1">
+        <img
+          class="popIMG"
+          src="orange-chicken-186858925-583387ea5f9b58d5b1bbdfd1.webp"
+        />
+        <p class="bottom">Orange Chicken</p>
+      </div>
+      <div id="pop2">
+        <img
+          class="popIMG"
+          src="orange-chicken-186858925-583387ea5f9b58d5b1bbdfd1.webp"
+        />
+        <p>Chow Mein</p>
+      </div>
+      <div id="pop3">
+        <img
+          class="popIMG"
+          src="orange-chicken-186858925-583387ea5f9b58d5b1bbdfd1.webp"
+        />
+        <p>Beef and Broccoli</p>
+      </div>
+      <div id="pop4">
+        <img
+          class="popIMG"
+          src="orange-chicken-186858925-583387ea5f9b58d5b1bbdfd1.webp"
+        />
+        <p>Dumplings</p>
+      </div>
+    </div>
+
+    <div id="Location">
+      <ul>
+        <li><p class="locotext">Come Visit our Resteraunt:</p></li>
+        <br />
+        <br />
+        <li><p class="addi">Encanto Village, Phoenix, AZ 85012</p></li>
+      </ul>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.9171018170596!2d-112.07285617144301!3d33.50219756772393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6c544356b3ede480!2zMzPCsDMwJzExLjciTiAxMTLCsDA0JzI0LjciVw!5e0!3m2!1sen!2sus!4v1667004779909!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
 </html>

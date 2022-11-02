@@ -14,8 +14,9 @@ a {
     text-decoration: none;
     color: black
 }
-.atPageLink {
+.homeLink {
     text-decoration: underline;
+    text-decoration-color: black;
 }
 .headerLinksContainer {
     display: flex;

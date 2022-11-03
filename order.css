@@ -55,9 +55,12 @@ a {
 }
 
 .boxes {
+    display: flex;
     height: 300px;
     width:220px;
     border: 1px solid black;
+    justify-content: center;
+    align-items: end;
 }
 
 .foodTitles {
@@ -71,13 +74,11 @@ hr {
     border: 1px solid black;
 }
 
-.addCart {
-    display: flex;
-    align-items: center;
-    width: 220px;
-    border-radius: 0px;
-    border: 0px solid black;
-    color: white;
+button {
+    width: 100%;
+    border-radius: 0%;
+    border: 3px solid black;
+    color: black;
     background-color: red;
-    text-align: center;
+    font-weight: 900;
 }

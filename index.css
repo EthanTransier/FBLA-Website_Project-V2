@@ -9,6 +9,7 @@ header {
     font-family: kanit-regular;
     font-size: 25px;
     color: black;
+    z-index: 30;
 }
 a {
     text-decoration: none;
@@ -46,9 +47,10 @@ a {
     src: url(./kanit/Kanit-Light.ttf);
 }
 
-#homeIMG {
+#homePageBackground{
     width: 100%;
-    align-content: center;
+    height: auto;
+    
 }
 
 #popFoods {

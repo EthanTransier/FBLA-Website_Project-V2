@@ -1,4 +1,3 @@
-
 * {
     margin: 0px;
     padding: 0px;
@@ -10,7 +9,6 @@ header {
     font-family: kanit-regular;
     font-size: 25px;
     color: black;
-    background-color: rgb(177, 177, 177);
 }
 a {
     text-decoration: none;
@@ -54,10 +52,34 @@ a {
     align-items: center;
 }
 
-.boxes {
-    height: 300px;
-    width:220px;
-    border: 1px solid black;
+.foodContainers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    gap: 20px;
+    height: auto;
+    width: 250px;
+    border: 2.5px solid black;
+    border-radius: 5px;
+}
+.foodContainerTitle{
+    font-size: 25px;
+    font-family: kanit-regular;
+}
+.foodContainerPicture{
+    width: 100%;
+    height: auto;
+}
+button{
+    font-size: 20px;
+    font-family: kanit-light;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    border: 2px solid red;
+    margin: 5px;
 }
 
 .foodTitles {

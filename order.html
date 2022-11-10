@@ -22,7 +22,7 @@
       <!-- Container for the links to the different pages of the website inside the header -->
       <div class="headerLinksContainer">
         <!-- Container for the link that goes to the home page -->
-        <div class="homeLinkContainer atPageLink">
+        <div class="homeLinkContainer">
           <a href="index.html">Home</a>
         </div>
         <!-- Container for the link that goes to the menu page -->
@@ -78,18 +78,39 @@
       </div>
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <br>
+    <hr>
+    <br>
 
     <!-- Makes the grid for the entrees -->
     <div class="foodTypes">
       <p class="foodTitles">Entrees</p>
-      <p class="boxes">Beef and Broccoli <button id="addToCart-BeefAndBroccoli" onclick="addToCart('Beef and Broccoli')">Add to Cart</button></p>
-      <p class="boxes">Tso's Chicken <button id="addToCart-TsoChicken" onclick="addToCart('Tsos Chicken')">Add to Cart</button></p>
-      <p class="boxes">Orange Chicken <button id="addToCart-OrangeChicken" onclick="addToCart('Orange Chicken')">Add to Cart</button></p>
-      <p class="boxes">Honey Walnut Shrimp <button id="addToCart-HoneyWalnetShrimp" onclick="addToCart('Honey Walnut Shrimp')">Add to Cart</button></p>
-      <p class="boxes">Black Pepper Angus Steak <button id="addToCart-BlackPepperAngusSteak" onclick="addToCart('Black Pepper Angus Steak')">Add to Cart</button></p>
+
+      <!--Beef and Broccoli Container  -->
+      <div class="foodContainers" id="beefBroccoliContainer">
+        <p class="foodContainerTitle" id="beefBroccoliTitle">Beef and Broccoli</p>
+        <button id="addToCart-BeefAndBroccoli" onclick="addToCart('Beef and Broccoli')">Add to Cart</button>
+      </div>
+      <!--Tso's Chicken Container  -->
+      <div class="foodContainers" id="tsoChickenContainer">
+        <p class="foodContainerTitle" id="tsoChickeTitle">Tso's Chicken</p>
+        <button id="addToCart-TsoChicken" onclick="addToCart('Tsos Chicken')">Add to Cart</button>
+      </div>
+      <!--Orange Chicken Container -->
+      <div class="foodContainers" id="orangeChickenContainer">
+        <p class="foodContainerTitle" id="orangeChickenTitle">Orange Chicken</p>
+        <button id="addToCart-OrangeChicken" onclick="addToCart('Orange Chicken')">Add to Cart</button>
+      </div>
+      <!-- Honey Walnut Shrimp Container -->
+      <div class="foodContainers" id="honeyWalnutShrimpContainer">
+        <p class="foodContainerTitle" id="honeyWalnutShrimpTitle">Honey Walnut Shrimp</p>
+        <button id="addToCart-HoneyWalnetShrimp" onclick="addToCart('Honey Walnut Shrimp')">Add to Cart</button>
+      </div>
+      <!-- Black Pepper Angus Steak Container-->
+      <div class="foodContainers" id="angusSteakContainer">
+        <p class="foodContainerTitle" id="angusSteakTitle">Black Pepper Angus Steak</p>
+        <button id="addToCart-BlackPepperAngusSteak" onclick="addToCart('Black Pepper Angus Steak')">Add to Cart</button>
+      </div>
     </div>
 
     <br />
@@ -99,13 +120,37 @@
     <!-- Makes the grid for the sides -->
     <div class="foodTypes">
       <p class="foodTitles">Sides</p>
-      <p class="boxes">Steamed Vegtables <button>Add to Cart</button></p>
-      <p class="boxes" src="/images/Chicken-Chow-Mein-3-1024x1536.jpg">
-        Chow Mein <button>Add to Cart</button>
-      </p>
-      <p class="boxes">White Rice <button id="addToCart-WhiteRice" onclick="addToCart('White Rice')">Add to Cart</button></p>
-      <p class="boxes">Fried Rice <button id="addToCart-FriedRice" onclick="addToCart('Fried Rice')">Add to Cart</button></p>
-      <p class="boxes">Chop Suey <button id="addToCart-ChopSuey" onclick="addToCart('Chope Suey')">Add to Cart</button></p>
+
+      <!-- Steamed Vegtables Container -->
+      <div class="foodContainers" id="steamedVegetablesContainer">
+        <p class="foodContainerTitle" id="steamedVegetablesTitle">Steamed Vegetables</p>
+        <button id="addToCart-SteamedVegetables" onclick="addToCart('Steamed Vegetables')">Add to Cart</button>
+      </div>
+      
+      <!--Chow Mein Container  -->
+      <div class="foodContainers" id="chowMeinContainer">
+        <p class="foodContainerTitle" id="chowMeinTitle">Chow Mein</p>
+        <button id="addToCart-ChowMein" onclick="addToCart('Chow Mein')">Add to Cart</button>
+      </div>
+
+      <!-- White Rice Container -->
+      <div class="foodContainers" id="whiteRiceContainer">
+        <p class="foodContainerTitle" id="whiteRiceTitle">White Rice</p>
+        <button id="addToCart-WhiteRice" onclick="addToCart('White Rice')">Add to Cart</button>
+      </div>
+
+      <!--Fried Rice Container -->
+      <div class="foodContainers" id="friedRiceContainer">
+        <p class="foodContainerTitle" id="friedRiceTitle">Fried Rice</p>
+        <button id="addToCart-FriedRice" onclick="addToCart('Fried Rice')">Add to Cart</button>
+      </div>
+      
+      <!-- Chope Suey Container -->
+      <div class="foodContainers" id="chopSueyContainer">
+        <p class="foodContainerTitle" id="chopSueyTitle">Chop Suey</p>
+        <button id="addToCart-ChopSuey" onclick="addToCart('Chope Suey')">Add to Cart</button>
+      </div>
+
     </div>
 
 

@@ -53,11 +53,11 @@ a:hover{
 }
 @font-face {
     font-family: kanit-regular;
-    src: url(./kanit/Kanit-Regular.ttf);
+    src: url(../kanit/Kanit-Regular.ttf);
 }
 @font-face {
     font-family: kanit-light;
-    src: url(./kanit/Kanit-Light.ttf);
+    src: url(../kanit/Kanit-Light.ttf);
 }
 
 #homePageBackground{

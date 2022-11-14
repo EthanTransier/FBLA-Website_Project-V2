@@ -12,7 +12,7 @@
     <header>
       <!-- Container for the title of the Resteraunt -->
       <img
-        src="./images/chineseLogo.webp"
+        src="../images/chineseLogo.webp"
         alt="Logo for chinese resteraunt"
         class="headerLogo"
       />
@@ -23,15 +23,15 @@
       <div class="headerLinksContainer">
         <!-- Container for the link that goes to the home page -->
         <div class="homeLinkContainer">
-          <a href="index.html">Home</a>
+          <a href="../homePage/index.html">Home</a>
         </div>
         <!-- Container for the link that goes to the menu page -->
         <div class="menuLinkContainer">
-          <a href="menu.html">Menu</a>
+          <a href="../menuPage/menu.html">Menu</a>
         </div>
         <!-- Container for the link that goes to the Hiring page -->
         <div class="jobs.html">
-          <a href="jobs.html">Join Us</a>
+          <a href="../jobsPage/jobs.html">Join Us</a>
         </div>
       </div>
       <!-- Container for the search bar for the header -->
@@ -40,12 +40,19 @@
       </div>
       <!-- Container for the button / link that takes you to the Ordering page -->
       <div class="orderLinkContainer">
-        <a href="order.html" class="headerOrderLink">Order Now</a>
+        <a href="../orderPage/order.html" class="headerOrderLink">Order Now</a>
       </div>
     </header>
-
-    <br>
-    <br>
+    
+    <!-- AREA FOR THE CART MENU -->
+    <div class="cartMenuContainer" id="cartMenuArea">
+      <h2 class="cartMenu">Cart Menu</h2>
+      <p>cart stuff</p>
+    </div>
+    
+    <!-- Makes the icon for the cart side menu area -->
+    <img src="../images/cartIcon.png" alt="Icon of a shopping cart" id="cartIcon" class="cartIcon" onclick="openCartMenu()">
+    <div class="cartNotification" id="cartRedIcon"><p id="cartRedIconNumber"> </p></div>
 
     <!-- Makes the grid & Title for the appetizers -->
     <div class="foodTypes">
@@ -53,7 +60,7 @@
       <!-- Chicken Katsu Container -->
       <div class="foodContainers" id="chickenKatsuContainer">
         <p class="foodContainerTitle" id="chickenKatsuTitle">Chicken Katsu</p>
-        <img src="./images/grilled-chicken-breast-11-2022.jpg" alt="Picture of Chicken Katsu" class="foodContainerPicture"> 
+        <img src="../images/grilled-chicken-breast-11-2022.jpg" alt="Picture of Chicken Katsu" class="foodContainerPicture"> 
         <button id="addToCart-ChickenKatsu" onclick="addToCart('Chicken Katsu')">Add to Cart</button>
       </div>
       <!-- Dumplings Container -->
@@ -113,9 +120,9 @@
       </div>
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <br>
+    <hr>
+    <br>
 
     <!-- Makes the grid for the sides -->
     <div class="foodTypes">
@@ -148,6 +155,7 @@
       <!-- Chope Suey Container -->
       <div class="foodContainers" id="chopSueyContainer">
         <p class="foodContainerTitle" id="chopSueyTitle">Chop Suey</p>
+        <img src="../images/Chop-suey-recipe.jpg" alt="Image of Chop Suey" class="foodContainerPicture">
         <button id="addToCart-ChopSuey" onclick="addToCart('Chope Suey')">Add to Cart</button>
       </div>
 

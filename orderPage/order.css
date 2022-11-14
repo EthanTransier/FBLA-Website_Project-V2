@@ -10,6 +10,9 @@ header {
     font-size: 25px;
     color: black;
 }
+body{
+    margin-right: 30px;
+}
 a {
     text-decoration: none;
     color: black
@@ -50,11 +53,11 @@ a:hover {
 }
 @font-face {
     font-family: kanit-regular;
-    src: url(./kanit/Kanit-Regular.ttf);
+    src: url(../kanit/Kanit-Regular.ttf);
 }
 @font-face {
     font-family: kanit-light;
-    src: url(./kanit/Kanit-Light.ttf);
+    src: url(../kanit/Kanit-Light.ttf);
 }
 
 .foodTypes {
@@ -114,4 +117,52 @@ hr {
     color: white;
     background-color: red;
     text-align: center;
+}
+
+.cartIcon{
+    width: 35px;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+}
+.cartNotification{
+    pointer-events: none;
+    width: 0px;
+    height: 0px;
+    background-color: red;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    transition: 0.1s;
+}
+.cartNotification p{
+    font-size: 8px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: kanit-bold;
+}
+
+/* CART MENU AREA */
+.cartMenuContainer{
+    height: 100%;
+    width: 250px;
+    margin-left: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.7s;
+    padding-top: 60px;
+}
+.cartMenuContainer h2{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }

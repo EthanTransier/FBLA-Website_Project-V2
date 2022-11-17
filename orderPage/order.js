@@ -16,9 +16,9 @@ function openCartMenu(){
     console.log(document.getElementById("cartMenuArea").style.width)
     if(cartOpenDecider == 0){
         cartOpenDecider++
-        document.getElementById("cartMenuArea").style.marginLeft = "100%";
+        document.getElementById("cartMenuArea").style.marginRight = "-100%";
     }else if(cartOpenDecider == 1){
         cartOpenDecider--
-        document.getElementById("cartMenuArea").style.marginLeft = 100% - cartMenuAreaWidth;
+        document.getElementById("cartMenuArea").style.marginRight = "100%";
     }
 }

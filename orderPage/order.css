@@ -13,7 +13,6 @@ header {
     width: 100%;
 }
 body{
-    margin-right: 30px;
     background-color: #dde0e0;
 }
 a {
@@ -110,6 +109,7 @@ button{
     border-width: 0;
     margin: 5px;
     animation: none;
+    
 }
 .foodContainers button:hover{
     background-color:rgb(223, 0, 0);
@@ -118,7 +118,7 @@ button{
 }
 .foodContainers button:focus{
     animation-name: addToCartAnimation;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
     animation-fill-mode: backwards;
     
 }
@@ -142,7 +142,7 @@ button{
     }
     100%{
         width: 35px;
-        border-radius: 35px;
+        border-radius: 50px;
         background-color: green;
         color: rgba(255, 255, 255, 0);
     }
@@ -200,7 +200,7 @@ hr {
 .cartMenuContainer{
     height: 100%;
     width: 250px;
-    margin-left: 100%;
+    margin-right: -100%;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -209,6 +209,7 @@ hr {
     overflow-x: hidden;
     transition: 0.7s;
     padding-top: 60px;
+    display: none;
 }
 .cartMenuContainer h2{
     padding: 8px 8px 8px 32px;

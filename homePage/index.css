@@ -26,6 +26,9 @@ a {
     text-decoration: none;
     color: black
 }
+a:hover{
+    text-decoration: underline;
+}
 .homeLink {
     text-decoration: underline;
     text-decoration-color: black;
@@ -41,21 +44,31 @@ a {
     width: auto;
 }
 .headerOrderLink {
-    background-color: red;
-    border-width: 5px;
-    border-radius: 5px;
-    border-color: red;
+    background-color: rgb(255, 58, 58);
+    border-radius: 20px;
+    border-color: rgb(255, 58, 58);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: kanit-light;
+    color: white;
+}
+
+.headerOrderLink:hover {
+    background-color: rgb(223, 0, 0);
+    border-color: rgb(223, 0, 0);
+    border-width: 7px;
+    text-decoration: none;
 }
 .dragonSpanTitle {
     color: red;
 }
 @font-face {
     font-family: kanit-regular;
-    src: url(./kanit/Kanit-Regular.ttf);
+    src: url(../kanit/Kanit-Regular.ttf);
 }
 @font-face {
     font-family: kanit-light;
-    src: url(./kanit/Kanit-Light.ttf);
+    src: url(../kanit/Kanit-Light.ttf);
 }
 
 #homePageBackground{

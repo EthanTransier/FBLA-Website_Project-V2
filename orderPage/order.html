@@ -43,16 +43,24 @@
         <a href="../orderPage/order.html" class="headerOrderLink">Order Now</a>
       </div>
     </header>
-    
+
     <!-- AREA FOR THE CART MENU -->
     <div class="cartMenuContainer" id="cartMenuArea">
       <h2 class="cartMenu">Cart Menu</h2>
       <p>cart stuff</p>
     </div>
-    
+
     <!-- Makes the icon for the cart side menu area -->
-    <img src="../images/cartIcon.png" alt="Icon of a shopping cart" id="cartIcon" class="cartIcon" onclick="openCartMenu()">
-    <div class="cartNotification" id="cartRedIcon"><p id="cartRedIconNumber"> </p></div>
+    <img
+      src="../images/cartIcon.png"
+      alt="Icon of a shopping cart"
+      id="cartIcon"
+      class="cartIcon"
+      onclick="openCartMenu()"
+    />
+    <div class="cartNotification" id="cartRedIcon">
+      <p id="cartRedIconNumber"></p>
+    </div>
 
     <!-- Makes the grid & Title for the appetizers -->
     <div class="foodTypes">
@@ -85,9 +93,9 @@
       </div>
     </div>
 
-    <br>
-    <hr>
-    <br>
+    <br />
+    <hr />
+    <br />
 
     <!-- Makes the grid for the entrees -->
     <div class="foodTypes">
@@ -120,9 +128,9 @@
       </div>
     </div>
 
-    <br>
-    <hr>
-    <br>
+    <br />
+    <hr />
+    <br />
 
     <!-- Makes the grid for the sides -->
     <div class="foodTypes">
@@ -133,7 +141,7 @@
         <p class="foodContainerTitle" id="steamedVegetablesTitle">Steamed Vegetables</p>
         <button id="addToCart-SteamedVegetables" onclick="addToCart('Steamed Vegetables'); buttonAnimation('addToCart-SteamedVegetables')">Add to Cart</button>
       </div>
-      
+
       <!--Chow Mein Container  -->
       <div class="foodContainers" id="chowMeinContainer">
         <p class="foodContainerTitle" id="chowMeinTitle">Chow Mein</p>
@@ -151,16 +159,14 @@
         <p class="foodContainerTitle" id="friedRiceTitle">Fried Rice</p>
         <button id="addToCart-FriedRice" onclick="addToCart('Fried Rice'); buttonAnimation('addToCart-FriedRice')">Add to Cart</button>
       </div>
-      
+
       <!-- Chope Suey Container -->
       <div class="foodContainers" id="chopSueyContainer">
         <p class="foodContainerTitle" id="chopSueyTitle">Chop Suey</p>
         <img src="../images/Chop-suey-recipe.jpg" alt="Image of Chop Suey" class="foodContainerPicture">
         <button id="addToCart-ChopSuey" onclick="addToCart('Chope Suey'); buttonAnimation('addToCart-ChopSuey')">Add to Cart</button>
       </div>
-
     </div>
-
 
     <script src="./order.js"></script>
   </body>

@@ -116,17 +116,20 @@ button{
     color: white;
     animation: none;
 }
-.foodContainers button:focus{
-    animation-name: addToCartAnimation;
-    animation-duration: 0.75s;
-    animation-fill-mode: backwards;
-    
-}
+
 .foodContainers button:active {
     animation: none;
     color: white;
     color: rgba(255, 255, 255, 0);
 }
+
+.addToCartAnimationClass:active{
+    animation-name: addToCartAnimation;
+    animation-duration: 0.75s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+}
+
 @keyframes addToCartAnimation {
     0%{
         width: 100%;

@@ -1,3 +1,5 @@
+let animationEnded = 0;
+
 let orderFood
 const cartArray = [];
 function addToCart(orderFood){
@@ -21,4 +23,37 @@ function openCartMenu(){
         cartOpenDecider--
         document.getElementById("cartMenuArea").style.marginRight = "100%";
     }
+}
+
+function buttonAnimation(buttonID){
+    const buttonAnimationThing = document.getElementById(buttonID);
+    buttonAnimationThing.addEventListener("animationstart", listener, false);
+    buttonAnimationThing.addEventListener("animationend", listener, false);
+    buttonAnimationThing.addEventListener("animationiteration", listener, false);
+    
+    if(animationEnded == 0){
+        buttonAnimationThing.className = "addToCartAnimationClass";
+        console.log(1);
+    }else if(animationEnded == 1){
+        buttonAnimationThing.className = "";
+        console.log(0)
+    }
+    
+    
+    // document.getElementById(buttonID).className = 'addToCartAnimationClass';
+    
+}
+
+function listener(event) {
+    const l = document.createElement("li");
+  switch(event.type) {
+    case "animationStart":
+        animationEnded = 1;
+        break;
+    
+    case "animationend":
+      console.log("animation ended")
+      animationEnded = 0;
+      break;
+  }
 }

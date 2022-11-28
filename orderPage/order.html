@@ -67,25 +67,22 @@
       <p class="foodTitles">Appetizers</p>
       <!-- Chicken Katsu Container -->
       <div class="foodContainers" id="chickenKatsuContainer">
+        
         <p class="foodContainerTitle" id="chickenKatsuTitle">Chicken Katsu</p>
-        <img
-          src="../images/grilled-chicken-breast-11-2022.jpg"
-          alt="Picture of Chicken Katsu"
-          class="foodContainerPicture"
-        />
-        <button
-          id="addToCart-ChickenKatsu"
-          onclick="addToCart('Chicken Katsu'); buttonAnimation('addToCart-ChickenKatsu')"
-        >
+        
+        <img src="../images/grilled-chicken-breast-11-2022.jpg" alt="Picture of Chicken Katsu" class="foodContainerPicture"/>
+        
+        <button id="addToCart-ChickenKatsu" onclick="addToCart('Chicken Katsu'); startAnimation('addToCart-ChickenKatsu');">
           Add to Cart
         </button>
+      
       </div>
       <!-- Dumplings Container -->
       <div class="foodContainers" id="dumplingsContainer">
         <p class="foodContainerTitle" id="dumplingsTitle">Dumplings</p>
         <button
           id="addToCart-Dumplings"
-          onclick="addToCart('Dumplings'); buttonAnimation('')"
+          onclick="addToCart('Dumplings'); startAnimation('addToCart-Dumplings')"
         >
           Add to Cart
         </button>
@@ -93,71 +90,45 @@
       <!-- Wontons Container -->
       <div class="foodContainers" id="wontonsContainer">
         <p class="foodContainerTitle" id="wontonsTitle">Wontons</p>
-        <<<<<<< HEAD
+        
         <img
           src="../images/wontons_resized.jpg"
           alt="Wontons"
           class="foodContainerPicture"
         />
-        <button id="addToCart-" onclick="addToCart('Wontons')">
+        <button id="addToCart-wontons" onclick="addToCart('Wontons'); startAnimation('addToCart-wontons')">
           Add to Cart
         </button>
-        =======
-        <button
-          id="addToCart-"
-          onclick="addToCart('Wontons'); buttonAnimation('')"
-        >
-          Add to Cart
-        </button>
-        >>>>>>> 1d1621ba03cd820fd311640d3bf70b4b78cf0d1e
       </div>
       <!--Spring Rolls Container  -->
       <div class="foodContainers" id="springRollsContainer">
         <p class="foodContainerTitle" id="springRollsTitle">Spring Rolls</p>
-        <<<<<<< HEAD
-        <img
-          src="../images/59252082.png"
-          alt="Spring Rolls"
-          class="foodContainerPicture"
-        />
-        <button id="addToCart-SpringRolls" onclick="addToCart('Spring Rolls')">
+        
+        <img src="../images/59252082.png" alt="Spring Rolls" class="foodContainerPicture"/>
+        
+        <button id="addToCart-SpringRolls" onclick="addToCart('Spring Rolls'); startAnimation('addToCart-SpringRolls')">
           Add to Cart
         </button>
-        =======
-        <button
-          id="addToCart-SpringRolls"
-          onclick="addToCart('Spring Rolls'); buttonAnimation('')"
-        >
-          Add to Cart
-        </button>
-        >>>>>>> 1d1621ba03cd820fd311640d3bf70b4b78cf0d1e
       </div>
       <!-- Crab Ragoons Container -->
       <div class="foodContainers" id="crabRagoonsContainer">
         <p class="foodContainerTitle" id="crabRagoonsTitle">Crab Ragoons</p>
-        <<<<<<< HEAD
+        
         <img
           src="../images/Crab-Rangoon-Wide.png"
           alt="Crab Rangoon"
           class="foodContainerPicture"
         />
-        <button id="addToCart-CrabRagoons" onclick="addToCart('Crab Ragoons')">
+        <button id="addToCart-CrabRagoons" onclick="addToCart('Crab Ragoons'); startAnimation('addToCart-CrabRagoons')">
           Add to Cart
         </button>
-        =======
-        <button
-          id="addToCart-CrabRagoons"
-          onclick="addToCart('Crab Ragoons'); buttonAnimation('')"
-        >
-          Add to Cart
-        </button>
-        >>>>>>> 1d1621ba03cd820fd311640d3bf70b4b78cf0d1e
+        
       </div>
     </div>
 
-    <br />
-    <hr />
-    <br />
+    <br>
+    <hr>
+    <br>
 
     <!-- Makes the grid for the entrees -->
     <div class="foodTypes">
@@ -165,39 +136,24 @@
 
       <!--Beef and Broccoli Container  -->
       <div class="foodContainers" id="beefBroccoliContainer">
-        <<<<<<< HEAD
         <p class="foodContainerTitle" id="beefBroccoliTitle">
           Beef and Broccoli
         </p>
-        <img
-          src="../images/instant-pot-beef-and-broccoli-1.png"
-          alt="Beef and Broccoli"
-          class="foodContainerPicture"
-        />
+        <img src="../images/instant-pot-beef-and-broccoli-1.png" alt="Beef and Broccoli" class="foodContainerPicture"/>
         <button
           id="addToCart-BeefAndBroccoli"
-          onclick="addToCart('Beef and Broccoli')"
+          onclick="addToCart('Beef and Broccoli'); startAnimation('addToCart-BeefAndBroccoli');"
         >
           Add to Cart
         </button>
-        =======
-        <p class="foodContainerTitle" id="beefBroccoliTitle">
-          Beef and Broccoli
-        </p>
-        <button
-          id="addToCart-BeefAndBroccoli"
-          onclick="addToCart('Beef and Broccoli'); buttonAnimation('addToCart-BeefAndBroccoli')"
-        >
-          Add to Cart
-        </button>
-        >>>>>>> 1d1621ba03cd820fd311640d3bf70b4b78cf0d1e
+        
       </div>
       <!--Tso's Chicken Container  -->
       <div class="foodContainers" id="tsoChickenContainer">
         <p class="foodContainerTitle" id="tsoChickeTitle">Tso's Chicken</p>
         <button
           id="addToCart-TsoChicken"
-          onclick="addToCart('Tsos Chicken'); buttonAnimation('addToCart-TsoChicken')"
+          onclick="addToCart('Tsos Chicken'); startAnimation('addToCart-TsoChicken')"
         >
           Add to Cart
         </button>
@@ -207,7 +163,7 @@
         <p class="foodContainerTitle" id="orangeChickenTitle">Orange Chicken</p>
         <button
           id="addToCart-OrangeChicken"
-          onclick="addToCart('Orange Chicken'); buttonAnimation('addToCart-OrangeChicken')"
+          onclick="addToCart('Orange Chicken'); startAnimation('addToCart-OrangeChicken')"
         >
           Add to Cart
         </button>
@@ -219,7 +175,7 @@
         </p>
         <button
           id="addToCart-HoneyWalnetShrimp"
-          onclick="addToCart('Honey Walnut Shrimp'); buttonAnimation('addToCart-HoneyWalnetShrimp')"
+          onclick="addToCart('Honey Walnut Shrimp'); startAnimation('addToCart-HoneyWalnetShrimp')"
         >
           Add to Cart
         </button>
@@ -231,7 +187,7 @@
         </p>
         <button
           id="addToCart-BlackPepperAngusSteak"
-          onclick="addToCart('Black Pepper Angus Steak'); buttonAnimation('addToCart-BlackPepperAngusSteak')"
+          onclick="addToCart('Black Pepper Angus Steak'); startAnimation('addToCart-BlackPepperAngusSteak')"
         >
           Add to Cart
         </button>
@@ -253,7 +209,7 @@
         </p>
         <button
           id="addToCart-SteamedVegetables"
-          onclick="addToCart('Steamed Vegetables'); buttonAnimation('addToCart-SteamedVegetables')"
+          onclick="addToCart('Steamed Vegetables'); startAnimation('addToCart-SteamedVegetables')"
         >
           Add to Cart
         </button>
@@ -264,7 +220,7 @@
         <p class="foodContainerTitle" id="chowMeinTitle">Chow Mein</p>
         <button
           id="addToCart-ChowMein"
-          onclick="addToCart('Chow Mein'); buttonAnimation('addToCart-ChowMein')"
+          onclick="addToCart('Chow Mein'); startAnimation('addToCart-ChowMein')"
         >
           Add to Cart
         </button>
@@ -275,7 +231,7 @@
         <p class="foodContainerTitle" id="whiteRiceTitle">White Rice</p>
         <button
           id="addToCart-WhiteRice"
-          onclick="addToCart('White Rice'); buttonAnimation('addToCart-WhiteRice')"
+          onclick="addToCart('White Rice'); startAnimation('addToCart-WhiteRice')"
         >
           Add to Cart
         </button>
@@ -286,7 +242,7 @@
         <p class="foodContainerTitle" id="friedRiceTitle">Fried Rice</p>
         <button
           id="addToCart-FriedRice"
-          onclick="addToCart('Fried Rice'); buttonAnimation('addToCart-FriedRice')"
+          onclick="addToCart('Fried Rice'); startAnimation('addToCart-FriedRice')"
         >
           Add to Cart
         </button>
@@ -302,7 +258,7 @@
         />
         <button
           id="addToCart-ChopSuey"
-          onclick="addToCart('Chope Suey'); buttonAnimation('addToCart-ChopSuey')"
+          onclick="addToCart('Chope Suey'); startAnimation('addToCart-ChopSuey')"
         >
           Add to Cart
         </button>

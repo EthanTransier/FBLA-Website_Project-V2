@@ -108,22 +108,18 @@ button{
     border-radius: 10px;
     border-width: 0;
     margin: 5px;
-    animation: none;
-    
 }
 .foodContainers button:hover{
     background-color:rgb(223, 0, 0);
     color: white;
-    animation: none;
 }
 
 .foodContainers button:active {
-    animation: none;
     color: white;
     color: rgba(255, 255, 255, 0);
 }
 
-.addToCartAnimationClass:active{
+.addToCartAnimationClass{
     animation-name: addToCartAnimation;
     animation-duration: 0.75s;
     animation-fill-mode: backwards;

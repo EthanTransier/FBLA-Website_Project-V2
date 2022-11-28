@@ -25,35 +25,18 @@ function openCartMenu(){
     }
 }
 
-function buttonAnimation(buttonID){
-    const buttonAnimationThing = document.getElementById(buttonID);
-    buttonAnimationThing.addEventListener("animationstart", listener, false);
-    buttonAnimationThing.addEventListener("animationend", listener, false);
-    buttonAnimationThing.addEventListener("animationiteration", listener, false);
-    
-    if(animationEnded == 0){
-        buttonAnimationThing.className = "addToCartAnimationClass";
-        console.log(1);
-    }else if(animationEnded == 1){
-        buttonAnimationThing.className = "";
-        console.log(0)
-    }
-    
-    
-    // document.getElementById(buttonID).className = 'addToCartAnimationClass';
-    
+
+
+function startAnimation(buttonID1) {
+    var buttonClicked1 = document.getElementById(buttonID1);
+    console.log(buttonClicked1.classList);
+    buttonClicked1.classList.add("addToCartAnimationClass");
+    document.getElementById(buttonID1).disabled = true;
+    setTimeout(endAnimation, 750, buttonID1)
 }
 
-function listener(event) {
-    const l = document.createElement("li");
-  switch(event.type) {
-    case "animationStart":
-        animationEnded = 1;
-        break;
-    
-    case "animationend":
-      console.log("animation ended")
-      animationEnded = 0;
-      break;
-  }
+function endAnimation(buttonID2){
+    var buttonClicked2 = document.getElementById(buttonID2);
+    buttonClicked2.classList.remove("addToCartAnimationClass");
+    document.getElementById(buttonID2).disabled = false;
 }

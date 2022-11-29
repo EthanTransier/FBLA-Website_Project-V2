@@ -63,7 +63,7 @@
     </div>
 
     <!-- Makes the grid & Title for the appetizers -->
-    <div class="foodTypes">
+    <div class="foodTypes" id="foodTypesContainer">
       <p class="foodTitles">Appetizers</p>
       <!-- Chicken Katsu Container -->
       <div class="foodContainers" id="chickenKatsuContainer">
@@ -72,8 +72,12 @@
         
         <img src="../images/grilled-chicken-breast-11-2022.jpg" alt="Picture of Chicken Katsu" class="foodContainerPicture"/>
         
-        <button id="addToCart-ChickenKatsu" onclick="addToCart('Chicken Katsu'); startAnimation('addToCart-ChickenKatsu');">
-          Add to Cart
+        <button  class="chickenKatsuButton" id="addToCart-ChickenKatsu" onclick="addToCart('Chicken Katsu'); startAnimation('addToCart-ChickenKatsu'); setTimeout(endAnimation, 1250); setTimeout(closeCheckAnimation, 930)">
+          <p class="buttonText">Add to Cart</p>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
         </button>
       
       </div>
@@ -85,6 +89,10 @@
           onclick="addToCart('Dumplings'); startAnimation('addToCart-Dumplings')"
         >
           Add to Cart
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
         </button>
       </div>
       <!-- Wontons Container -->

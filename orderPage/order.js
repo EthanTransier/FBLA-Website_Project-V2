@@ -25,18 +25,39 @@ function openCartMenu(){
     }
 }
 
-
-
+var buttonVariable;
+var buttonVariable2;
+var buttonVariable3;
+var buttonVariabl4;
 function startAnimation(buttonID1) {
+    buttonVariable = document.querySelector('#addToCart-ChickenKatsu svg');
+    // sets the checkmarks display to flex
+    buttonVariable.style.display = 'flex';
+    console.log(buttonVariable.style.display)
+    // gets the id for the text inside the button
+    buttonVariable4 = ("#" + buttonID1 + " .buttonText");
+    // Removes the Text Inside the Button
+    document.querySelector(buttonVariable4).innerHTML = '';
+    
     var buttonClicked1 = document.getElementById(buttonID1);
-    console.log(buttonClicked1.classList);
     buttonClicked1.classList.add("addToCartAnimationClass");
+    
+    buttonVariable3 = "button#" + buttonID1 + "svg.checkmark";
+    console.log(buttonVariable3);
+    
+   
+    console.log(buttonVariable)
+    
     document.getElementById(buttonID1).disabled = true;
     setTimeout(endAnimation, 750, buttonID1)
 }
 
 function endAnimation(buttonID2){
-    var buttonClicked2 = document.getElementById(buttonID2);
-    buttonClicked2.classList.remove("addToCartAnimationClass");
-    document.getElementById(buttonID2).disabled = false;
+    // var buttonClicked2 = document.getElementById(buttonID2);
+    // buttonClicked2.classList.remove("addToCartAnimationClass");
+    // document.getElementById(buttonID2).disabled = false;
+}
+
+function closeCheckAnimation() {
+    
 }

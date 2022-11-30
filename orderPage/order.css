@@ -299,3 +299,9 @@ hr {
     font-family: inter-regular;
     src: url(../inter/static/Inter-Bold.ttf);
 }
+
+.foodContainers img:hover{
+    width: 120%;
+    height: 120%;
+    z-index: 30;
+}

@@ -99,17 +99,6 @@ background-attachment: fixed;
 background-size: cover;
 }
 
-#btn{
-    border-radius:0%;
-    width: 100%;
-    background-color: red;
-    height: 50px;
-    font-family: kanit-regular;
-    font-weight: 500;
-    font-size: 35px;
-}
-
-
 #passReqs{
     font-size: 10px;
     text-align: left;
@@ -125,6 +114,23 @@ h4{
     color: red;
 }
 
-#btn:hover{
-    background-color: rgb(139, 0, 0);
+#buyBTN{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    color:black;
+}
+
+#buyBTN:hover{
+    background-color:rgb(156, 0, 0);
+}
+
+.buyTitle{
+    font-family: kanit-regular;
+    font-size: 25px;
+}
+
+.purchaseTitle{
+    font-family: kanit-regular;
+    font-size: 25px;
 }

@@ -76,15 +76,30 @@ a:hover {
     justify-content: center;
     align-items: center;
     align-content: space-between;
-    padding-left: 0px;
-    padding-right: 0px;
     gap: 20px;
     height: auto;
     width: 250px;
-    /* border: 2.5px solid black; */
+    max-width: width;
+    min-width: 250px;
     border-radius: 15px;
-    background-color: white
+    background-color: white;
+    background-image: url("../images/informationIcon.png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: left 220px top 5px;
 }
+#appetizersContainer{
+    overflow: auto;
+    display: flex;
+}
+#entreesContainer{
+    overflow: auto;
+    display: flex;
+}
+ #sidesContainer{
+    overflow-x: scroll;
+    display: flex;
+ }
 .foodContainerTitle{
     font-size: 25px;
     font-family: kanit-light;
@@ -93,9 +108,22 @@ a:hover {
 .foodContainerPicture{
     width: 100%;
     height: auto;
-    border-radius: 10px;
     margin-bottom: 0px;
+    z-index: 2;
 }
+/* .informationImageContainer{
+    position: absolute;
+}
+.informationImage{
+    position: relative;
+    width: 25px;
+    height: auto;
+    left: 0px;
+    bottom: 100px;
+    z-index: 1;
+} */
+
+/* Add to Cart Button CSS & Animation */
 button{
     font-size: 20px;
     font-family: kanit-light;
@@ -217,13 +245,13 @@ button{
     }
 }
 
-
+/*The Food Names at the top of each food box */
 .foodTitles {
     font-size: 50px;
     text-align: center;
     width: 240px;
 }
-
+/* Horizontal Line seperating the different types of foods */
 hr {
     color: black;
     border: 1px solid black;
@@ -300,7 +328,7 @@ hr {
     src: url(../inter/static/Inter-Bold.ttf);
 }
 
-.foodContainers img:hover{
+.foodContainerPicture:hover{
     width: 120%;
     height: 120%;
     z-index: 30;

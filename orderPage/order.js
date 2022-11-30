@@ -25,18 +25,30 @@ function openCartMenu(){
     }
 }
 
-
-
+var buttonVariable;
+var buttonVariable2;
+var buttonVariable3;
+var buttonVariable4;
+var buttonVariable5;
 function startAnimation(buttonID1) {
-    var buttonClicked1 = document.getElementById(buttonID1);
-    console.log(buttonClicked1.classList);
-    buttonClicked1.classList.add("addToCartAnimationClass");
+    // sets the checkmarks display to flex
+    document.querySelector("#" + buttonID1 + " svg").style.display = 'flex';
+    // Removes the Text Inside the Button
+    document.querySelector("#" + buttonID1 + " .buttonText").innerHTML = '';
+    // adds the animation class to the button so the animation will start playing
+    document.getElementById(buttonID1).classList.add("addToCartAnimationClass");
+    // disables the button so it can't be clicked anymore during the animation so the animation won't start over if clicked again while the animation is playing
     document.getElementById(buttonID1).disabled = true;
-    setTimeout(endAnimation, 750, buttonID1)
 }
 
 function endAnimation(buttonID2){
-    var buttonClicked2 = document.getElementById(buttonID2);
-    buttonClicked2.classList.remove("addToCartAnimationClass");
+    document.getElementById(buttonID2).classList.remove("addToCartAnimationClass");
     document.getElementById(buttonID2).disabled = false;
+    // Adds the text back into the button
+    document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
+}
+
+function closeCheckAnimation(buttonID3) {
+    // Makes the display of the checkmark none so it dissapears from the button
+    document.querySelector("#" + buttonID3 + " svg").style.display = '';
 }

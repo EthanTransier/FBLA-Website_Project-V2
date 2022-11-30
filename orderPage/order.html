@@ -63,7 +63,7 @@
     </div>
 
     <!-- Makes the grid & Title for the appetizers -->
-    <div class="foodTypes">
+    <div class="foodTypes" id="foodTypesContainer">
       <p class="foodTitles">Appetizers</p>
       <!-- Chicken Katsu Container -->
       <div class="foodContainers" id="chickenKatsuContainer">
@@ -76,10 +76,29 @@
         />
 
         <button
+          class="chickenKatsuButton"
           id="addToCart-ChickenKatsu"
-          onclick="addToCart('Chicken Katsu'); startAnimation('addToCart-ChickenKatsu');"
+          onclick="addToCart('Chicken Katsu'); startAnimation('addToCart-ChickenKatsu'); setTimeout(endAnimation, 1250, 'addToCart-ChickenKatsu'); setTimeout(closeCheckAnimation, 930, 'addToCart-ChickenKatsu')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!-- Dumplings Container -->
@@ -90,11 +109,30 @@
           alt="steamed DUmplings"
           class="foodContainerPicture"
         />
+        Add to Cart
         <button
           id="addToCart-Dumplings"
-          onclick="addToCart('Dumplings'); startAnimation('addToCart-Dumplings')"
+          onclick="addToCart('Dumplings'); startAnimation('addToCart-Dumplings'); setTimeout(endAnimation, 1250, 'addToCart-Dumplings'); setTimeout(closeCheckAnimation, 930, 'addToCart-Dumplings')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!-- Wontons Container -->
@@ -108,9 +146,27 @@
         />
         <button
           id="addToCart-wontons"
-          onclick="addToCart('Wontons'); startAnimation('addToCart-wontons')"
+          onclick="addToCart('Wontons'); startAnimation('addToCart-wontons'); setTimeout(endAnimation, 1250, 'addToCart-wontons'); setTimeout(closeCheckAnimation, 930, 'addToCart-wontons')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!--Spring Rolls Container  -->
@@ -125,9 +181,27 @@
 
         <button
           id="addToCart-SpringRolls"
-          onclick="addToCart('Spring Rolls'); startAnimation('addToCart-SpringRolls')"
+          onclick="addToCart('Spring Rolls'); startAnimation('addToCart-SpringRolls'); setTimeout(endAnimation, 1250, 'addToCart-SpringRolls'); setTimeout(closeCheckAnimation, 930, 'addToCart-SpringRolls')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!-- Crab Ragoons Container -->
@@ -141,9 +215,27 @@
         />
         <button
           id="addToCart-CrabRagoons"
-          onclick="addToCart('Crab Ragoons'); startAnimation('addToCart-CrabRagoons')"
+          onclick="addToCart('Crab Ragoons'); startAnimation('addToCart-CrabRagoons'); setTimeout(endAnimation, 1250, 'addToCart-CrabRagoons'); setTimeout(closeCheckAnimation, 930, 'addToCart-CrabRagoons')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
     </div>
@@ -168,9 +260,27 @@
         />
         <button
           id="addToCart-BeefAndBroccoli"
-          onclick="addToCart('Beef and Broccoli'); startAnimation('addToCart-BeefAndBroccoli');"
+          onclick="addToCart('Beef and Broccoli'); startAnimation('addToCart-BeefAndBroccoli'); setTimeout(endAnimation, 1250, 'addToCart-BeefAndBroccoli'); setTimeout(closeCheckAnimation, 930, 'addToCart-BeefAndBroccoli')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!--Tso's Chicken Container  -->
@@ -181,11 +291,30 @@
           alt="Tso Chicken"
           class="foodContainerPicture"
         />
+        Add to Cart
         <button
           id="addToCart-TsoChicken"
-          onclick="addToCart('Tsos Chicken'); startAnimation('addToCart-TsoChicken')"
+          onclick="addToCart('Tsos Chicken'); startAnimation('addToCart-TsoChicken'); setTimeout(endAnimation, 1250, 'addToCart-TsoChicken'); setTimeout(closeCheckAnimation, 930, 'addToCart-TsoChicken')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!--Orange Chicken Container -->
@@ -196,11 +325,30 @@
           alt="Orange Chicken"
           class="foodContainerPicture"
         />
+        Add to Cart
         <button
           id="addToCart-OrangeChicken"
-          onclick="addToCart('Orange Chicken'); startAnimation('addToCart-OrangeChicken')"
+          onclick="addToCart('Orange Chicken'); startAnimation('addToCart-OrangeChicken'); setTimeout(endAnimation, 1250, 'addToCart-OrangeChicken'); setTimeout(closeCheckAnimation, 930, 'addToCart-OrangeChicken')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!-- Honey Walnut Shrimp Container -->
@@ -209,11 +357,30 @@
           Honey Walnut Shrimp
         </p>
         <img src="" alt="" />
+        Add to Cart
         <button
           id="addToCart-HoneyWalnetShrimp"
-          onclick="addToCart('Honey Walnut Shrimp'); startAnimation('addToCart-HoneyWalnetShrimp')"
+          onclick="addToCart('Honey Walnut Shrimp'); startAnimation('addToCart-HoneyWalnetShrimp'); setTimeout(endAnimation, 1250, 'addToCart-HoneyWalnetShrimp'); setTimeout(closeCheckAnimation, 930, 'addToCart-HoneyWalnetShrimp')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
       <!-- Black Pepper Angus Steak Container-->
@@ -224,9 +391,27 @@
         </p>
         <button
           id="addToCart-BlackPepperAngusSteak"
-          onclick="addToCart('Black Pepper Angus Steak'); startAnimation('addToCart-BlackPepperAngusSteak')"
+          onclick="addToCart('Black Pepper Angus Steak'); startAnimation('addToCart-BlackPepperAngusSteak'); setTimeout(endAnimation, 1250, 'addToCart-BlackPepperAngusSteak'); setTimeout(closeCheckAnimation, 930, 'addToCart-BlackPepperAngusSteak')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
     </div>
@@ -245,11 +430,30 @@
           Steamed Vegetables
         </p>
         <img src="" alt="" />
+        Add to Cart
         <button
           id="addToCart-SteamedVegetables"
-          onclick="addToCart('Steamed Vegetables'); startAnimation('addToCart-SteamedVegetables')"
+          onclick="addToCart('Steamed Vegetables'); startAnimation('addToCart-SteamedVegetables'); setTimeout(endAnimation, 1250, 'addToCart-SteamedVegetables'); setTimeout(closeCheckAnimation, 930, 'addToCart-SteamedVegetables')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
 
@@ -259,9 +463,27 @@
         <img src="" alt="" />
         <button
           id="addToCart-ChowMein"
-          onclick="addToCart('Chow Mein'); startAnimation('addToCart-ChowMein')"
+          onclick="addToCart('Chow Mein'); startAnimation('addToCart-ChowMein'); setTimeout(endAnimation, 1250, 'addToCart-ChowMein'); setTimeout(closeCheckAnimation, 930, 'addToCart-ChowMein')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
 
@@ -269,11 +491,30 @@
       <div class="foodContainers" id="whiteRiceContainer">
         <p class="foodContainerTitle" id="whiteRiceTitle">White Rice</p>
         <img src="" alt="" />
+        Add to Cart
         <button
           id="addToCart-WhiteRice"
-          onclick="addToCart('White Rice'); startAnimation('addToCart-WhiteRice')"
+          onclick="addToCart('White Rice'); startAnimation('addToCart-WhiteRice'); setTimeout(endAnimation, 1250, 'addToCart-WhiteRice'); setTimeout(closeCheckAnimation, 930, 'addToCart-WhiteRice')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
 
@@ -283,9 +524,27 @@
         <img src="" alt="" />
         <button
           id="addToCart-FriedRice"
-          onclick="addToCart('Fried Rice'); startAnimation('addToCart-FriedRice')"
+          onclick="addToCart('Fried Rice'); startAnimation('addToCart-FriedRice'); setTimeout(endAnimation, 1250, 'addToCart-FriedRice'); setTimeout(closeCheckAnimation, 930, 'addToCart-FriedRice')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
 
@@ -299,9 +558,27 @@
         />
         <button
           id="addToCart-ChopSuey"
-          onclick="addToCart('Chope Suey'); startAnimation('addToCart-ChopSuey')"
+          onclick="addToCart('Chope Suey'); startAnimation('addToCart-ChopSuey'); setTimeout(endAnimation, 1250, 'addToCart-ChopSuey'); setTimeout(closeCheckAnimation, 930, 'addToCart-ChopSuey')"
         >
-          Add to Cart
+          <p class="buttonText">Add to Cart</p>
+          <svg
+            class="checkmark"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 52 52"
+          >
+            <circle
+              class="checkmark__circle"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark__check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
         </button>
       </div>
     </div>

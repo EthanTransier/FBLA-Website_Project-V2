@@ -105,8 +105,8 @@ button{
     font-weight: bold;
     color: white;
     background-color:rgb(255, 58, 58);
-    border-radius: 10px;
-    border-width: 0;
+    border-radius: 15px;
+    border-width: 0px;
     margin: 5px;
 }
 .foodContainers button:hover{
@@ -119,31 +119,101 @@ button{
     color: rgba(255, 255, 255, 0);
 }
 
+.foodContainers button:disabled {
+    background-color: rgb(223, 0, 0);
+    color: white;
+}
+
 .addToCartAnimationClass{
-    animation-name: addToCartAnimation;
-    animation-duration: 0.75s;
-    animation-fill-mode: backwards;
-    animation-iteration-count: 1;
+    animation: addToCartAnimation 1.25s;
+    -webkit-animation: addToCartAnimation 1.25s;
 }
 
 @keyframes addToCartAnimation {
     0%{
+        font-size: 0;
         width: 100%;
-        border-radius: 10px;
         background-color: rgb(223, 0, 0);
-        color: rgba(255, 255, 255, 0);
     }
-    35%{
-        background-color: green;
+    15%{
+        font-size: 0;
+        background-color: #7ac142;
     }
-    50%{
-        background-color: green;
+    25%{
+        font-size: 0;
+        background-color: #7ac142;
+    }
+    40%{
+        width: 30px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+    75%{
+        width: 30px;
+        font-size: 0;
+        background-color: #7ac142;
     }
     100%{
-        width: 35px;
-        border-radius: 50px;
-        background-color: green;
-        color: rgba(255, 255, 255, 0);
+        font-size: 0;
+        width: 100%;
+        background-color: rgb(223, 0, 0);
+    }
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: none;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .1s ease-in-out .1s forwards, scale .1s ease-in-out .1s both;
+
+}
+
+.checkmark__check {
+    /* transform-origin: 50% 50%; */
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
     }
 }
 
@@ -228,4 +298,10 @@ hr {
 @font-face {
     font-family: inter-regular;
     src: url(../inter/static/Inter-Bold.ttf);
+}
+
+.foodContainers img:hover{
+    width: 120%;
+    height: 120%;
+    z-index: 30;
 }

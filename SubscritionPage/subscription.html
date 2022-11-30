@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="jobs.css">
-    <title>Join Us</title>
+    <link rel="stylesheet" href="subscription.css">
+    <title>Become a Jī lóng plus member</title>
 </head>
 <body>
     <!-- Header, which includes the Title, the Logo, and the links -->
@@ -41,7 +41,7 @@
     </header>
 
     <!-- title of the page -->
-    <h1>Would you like to join our team? If so fill out the following information:</h1>
+    <h1>Would you like to get free food and? If so fill out the following information to become a Jī lóng plus member!</h1>
 
     <!-- signup sheet -->
     <form>
@@ -60,18 +60,15 @@
             <h4>Create a password</h4>
             <label id="passReqs" name="account"><em>*Your password must be at least 8 character long, have one upercase letter, lowercase letter, a number, and a special symbol.</em></label><br>
             <label>Create a password: </label><input type="password" name="account" id="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
-            <label>Verify your password: </label><input type="password" name="account" id="password" minlength="8" required><br><br>
+            <label>Verify your password: </label><input type="password" name="account" minlength="8" required><br><br>
             </div>
 
-            <!-- job info -->
+            <!-- payment info -->
             <div class="infoBoxes">
-            <h4>Enter your desired job:</h4>
-            <input type="radio" name="class" required><label>Cook</label><br>
-            <input type="radio" name="class" required><label>Waiter/Waitress</label><br>
-            <input type="radio" name="class" required><label>Cashier</label><br>
-            <input type="radio" name="class" required><label>Cleaner</label><br>
-            <input type="radio" name="class" required><label>Resteraunt Manager</label><br>
-            <input type="radio" name="class" required><label>Kitchen Manager</label><br><br>
+            <h4>Enter your desired payment method:</h4>
+            <label>Enter your card's expiration date: </label><input type="text" placeholder="mm/yy" required><br>
+            <label>Enter your card's CVC code: </label><input type="text" placeholder="000" required><br>
+            <label>Enter your card number: </label><input type="password" placeholder="0000 0000 0000 0000" name="account" id="password" pattern="[0-9]{16}" required><br><br>
             </div>
             
             <!-- notifaction info -->
@@ -81,22 +78,10 @@
             <input type="radio" name="notifications" name="account"><label>Text Message</label><br><br>
             </div>
             
-
-            <!-- allergy info -->
-            <div class="infoBoxes">
-            <h4>Check any boxes for allergy information:</h4>
-            <input type="checkbox"><label>Nuts</label><br>
-            <input type="checkbox"><label>Eggs</label><br>
-            <input type="checkbox"><label>Dairy</label><br>
-            <input type="checkbox"><label>Other: <input type="text"></input></label><br><br>
-            </div>
-            
-            <!--other comments and submit button -->
-            <div class="infoBoxes">
-            <h4>Put any other comments or notes:</h4>
-            <textarea rows="6" placeholder="Enter any other information here" id="extra"></textarea>
-            <p><em>*Please note that it will take at least 2 buisness days to get back to you</em></p>
-            <a href="index.html"><button type="submit" id="btn">Submit</button></a>
+            <!-- purchase info -->
+            <div id="purchase">
+                <button id="buyBTN"><span class="buyTitle">Monthly</span><br><span class="purchaseTitle">$6.99/month</span></button>
+                <button id="buyBTN"><span class="buyTitle">Annually</span><br><span class="purchaseTitle">$59.99/year</span></button>
             </div>
 
         </fieldset>

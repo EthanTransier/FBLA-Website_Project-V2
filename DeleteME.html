@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="order.css" />
+    <title>Jī lóng Grill</title>
+  </head>
+  <body>
+    <!-- Header, which includes the Title, the Logo, and the links -->
+    <header>
+      <!-- Container for the title of the Resteraunt -->
+      <img
+        src="./images/chineseLogo.webp"
+        alt="Logo for chinese resteraunt"
+        class="headerLogo"
+      />
+      <div class="titleContainer">
+        <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      </div>
+      <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerLinksContainer">
+        <!-- Container for the link that goes to the home page -->
+        <div class="homeLinkContainer atPageLink">
+          <a href="index.html">Home</a>
+        </div>
+        <!-- Container for the link that goes to the menu page -->
+        <div class="menuLinkContainer">
+          <a href="menu.html">Menu</a>
+        </div>
+        <!-- Container for the link that goes to the Hiring page -->
+        <div class="jobs.html">
+          <a href="jobs.html">Join Us</a>
+        </div>
+      </div>
+      <!-- Container for the search bar for the header -->
+      <div class="searchBarContainer">
+        <input type="search" class="headerSearchBar" />
+      </div>
+      <!-- Container for the button / link that takes you to the Ordering page -->
+      <div class="orderLinkContainer">
+        <a href="order.html" class="headerOrderLink">Order Now</a>
+      </div>
+    </header>
+
+    <br>
+
+    <!-- Makes the grid & Title for the appetizers -->
+    <div class="foodTypes">
+      <p class="foodTitles">Appetizers</p>
+      <!-- Chicken Katsu Container -->
+      <div class="foodContainers" id="chickenKatsuContainer">
+        <p class="foodContainerTitle" id="chickenKatsuTitle">Chicken Katsu</p>
+        <img src="./images/grilled-chicken-breast-11-2022.jpg" alt="Picture of Chicken Katsu" class="foodContainerPicture"> 
+        <button id="addToCart-ChickenKatsu" onclick="addToCart('Chicken Katsu')">Add to Cart</button>
+      </div>
+      <!-- Dumplings Container -->
+      <div class="foodContainers" id="dumplingsContainer">
+        <p class="foodContainerTitle" id="dumplingsTitle">Dumplings</p> 
+        <button id="addToCart-Dumplings" onclick="addToCart('Dumplings')">Add to Cart</button>
+      </div>
+      <!-- Wontons Container -->
+      <div class="foodContainers" id="wontonsContainer">
+        <p class="foodContainerTitle" id="wontonsTitle">Wontons</p>
+        <button id="addToCart-" onclick="addToCart('Wontons')">Add to Cart</button>
+      </div>
+      <!--Spring Rolls Container  -->
+      <div class="foodContainers" id="springRollsContainer">
+        <p class="foodContainerTitle" id="springRollsTitle">Spring Rolls</p>
+        <button id="addToCart-SpringRolls" onclick="addToCart('Spring Rolls')">Add to Cart</button>
+      </div>
+      <!-- Crab Ragoons Container -->
+      <div class="foodContainers" id="crabRagoonsContainer">
+        <p class="foodContainerTitle" id="crabRagoonsTitle">Crab Ragoons</p>
+        <button id="addToCart-CrabRagoons" onclick="addToCart('Crab Ragoons')">Add to Cart</button>
+      </div>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Makes the grid for the entrees -->
+    <div class="foodTypes">
+      <p class="foodTitles">Entrees</p>
+      <p class="boxes">Beef and Broccoli <button id="addToCart-BeefAndBroccoli" onclick="addToCart('Beef and Broccoli')">Add to Cart</button></p>
+      <p class="boxes">Tso's Chicken <button id="addToCart-TsoChicken" onclick="addToCart('Tsos Chicken')">Add to Cart</button></p>
+      <p class="boxes">Orange Chicken <button id="addToCart-OrangeChicken" onclick="addToCart('Orange Chicken')">Add to Cart</button></p>
+      <p class="boxes">Honey Walnut Shrimp <button id="addToCart-HoneyWalnetShrimp" onclick="addToCart('Honey Walnut Shrimp')">Add to Cart</button></p>
+      <p class="boxes">Black Pepper Angus Steak <button id="addToCart-BlackPepperAngusSteak" onclick="addToCart('Black Pepper Angus Steak')">Add to Cart</button></p>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <!-- Makes the grid for the sides -->
+    <div class="foodTypes">
+      <p class="foodTitles">Sides</p>
+      <p class="boxes">Steamed Vegtables <button>Add to Cart</button></p>
+      <p class="boxes" src="/images/Chicken-Chow-Mein-3-1024x1536.jpg">
+        Chow Mein <button>Add to Cart</button>
+      </p>
+      <p class="boxes">White Rice <button id="addToCart-WhiteRice" onclick="addToCart('White Rice')">Add to Cart</button></p>
+      <p class="boxes">Fried Rice <button id="addToCart-FriedRice" onclick="addToCart('Fried Rice')">Add to Cart</button></p>
+      <p class="boxes">Chop Suey <button id="addToCart-ChopSuey" onclick="addToCart('Chope Suey')">Add to Cart</button></p>
+    </div>
+
+
+    <script src="./order.js"></script>
+  </body>
+</html>

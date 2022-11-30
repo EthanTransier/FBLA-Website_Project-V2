@@ -28,12 +28,17 @@ function openCartMenu(){
 var buttonVariable;
 var buttonVariable2;
 var buttonVariable3;
-var buttonVariabl4;
+var buttonVariable4;
+var buttonVariable5;
 function startAnimation(buttonID1) {
-    buttonVariable = document.querySelector('#addToCart-ChickenKatsu svg');
+    // Sets Button Variable 3 to whatever buttonID1
+    buttonVariable3 = buttonID1
+    
+    buttonVariable2 = "#" + buttonID1 + " svg"
+    // Makes the buttonVariable set to the svg found inside the specific button being pressed
+    buttonVariable = document.querySelector(buttonVariable2);
     // sets the checkmarks display to flex
     buttonVariable.style.display = 'flex';
-    console.log(buttonVariable.style.display)
     // gets the id for the text inside the button
     buttonVariable4 = ("#" + buttonID1 + " .buttonText");
     // Removes the Text Inside the Button
@@ -42,20 +47,22 @@ function startAnimation(buttonID1) {
     var buttonClicked1 = document.getElementById(buttonID1);
     buttonClicked1.classList.add("addToCartAnimationClass");
     
-    buttonVariable3 = "button#" + buttonID1 + "svg.checkmark";
-    console.log(buttonVariable3);
-    
-   
-    console.log(buttonVariable)
-    
     document.getElementById(buttonID1).disabled = true;
-    setTimeout(endAnimation, 750, buttonID1)
+    buttonVariable5 = buttonID1;
+    console.log(buttonVariable5)
+    setTimeout(endAnimation, 750)
 }
 
-function endAnimation(buttonID2){
-    // var buttonClicked2 = document.getElementById(buttonID2);
-    // buttonClicked2.classList.remove("addToCartAnimationClass");
-    // document.getElementById(buttonID2).disabled = false;
+function endAnimation(){
+    console.log(buttonVariable5)
+    var buttonClicked2 = document.getElementById(buttonVariable5);
+    buttonClicked2.classList.remove("addToCartAnimationClass");
+    document.getElementById(buttonVariable5).disabled = false;
+    // makes the display of the checkmark none, so it removes it from the button
+    buttonVariable.style.display = '';
+    // Adds the text back into the button
+    buttonVariable4 = ("#" + buttonVariable3 + " .buttonText");
+    document.querySelector(buttonVariable4).innerHTML = 'Add to Cart';
 }
 
 function closeCheckAnimation() {

@@ -3,6 +3,7 @@ let animationEnded = 0;
 let orderFood
 const cartArray = [];
 function addToCart(orderFood){
+    // Adds the food item to the cart
     cartArray.push(orderFood)
     console.log(cartArray)
     document.getElementById("cartRedIconNumber").innerHTML = cartArray.length;
@@ -25,11 +26,6 @@ function openCartMenu(){
     }
 }
 
-var buttonVariable;
-var buttonVariable2;
-var buttonVariable3;
-var buttonVariable4;
-var buttonVariable5;
 function startAnimation(buttonID1) {
     // sets the checkmarks display to flex
     document.querySelector("#" + buttonID1 + " svg").style.display = 'flex';
@@ -42,13 +38,15 @@ function startAnimation(buttonID1) {
 }
 
 function endAnimation(buttonID2){
+    // Removes the animation class from the button
     document.getElementById(buttonID2).classList.remove("addToCartAnimationClass");
+    // Re-enables the button so it works again after the animation is finished
     document.getElementById(buttonID2).disabled = false;
     // Adds the text back into the button
     document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
 }
 
 function closeCheckAnimation(buttonID3) {
-    // Makes the display of the checkmark none so it dissapears from the button
+    // Makes the display of the checkmark none so it dissapears from the button when the animation is 75% done
     document.querySelector("#" + buttonID3 + " svg").style.display = '';
 }

@@ -63,11 +63,15 @@
     </div>
 
     <!-- Makes the grid & Title for the appetizers -->
-    <div class="foodTypes" id="foodTypesContainer">
+    <div class="foodTypes" id="appetizersContainer">
       <p class="foodTitles">Appetizers</p>
       <!-- Chicken Katsu Container -->
       <div class="foodContainers" id="chickenKatsuContainer">
         <p class="foodContainerTitle" id="chickenKatsuTitle">Chicken Katsu</p>
+  
+        <!-- <div class="informationImageContainer">
+          <img src="../images/informationIcon.png" alt="Image of i with a circle around it" class="informationImage">
+        </div> -->
 
         <img
           src="../images/grilled-chicken-breast-11-2022.jpg"
@@ -136,8 +140,13 @@
       </div>
       <!-- Wontons Container -->
       <div class="foodContainers" id="wontonsContainer">
+        
         <p class="foodContainerTitle" id="wontonsTitle">Wontons</p>
-
+        
+        <!-- <div class="informationImageContainer">
+          <img src="../images/informationIcon.png" alt="Image of i with a circle around it" class="informationImage">
+        </div> -->
+        
         <img
           src="../images/wontons_resized.jpg"
           alt="Wontons"
@@ -170,6 +179,7 @@
       </div>
       <!--Spring Rolls Container  -->
       <div class="foodContainers" id="springRollsContainer">
+        
         <p class="foodContainerTitle" id="springRollsTitle">Spring Rolls</p>
 
         <img
@@ -205,6 +215,7 @@
       </div>
       <!-- Crab Ragoons Container -->
       <div class="foodContainers" id="crabRagoonsContainer">
+        
         <p class="foodContainerTitle" id="crabRagoonsTitle">Crab Ragoons</p>
 
         <img
@@ -244,23 +255,21 @@
     <br />
 
     <!-- Makes the grid for the entrees -->
-    <div class="foodTypes">
+    <div class="foodTypes" id="entreesContainer">
       <p class="foodTitles">Entrees</p>
 
       <!--Beef and Broccoli Container  -->
       <div class="foodContainers" id="beefBroccoliContainer">
-        <p class="foodContainerTitle" id="beefBroccoliTitle">
-          Beef and Broccoli
-        </p>
-        <img
-          src="../images/instant-pot-beef-and-broccoli-1.png"
-          alt="Beef and Broccoli"
-          class="foodContainerPicture"
-        />
-        <button
-          id="addToCart-BeefAndBroccoli"
-          onclick="addToCart('Beef and Broccoli'); startAnimation('addToCart-BeefAndBroccoli'); setTimeout(endAnimation, 1250, 'addToCart-BeefAndBroccoli'); setTimeout(closeCheckAnimation, 930, 'addToCart-BeefAndBroccoli')"
-        >
+        
+        <p class="foodContainerTitle" id="beefBroccoliTitle">Beef & Broccoli</p>
+        
+        <!-- <div class="informationImageContainer">
+          <img src="../images/informationIcon.png" alt="Image of i with a circle around it" class="informationImage">
+        </div> -->
+        
+        <img src="../images/instant-pot-beef-and-broccoli-1.png" alt="Beef and Broccoli" class="foodContainerPicture"/>
+        
+        <button id="addToCart-BeefAndBroccoli" onclick="addToCart('Beef and Broccoli'); startAnimation('addToCart-BeefAndBroccoli'); setTimeout(endAnimation, 1250, 'addToCart-BeefAndBroccoli'); setTimeout(closeCheckAnimation, 930, 'addToCart-BeefAndBroccoli')">
           <p class="buttonText">Add to Cart</p>
           <svg
             class="checkmark"
@@ -417,7 +426,7 @@
     <br />
 
     <!-- Makes the grid for the sides -->
-    <div class="foodTypes">
+    <div class="foodTypes" id="sidesContainer">
       <p class="foodTitles">Sides</p>
 
       <!-- Steamed Vegtables Container -->

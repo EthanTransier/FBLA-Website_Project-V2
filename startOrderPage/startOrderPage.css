@@ -1,0 +1,82 @@
+/* Header CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: kanit-regular;
+    font-size: 25px;
+    color: black;
+    background-color: white;
+    width: 100%;
+}
+
+body {
+    background-color: #dde0e0;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.atPageLink {
+    text-decoration: underline;
+}
+
+.headerLinksContainer {
+    display: flex;
+    gap: 20px;
+    font-family: kanit-light;
+}
+
+.headerLogo {
+    position: relative;
+    height: 100px;
+    width: auto;
+}
+
+.headerOrderLink {
+    background-color: rgb(255, 58, 58);
+    border-radius: 20px;
+    border-color: rgb(255, 58, 58);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: kanit-light;
+    color: white;
+}
+
+.headerOrderLink:hover {
+    background-color: rgb(223, 0, 0);
+    border-color: rgb(223, 0, 0);
+    border-width: 7px;
+    text-decoration: none;
+}
+
+.dragonSpanTitle {
+    color: red;
+}
+
+@font-face {
+    font-family: kanit-regular;
+    src: url(../kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family: kanit-light;
+    src: url(../kanit/Kanit-Light.ttf);
+}
+/* Rest of the page CSS after the header */
+/* CSS for the pictures of the bowls  */
+.bowlPicture{
+    height: 300px;
+    width: auto;
+}

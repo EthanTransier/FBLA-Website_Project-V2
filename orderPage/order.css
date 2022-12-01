@@ -81,7 +81,6 @@ a:hover {
     width: 250px;
     max-width: width;
     min-width: 250px;
-    border-radius: 15px;
     background-color: white;
     background-image: url("../images/informationIcon.png");
     background-repeat: no-repeat;
@@ -133,7 +132,7 @@ button{
     font-weight: bold;
     color: white;
     background-color:rgb(255, 58, 58);
-    border-radius: 15px;
+    border-radius: 1px;
     border-width: 0px;
     margin: 5px;
 }
@@ -159,29 +158,35 @@ button{
 
 @keyframes addToCartAnimation {
     0%{
+        border-radius: 1px;
         font-size: 0;
         width: 100%;
         background-color: rgb(223, 0, 0);
     }
     15%{
+        border-radius: 15px;
         font-size: 0;
         background-color: #7ac142;
     }
     25%{
+        border-radius: 15px;
         font-size: 0;
         background-color: #7ac142;
     }
     40%{
+        border-radius: 15px;
         width: 30px;
         font-size: 0;
         background-color: #7ac142;
     }
     75%{
+        border-radius: 15px;
         width: 30px;
         font-size: 0;
         background-color: #7ac142;
     }
     100%{
+        border-radius: 1px;
         font-size: 0;
         width: 100%;
         background-color: rgb(223, 0, 0);

@@ -75,6 +75,15 @@ a:hover {
     src: url(../kanit/Kanit-Light.ttf);
 }
 /* Rest of the page CSS after the header */
+/* Main Content Container CSS */
+.mainContentContainer{
+    display: flex;
+}
+/* Title CSS */
+.mainContentTitle{
+    text-align: center;
+}
+
 /* CSS for the pictures of the bowls  */
 .bowlPicture{
     height: 300px;

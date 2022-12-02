@@ -13,10 +13,13 @@ header {
     color: black;
     background-color: white;
     width: 100%;
+    border-bottom-width: 3.5px;
+    border-bottom-color: rgb(223, 0, 0);
+    border-bottom-style: solid;
 }
 
 body {
-    background-color: #dde0e0;
+    background-color: #333333;
 }
 
 a {
@@ -78,14 +81,91 @@ a:hover {
 /* Main Content Container CSS */
 .mainContentContainer{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* Title CSS */
 .mainContentTitle{
     text-align: center;
+    font-family: montserrat-bold;
+    font-size: 50px;
+    padding-top: 5px;
+    color: white;
+}
+/* CSS for the sub title */
+.subTitle{
+    text-align: center;
+    font-family: montserrat-light;
+    padding-top: 10px;
+    font-size: 30px;
+    color: rgb(255, 58, 58);
+}
+/* CSS for the container of the top row images */
+.topRowImagesContainer{
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+    margin-top: 30px;
+}
+/* CSS for the picture of the bowl  */
+.bowlPicture{
+    height: 175px;
+    width: auto;
+    padding-bottom: 30px;
+}
+/* CSS for the picture of the plate */
+.platePicture{
+    width: 200px;
+    height: auto;
+    padding-bottom: 20px;
+}
+/* CSS for the picture of the platter */
+.platterPicture{
+    width: auto;
+    height: 225px;
+    padding-bottom: 10px;
+}
+/* CSS for the titles under the images options */
+.optionsTitles{
+    color: white;
+    text-align: center;
+    font-family: montserrat-light;
+    font-size: 25px;
+}
+/* CSS for the plate title */
+.plateTitle{
+    padding-right: 10px;
+}
+.platterTitle{
+    padding-left: 120px;
+}
+/* CSS for the arrow */
+.arrowContainer{
+    text-align: center;
 }
 
-/* CSS for the pictures of the bowls  */
-.bowlPicture{
-    height: 300px;
-    width: auto;
+.arrow {
+    border: solid rgb(223, 0, 0);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 5px;
+}
+/* CSS that rotates the arrow into position */
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(../montserrat/static/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: montserrat-bold;
+    src: url(../montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: montserrat-light;
+    src: url(../montserrat/static/Montserrat-Light.ttf);
 }

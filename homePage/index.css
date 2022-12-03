@@ -131,3 +131,23 @@ frame{
     width: 40%;
     text-decoration: none;
 }
+.line{
+    border-width: 2px;
+    border-color: black;
+    background-color: black;
+
+}
+.Footer{
+    background-color: white;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.loc{
+    font-size: 40px;
+    font-family: kanit-regular;
+}
+.nav{
+    font-size: 40px;
+    font-family: kanit-regular;
+}

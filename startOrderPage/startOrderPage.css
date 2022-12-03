@@ -89,14 +89,14 @@ a:hover {
     text-align: center;
     font-family: montserrat-bold;
     font-size: 50px;
-    padding-top: 5px;
+    padding-top: 15px;
     color: white;
 }
 /* CSS for the sub title */
 .subTitle{
     text-align: center;
     font-family: montserrat-light;
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 30px;
     color: rgb(255, 58, 58);
 }
@@ -106,6 +106,7 @@ a:hover {
     align-items: flex-end;
     gap: 80px;
     margin-top: 30px;
+    margin-left: 50px;
 }
 /* CSS for the picture of the bowl  */
 .bowlPicture{
@@ -129,16 +130,61 @@ a:hover {
 .optionsTitles{
     color: white;
     text-align: center;
-    font-family: montserrat-light;
-    font-size: 25px;
+    font-family: montserrat-regular;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
 }
 /* CSS for the plate title */
 .plateTitle{
     padding-right: 10px;
 }
-.platterTitle{
-    padding-left: 120px;
+/* CSS for the price text next to the food titles */
+.priceText{
+    font-size: 25px;
+    color: rgb(255, 58, 58);
 }
+/* Options Sub Text */
+.optionsSubText{
+    font-family: montserrat-light;
+}
+.optionsSubTextContainer{
+    margin-left: 20px;
+}
+li {
+    color:rgb(255, 58, 58);
+}
+li span{
+    color: white;
+}
+.bottomRowImagesContainer{
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+}
+/* CSS for the drink container */
+.drinkContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* CSS for the picture of the drink */
+.drinkPicture{
+    height: 275px;
+    width: auto;
+}
+/* CSS for the sides container */
+.sidesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* CSS for the picture of the egg rolls */
+.sidesPicture{
+    width: 230px;
+    height: auto;
+}
+
 /* CSS for the arrow */
 .arrowContainer{
     text-align: center;

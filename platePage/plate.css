@@ -1,0 +1,241 @@
+body {
+    background-color: rgb(51, 51, 51);
+    ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: kanit-regular;
+    font-size: 25px;
+    color: black;
+    z-index: 30;
+    background-color: white;
+    border-bottom-width: 3.5px;
+    border-bottom-color: rgb(223, 0, 0);
+    border-bottom-style: solid;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.homeLink {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.headerLinksContainer {
+    display: flex;
+    gap: 20px;
+    font-family: kanit-light;
+}
+
+.headerLogo {
+    position: relative;
+    height: 100px;
+    width: auto;
+}
+
+.headerOrderLink {
+    background-color: rgb(255, 58, 58);
+    border-radius: 20px;
+    border-color: rgb(255, 58, 58);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: kanit-light;
+    color: white;
+}
+
+.headerOrderLink:hover {
+    background-color: rgb(223, 0, 0);
+    border-color: rgb(223, 0, 0);
+    border-width: 7px;
+    text-decoration: none;
+}
+
+.dragonSpanTitle {
+    color: red;
+}
+
+@font-face {
+    font-family: kanit-regular;
+    src: url(../kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family: kanit-light;
+    src: url(../kanit/Kanit-Light.ttf);
+}
+/* MAIN CONTENT CSS */
+.mainContentContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-direction: column;
+}
+.mainContentTitle{
+    text-align: center;
+    color: white;
+    font-family: montserrat-bold;
+    font-size: 50px;
+}
+/* CSS for the sub title */
+.subTitle{
+    color: rgb(255, 58, 58);
+    font-family: montserrat-regular;
+    text-align: center;
+}
+/* CSS for the overall food container */
+.foodContainers{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/* CSS for the primary food container title */
+.primaryFoodContainerTitle{
+    color: white;
+    font-family: montserrat-bold;
+    text-align: center;
+    width: 700px;
+}
+/* CSS for the primary food container */
+.primaryFoodContainers{
+    display: flex;
+    width: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/* CSS for the individual food containers */
+.foodContainer{
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(51, 51, 51);
+    width: 250px;
+    border-radius: 10px;
+    gap: 0px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* CSS for the food pictures */
+.foodPicture{
+    width: 100%;
+    height: auto;
+    border-bottom: 3px rgb(255, 58, 58) solid;
+    
+}
+/* CSS for the food titles */
+.foodTitle{
+    text-align: center;
+    color: white;
+    font-family: montserrat-light;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* CSS for the food text */
+.foodText{
+    text-align: left;
+    color: rgb(255, 58, 58);
+    font-size: 17px;
+    font-family: montserrat-light;
+}
+
+/* ANIMATIONS AREA */
+/* Animation class for when the food is selected  */
+.selectAnimation{
+    animation: selectContainerAnimation .15s;
+    animation-fill-mode: forwards;
+}
+/* Animation for when the food is selected */
+@keyframes selectContainerAnimation {
+    0%{
+        border-width: 2px;
+        border-color:rgb(51, 51, 51);
+        background-color: rgb(51, 51, 51);
+    }
+    100%{
+        border-width: 2px;
+        border-color: #659f38;
+        background-color: #659f38;
+    }
+}
+/* Animaion class for when the food is deselected */
+.deselectAnimation{
+    animation: deselectContainerAnimation .15s;
+    animation-fill-mode: forwards;
+}
+/* Animation for when the food is deselected */
+@keyframes deselectContainerAnimation {
+    0% {
+        background-color: #659f38;
+        border-width: 2px;
+        border-color: #659f38;
+    }
+
+    100% {
+        background-color: rgb(51, 51, 51);
+        border-width: 2px;
+        border-color: rgb(51, 51, 51);
+    }
+}
+/* Animation class for when the food text's container has been selected */
+.foodTextSelectAnimation{
+    animation: foodTextSelectContainerAnimation .15s;
+    animation-fill-mode: forwards;
+}
+/* Animation for when the food text's container has been selected */
+@keyframes foodTextSelectContainerAnimation {
+    0% {
+        color:rgb(255, 58, 58);
+    }
+
+    100% {
+        color: white;
+    }
+}
+/* Animation class for when the food text's container has been deselected */
+.foodTextDeselectAnimation {
+    animation: foodTextDeselectContainerAnimation .15s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the food text's container has been deselected */
+@keyframes foodTextDeselectContainerAnimation {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: rgb(255, 58, 58);
+    }
+}
+
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(../montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(../montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(../montserrat/static/Montserrat-Light.ttf);
+}

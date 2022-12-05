@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./plate.css">
+</head>
+
+<body>
+    <!-- Header, which includes the Title, the Logo, and the links -->
+    <header>
+        <!-- Container for the title of the Resteraunt -->
+        <a href="../homePage/index.html">
+            <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
+        </a>
+        <div class="titleContainer">
+            <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+        </div>
+        <!-- Container for the links to the different pages of the website inside the header -->
+        <div class="headerLinksContainer">
+            <!-- Container for the link that goes to the home page -->
+            <div class="homeLinkContainer">
+                <a href="../homePage/index.html">Home</a>
+            </div>
+            <!-- Container for the link that goes to the menu page -->
+            <div class="menuLinkContainer">
+                <a href="../SubscritionPage/subscription.html">Subscrition</a>
+            </div>
+            <!-- Container for the link that goes to the Hiring page -->
+            <div class="jobs.html">
+                <a href="../jobsPage/jobs.html">Join Us</a>
+            </div>
+        </div>
+        <!-- Container for the search bar for the header -->
+        <div class="searchBarContainer">
+            <input type="search" class="headerSearchBar" />
+        </div>
+        <!-- Container for the button / link that takes you to the Ordering page -->
+        <div class="orderLinkContainer">
+            <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink">Order Now</a>
+        </div>
+    </header>
+    <!-- Main Content Area -->
+    <div class="mainContentContainer">
+        <h1 class="mainContentTitle" id="title">Plate</h1>
+        <h3 class="subTitle">Select 2 Primary Dishes and 1 Secondary Dish</h3>
+        <!-- Food Containers -->
+        <div class="foodContainers">
+            <div class="primaryFoodContainers">
+                <h1 class="primaryFoodContainerTitle">Primary Dishes</h1>
+                <h3 class="primaryFoodContainerSubTitle">Select 2</h3>
+                <div class="foodContainer" id="orangeChickenContainer" onclick="selectFoodContainer('orangeChickenContainer')">
+                    <img src="../images/orangeChicken.jpg" alt="Image of OrangeChicken on a plate" class="foodPicture">
+                    <h1 class="foodTitle">
+                        Orange Chicken
+                    </h1>
+                    <p class="foodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                    </p>
+                </div>
+                <div class="foodContainer" id="tsoChickenContainer" onclick="selectFoodContainer('tsoChickenContainer')">
+                    <img src="../images/tsoChicken.jpg" alt="Image of Tso's Chicken on a plate" class="foodPicture">
+                    <h1 class="foodTitle">
+                        Tso's Chicken
+                    </h1>
+                    <p class="foodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./plate.js"></script>
+</body>
+
+</html>

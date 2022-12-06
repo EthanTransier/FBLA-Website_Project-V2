@@ -10,6 +10,17 @@ function selectFoodContainer(containerID){
         console.log(dishesSelected);
         document.querySelector("#" + containerID + " p").classList.add("foodTextSelectAnimation");
         document.querySelector("#" + containerID + " p").classList.remove("foodTextDeselectAnimation");
+
+        if(dishesSelected == 1){
+            document.getElementById("primarySubTitle").innerHTML = ("You Have Selected 1 Dish")
+        }else if(dishesSelected == 2 || dishesSelected == 0){
+            document.getElementById("primarySubTitle").innerHTML = ("You Have Selected " + dishesSelected +" Dishes")
+        }
+        if(dishesSelected == 2){
+            document.getElementById("primarySubTitle").style.color = "#659f38";
+        }else{
+            document.getElementById("primarySubTitle").style.color = "grey";
+        }
     }else if(foodContainerSelected.classList.contains("selectAnimation")){
         foodContainerSelected.classList.add("deselectAnimation");
         foodContainerSelected.classList.remove("selectAnimation");
@@ -18,5 +29,17 @@ function selectFoodContainer(containerID){
         console.log(dishesSelected);
         document.querySelector("#" + containerID + " p").classList.remove("foodTextSelectAnimation");
         document.querySelector("#" + containerID + " p").classList.add("foodTextDeselectAnimation");
+
+        if(dishesSelected == 1){
+            document.getElementById("primarySubTitle").innerHTML = ("You Have Selected 1 Dish")
+        }else if(dishesSelected == 2 || dishesSelected == 0){
+            document.getElementById("primarySubTitle").innerHTML = ("You Have Selected " + dishesSelected +" Dishes")
+        }
+
+        if(dishesSelected == 2){
+            document.getElementById("primarySubTitle").style.color = "#659f38";
+        }else{
+            document.getElementById("primarySubTitle").style.color = "grey";
+        }
     }
 }

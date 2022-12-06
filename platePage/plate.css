@@ -106,6 +106,13 @@ a {
     text-align: center;
     width: 700px;
 }
+/* CSS for the primary food container sub title */
+.primaryFoodContainerSubTitle{
+    color: grey;
+    font-family: montserrat-light;
+    text-align: center;
+    width: 700px;
+}
 /* CSS for the primary food container */
 .primaryFoodContainers{
     display: flex;

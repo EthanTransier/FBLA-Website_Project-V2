@@ -1,19 +1,19 @@
 /* new fonts */
 @font-face {
     font-family: kanit-italic;
-    src: url("../kanit/Kanit-Italic.ttf");
+    src: url("./kanit/Kanit-Italic.ttf");
 }
 @font-face {
     font-family: kanit-regular;
-    src: url(../kanit/Kanit-Regular.ttf);
+    src: url(./kanit/Kanit-Regular.ttf);
 }
 @font-face {
     font-family: kanit-light;
-    src: url(../kanit/Kanit-Light.ttf);
+    src: url(./kanit/Kanit-Light.ttf);
 }
 @font-face {
     font-family: kanit-bold;
-    src: url("../kanit/Kanit-Bold.ttf");
+    src: url("./kanit/Kanit-Bold.ttf");
 }
 
 /* general changers */

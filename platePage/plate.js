@@ -1,3 +1,7 @@
+const primarySelected = [];
+const secondarySelected = [];
+
+
 var primaryDishesSelected = 0;
 function selectPrimaryFoodContainer(containerID){
     var primaryFoodContainerSelected = document.getElementById(containerID);
@@ -56,6 +60,8 @@ function selectPrimaryFoodContainer(containerID){
         document.getElementById('addToCartPlate').classList.add("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = true;
     }
+
+    
 }
 
 var secondaryDishesSelected = 0;
@@ -155,4 +161,14 @@ function endAnimation(buttonID2){
 function closeCheckAnimation(buttonID3) {
     // Makes the display of the checkmark none so it dissapears from the button when the animation is 75% done
     document.querySelector("#" + buttonID3 + " svg").style.display = '';
+}
+
+const cartArray = [];
+function addToCart(){
+    // Adds the food item to the cart
+    cartArray.push(orderFood)
+    console.log(cartArray)
+    localStorage.setItem("cartArray", JSON.stringify(cartArray))
+
+    console.log(localStorage.getItem("cartArray"))
 }

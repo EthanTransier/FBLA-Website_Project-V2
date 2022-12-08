@@ -13,17 +13,17 @@
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
-        <a href="../homePage/index.html">
+        <a href="../docs/index.html" class="headerLogoContainer">
             <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
         </a>
         <div class="titleContainer">
-            <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+            <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
         </div>
         <!-- Container for the links to the different pages of the website inside the header -->
         <div class="headerLinksContainer">
             <!-- Container for the link that goes to the home page -->
             <div class="homeLinkContainer">
-                <a href="../homePage/index.html">Home</a>
+                <a href="../docs/index.html">Home</a>
             </div>
             <!-- Container for the link that goes to the menu page -->
             <div class="menuLinkContainer">
@@ -34,14 +34,15 @@
                 <a href="../jobsPage/jobs.html">Join Us</a>
             </div>
         </div>
-        <!-- Container for the search bar for the header -->
-        <div class="searchBarContainer">
-            <input type="search" class="headerSearchBar" />
-        </div>
         <!-- Container for the button / link that takes you to the Ordering page -->
         <div class="orderLinkContainer">
             <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink">Order Now</a>
         </div>
+        <!-- Container for the cart icon / link -->
+        <div class="cartHeaderContainer">
+            <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon">
+        </div>
+
     </header>
     <!-- Main Content Area -->
     <div class="mainContentContainer">
@@ -56,7 +57,7 @@
             <div class="foodContainers" id="primaryFoodContainers">
                 <h1 class="foodContainerTitle">Primary Dishes</h1>
                 <h3 class="foodContainerSubTitle" id="primarySubTitle">You've Selected 0 Primary Dishes</h3>
-                <div class="foodContainer" id="orangeChickenContainer" onclick="selectPrimaryFoodContainer('orangeChickenContainer')">
+                <div class="foodContainer primaryFoodContainer" id="orangeChickenContainer" onclick="selectPrimaryFoodContainer('orangeChickenContainer')">
                     <img src="../images/orangeChicken.jpg" alt="Image of OrangeChicken on a plate" class="foodPicture">
                     <h1 class="foodTitle">
                         Orange Chicken
@@ -67,7 +68,7 @@
                         545 Calories
                     </p>
                 </div>
-                <div class="foodContainer" id="tsoChickenContainer" onclick="selectPrimaryFoodContainer('tsoChickenContainer')">
+                <div class="foodContainer primaryFoodContainer" id="tsoChickenContainer" onclick="selectPrimaryFoodContainer('tsoChickenContainer')">
                     <img src="../images/tsoChicken.jpg" alt="Image of Tso's Chicken on a plate" class="foodPicture">
                     <h1 class="foodTitle">
                         Tso's Chicken
@@ -79,7 +80,7 @@
                     </p>
                 </div>
 
-                <div class="foodContainer" id="teriyakiChickenContainer" onclick="selectPrimaryFoodContainer('teriyakiChickenContainer')">
+                <div class="foodContainer primaryFoodContainer" id="teriyakiChickenContainer" onclick="selectPrimaryFoodContainer('teriyakiChickenContainer')">
                     <img src="../images/teriyakiChicken.jpg" alt="Image of Teriyaki Chicken on a plate" class="foodPicture">
                     <h1 class="foodTitle">
                         Teriyaki Chicken
@@ -91,7 +92,7 @@
                     </p>
                 </div>
 
-                <div class="foodContainer" id="kungPaoChickenContainer" onclick="selectPrimaryFoodContainer('kungPaoChickenContainer')">
+                <div class="foodContainer primaryFoodContainer" id="kungPaoChickenContainer" onclick="selectPrimaryFoodContainer('kungPaoChickenContainer')">
                     <img src="../images/kungPaoChicken.jpg" alt="Image of Kung Pao on a plate" class="foodPicture">
                     <h1 class="foodTitle">
                         Kung Pao Chicken
@@ -109,7 +110,7 @@
             </div>
 
             <!-- SECONDARY FOOD CONTAINERS -->
-            <div class="foodContainers"  id="secondaryFoodContainers">
+            <div class="foodContainers secondaryFoodContainer"  id="secondaryFoodContainers">
                 <h1 class="foodContainerTitle">Secondary Dishes</h1>
                 <h3 class="foodContainerSubTitle" id="secondarySubTitle">You've Selected 0 Secondary Dishes</h3>
                 <div class="foodContainer" id="whiteRiceContainer" onclick="selectSecondaryFoodContainer('whiteRiceContainer')">
@@ -124,7 +125,7 @@
                     </p>
                 </div>
 
-                <div class="foodContainer" id="friedRiceContainer" onclick="selectSecondaryFoodContainer('friedRiceContainer')">
+                <div class="foodContainer secondaryFoodContainer" id="friedRiceContainer" onclick="selectSecondaryFoodContainer('friedRiceContainer')">
                     <img src="../images/friedRice.jpg" alt="Image of fried rice in a wooden spoon" class="foodPicture">
                     <h1 class="foodTitle">
                         Fried Rice
@@ -136,7 +137,7 @@
                     </p>
                 </div>
 
-                <div class="foodContainer" id="chowMeinContainer" onclick="selectSecondaryFoodContainer('chowMeinContainer')">
+                <div class="foodContainer secondaryFoodContainer" id="chowMeinContainer" onclick="selectSecondaryFoodContainer('chowMeinContainer')">
                     <img src="../images/chowMein.jpg"
                         alt="Image of chop suey in a wooden spoon" class="foodPicture">
                     <h1 class="foodTitle">
@@ -153,7 +154,7 @@
         <!-- SUBMIT BUTTON AREA -->
         <div class="submitButtonContainer">
             <button disabled class="plateButton buttonDisabled" id="addToCartPlate"
-                onclick="startAnimation('addToCartPlate'); setTimeout(endAnimation, 1250, 'addToCartPlate'); setTimeout(closeCheckAnimation, 930, 'addToCartPlate')">
+                onclick="addToCart('testing'); startAnimation('addToCartPlate'); setTimeout(endAnimation, 1250, 'addToCartPlate'); setTimeout(closeCheckAnimation, 930, 'addToCartPlate')" >
                 <p class="buttonText">Add to Cart</p>
                 <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                     <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />

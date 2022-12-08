@@ -13,10 +13,8 @@ function addToCart(orderFood){
 
 let cartOpenDecider = 0;
 
-let cartMenuAreaWidth;
 function openCartMenu(){
-    cartMenuAreaWidth = document.getElementById("cartMenuArea").style.width;
-    console.log(document.getElementById("cartMenuArea").style.width)
+
     if(cartOpenDecider == 0){
         cartOpenDecider++
         document.getElementById("cartMenuArea").style.marginRight = "-100%";

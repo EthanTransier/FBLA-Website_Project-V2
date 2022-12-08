@@ -93,28 +93,37 @@ a {
     font-family: montserrat-regular;
     text-align: center;
 }
+/* CSS for the vertical line down the middle of the page */
+.verticalLine{
+    background-color: rgb(223, 0, 0);
+    width: 5px;
+    margin-top: 50px;
+}
+
 /* CSS for the overall food container */
-.foodContainers{
+.foodContainersArea{
     display: flex;
+    justify-content: space-evenly;
     padding-left: 100px;
     padding-right: 100px;
+    padding-top: 30px;
 }
 /* CSS for the primary food container title */
-.primaryFoodContainerTitle{
+.foodContainerTitle{
     color: white;
     font-family: montserrat-bold;
     text-align: center;
     width: 700px;
 }
 /* CSS for the primary food container sub title */
-.primaryFoodContainerSubTitle{
+.foodContainerSubTitle{
     color: grey;
     font-family: montserrat-light;
     text-align: center;
     width: 700px;
 }
 /* CSS for the primary food container */
-.primaryFoodContainers{
+.foodContainers{
     display: flex;
     width: 700px;
     flex-direction: row;
@@ -246,4 +255,155 @@ a {
 @font-face {
     font-family: montserrat-light;
     src: url(../montserrat/static/Montserrat-Light.ttf);
+}
+/* CSS FOR THE BUTTON CONTAINER */
+.submitButtonContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+/* CSS FOR THE BUTTON */
+.plateButton {
+    font-size: 30px;
+    font-family: kanit-light;
+    width: 500px;
+    height: 50px;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 58, 58);
+    border-radius: 25px;
+    border-width: 0px;
+    margin: 5px;
+}
+
+.plateButton:hover {
+    background-color: rgb(223, 0, 0);
+    color: white;
+}
+
+.plateButton:active {
+    color: white;
+    color: rgba(255, 255, 255, 0);
+}
+
+.plateButton:disabled {
+    /* background-color: rgb(223, 0, 0); */
+    color: white;
+}
+
+.addToCartAnimationClass {
+    animation: addToCartAnimation 1.25s;
+    -webkit-animation: addToCartAnimation 1.25s;
+}
+
+@keyframes addToCartAnimation {
+    0% {
+        
+        font-size: 0;
+        width: 500px;
+        background-color: rgb(223, 0, 0);
+    }
+
+    15% {
+        
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    25% {
+        
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    40% {
+        
+        width: 50px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    75% {
+        
+        width: 50px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    100% {
+       
+        font-size: 0;
+        width: 500px;
+        background-color: rgb(223, 0, 0);
+    }
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: none;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .1s ease-in-out .1s forwards, scale .1s ease-in-out .1s both;
+
+}
+
+.checkmark__check {
+    /* transform-origin: 50% 50%; */
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}
+
+.buttonDisabled{
+    cursor: not-allowed;
+    background-color: grey;
+    
+}
+.buttonDisabled:hover{
+    background-color: rgb(82, 82, 82);
 }

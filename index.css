@@ -21,7 +21,7 @@ body {
     background-color: rgb(51, 51, 51);
     background-image: url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 2000px;
 }
 * {
     margin: 0px;
@@ -86,7 +86,6 @@ a {
 
 /* page opening */
 #opening{
-    margin-left: 4%;
     margin-top: 16%;
     color:white;
     font-size: 30px;
@@ -95,7 +94,10 @@ a {
 .openingGradient{
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1));
     height: 350px;
-    margin-left: -7%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin-top: 15px;
 }
 #plusLOGO{
     width: 200px;
@@ -143,14 +145,13 @@ a {
 }
 
 #startOrder {
-    width: 25%;
+    width: 300px;
     height: auto;
     font-family: kanit-regular;
     color: white;
     background-color: red;
     border-radius: 15px;
     font-size: 30px;
-    margin-left: 10%;
     border: 0px solid black;
 }
 
@@ -233,4 +234,28 @@ a {
     align-items: center;
     font-family: kanit-italic;
     font-size: 48px;
+}
+.openingTitleAndButtonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+    /* padding-top: 100px; */
+    width: 700px;
+}
+
+.plusIntoContainer{
+    padding-left: 50px;
+}
+
+.openingText{
+    font-weight: bolder;
+    font-family: kanit-light;
+}
+
+.verticalLine{
+    width: 5px;
+    height: 100%;
+    background-color:rgb(255, 58, 58);
 }

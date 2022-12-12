@@ -21,7 +21,7 @@ body {
     background-color: rgb(51, 51, 51);
     background-image: url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
     background-repeat: no-repeat;
-    background-size: 2000px;
+    background-size: contain;
 }
 * {
     margin: 0px;
@@ -203,28 +203,115 @@ a {
 }
 
 /* giftcard box */
-#giftcards {
-    background-color: rgb(255, 255, 255);
+.giftCardContainer{
+    background-color: rgb(35, 35, 35);
     color: black;
-    margin-top: 0%;
-    margin-left: 5%;
     display: flex;
     font-size: 35px;
     justify-content: space-between;
-    border-radius: 0px 30px 30px 0px;
-    border: 0px solid black;
     height: 400px;
-    width: 90%;
+    width: 1200px;
     text-align: center;
+    
 }
-#giftTEXT{
+.giftCardImage{
+    width: 630px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 30% 0;
+}
+.verticalLine1 {
+    width: 14px;
+    height: 400px;
+    position: relative;
+    background-color: rgb(223, 0, 0);
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-42px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-42px);
+    -o-transform: skew(-15deg, 0deg) translateX(-42px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-42px); */
+    transform: skew(-15deg, 0deg) translateX(-44px);
+    z-index: 9;
+}
+.verticalLine2 {
+    width: 15px;
+    height: 400px;
+    position: relative;
+    background-color: rgb(255, 58, 58);
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-55px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-55px);
+    -o-transform: skew(-15deg, 0deg) translateX(-55px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-55px); */
+    transform: skew(-15deg, 0deg) translateX(-68px);
+    z-index: 9;
+}
+.verticalLine3{
+    width: 15px;
+    height: 400px;
+    position: relative;
+    background-color: rgb(223, 0, 0);
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-42px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-42px);
+    -o-transform: skew(-15deg, 0deg) translateX(-42px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-42px); */
+    transform: skew(-15deg, 0deg) translateX(68px);
+    z-index: 9;
+}
+.verticalLine4{
+    width: 15px;
+    height: 400px;
+    position: relative;
+    background-color: rgb(255, 58, 58);
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-55px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-55px);
+    -o-transform: skew(-15deg, 0deg) translateX(-55px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-55px); */
+    transform: skew(-15deg, 0deg) translateX(42px);
+    z-index: 9;
+}
+.transparentImagePart{
+    background-color: rgb(35, 35, 35);
+    height: 400px;
+    width: 10px;
+    position: relative;
+    right: 272px; 
+    /* border: black 1px solid; */
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-150px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-150px);
+    -o-transform: skew(-15deg, 0deg) translateX(-150px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-150px); */
+    transform: skew(-15deg, 0deg) translateX(-150px) scaleX(14);
+}
+.transparentImagePart2 {
+    background-color: rgb(51, 51, 51);
+    height: 400px;
+    width: 121px;
+    position: relative;
+    left: 202px;
+    /* border: black 1px solid; */
+    /* -webkit-transform: skew(-15deg, 0deg) translateX(-150px);
+    -moz-transform: skew(-15deg, 0deg) translateX(-150px);
+    -o-transform: skew(-15deg, 0deg) translateX(-150px);
+    -ms-transform: skew(-15deg, 0deg) translateX(-150px); */
+    transform: skew(-15deg, 0deg) translateX(-150px) scaleX(1.1);
+}
+
+.giftText{
     height: 100%;
     width: 500px;
     text-decoration: none;
     text-align: center;
     align-items: center;
-    font-family: kanit-regular;
-    font-size: 48px;
+    font-family: kanit-light;
+    font-size: 45px;
+    /* padding-left: 30px; */
+    z-index: 10;
+    color: white;
+    display: flex;
+}
+#giftTEXT{
+    position: relative;
+    width: 100%;
+    line-height: 1.35;
 }
 #giftALT{
     height: 100%;
@@ -251,11 +338,28 @@ a {
 
 .openingText{
     font-weight: bolder;
-    font-family: kanit-light;
+    font-family: montserrat-regular;
 }
 
-.verticalLine{
-    width: 5px;
-    height: 100%;
-    background-color:rgb(255, 58, 58);
+.mainContentContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 400px;
+}
+
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(./montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(./montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(./montserrat/static/Montserrat-Light.ttf);
 }

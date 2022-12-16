@@ -170,10 +170,16 @@ function closeCheckAnimation(buttonID3) {
 // Adds the food item to the cart
 const cartArray = [];
 function addToCart() {
-    console.log(document.getElementsByClassName('selected'))
-    cartArray.push(toString(document.getElementsByClassName('selected').innerHTML));
+    // console.log(document.getElementsByClassName("selected")[0].innerHTML)
+    const firstCartArray = document.getElementsByClassName("selected");
+    for (let i = 0; i < firstCartArray.length; i++){
+        cartArray.push(firstCartArray.item(i).innerHTML)
+        console.log(cartArray)
+    }
+    // console.log(Array.prototype.slice.call(document.getElementsByClassName('selected').innerHTML))
+    // cartArray.push(document.getElementsByClassName('selected').innerHTML);
 
-    console.log(cartArray)
-    localStorage.setItem("cartArray", JSON.stringify(cartArray))
-    console.log(localStorage.getItem("cartArray"))
+    // console.log(cartArray)
+    // localStorage.setItem("cartArray", JSON.stringify(cartArray))
+    // console.log(localStorage.getItem("cartArray"))
 }

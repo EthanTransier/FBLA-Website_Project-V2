@@ -6,10 +6,11 @@ var primaryDishesSelected = 0;
 function selectPrimaryFoodContainer(containerID) {
     var primaryFoodContainerSelected = document.getElementById(containerID);
 
-    document.querySelector("#" + containerID + " .foodTitle").classList.add('selected');
+    
     // If the food container has not played the starting animation, it will play it and then remove the ending animation class. If the food container has played the starting animation, it will remove the starting animation class and play the ending animation class.
     if (primaryFoodContainerSelected.classList.contains("selectAnimation") != true && primaryDishesSelected < 2) {
-
+        // Adds selected class to the container that is selected
+        document.querySelector("#" + containerID + " .foodTitle").classList.add('selected');
         // Adds and removes the animation class so the animation palys
         primaryFoodContainerSelected.classList.add("selectAnimation");
         primaryFoodContainerSelected.classList.remove("deselectAnimation");
@@ -34,6 +35,9 @@ function selectPrimaryFoodContainer(containerID) {
             document.getElementById("primarySubTitle").style.color = "grey";
         }
     } else if (primaryFoodContainerSelected.classList.contains("selectAnimation")) {
+        // Removes selected class to the container that is deselected
+        document.querySelector("#" + containerID + " .foodTitle").classList.remove('selected');
+
 
         document.querySelector("#" + containerID + " .foodTitle").classList.remove('selected');
 
@@ -74,6 +78,9 @@ function selectSecondaryFoodContainer(containerID) {
     var secondaryFoodContainerSelected = document.getElementById(containerID);
     // If the food container has not played the starting animation, it will play it and then remove the ending animation class. If the food container has played the starting animation, it will remove the starting animation class and play the ending animation class.
     if (secondaryFoodContainerSelected.classList.contains("selectAnimation") != true && secondaryDishesSelected < 1) {
+        // Adds selected class to the container that is selected
+        document.querySelector("#" + containerID + " .foodTitle").classList.add('selected');
+
 
         // Adds and removes the animation class so the animation palys
         secondaryFoodContainerSelected.classList.add("selectAnimation");
@@ -99,6 +106,9 @@ function selectSecondaryFoodContainer(containerID) {
             document.getElementById("secondarySubTitle").style.color = "grey";
         }
     } else if (secondaryFoodContainerSelected.classList.contains("selectAnimation")) {
+         // Removes selected class to the container that is deselected
+        document.querySelector("#" + containerID + " .foodTitle").classList.remove('selected');
+        
         secondaryFoodContainerSelected.classList.add("deselectAnimation");
         secondaryFoodContainerSelected.classList.remove("selectAnimation");
 
@@ -169,17 +179,23 @@ function closeCheckAnimation(buttonID3) {
 }
 // Adds the food item to the cart
 const cartArray = [];
+const secondaryCartArray = [];
 function addToCart() {
     // console.log(document.getElementsByClassName("selected")[0].innerHTML)
     const firstCartArray = document.getElementsByClassName("selected");
     for (let i = 0; i < firstCartArray.length; i++){
-        cartArray.push(firstCartArray.item(i).innerHTML)
-        console.log(cartArray)
+        secondaryCartArray.push(firstCartArray.item(i).innerHTML)
+        
+        if(secondaryCartArray.length == 3){
+            cartArray.push("Plate with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
+            console.log(cartArray)
+            secondaryCartArray.length = 0;
+        }
     }
     // console.log(Array.prototype.slice.call(document.getElementsByClassName('selected').innerHTML))
     // cartArray.push(document.getElementsByClassName('selected').innerHTML);
-
-    // console.log(cartArray)
-    // localStorage.setItem("cartArray", JSON.stringify(cartArray))
-    // console.log(localStorage.getItem("cartArray"))
+    console.log(cartArray[cartArray.length - 1])
+    localStorage.setItem(("cartArray" + localStorage.length), cartArray[cartArray.length]);
+    console.log(localStorage.getItem("cartArray2"));
 }
+// localStorage.clear();

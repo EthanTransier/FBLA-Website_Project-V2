@@ -170,7 +170,7 @@ function endAnimation(buttonID2) {
     // Adds the text back into the button
     document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
 
-    // window.location.href = "../startOrderPage/startOrderPage.html"
+    window.location.href = "../startOrderPage/startOrderPage.html"
 }
 
 function closeCheckAnimation(buttonID3) {
@@ -195,7 +195,9 @@ function addToCart() {
     // console.log(Array.prototype.slice.call(document.getElementsByClassName('selected').innerHTML))
     // cartArray.push(document.getElementsByClassName('selected').innerHTML);
     console.log(cartArray[cartArray.length - 1])
-    localStorage.setItem(("cartArray" + localStorage.length), cartArray[cartArray.length]);
-    console.log(localStorage.getItem("cartArray2"));
+    localStorage.setItem(("cartArray" + (localStorage.length + 1)), JSON.stringify(cartArray));
+    console.log(localStorage.getItem("cartArray" + localStorage.length));
 }
-// localStorage.clear();
+function clearLocalStorage() {
+    localStorage.clear();
+}

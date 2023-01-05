@@ -5,8 +5,17 @@ function cartUpdater() {
         document.getElementById("cartItemsID").innerHTML = "Your Cart is Empty";
     }else{
         for(let i = 1; i <= localStorage.length; i++){
-            cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'</div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>');;  
+            let price;
+        if(/Plate/g.test(localStorage.getItem("cartArray" + i))){
+            price = "$9.49";
+        }else if(/Platter/g.test(localStorage.getItem("cartArray" + i))){
+            price = "$10.99";
+        }else if(/Bowl/g.test(localStorage.getItem("cartArray" + i))){
+            price = "$7.99";
         }
+            cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
+        }
+        console.log(/Plate/g.test(cartHTMLList))
         document.getElementById("cartItemsID").innerHTML = cartHTMLList;
     }
 }
@@ -15,6 +24,7 @@ function removeCartItem(cartItemID){
     document.getElementById(cartItemID).remove();
     localStorage.removeItem(cartItemID);
     reorderCart();
+    resetCartList();
     cartUpdater();
 }
 function reorderCart(){
@@ -26,6 +36,11 @@ function reorderCart(){
             localStorage.setItem(('cartArray' + (i + 1)), currentItem)
         }
     }
+}
+
+function resetCartList(){
+    cartHTMLList = "";
+    document.getElementById("cartItemsID").innerHTML = cartHTMLList;
 }
 
 function clearLocalStorage() {

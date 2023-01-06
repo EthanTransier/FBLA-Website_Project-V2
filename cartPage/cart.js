@@ -26,6 +26,7 @@ function removeCartItem(cartItemID){
     reorderCart();
     resetCartList();
     cartUpdater();
+    cartNotification();
 }
 function reorderCart(){
     keys = Object.keys(localStorage);
@@ -45,4 +46,12 @@ function resetCartList(){
 
 function clearLocalStorage() {
     localStorage.clear();
+}
+
+function cartNotification() {
+    if(localStorage.length > 0){
+        document.getElementById("cartRedIconID").style.display = "block";
+    }else{
+        document.getElementById("cartRedIconID").style.display = "none";
+    }
 }

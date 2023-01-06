@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./plate.css">
 </head>
 
-<body>
+<body onload="cartNotification()">
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
@@ -41,6 +41,7 @@
         <!-- Container for the cart icon / link -->
         <div class="cartHeaderContainer">
             <a href="../cartPage/cart.html"><img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"></a>
+            <div class="cartRedIcon" id="cartRedIconID"></div>
         </div>
 
     </header>

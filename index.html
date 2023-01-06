@@ -7,19 +7,14 @@
     <title>Jī lóng Grill</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <!-- Header, which includes the Title, the Logo, and the links -->
+  <body onload="cartNotification()">
     <header>
       <!-- Container for the title of the Resteraunt -->
-      <a href="./index.html">
-      <img
-      src="./images/newLOGO.png"
-        alt="Logo for chinese resteraunt"
-        class="headerLogo"
-      />
-    </a>
+      <a href="./index.html" class="headerLogoContainer">
+        <img src="./images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
+      </a>
       <div class="titleContainer">
-        <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+        <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
       </div>
       <!-- Container for the links to the different pages of the website inside the header -->
       <div class="headerLinksContainer">
@@ -36,16 +31,17 @@
           <a href="./jobsPage/jobs.html">Join Us</a>
         </div>
       </div>
-      <!-- Container for the search bar for the header -->
-      <div class="searchBarContainer">
-        <input type="search" class="headerSearchBar" />
-      </div>
       <!-- Container for the button / link that takes you to the Ordering page -->
       <div class="orderLinkContainer">
-        <a href="./startOrderPage/startOrderPage.html" class="headerOrderLink"
-          >Order Now</a
-        >
+        <a href="./startOrderPage/startOrderPage.html" class="headerOrderLink">Order Now</a>
       </div>
+      <!-- Container for the cart icon / link -->
+      <div class="cartHeaderContainer">
+        <a href="./cartPage/cart.html"><img src="./images/cartIcon.png" alt="icon of a shopping cart"
+            class="cartIcon"></a>
+        <div class="cartRedIcon" id="cartRedIconID"></div>
+      </div>
+    
     </header>
 
     <!-- Opening to the site -->
@@ -106,6 +102,6 @@
       <br>
     </div>
     
-    
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -76,10 +76,29 @@ a {
     color: red;
 }
 
+.cartHeaderContainer {
+    position: relative;
+    width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+    height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+}
+
 .cartIcon {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: auto;
-    padding-top: 10px;
+    position: absolute;
+}
+
+.cartRedIcon {
+    width: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
+    height: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
+    background-color: white;
+    outline-color: rgb(255, 58, 58);
+    outline-width: 4px;
+    outline-style: solid;
+    outline-offset: -4px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
 }
 
 @font-face {

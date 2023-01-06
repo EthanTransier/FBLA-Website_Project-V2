@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./cart.css">
 </head>
-<body>
+<body onload="cartUpdater()">
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
@@ -39,13 +39,29 @@
         <!-- Container for the cart icon / link -->
         <div class="cartHeaderContainer">
             <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon">
+            <div class="cartRedIcon"></div>
         </div>
     
     </header>
     <!-- MAIN CONTENT AREA -->
     <div class="mainContentContainer">
-        
+        <div class="cartContainer" id="cartCheckoutID">
+            <div class="cartItemsContainer">
+                <div class="cartItemsTitle">Your Cart</div>
+                <div id="cartItemsID" class="cartItemsClass">
+
+                </div>
+                <div class="cartOrderMoreContainer">
+
+                </div>
+            </div>
+            <div class="verticalLine"></div>
+            <div class="cartCheckoutContainer">
+                
+            </div>
+        </div>
     </div>
+    <button onclick="clearLocalStorage()">Clear Local Storage</button>
     <script src="./cart.js"></script>
 </body>
 </html>

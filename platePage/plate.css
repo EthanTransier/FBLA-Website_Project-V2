@@ -92,6 +92,17 @@ a {
     src: url(../kanit/Kanit-Light.ttf);
 }
 
+.backArrowContainer{
+    display: flex;
+}
+
+.backArrowTitle{
+    font-family: montserrat-light;
+    color: red;
+    font-size: 17px;
+    font-weight: normal;
+}
+
 /* MAIN CONTENT CSS */
 .mainContentContainer {
     display: flex;

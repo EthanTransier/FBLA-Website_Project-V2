@@ -76,10 +76,29 @@ a {
     color: red;
 }
 
+.cartHeaderContainer{
+    position: relative;
+    width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+    height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+}
+
 .cartIcon {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: auto;
-    padding-top: 10px;
+    position: absolute;
+}
+
+.cartRedIcon{
+    width: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
+    height: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
+    background-color:white;
+    outline-color: rgb(255, 58, 58);
+    outline-width: 4px;
+    outline-style: solid;
+    outline-offset: -4px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
 }
 
 @font-face {
@@ -95,4 +114,171 @@ a {
     .headerTitle {
         display: none;
     }
+}
+
+.mainContentContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.cartContainer{
+    background-color: #f9f9f9;
+    width: 1200px;
+    max-width: 1200px;
+    min-width: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 95px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cartCheckoutTitle{
+    font-family: montserrat-regular;
+    font-size: 30px;
+    text-align: center;
+}
+
+.verticalLine{
+    width: 5px;
+    background-color: rgb(223, 0, 0);
+    height: 90%;
+}
+
+.cartItemsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    height: 600px;
+    max-height: fit-content;
+    min-height: 600px;
+    font-size: 23px;
+    font-family: montserrat-regular;
+    width: 600px;
+    max-width: 600px;
+    min-width: 100px;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cartItems{
+    box-shadow: 0 2px 4px 0 rgb(90 50 37 / 18%);
+    background-color: white;
+    height: 75px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 1.6;
+    font-weight: 500;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartItemText{
+    width: 475px;
+    max-width: 475px;
+    min-width: 25px;
+}
+
+.cartItemsClass{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.priceText{
+    color: rgb(212, 0, 0);
+    font-weight: 600;
+}
+
+.cartItemsTitle{
+    font-size: 32px;
+    font-family: montserrat-bold;
+}
+
+
+.cartCheckoutContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    font-size: 18px;
+    font-family: montserrat-regular;
+    width: 600px;
+    max-width: 600px;
+    min-width: 100px;
+}
+
+.removeCartItem{
+    width: 75px;
+    height: 75px;
+    background-color: rgb(255, 58, 58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removeCartItemSign{
+    background-color: rgb(255, 156, 156);
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+}
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+    .verticalLine {
+        display: none;
+    }
+    .cartContainer{
+        flex-direction: column;
+    }
+    .cartItemsContainer{
+        height:fit-content;
+        min-height: 300px;
+        width: clamp(13.75rem, -4.167rem + 102.381vw, 40.625rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cartItems{
+        width: clamp(13.75rem, -0.771rem + 82.979vw, 38.125rem);
+        font-size: clamp(0.625rem, -0.031rem + 3.75vw, 1.188rem);
+        height: clamp(1.739rem, -0.018rem + 10.038vw, 4.688rem);
+        padding-left: 0px;
+    }
+    .cartItemsClass{
+        width: clamp(13.75rem, -0.771rem + 82.979vw, 38.125rem);
+    }
+    .cartCheckoutContainer{
+        width: clamp(13.75rem, -4.167rem + 102.381vw, 40.625rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .removeCartItem{
+        height: clamp(1.739rem, -0.018rem + 10.038vw, 4.688rem);
+        width: clamp(1.739rem, -0.018rem + 10.038vw, 4.688rem);
+    }
+}
+
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(../montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(../montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(../montserrat/static/Montserrat-Light.ttf);
 }

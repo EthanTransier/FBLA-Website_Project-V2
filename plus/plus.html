@@ -5,62 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="plus.css">
+    <link rel="stylesheet" href="../header-footer.css">
     <title>Document</title>
 </head>
 <body>
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
-        <!-- Container for the title of the Resteraunt -->
-        <a href="../index.html">
-            <img
-            src="../images/newLOGO.png"
-              alt="Logo for chinese resteraunt"
-              class="headerLogo"
-            />
-          </a>
-        <div class="titleContainer">
-          <h1><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
-        </div>
-        <!-- Container for the links to the different pages of the website inside the header -->
-        <div class="headerLinksContainer">
+      <!-- Container for the title of the Resteraunt -->
+      <a href="../index.html" class="headerLogoContainer">
+          <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
+      </a>
+      <div class="titleContainer">
+          <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+      </div>
+      <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerLinksContainer">
           <!-- Container for the link that goes to the home page -->
           <div class="homeLinkContainer">
-            <a href="../index.html">Home</a>
+              <a href="../index.html">Home</a>
           </div>
           <!-- Container for the link that goes to the menu page -->
           <div class="menuLinkContainer">
-            <a href="../SubscritionPage/subscription.html">Subscrition</a>
+              <a href="../plus/plus.html">Subscrition</a>
           </div>
           <!-- Container for the link that goes to the Hiring page -->
           <div class="jobs.html">
-            <a href="../jobsPage/jobs.html">Join Us</a>
+              <a href="../jobsPage/jobs.html">Join Us</a>
           </div>
-        </div>
-        <!-- Container for the search bar for the header -->
-        <div class="searchBarContainer">
-          <input type="search" class="headerSearchBar" />
-        </div>
-        <!-- Container for the button / link that takes you to the Ordering page -->
-        <div class="orderLinkContainer">
-          <a href="../orderPage/order.html" class="headerOrderLink">Order Now</a>
-        </div>
-      </header>
+      </div>
+      <!-- Container for the button / link that takes you to the Ordering page -->
+      <div class="orderLinkContainer">
+          <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink">Order Now</a>
+      </div>
+      <!-- Container for the cart icon / link -->
+      <div class="cartHeaderContainer">
+        <a href="../cartPage/cart.html"><img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"></a>
+    </div>
   
-      <h2>Would you like to recive rewards like free drinks and free meals? If so, then Jī lóng Plus is for you! </h2>
+  </header>
 
+  <br>
+
+        <!-- title -->
+      <h1 style="color: white;text-align: center;">Would you like to recive rewards like free drinks and<br> free meals? If so, then Jī lóng Plus is for you! </h1>
+
+      <br>
+
+      <!-- plus info -->
+    <div class="signUp">
+        <h4>Description</h4>
       <p>Jī lóng Plus is a subsciption based reward program. With a monthly cost of $6.99 and a yearly cost of $59.99. With Jī lóng Plus you will be able to expericence the food in a greater way knowing that you are saving money on whatever you end up getting. To add to the benefits, we donate 5% of the money made from Jī lóng Plus to the American Cancer Society to help fund the reaserch for cancer patients.</p><br>
 
-      <p>Some of rewards:</p>
+      <h4>Some of rewards:</h4>
       <ul>
-        <li>-A free drink with any purchase over $20</li>
-        <li>-A free medium food itme with a drink on your birthday</li>
-        <li>-Free delivery</li>
-        <li>-Updates on the newest meals</li>
-        <li>-Meal points on every order</li>
-        <li>-Allowing you to buy things with meal points</li>
-        <li>-Multiple seasonal deals</li>
+        <p class="rewards">-A free drink with any purchase over $20</p>
+        <p class="rewards">-A free medium food itme with a drink on your birthday</p>
+        <p class="rewards">-Free delivery</p>
+        <p class="rewards">-Updates on the newest meals</p>
+        <p class="rewards">-Meal points on every order</p>
+        <p class="rewards">-Allowing you to buy things with meal points</p>
+        <p class="rewards">-Multiple seasonal deals</p>
       </ul>
 
-     <button><a href="../SubscritionPage/subscription.html">Sign up</a></button>
+      <br>
+
+      
+     <div class="flexCenter"><button class="signBTN"><strong><a href="../SubscritionPage/subscription.html">Sign up</a></strong></button></div>
+    </div>
+
 </body>
 </html>

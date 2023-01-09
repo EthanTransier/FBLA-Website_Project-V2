@@ -213,6 +213,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    cursor: pointer;
 }
 
 /* CSS for the food pictures */

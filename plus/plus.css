@@ -26,7 +26,7 @@ body {
 }
 
 .signUp{
-    border: 5px solid black;
+    border: 0px solid black;
     margin: 0% 20% 5% 20%;
     font-family: kanit-regular;
     font-size: 20px;
@@ -49,13 +49,18 @@ body {
     width: 700px;
     height: 100px;
     background-color: red;
-    color:black;
+    color:white;
     font-size: 30px;
     border-radius: 20px;
     padding-left: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 0px solid red;
+    font-family: kanit-regular;
+}
+.signBTN:hover {
+    cursor: pointer;
 }
 
 h4{

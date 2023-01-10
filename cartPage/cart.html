@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jī lóng | Cart</title>
     <link rel="stylesheet" href="./cart.css">
+    <link rel="shortcut icon" href="../images/newLOGO.png" type="image/x-icon">
 </head>
 <body onload="cartUpdater(); cartNotification()">
     <!-- Header, which includes the Title, the Logo, and the links -->
@@ -58,6 +59,11 @@
             <div class="verticalLine"></div>
             <div class="cartCheckoutContainer">
                 <div class="cartCheckoutTitle">Checkout</div>
+                <div class="cartDiningButtonsContainer">
+                    <button class="dineInButton cartDinerButton" id="dineIn" onclick="diningSelected('dineIn')"><p class="cartDinerTitle">Dine-In</p></button>
+                    <button class="takeOutButton cartDinerButton" id="takeOut" onclick="diningSelected('takeOut')"><p class="cartDinerTitle">Take Out</p></button>
+                    <button class="deliveryButton cartDinerButton" id="delivery" onclick="diningSelected('delivery')"><p class="cartDinerTitle">Delivery</p></button>
+                </div>
             </div>
         </div>
     </div>

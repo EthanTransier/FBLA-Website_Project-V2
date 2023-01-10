@@ -58,6 +58,8 @@ h4{
     height: 100px;
     background-color: red;
     color:black;
+    border: 0px solid black;
+    border-radius: 20px;
 }
 
 #buyBTN:hover{

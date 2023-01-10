@@ -3,14 +3,17 @@
     font-family: kanit-italic;
     src: url("./kanit/Kanit-Italic.ttf");
 }
+
 @font-face {
     font-family: kanit-regular;
     src: url(./kanit/Kanit-Regular.ttf);
 }
+
 @font-face {
     font-family: kanit-light;
     src: url(./kanit/Kanit-Light.ttf);
 }
+
 @font-face {
     font-family: kanit-bold;
     src: url("./kanit/Kanit-Bold.ttf");
@@ -23,10 +26,12 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 * {
     margin: 0px;
     padding: 0px;
 }
+
 header {
     display: flex;
     justify-content: space-evenly;
@@ -63,6 +68,7 @@ a {
 
 .headerLogo {
     position: relative;
+<<<<<<< Updated upstream
     width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
     height: auto;
 }
@@ -74,6 +80,12 @@ a {
 }
 
 
+=======
+    height: 100px;
+    width: auto;
+}
+
+>>>>>>> Stashed changes
 .headerOrderLink {
     background-color: rgb(255, 58, 58);
     border-radius: 20px;
@@ -142,34 +154,38 @@ a {
 }
 
 /* page opening */
-#opening{
+#opening {
     margin-top: 16%;
-    color:white;
+    color: white;
     font-size: 30px;
     font-family: kanit-light;
 }
-.openingGradient{
+
+.openingGradient {
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1));
     height: 350px;
     width: 100%;
     position: absolute;
     z-index: -1;
-    margin-top: 15px;
+    margin-top: -75px;
 }
-#plusLOGO{
+
+#plusLOGO {
     width: 200px;
     height: auto;
 }
-#plusIntroP{
+
+#plusIntroP {
     padding-left: 20px;
 }
-.redText{
-    color:rgb(223, 0, 0);
+
+.redText {
+    color: rgb(223, 0, 0);
     font-weight: bold;
 }
 
 /* plus box */
-#plus{
+#plus {
     background-color: rgb(255, 255, 255);
     color: black;
     margin-top: 0%;
@@ -183,15 +199,18 @@ a {
     width: 90%;
     text-align: center;
 }
-#plusIMG{
+
+#plusIMG {
     height: 100%;
     width: auto;
     margin-right: 0px;
 }
-#plus a:hover{
+
+#plus a:hover {
     text-decoration: none;
 }
-#plusTEXT{
+
+#plusTEXT {
     display: flex;
     height: 100%;
     width: 500px;
@@ -210,26 +229,29 @@ a {
     border-radius: 15px;
     font-size: 30px;
     border: 0px solid black;
+    margin-left: -350px;
+
 }
 
-#startOrder:hover{
+#startOrder:hover {
     cursor: pointer;
 }
 
-#plusINTRO{
+#plusINTRO {
     display: flex;
     align-items: center;
     font-size: 45px;
     color: white;
-    padding-left: 100px;
+    padding-left: 20px;
+    margin-top: -50px;
 }
 
-#plusINTRO a:hover{
+#plusINTRO a:hover {
     text-decoration: none;
 }
 
 /* about box */
-#about{
+#about {
     background-color: rgb(255, 255, 255);
     color: black;
     margin-top: 0%;
@@ -243,7 +265,8 @@ a {
     width: 90%;
     text-align: center;
 }
-#aboutTEXT{
+
+#aboutTEXT {
     display: flex;
     height: 100%;
     width: 500px;
@@ -252,15 +275,16 @@ a {
     align-items: center;
     font-family: kanit-regular;
 }
+
 #aboutTITLE {
     font-family: kanit-regular;
     font-weight: bold;
     font-size: 45px;
-    color:red;
+    color: red;
 }
 
 /* giftcard box */
-.giftCardContainer{
+.giftCardContainer {
     background-color: rgb(35, 35, 35);
     color: black;
     display: flex;
@@ -269,14 +293,16 @@ a {
     height: 400px;
     width: 1200px;
     text-align: center;
-    
+
 }
-.giftCardImage{
+
+.giftCardImage {
     width: 630px;
     height: 400px;
     object-fit: cover;
     object-position: 30% 0;
 }
+
 .verticalLine1 {
     width: 14px;
     height: 400px;
@@ -289,6 +315,7 @@ a {
     transform: skew(-15deg, 0deg) translateX(-44px);
     z-index: 9;
 }
+
 .verticalLine2 {
     width: 15px;
     height: 400px;
@@ -301,7 +328,8 @@ a {
     transform: skew(-15deg, 0deg) translateX(-68px);
     z-index: 9;
 }
-.verticalLine3{
+
+.verticalLine3 {
     width: 15px;
     height: 400px;
     position: relative;
@@ -313,7 +341,8 @@ a {
     transform: skew(-15deg, 0deg) translateX(68px);
     z-index: 9;
 }
-.verticalLine4{
+
+.verticalLine4 {
     width: 15px;
     height: 400px;
     position: relative;
@@ -325,12 +354,13 @@ a {
     transform: skew(-15deg, 0deg) translateX(42px);
     z-index: 9;
 }
-.transparentImagePart{
+
+.transparentImagePart {
     background-color: rgb(35, 35, 35);
     height: 400px;
     width: 10px;
     position: relative;
-    right: 272px; 
+    right: 272px;
     /* border: black 1px solid; */
     /* -webkit-transform: skew(-15deg, 0deg) translateX(-150px);
     -moz-transform: skew(-15deg, 0deg) translateX(-150px);
@@ -338,6 +368,7 @@ a {
     -ms-transform: skew(-15deg, 0deg) translateX(-150px); */
     transform: skew(-15deg, 0deg) translateX(-150px) scaleX(14);
 }
+
 .transparentImagePart2 {
     background-color: rgb(51, 51, 51);
     height: 400px;
@@ -352,7 +383,7 @@ a {
     transform: skew(-15deg, 0deg) translateX(-150px) scaleX(1.1);
 }
 
-.giftText{
+.giftText {
     height: 100%;
     width: 500px;
     text-decoration: none;
@@ -365,12 +396,14 @@ a {
     color: white;
     display: flex;
 }
-#giftTEXT{
+
+#giftTEXT {
     position: relative;
     width: 100%;
     line-height: 1.35;
 }
-#giftALT{
+
+#giftALT {
     height: 100%;
     width: 480px;
     text-decoration: none;
@@ -379,7 +412,8 @@ a {
     font-family: kanit-italic;
     font-size: 48px;
 }
-.openingTitleAndButtonContainer{
+
+.openingTitleAndButtonContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -387,22 +421,23 @@ a {
     padding-left: 50px;
     /* padding-top: 100px; */
     width: 700px;
+    gap: 30px;
 }
 
-.plusIntoContainer{
+.plusIntoContainer {
     padding-left: 50px;
 }
 
-.openingText{
+.openingText {
     font-weight: bolder;
     font-family: montserrat-regular;
 }
 
-.mainContentContainer{
+.mainContentContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 400px;
+    margin-top: 105px;
 }
 
 /* Fonts Area */

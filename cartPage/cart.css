@@ -201,6 +201,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .removeCartItemSign{
@@ -212,6 +213,7 @@ a {
 .cartItemsTitle{
     font-size: 32px;
     font-family: montserrat-bold;
+    cursor: pointer;
 }
 
 .cartOrderMoreImage{
@@ -251,24 +253,61 @@ a {
 }
 
 .cartDinerButton{
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     font-family: montserrat-bold;
-    
+    cursor: pointer;
+    background-color: rgb(15, 196, 194);
+    filter: invert(1);
+    background-repeat: no-repeat;
 }
 .cartDinerTitle{
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     filter: invert(1);
 }
 .deliveryButton{
     background-image: url(../images/car.png);
     background-position: 30% 160%;
-    background-repeat: no-repeat;
-    background-size: 80px 80px;
-    background-color: rgba(15, 196, 194, 255);
-    filter: invert(1)
+    background-size: 100px 100px;
+}
+.takeOutButton{
+    background-image: url(../images/takeout.svg);
+    background-position: 50% 160%;
+    background-size: 95px 95px;
+}
+.dineInButton{
+    background-image: url(../images/plateAndUtensils.svg);
+    background-position: 50% 190%;
+    background-size: 100px 100px;
+}
+/* Dining Choosing Buttons On Hover, which makes their color darker when hovered on */
+.deliveryButton:hover {
+    background-color: rgb(52, 255, 252);
+}
+
+.takeOutButton:hover {
+    background-color: rgb(52, 255, 252);
+}
+
+.dineInButton:hover {
+    background-color: rgb(52, 255, 252);
+}
+/* Determins what the buttons look like when one has been selected */
+.selected{
+    background-color: #853ebd;
+}
+.deselected{
+    background-color: grey;
+}
+
+.selected:hover {
+    background-color: #853ebd;
+}
+
+.deselected:hover {
+    background-color: #853ebd;
 }
 
 /* Media Queries */

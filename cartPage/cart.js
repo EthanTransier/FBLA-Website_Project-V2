@@ -55,3 +55,12 @@ function cartNotification() {
         document.getElementById("cartRedIconID").style.display = "none";
     }
 }
+
+function diningSelected(buttonID) {
+    let buttons = document.getElementsByClassName('cartDinerButton')
+    for(let i = 0; i < buttons.length; i++){
+        buttons[i].classList.add('deselected')
+    }
+    document.getElementById(buttonID).classList.remove('deselected')
+    document.getElementById(buttonID).classList.add('selected') 
+}

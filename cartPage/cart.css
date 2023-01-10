@@ -231,7 +231,9 @@ a {
 .cartCheckoutContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 600px;
     font-size: 18px;
     font-family: montserrat-regular;
@@ -248,6 +250,26 @@ a {
     font-family: montserrat-bold;
 }
 
+.cartDinerButton{
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    font-family: montserrat-bold;
+    
+}
+.cartDinerTitle{
+    margin-bottom: 50px;
+    filter: invert(1);
+}
+.deliveryButton{
+    background-image: url(../images/car.png);
+    background-position: 30% 160%;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-color: rgba(15, 196, 194, 255);
+    filter: invert(1)
+}
 
 /* Media Queries */
 @media only screen and (max-width: 1000px) {

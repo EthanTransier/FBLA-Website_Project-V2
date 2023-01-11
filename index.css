@@ -22,9 +22,6 @@
 /* general changers */
 body {
     background-color: rgb(51, 51, 51);
-    background-image: url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 * {
@@ -148,20 +145,26 @@ a {
 
 /* page opening */
 #opening {
-    margin-top: 16%;
     color: white;
     font-size: 30px;
     font-family: kanit-light;
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1)), url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: auto;
 }
 
-.openingGradient {
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1));
+/* .openingGradient {
+    background-image: ;
+    background-size: 100%;
     height: 350px;
     width: 100%;
     position: absolute;
     z-index: -1;
     margin-top: -75px;
-}
+} */
 
 #plusLOGO {
     width: 200px;
@@ -222,7 +225,6 @@ a {
     border-radius: 15px;
     font-size: 30px;
     border: 0px solid black;
-    margin-left: -350px;
 
 }
 
@@ -233,10 +235,11 @@ a {
 #plusINTRO {
     display: flex;
     align-items: center;
-    font-size: 45px;
+    font-size: clamp(1.563rem, 0.938rem + 2vw, 2.813rem);
     color: white;
     padding-left: 20px;
     margin-top: -50px;
+    padding-bottom: 200px;
 }
 
 #plusINTRO a:hover {
@@ -410,10 +413,10 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 50px;
     /* padding-top: 100px; */
-    width: 700px;
+    /* width: 700px; */
     gap: 30px;
 }
 
@@ -424,6 +427,8 @@ a {
 .openingText {
     font-weight: bolder;
     font-family: montserrat-regular;
+    font-size: clamp(2.188rem, 1.719rem + 1.5vw, 3.125rem);
+    margin-top: 350px;
 }
 
 .mainContentContainer {

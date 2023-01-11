@@ -68,7 +68,6 @@ a {
 
 .headerLogo {
     position: relative;
-<<<<<<< Updated upstream
     width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
     height: auto;
 }
@@ -80,12 +79,6 @@ a {
 }
 
 
-=======
-    height: 100px;
-    width: auto;
-}
-
->>>>>>> Stashed changes
 .headerOrderLink {
     background-color: rgb(255, 58, 58);
     border-radius: 20px;

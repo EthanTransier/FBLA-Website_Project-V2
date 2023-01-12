@@ -149,9 +149,10 @@ a {
     font-size: 30px;
     font-family: kanit-light;
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1)), url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
+    filter: blur(10px);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     width: 100%;
     height: auto;
 }
@@ -413,11 +414,11 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    align-content: flex-start;
     padding-left: 50px;
-    /* padding-top: 100px; */
-    /* width: 700px; */
     gap: 30px;
+    filter: blur(0px)
 }
 
 .plusIntoContainer {
@@ -428,7 +429,7 @@ a {
     font-weight: bolder;
     font-family: montserrat-regular;
     font-size: clamp(2.188rem, 1.719rem + 1.5vw, 3.125rem);
-    margin-top: 350px;
+    margin-top: 250px;
 }
 
 .mainContentContainer {
@@ -452,4 +453,12 @@ a {
 @font-face {
     font-family: montserrat-light;
     src: url(./montserrat/static/Montserrat-Light.ttf);
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+    .openingTitleAndButtonContainer{
+        align-content: center;
+        padding-left: 0px;
+    }
 }

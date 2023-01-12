@@ -29,98 +29,6 @@ body {
     padding: 0px;
 }
 
-header {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: kanit-regular;
-    font-size: clamp(0.625rem, 0.474rem + 1.21vw, 1.563rem);
-    color: black;
-    z-index: 30;
-    background-color: white;
-    border-bottom-width: 3.5px;
-    border-bottom-color: rgb(223, 0, 0);
-    border-bottom-style: solid;
-}
-
-a {
-    text-decoration: none;
-    color: black
-}
-
-.headerTitle {
-    font-size: clamp(1.25rem, 0.0781rem + 3.75vw, 3.125rem);
-}
-
-.homeLink {
-    text-decoration: underline;
-    text-decoration-color: black;
-}
-
-.headerLinksContainer {
-    display: flex;
-    gap: clamp(0.313rem, -0.186rem + 1.596vw, 1.25rem);
-    font-family: kanit-light;
-}
-
-.headerLogo {
-    position: relative;
-    width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
-    height: auto;
-}
-
-.headerLogoContainer {
-    width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
-    height: auto;
-
-}
-
-
-.headerOrderLink {
-    background-color: rgb(255, 58, 58);
-    border-radius: 20px;
-    border-color: rgb(255, 58, 58);
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: kanit-light;
-    color: white;
-}
-
-.headerOrderLink:hover {
-    background-color: rgb(223, 0, 0);
-    border-color: rgb(223, 0, 0);
-    border-width: 7px;
-    text-decoration: none;
-}
-
-.dragonSpanTitle {
-    color: red;
-}
-
-.cartHeaderContainer {
-    position: relative;
-    width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
-    height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
-}
-
-.cartIcon {
-    width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
-    height: auto;
-    position: absolute;
-}
-
-.cartRedIcon {
-    width: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
-    height: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
-    background-color: white;
-    outline-color: rgb(255, 58, 58);
-    outline-width: 4px;
-    outline-style: solid;
-    outline-offset: -4px;
-    border-radius: 50%;
-    position: absolute;
-    margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
-}
 
 @font-face {
     font-family: kanit-regular;
@@ -155,16 +63,6 @@ a {
     width: 100%;
     height: auto;
 }
-
-/* .openingGradient {
-    background-image: ;
-    background-size: 100%;
-    height: 350px;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    margin-top: -75px;
-} */
 
 #plusLOGO {
     width: 200px;
@@ -281,11 +179,9 @@ a {
 
 /* giftcard box */
 .giftCardContainer {
-    background-color: rgb(35, 35, 35);
     color: black;
     display: flex;
     font-size: 35px;
-    justify-content: space-between;
     height: 400px;
     width: 1200px;
     text-align: center;
@@ -304,11 +200,6 @@ a {
     height: 400px;
     position: relative;
     background-color: rgb(223, 0, 0);
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-42px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-42px);
-    -o-transform: skew(-15deg, 0deg) translateX(-42px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-42px); */
-    transform: skew(-15deg, 0deg) translateX(-44px);
     z-index: 9;
 }
 
@@ -317,83 +208,27 @@ a {
     height: 400px;
     position: relative;
     background-color: rgb(255, 58, 58);
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-55px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-55px);
-    -o-transform: skew(-15deg, 0deg) translateX(-55px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-55px); */
-    transform: skew(-15deg, 0deg) translateX(-68px);
     z-index: 9;
 }
 
-.verticalLine3 {
-    width: 15px;
-    height: 400px;
-    position: relative;
-    background-color: rgb(223, 0, 0);
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-42px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-42px);
-    -o-transform: skew(-15deg, 0deg) translateX(-42px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-42px); */
-    transform: skew(-15deg, 0deg) translateX(68px);
-    z-index: 9;
-}
 
-.verticalLine4 {
-    width: 15px;
-    height: 400px;
-    position: relative;
-    background-color: rgb(255, 58, 58);
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-55px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-55px);
-    -o-transform: skew(-15deg, 0deg) translateX(-55px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-55px); */
-    transform: skew(-15deg, 0deg) translateX(42px);
-    z-index: 9;
-}
 
-.transparentImagePart {
-    background-color: rgb(35, 35, 35);
-    height: 400px;
-    width: 10px;
-    position: relative;
-    right: 272px;
-    /* border: black 1px solid; */
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-150px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-150px);
-    -o-transform: skew(-15deg, 0deg) translateX(-150px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-150px); */
-    transform: skew(-15deg, 0deg) translateX(-150px) scaleX(14);
-}
-
-.transparentImagePart2 {
-    background-color: rgb(51, 51, 51);
-    height: 400px;
-    width: 121px;
-    position: relative;
-    left: 202px;
-    /* border: black 1px solid; */
-    /* -webkit-transform: skew(-15deg, 0deg) translateX(-150px);
-    -moz-transform: skew(-15deg, 0deg) translateX(-150px);
-    -o-transform: skew(-15deg, 0deg) translateX(-150px);
-    -ms-transform: skew(-15deg, 0deg) translateX(-150px); */
-    transform: skew(-15deg, 0deg) translateX(-150px) scaleX(1.1);
-}
-
-.giftText {
+.giftTextContainer {
     height: 100%;
     width: 500px;
     text-decoration: none;
     text-align: center;
     align-items: center;
-    font-family: kanit-light;
-    font-size: 45px;
+    font-family: montserrat-bold;
+    font-size: 44px;
     /* padding-left: 30px; */
     z-index: 10;
     color: white;
     display: flex;
+    padding-left: 25px;
 }
 
-#giftTEXT {
+.giftTEXT {
     position: relative;
     width: 100%;
     line-height: 1.35;
@@ -435,7 +270,7 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 105px;
+    margin-top: 10px;
 }
 
 /* Fonts Area */

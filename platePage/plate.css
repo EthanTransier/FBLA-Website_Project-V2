@@ -21,12 +21,14 @@ body {
 
 .backArrowContainer{
     display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .backArrowTitle{
     font-family: montserrat-light;
-    color: red;
-    font-size: 17px;
+    color: rgb(255, 58, 58);
+    font-size: 25px;
     font-weight: normal;
 }
 
@@ -368,7 +370,6 @@ body {
 }
 
 @keyframes scale {
-
     0%,
     100% {
         transform: none;

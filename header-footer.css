@@ -45,7 +45,7 @@ a {
 }
 
 
-.headerOrderLink {
+/* .headerOrderLink {
     background-color: rgb(255, 58, 58);
     border-radius: 20px;
     border-color: rgb(255, 58, 58);
@@ -60,7 +60,7 @@ a {
     border-color: rgb(223, 0, 0);
     border-width: 7px;
     text-decoration: none;
-}
+} */
 
 .dragonSpanTitle {
     color: red;
@@ -70,4 +70,10 @@ a {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: auto;
     padding-top: 10px;
+}
+
+.underlineText{
+    text-decoration: underline;
+    text-decoration-color: rgb(223, 0, 0);
+    text-underline-offset: 6px;
 }

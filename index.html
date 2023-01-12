@@ -47,29 +47,27 @@
     </header>
 
     <!-- Opening to the site -->
-    <div id="opening">
+    <div class="opening">
       <div class="openingTitleAndButtonContainer">
+        <!-- Title -->
         <h1 class="openingText">Welcome to Jī lóng Grill</h1>
-        <a href="./startOrderPage/startOrderPage.html">
-          <button id="startOrder">Order Now</button>
+        <!-- Button for the order page -->
+        <button class="startOrder" onclick="window.location.href='./startOrderPage/startOrderPage.html'">Order Now</button>
+        <!-- Subscription container -->
+        <div class="plusIntroContainer">
+          <a href="./SubscritionPage/subscription.html">
+            <div class="plusINTRO">
+              <img class="plusLOGO" alt="Jī lóng Plus logo" src="./images/plusLOGO.png">
+              <p class="plusIntroP">Join <span class="redText">Jī lóng Plus</span> Now <br>For Rewards and More!</p>
+            </div>
         </a>
       </div>
-      
-      <br>
-      <br>
-      <br>
-      <div class="plusIntoContainer">
-        <a href="./SubscritionPage/subscription.html">
-          <div id="plusINTRO">
-            <img id="plusLOGO" alt="Jī lóng Plus logo" src="./images/plusLOGO.png">
-            <p id="plusIntroP">Join <span class="redText">Jī lóng Plus</span> Now <br>For Rewards and More!</p>
-          </div>
-      </a>
-      </div>
     </div>
+    </div>  
+    
     <div class="mainContentContainer">
       <!-- gift cards -->
-        <div id="giftcards" class="giftCardContainer">
+        <div class="giftCardContainer">
           <img alt="Seasonal Gift Cards" src="./images/cards.png" class="giftCardImage">
           <div class="verticalLine1"></div>
           <div class="verticalLine2"></div>
@@ -77,24 +75,20 @@
             <p class="giftTEXT">Celebrate The Holiday Season And Get The Best Gift For Your Loved Ones With The All New Jī lóng Gift Card.
           </div>
         </div>
-        <br>
-        <br>
         <!-- Jī lóng Plus -->
        <a href="./plus/plus.html">
         <div id="plus">
           <p id="plusTEXT">Interested in free rewards? Try Jī lóng Plus! Click here to find out more!</p>
           <img alt="Jī lóng Plus logo" src="./images/plusLogoIMG.png" id="plusIMG">
       </div>
-      </a><br><br>
+      </a>
 
       <!-- about us area  -->
-      <h1 class="center" id="aboutTITLE">About Us</h1><br>
+      <h1 id="aboutTITLE">About Us</h1><br>
       <div id="about">
         <img alt="Crab Ragoons" src="./images/Crab-Rangoon-Wide.png">
         <p id="aboutTEXT">Jī lóng Grill provides traditional Chinese food with an American twist. Mix and Match Our Bowls, Plates and Platters for a Memorable Family Dinner at an Affordable Price. </p>
       </div>
-      <br>
-      <br> 
     </div>
     
     <script src="./index.js"></script>

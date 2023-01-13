@@ -19,6 +19,16 @@
         <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
       </div>
       <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerDropdown">
+        <div class="homeLinkContainer">
+          <a onclick="openDropdown()" class="underlineText">Home</a>
+        </div>
+        <div class="dropdownContent" id="dropdownID">
+          <a href="./startOrderPage/startOrderPage.html" class="headerOrderLink">Order</a>
+          <a href="./SubscritionPage/subscription.html">Jī lóng+</a>
+          <a href="./jobsPage/jobs.html">Join Us</a>
+        </div>  
+      </div>
       <div class="headerLinksContainer">
         <!-- Container for the link that goes to the home page -->
         <div class="homeLinkContainer">
@@ -92,5 +102,6 @@
     </div>
     
     <script src="./index.js"></script>
+    <script src="./header-footer.js"></script>
   </body>
 </html>

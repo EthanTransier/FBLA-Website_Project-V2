@@ -30,6 +30,7 @@ a {
     display: flex;
     gap: clamp(0.313rem, -0.186rem + 1.596vw, 1.25rem);
     font-family: kanit-light;
+    display: none;
 }
 
 .headerLogo {
@@ -82,5 +83,23 @@ a {
 @media only screen and (max-width: 780px) {
     .headerTitle {
         display: none;
+    }
+}
+
+@media only screen and (orientation: portrait){
+
+}
+
+.dropdownOpenAnimation{
+    animation: dropdownOpen .25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dropdownOpen {
+    0%{
+
+    }
+    100%{
+        
     }
 }

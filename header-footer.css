@@ -30,7 +30,6 @@ a {
     display: flex;
     gap: clamp(0.313rem, -0.186rem + 1.596vw, 1.25rem);
     font-family: kanit-light;
-    display: none;
 }
 
 .headerLogo {
@@ -83,12 +82,15 @@ a {
 @media only screen and (max-width: 780px) {
     .headerTitle {
         display: none;
+        position: absolute;
     }
 }
 
 @media only screen and (max-width: 500px){
     .headerDropdown{
         font-size: clamp(0.625rem, 0rem + 5vw, 1.563rem);
+        position: absolute;
+        display: none;
     }
     /* .cartIcon{
         height: 100%;
@@ -98,14 +100,13 @@ a {
         height: 100%;
         width: 100%;
     } */
-    .dropdownContent{
+    /* .dropdownContent{
         display: none;
         position: absolute;
-    }
+    } */
     header{
         justify-content: center;
-        gap: 15%;
-        flex-basis: auto;
+        gap: 5%;
     }
 }
 

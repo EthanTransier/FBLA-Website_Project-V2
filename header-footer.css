@@ -86,8 +86,27 @@ a {
     }
 }
 
-@media only screen and (orientation: portrait){
-
+@media only screen and (max-width: 500px){
+    .headerDropdown{
+        font-size: clamp(0.625rem, 0rem + 5vw, 1.563rem);
+    }
+    /* .cartIcon{
+        height: 100%;
+        width: auto;
+    } */
+    /* .cartHeaderContainer{
+        height: 100%;
+        width: 100%;
+    } */
+    .dropdownContent{
+        display: none;
+        position: absolute;
+    }
+    header{
+        justify-content: center;
+        gap: 15%;
+        flex-basis: auto;
+    }
 }
 
 .dropdownOpenAnimation{

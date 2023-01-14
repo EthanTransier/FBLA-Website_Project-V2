@@ -79,34 +79,76 @@ a {
     text-underline-offset: 6px;
 }
 
+.headerDropdown{
+    display: none;
+}
+
 @media only screen and (max-width: 780px) {
     .headerTitle {
         display: none;
         position: absolute;
     }
+    .headerLogoContainer{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    .headerLinksContainer{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .cartHeaderContainer{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    header{
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 500px){
     .headerDropdown{
-        font-size: clamp(0.625rem, 0rem + 5vw, 1.563rem);
-        position: absolute;
+        font-size: clamp(1.25rem, 1.042rem + 1.667vw, 1.563rem);
+        display: flex;
+        justify-content: center;
+        width: 33%;
+    }
+    .headerLinksContainer{
         display: none;
+    }
+    .headerLogoContainer{
+        width: 33%;
     }
     /* .cartIcon{
         height: 100%;
         width: auto;
     } */
-    /* .cartHeaderContainer{
+    .cartHeaderContainer{
+        width: 33%;
+    }
+    .headerDropdown{
         height: 100%;
-        width: 100%;
-    } */
-    /* .dropdownContent{
-        display: none;
+    }
+    .dropdownContent{
         position: absolute;
-    } */
+        z-index: -10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        transform: translateY(-120px);
+    }
+    .dropdownLink{
+        position: absolute;
+    }
     header{
         justify-content: center;
-        gap: 5%;
+        position: fixed;
+        width: 100%;
     }
 }
 
@@ -117,9 +159,23 @@ a {
 
 @keyframes dropdownOpen {
     0%{
-
+        transform: translateY(-120px);
     }
     100%{
-        
+        transform: translateY(120px)
+    }
+}
+
+.dropdownCloseAnimation{
+    animation: dropdownClose .25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dropdownClose {
+    0%{
+        transform: translateY(120px);
+    }
+    100%{
+        transform: translateY(0px)
     }
 }

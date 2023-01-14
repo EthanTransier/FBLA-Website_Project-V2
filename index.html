@@ -19,9 +19,9 @@
         <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
       </div>
       <!-- Container for the links to the different pages of the website inside the header -->
-      <div class='headerDropdown' id='dropdownID'>
-        <div class='homeLinkContainer'>
-          <a onclick='openDropdown()' class='underlineText'>Home</a>
+      <div class='headerDropdown'  onclick='openDropdown()' id='dropdownID'>
+        <div class='homeLinkContainer dropdownLink'>
+          <a class='underlineText'>Home</a>
         </div>
         <div class='dropdownContent' id='dropdownID'>
           <a href='./startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
@@ -40,7 +40,7 @@
       </div>
       <!-- Container for the link that goes to the menu page -->
         <div class='menuLinkContainer'>
-          <a href='./SubscritionPage/subscription.html'>Jī lóng+</a>
+          <a href='./plus/plus.html'>Jī lóng+</a>
         </div>
         <!-- Container for the link that goes to the Hiring page -->
         <div class='jobs.html'>
@@ -49,8 +49,7 @@
       </div>
       <!-- Container for the cart icon / link -->
       <div class="cartHeaderContainer">
-        <a href="./cartPage/cart.html"><img src="./images/cartIcon.png" alt="icon of a shopping cart"
-            class="cartIcon"></a>
+        <img src="./images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon" onclick="window.location.href='./cartPage/cart.html'">
         <div class="cartRedIcon" id="cartRedIconID"></div>
       </div>
     

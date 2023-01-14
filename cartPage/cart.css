@@ -267,3 +267,38 @@ body {
     font-family: montserrat-light;
     src: url(../montserrat/static/Montserrat-Light.ttf);
 }
+
+.dropdownOpenAnimation {
+    animation: dropdownOpen .25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dropdownOpen {
+    0% {
+        transform: translateY(-30%);
+    }
+
+    100% {
+        transform: translateY(70%)
+    }
+}
+
+.dropdownCloseAnimation {
+    animation: dropdownClose .25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dropdownClose {
+    0% {
+        transform: translateY(70%);
+    }
+
+    100% {
+        transform: translateY(-30%)
+    }
+}
+@media only screen and (max-width: 500px){
+    .dropdownContent{
+    transform: translateY(-30%);
+}
+}

@@ -16,32 +16,45 @@
         <a href="../index.html" class="headerLogoContainer">
             <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
         </a>
-        <div class="titleContainer">
+        <div class="titleContainer" id="titleID">
             <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
         </div>
         <!-- Container for the links to the different pages of the website inside the header -->
-        <div class="headerLinksContainer">
+        <div class='headerDropdown' id='dropdownID'>
+            <div class='homeLinkContainer dropdownLink' onclick='openDropdown()'>
+                <a class='underlineText'>Jī lóng+</a>
+                <img src="../images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
+            </div>
+        </div>
+        <div class='dropdownContent' id='dropdownContentID'>
+            <a href='../index.html' class='headerOrderLink'>Home</a>
+            <div class="horizontalLine"></div>
+            <a href='../startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
+            <div class="horizontalLine"></div>
+            <a href='../jobsPage/jobs.html' class='headerOrderLink'>Join Us</a>
+        </div>
+        <div class='headerLinksContainer' id='headerLinksID'>
             <!-- Container for the link that goes to the home page -->
-            <div class="homeLinkContainer">
-                <a href="../index.html">Home</a>
+            <div class='homeLinkContainer'>
+                <a href='../index.html'>Home</a>
             </div>
             <!-- Container for the button / link that takes you to the Ordering page -->
-            <div class="orderLinkContainer">
-                <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink">Order</a>
+            <div class='orderLinkContainer'>
+                <a href='../startOrderPage/startOrderPage.html'>Order</a>
             </div>
             <!-- Container for the link that goes to the menu page -->
-            <div class="menuLinkContainer">
-                <a href="../SubscritionPage/subscription.html" class="underlineText">Jī lóng+</a>
+            <div class='menuLinkContainer'>
+                <a href='../plus/plus.html' class='underlineText'>Jī lóng+</a>
             </div>
             <!-- Container for the link that goes to the Hiring page -->
-            <div class="jobs.html">
-                <a href="../jobsPage/jobs.html">Join Us</a>
+            <div class='jobs.html'>
+                <a href='../jobsPage/jobs.html'>Join Us</a>
             </div>
         </div>
         <!-- Container for the cart icon / link -->
         <div class="cartHeaderContainer">
-            <a href="../cartPage/cart.html"><img src="../images/cartIcon.png" alt="icon of a shopping cart"
-                    class="cartIcon"></a>
+            <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"
+                onclick="window.location.href='../cartPage/cart.html'">
             <div class="cartRedIcon" id="cartRedIconID"></div>
         </div>
     
@@ -75,6 +88,6 @@
       
      <div class="flexCenter"><a href="../SubscritionPage/subscription.html"><button class="signBTN"><strong>Sign Up</strong></button></a></div>
     </div>
-
+    <script src="../header-footer.js"></script>
 </body>
 </html>

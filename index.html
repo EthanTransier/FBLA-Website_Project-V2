@@ -15,20 +15,23 @@
       <a href="./index.html" class="headerLogoContainer">
         <img src="./images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
       </a>
-      <div class="titleContainer" id="titleID">
+      <div class="titleContainer" id="titleID" onclick="window.location.href='./index.html'">
         <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
       </div>
       <!-- Container for the links to the different pages of the website inside the header -->
-      <div class='headerDropdown'  onclick='openDropdown()' id='dropdownID'>
-        <div class='homeLinkContainer dropdownLink'>
+      <div class='headerDropdown'id='dropdownID'>
+        <div class='homeLinkContainer dropdownLink' onclick='openDropdown()'>
           <a class='underlineText'>Home</a>
+          <img src="./images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
         </div>
-        <div class='dropdownContent' id='dropdownID'>
-          <a href='./startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
-          <a href='./SubscritionPage/subscription.html'>Jī lóng+</a>
-          <a href='./jobsPage/jobs.html'>Join Us</a>
-        </div>  
       </div>
+      <div class='dropdownContent' id='dropdownContentID'>
+        <a href='./startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
+        <div class="horizontalLine"></div>
+        <a href='./plus/plus.html' class='headerOrderLink'>Jī lóng+</a>
+        <div class="horizontalLine"></div>
+        <a href='./jobsPage/jobs.html' class='headerOrderLink'>Join Us</a>
+      </div>  
       <div class='headerLinksContainer' id='headerLinksID'>
         <!-- Container for the link that goes to the home page -->
         <div class='homeLinkContainer'>

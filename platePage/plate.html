@@ -80,12 +80,16 @@
                 <h3 class="foodContainerSubTitle" id="primarySubTitle">You've Selected 0 Primary Dishes</h3>
                 <div class="foodContainer primaryFoodContainer" id="orangeChickenContainer" onclick="selectPrimaryFoodContainer('orangeChickenContainer')">
                     <img src="../images/orangeChicken.jpg" alt="Image of OrangeChicken on a plate" class="foodPicture">
+                    
                     <h1 class="foodTitle">Orange Chicken</h1>
                     <p class="foodText">
                         Serving Size: 6oz
                         <br>
                         545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('orangeChickenFireID')" id="orangeChickenFireID">
+                        <div class="fireIconCrossout" id="orangeChickenCrossID"></div>
                     </p>
+                    
                 </div>
                 <div class="foodContainer primaryFoodContainer" id="tsoChickenContainer" onclick="selectPrimaryFoodContainer('tsoChickenContainer')">
                     <img src="../images/tsoChicken.jpg" alt="Image of Tso's Chicken on a plate" class="foodPicture">
@@ -94,6 +98,8 @@
                         Serving Size: 6oz
                         <br>
                         545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('tsoChickenFireID')" id="tsoChickenFireID">
+                        <div class="fireIconCrossout" id="tsoChickenCrossID"></div>
                     </p>
                 </div>
 
@@ -104,6 +110,8 @@
                         Serving Size: 6oz
                         <br>
                         545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('teriyakiChickenFireID')" id="teriyakiChickenFireID">
+                        <div class="fireIconCrossout bottomCrossout"></div>
                     </p>
                 </div>
 
@@ -114,6 +122,8 @@
                         Serving Size: 6oz
                         <br>
                         545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('kungPaoChickenFireID')" id="kungPaoChickenFireID">
+                        <div class="fireIconCrossout bottomCrossout" id="kungPaoCrossID"></div>
                     </p>
                 </div>
             </div>
@@ -169,7 +179,6 @@
                 </svg>
             </button>
         </div>
-        <button onclick="clearLocalStorage()">Clear Local Storage</button>
 
     </div>
 

@@ -23,6 +23,14 @@ function selectPrimaryFoodContainer(containerID) {
         document.querySelector("#" + containerID + " p").classList.add("foodTextSelectAnimation");
         document.querySelector("#" + containerID + " p").classList.remove("foodTextDeselectAnimation");
 
+        console.log(document.querySelector("#" + containerID + " .fireIcon"))
+        document.querySelector("#" + containerID + " .fireIcon").classList.add("fireIconWhiteOnAnimation");
+        document.querySelector("#" + containerID + " .fireIcon").classList.remove("fireIconWhiteOffAnimation");
+
+        document.querySelector("#" + containerID + " .fireIconCrossout").classList.add("fireCrossWhiteOnAnimation");
+        document.querySelector("#" + containerID + " .fireIconCrossout").classList.remove("fireCrossWhiteOffAnimation");
+
+
         // Changes the title at the top of the primary dish title to whatever the number of dishes selected is, and then turns in green if one primary dish has been selected
         if (primaryDishesSelected == 1) {
             document.getElementById("primarySubTitle").innerHTML = ("You Have Selected 1 Primary Dish")
@@ -49,6 +57,14 @@ function selectPrimaryFoodContainer(containerID) {
 
         document.querySelector("#" + containerID + " p").classList.remove("foodTextSelectAnimation");
         document.querySelector("#" + containerID + " p").classList.add("foodTextDeselectAnimation");
+
+        document.querySelector("#" + containerID + " .fireIcon").classList.remove("fireIconWhiteOnAnimation");
+        document.querySelector("#" + containerID + " .fireIcon").classList.add("fireIconWhiteOffAnimation");
+
+        document.querySelector("#" + containerID + " .fireIconCrossout").classList.remove("fireCrossWhiteOnAnimation");
+        document.querySelector("#" + containerID + " .fireIconCrossout").classList.add("fireCrossWhiteOffAnimation");
+
+        document.querySelector("#" + containerID + " .fireIcon").style.backgroundColor = 'rgba(51, 51, 51, 0)'
 
         if (primaryDishesSelected == 1) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 1 Primary Dish")
@@ -79,6 +95,7 @@ function selectSecondaryFoodContainer(containerID) {
     // If the food container has not played the starting animation, it will play it and then remove the ending animation class. If the food container has played the starting animation, it will remove the starting animation class and play the ending animation class.
     if (secondaryFoodContainerSelected.classList.contains("selectAnimation") != true && secondaryDishesSelected < 1) {
         // Adds selected class to the container that is selected
+        
         document.querySelector("#" + containerID + " .foodTitle").classList.add('selected');
 
 
@@ -170,7 +187,7 @@ function endAnimation(buttonID2) {
     // Adds the text back into the button
     document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
 
-    window.location.href = "../startOrderPage/startOrderPage.html"
+    // window.location.href = "../startOrderPage/startOrderPage.html"
 }
 
 function closeCheckAnimation(buttonID3) {
@@ -184,8 +201,22 @@ function addToCart() {
     // console.log(document.getElementsByClassName("selected")[0].innerHTML)
     const firstCartArray = document.getElementsByClassName("selected");
     for (let i = 0; i < firstCartArray.length; i++){
-        secondaryCartArray.push(firstCartArray.item(i).innerHTML)
         
+        console.log(firstCartArray[i].parentElement.id)
+        if(document.querySelector("#" + firstCartArray[i].parentElement.id + " .fireIcon")){
+            if(document.querySelector("#" + firstCartArray[i].parentElement.id + " .fireIcon").style.backgroundColor == "rgb(58, 255, 255)"){
+                secondaryCartArray.push("Spicy " + firstCartArray.item(i).innerHTML)
+            }else{
+                secondaryCartArray.push(firstCartArray.item(i).innerHTML)
+            }
+        }else{
+            secondaryCartArray.push(firstCartArray.item(i).innerHTML)
+        }
+        
+        // if(document.querySelector("#" + (secondaryCartArray[i].parentElement.id) + " .fireIcon").style.backgroundColor == 'rgb(58, 255, 255)'){
+        //     console.log('its spicy')
+        // }
+
         if(secondaryCartArray.length == 3){
             cartArray.push("Plate with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
             console.log(cartArray)
@@ -208,4 +239,25 @@ function cartNotification() {
     }else{
         document.getElementById("cartRedIconID").style.display = "none";
     }
+}
+
+function makeSpicy(event){
+    event.stopPropagation();
+}
+
+function spicyAnimation(fireID){
+    if(document.getElementById(fireID).parentElement.parentElement.classList.contains('selectAnimation')){
+        if(document.getElementById(fireID).style.backgroundColor == 'rgb(58, 255, 255)'){
+        // document.getElementById(fireID).classList.remove('fireSelectAnimation');
+        // document.getElementById(fireID).classList.add('fireDeselectAnimation');
+        document.getElementById(fireID).style.backgroundColor = 'rgba(51, 51, 51, 0)';
+        console.log('deselected')
+        }else {
+        // document.getElementById(fireID).classList.remove('fireDeselectAnimation');
+        // document.getElementById(fireID).classList.add('fireSelectAnimation');
+        console.log('selected')
+        document.getElementById(fireID).style.backgroundColor = 'rgb(58, 255, 255)';
+        }
+    }
+    
 }

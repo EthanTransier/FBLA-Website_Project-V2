@@ -1,9 +1,19 @@
+function quantityMinus(event){
+    event.stopPropagation();
+    event.preventDefault();
+}
+
+function quantityPlus(event){
+    event.stopPropagation();
+    event.preventDefault();
+}
 const primarySelected = [];
 const secondarySelected = [];
 
 
 var primaryDishesSelected = 0;
 function selectPrimaryFoodContainer(containerID) {
+    
     var primaryFoodContainerSelected = document.getElementById(containerID);
 
     
@@ -16,19 +26,27 @@ function selectPrimaryFoodContainer(containerID) {
         primaryFoodContainerSelected.classList.remove("deselectAnimation");
 
         // Adds a dish to the primary dishes selected variable, which says how many primary dishes have been selected by the user, and then console logs it
-        primaryDishesSelected++;
-        console.log(primaryDishesSelected);
+        
+        if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1 && primaryDishesSelected != 2){
+            primaryDishesSelected++;
+        }else if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 2){
+            primaryDishesSelected = 2;
+        }
+        if(document.getElementsByClassName('selected').length == 0){
+        primaryDishesSelected = 0;
+        }
 
         // Plays the animation that changes the text in the container to white when it is selected because the red text doesn't contrast enough with the now green container
-        document.querySelector("#" + containerID + " p").classList.add("foodTextSelectAnimation");
-        document.querySelector("#" + containerID + " p").classList.remove("foodTextDeselectAnimation");
+        document.querySelector("#" + containerID + " div").classList.add("foodTextSelectAnimation");
+        document.querySelector("#" + containerID + " div").classList.remove("foodTextDeselectAnimation");
 
-        console.log(document.querySelector("#" + containerID + " .fireIcon"))
         document.querySelector("#" + containerID + " .fireIcon").classList.add("fireIconWhiteOnAnimation");
         document.querySelector("#" + containerID + " .fireIcon").classList.remove("fireIconWhiteOffAnimation");
 
         document.querySelector("#" + containerID + " .fireIconCrossout").classList.add("fireCrossWhiteOnAnimation");
         document.querySelector("#" + containerID + " .fireIconCrossout").classList.remove("fireCrossWhiteOffAnimation");
+
+        document.querySelector("#" + containerID + " .quantityCounter").style.display = "flex";
 
 
         // Changes the title at the top of the primary dish title to whatever the number of dishes selected is, and then turns in green if one primary dish has been selected
@@ -52,11 +70,19 @@ function selectPrimaryFoodContainer(containerID) {
         primaryFoodContainerSelected.classList.add("deselectAnimation");
         primaryFoodContainerSelected.classList.remove("selectAnimation");
 
-        primaryDishesSelected--;
-        console.log(primaryDishesSelected);
+        
+        if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1){
+            primaryDishesSelected--;
+        }else if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 2){
+            primaryDishesSelected = 0;
+        }
 
-        document.querySelector("#" + containerID + " p").classList.remove("foodTextSelectAnimation");
-        document.querySelector("#" + containerID + " p").classList.add("foodTextDeselectAnimation");
+        if(document.getElementsByClassName('selected').length == 0){
+        primaryDishesSelected = 0;
+        }
+
+        document.querySelector("#" + containerID + " div").classList.remove("foodTextSelectAnimation");
+        document.querySelector("#" + containerID + " div").classList.add("foodTextDeselectAnimation");
 
         document.querySelector("#" + containerID + " .fireIcon").classList.remove("fireIconWhiteOnAnimation");
         document.querySelector("#" + containerID + " .fireIcon").classList.add("fireIconWhiteOffAnimation");
@@ -65,6 +91,8 @@ function selectPrimaryFoodContainer(containerID) {
         document.querySelector("#" + containerID + " .fireIconCrossout").classList.add("fireCrossWhiteOffAnimation");
 
         document.querySelector("#" + containerID + " .fireIcon").style.backgroundColor = 'rgba(51, 51, 51, 0)'
+
+        document.querySelector("#" + document.querySelector("#" + containerID + " .foodText").id + " .quantityCounter").style.display = "none";
 
         if (primaryDishesSelected == 1) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 1 Primary Dish")
@@ -85,7 +113,9 @@ function selectPrimaryFoodContainer(containerID) {
         document.getElementById('addToCartPlate').classList.add("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = true;
     }
-
+    
+    
+    
 
 }
 
@@ -105,11 +135,11 @@ function selectSecondaryFoodContainer(containerID) {
 
         // Adds a dish to the secondary dishes selected variable, which says how many secondary dishes have been selected by the user, and then console logs it
         secondaryDishesSelected++;
-        console.log(secondaryDishesSelected);
+        
 
         // Plays the animation that changes the text in the container to white when it is selected because the red text doesn't contrast enough with the now green container
-        document.querySelector("#" + containerID + " p").classList.add("foodTextSelectAnimation");
-        document.querySelector("#" + containerID + " p").classList.remove("foodTextDeselectAnimation");
+        document.querySelector("#" + containerID + " div").classList.add("foodTextSelectAnimation");
+        document.querySelector("#" + containerID + " div").classList.remove("foodTextDeselectAnimation");
 
         // Changes the title at the top of the secondary dish title to whatever the number of dishes selected is, and then turns in green if one secondary dish has been selected
         if (secondaryDishesSelected == 1) {
@@ -130,10 +160,10 @@ function selectSecondaryFoodContainer(containerID) {
         secondaryFoodContainerSelected.classList.remove("selectAnimation");
 
         secondaryDishesSelected--;
-        console.log(secondaryDishesSelected);
+        
 
-        document.querySelector("#" + containerID + " p").classList.remove("foodTextSelectAnimation");
-        document.querySelector("#" + containerID + " p").classList.add("foodTextDeselectAnimation");
+        document.querySelector("#" + containerID + " div").classList.remove("foodTextSelectAnimation");
+        document.querySelector("#" + containerID + " div").classList.add("foodTextDeselectAnimation");
 
         if (secondaryDishesSelected == 1) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 1 Secondary Dish")
@@ -198,11 +228,8 @@ function closeCheckAnimation(buttonID3) {
 const cartArray = [];
 const secondaryCartArray = [];
 function addToCart() {
-    // console.log(document.getElementsByClassName("selected")[0].innerHTML)
     const firstCartArray = document.getElementsByClassName("selected");
     for (let i = 0; i < firstCartArray.length; i++){
-        
-        console.log(firstCartArray[i].parentElement.id)
         if(document.querySelector("#" + firstCartArray[i].parentElement.id + " .fireIcon")){
             if(document.querySelector("#" + firstCartArray[i].parentElement.id + " .fireIcon").style.backgroundColor == "rgb(58, 255, 255)"){
                 secondaryCartArray.push("Spicy " + firstCartArray.item(i).innerHTML)
@@ -212,22 +239,18 @@ function addToCart() {
         }else{
             secondaryCartArray.push(firstCartArray.item(i).innerHTML)
         }
-        
-        // if(document.querySelector("#" + (secondaryCartArray[i].parentElement.id) + " .fireIcon").style.backgroundColor == 'rgb(58, 255, 255)'){
-        //     console.log('its spicy')
-        // }
 
         if(secondaryCartArray.length == 3){
             cartArray.push("Plate with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
-            console.log(cartArray)
             secondaryCartArray.length = 0;
+        }else if(secondaryCartArray.length == 2 && firstCartArray.length == 2){
+            cartArray.push("Plate with Two Servings of " + secondaryCartArray[0] + " and 1 Serving of " + secondaryCartArray[1] )
         }
+        
     }
-    // console.log(Array.prototype.slice.call(document.getElementsByClassName('selected').innerHTML))
-    // cartArray.push(document.getElementsByClassName('selected').innerHTML);
-    console.log(cartArray[cartArray.length - 1])
+    
     localStorage.setItem(("cartArray" + (localStorage.length + 1)), JSON.stringify(cartArray));
-    console.log(localStorage.getItem("cartArray" + localStorage.length));
+    
 }
 function clearLocalStorage() {
     localStorage.clear();
@@ -251,13 +274,29 @@ function spicyAnimation(fireID){
         // document.getElementById(fireID).classList.remove('fireSelectAnimation');
         // document.getElementById(fireID).classList.add('fireDeselectAnimation');
         document.getElementById(fireID).style.backgroundColor = 'rgba(51, 51, 51, 0)';
-        console.log('deselected')
+        
         }else {
         // document.getElementById(fireID).classList.remove('fireDeselectAnimation');
         // document.getElementById(fireID).classList.add('fireSelectAnimation');
-        console.log('selected')
+        
         document.getElementById(fireID).style.backgroundColor = 'rgb(58, 255, 255)';
         }
     }
     
 }
+
+function minusQuantity(quantityID){
+    if(document.getElementById(quantityID).innerHTML == 2){
+        document.getElementById(quantityID).innerHTML--;
+        selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+        selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+    }
+}
+function addQuantity(quantityID){
+    if(document.getElementById(quantityID).innerHTML == 1 && primaryDishesSelected == 1){
+        document.getElementById(quantityID).innerHTML++;
+        selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+        selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+    }
+}
+

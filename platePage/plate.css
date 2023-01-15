@@ -151,6 +151,39 @@ body {
     font-family: montserrat-light;
 }
 
+.quantityCounter{
+    position: absolute;
+    display: none;
+    align-items: center;
+    width: 25px;
+    font-size: 30px;
+    font-family: montserrat-regular;
+    height: auto;
+    margin-left: 184px;
+    margin-top: -42px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 75px;
+}
+
+.minusQuantity{
+    font-size: 40px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.addQuantity{
+    font-size: 35px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .fireIconContainer{
     position: absolute;
 }
@@ -163,7 +196,7 @@ body {
     border: 2px solid black;
     position: absolute;
     z-index: 15;
-    margin-left: 116px;
+    margin-left: 51px;
     margin-top: -10px;
     cursor: pointer;
 }
@@ -173,17 +206,12 @@ body {
     z-index: 14;
     background-color: black;
     position: absolute;
-    margin-left: 219px;
-    margin-top: 230px;
+    margin-left: 153px;
+    margin-top: -17px;
     transform: rotate(45deg);
     border: 0px solid black;
 }
 
-
-.bottomCrossout{
-    margin-left: 219px;
-    margin-top: 210px;
-}
 
 /* ANIMATIONS AREA */
 /* Animation class for when the food is selected  */

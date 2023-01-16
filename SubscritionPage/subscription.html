@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="subscription.css">
     <link rel="stylesheet" href="../header-footer.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-    <title>Become a Jī lóng plus member</title>
+    <title>Jī lóng | Plus</title>
 </head>
 <body>
     <!-- Header, which includes the Title, the Logo, and the links -->
@@ -45,23 +45,19 @@
   
   </header>
 
-  <br><br>
-
     <!-- title of the page -->
-    <h1 style="color: white;">Would you like to get free food and? If so fill out the following <br> information to become a Jī lóng plus member!</h1>
-
-  <br>
+    <h1 style="color: white;">Would you like to get free food and? If so fill out the following information to become a Jī lóng plus member!</h1>
 
     <!-- signup sheet -->
-    <form>
-        <fieldset id="signup">
+    <div class="signupBox"><form>
+        <fieldset class="signup">
 
             <!-- user info -->
             <div class="infoBoxes">
             <h4>Enter your user info:</h4>
             <label>Enter your email: </label><input type="email" name="account" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/><required><br>
             <label>Enter your phone number: </label><input type="email" name="account"/><required><br>
-            <label>Enter your name: </label><input type="text" name="account" required><br><br>
+            <label>Enter your name: </label><input type="text" name="account" required>
             </div>
 
             <!-- password info -->
@@ -69,7 +65,7 @@
             <h4>Create a password</h4>
             <label id="passReqs" name="account"><em>*Your password must be at least 8 character long, have one upercase letter, lowercase letter, a number, and a special symbol.</em></label><br>
             <label>Create a password: </label><input type="password" name="account" id="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
-            <label>Verify your password: </label><input type="password" name="account" minlength="8" required><br><br>
+            <label>Verify your password: </label><input type="password" name="account" minlength="8" required>
             </div>
 
             <!-- payment info -->
@@ -77,23 +73,23 @@
             <h4>Enter your desired payment method:</h4>
             <label>Enter your card's expiration date: </label><input type="text" placeholder="mm/yy" required><br>
             <label>Enter your card's CVC code: </label><input type="text" placeholder="000" required><br>
-            <label>Enter your card number: </label><input type="password" placeholder="0000 0000 0000 0000" name="account" id="password" pattern="[0-9]{16}" required><br><br>
+            <label>Enter your card number: </label><input type="password" placeholder="0000 0000 0000 0000" name="account" id="password" pattern="[0-9]{16}" required>
             </div>
             
             <!-- notifaction info -->
             <div class="infoBoxes">
             <h4>Would you like to recieve text or email?</h4>
             <input type="radio" name="notifications" name="account"><label>Email</label><br>
-            <input type="radio" name="notifications" name="account"><label>Text Message</label><br><br>
+            <input type="radio" name="notifications" name="account"><label>Text Message</label>
             </div>
             
             <!-- purchase info -->
-            <div id="purchase">
+            <div class="purchase">
                 <button id="buyBTN"><span class="buyTitle">Monthly</span><br><span class="purchaseTitle">$6.99/month</span></button>
                 <button id="buyBTN"><span class="buyTitle">Annually</span><br><span class="purchaseTitle">$59.99/year</span></button>
             </div>
 
         </fieldset>
-    </form>
+    </form></div>
 </body>
 </html>

@@ -71,3 +71,51 @@ a {
     height: auto;
     padding-top: 10px;
 }
+
+footer {
+    display: flex;
+    background-color: white;
+    border-top-width: 3.5px;
+    border-top-color: rgb(223, 0, 0);
+    border-top-style: solid;
+    margin-top: 50px;
+    height: auto;
+    justify-content: space-around;
+}
+
+.footerTitle{
+    color: red;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.footerCopyRight{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footerIMG{
+    width: 30px;
+    height: 30px;
+}
+
+.horizontalCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.igLogo{
+    padding-top:6px;
+}
+
+.fbLogo{
+    padding-top:6px;
+}
+
+.twLogo{
+    padding-top:6px;
+}

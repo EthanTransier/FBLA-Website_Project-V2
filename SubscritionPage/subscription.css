@@ -12,9 +12,8 @@
     src: url(../kanit/Kanit-Light.ttf);
 }
 
-#signup {
+.signup {
     border: 0px solid black;
-    margin: 0% 20% 5% 20%;
     text-align: center;
     font-family: kanit-regular;
     font-size: 20px;
@@ -27,6 +26,11 @@
     align-items: center;
     padding-bottom: 10px;
     width: 800px;
+}
+
+.signupBox{
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -46,6 +50,7 @@ body{
 .infoBoxes{
     width:600px;
     text-align: left;
+    padding: 10px 0 10px 0;
 }
 
 h4{
@@ -57,7 +62,7 @@ h4{
     width: 200px;
     height: 100px;
     background-color: red;
-    color:black;
+    color:white;
     border: 0px solid black;
     border-radius: 20px;
 }
@@ -74,4 +79,8 @@ h4{
 .purchaseTitle{
     font-family: kanit-regular;
     font-size: 25px;
+}
+
+.purchase{
+    padding-top: 10px;
 }

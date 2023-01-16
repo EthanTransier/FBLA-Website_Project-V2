@@ -27,7 +27,6 @@ body {
 
 .signUp{
     border: 0px solid black;
-    margin: 0% 20% 5% 20%;
     font-family: kanit-regular;
     font-size: 20px;
     font-weight: 200;
@@ -41,18 +40,23 @@ body {
     padding: 20px;
 }
 
+
+.signUpBox{
+    display: flex;
+    justify-content: center;
+}
+
 .rewards{
     text-align: left;
 }
 
 .signBTN{
-    width: 700px;
+    width: 350px;
     height: 100px;
     background-color: red;
     color:white;
-    font-size: 30px;
+    font-size: 60px;
     border-radius: 20px;
-    padding-left: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +74,17 @@ h4{
 }
 
 .flexCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.pageTitle{
+    color: white;
+    text-align: center;
+    width: 800px;
+}
+
+.centerTitle{
     display: flex;
     justify-content: center;
 }

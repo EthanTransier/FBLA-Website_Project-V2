@@ -91,6 +91,69 @@ a {
     display: none;
 }
 
+footer {
+    display: flex;
+    background-color: white;
+    border-top-width: 3.5px;
+    border-top-color: rgb(223, 0, 0);
+    border-top-style: solid;
+    margin-top: 50px;
+    height: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footerTitle{
+    color: red;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footerCopyRight{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+
+.footerIMG{
+    width: 30px;
+    height: 30px;
+}
+
+.horizontalCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.igLogo{
+    display: flex;
+    justify-content: center;
+    padding-top:6px;
+}
+
+.fbLogo{
+    display: flex;
+    justify-content: center;
+    padding-top:6px;
+}
+
+.twLogo{
+    display: flex;
+    justify-content: center;
+    padding-top:6px;
+}
+
+.footerBox{
+    text-align: center;
+    width: 25%;
+    height: auto;
+}
+
 @media only screen and (max-width: 780px) {
     .headerTitle {
         display: none;
@@ -117,6 +180,17 @@ a {
 
     header {
         justify-content: center;
+    }
+
+    footer {
+        font-size: clamp(1.2vh, 8rem, 1.5vh);
+        padding: 4px;
+        justify-content: space-between;
+    }
+
+    .footerIMG{
+        width: 17px;
+        height: 17px;
     }
 }
 
@@ -239,52 +313,11 @@ a {
     100% {
         transform: rotate(360deg)
     }
+
+    footer {
+        font-size: clamp(0.8vh, 8rem, 1vh);
+        padding: 2px;
+        justify-content: space-between;
+    }
 }
 
-footer {
-    display: flex;
-    background-color: white;
-    border-top-width: 3.5px;
-    border-top-color: rgb(223, 0, 0);
-    border-top-style: solid;
-    margin-top: 50px;
-    height: auto;
-    justify-content: space-around;
-}
-
-.footerTitle{
-    color: red;
-    text-decoration: underline;
-    font-size: 20px;
-}
-
-.footerCopyRight{
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-bottom: 5px;
-}
-
-.footerIMG{
-    width: 30px;
-    height: 30px;
-}
-
-.horizontalCenter{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.igLogo{
-    padding-top:6px;
-}
-
-.fbLogo{
-    padding-top:6px;
-}
-
-.twLogo{
-    padding-top:6px;
-}

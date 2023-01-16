@@ -60,9 +60,186 @@
         </div>
     
     </header>
+    <div class="backArrowContainer">
+        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'"> <- Back To Order Page</h2>
+    </div>
     <!-- Main Content Area -->
     <div class="mainContentContainer">
-        <h1 class="mainContentTitle" id="title"></h1>
+        <!-- Text/Link that you can click on to go back to the start order page -->
+        <div class="backText">
+    
+        </div>
+        <h1 class="mainContentTitle" id="title">Platter</h1>
+        <h3 class="subTitle">Select 2 Primary Dishes and 2 Secondary Dishes</h3>
+        <!-- Food Containers -->
+        <div class="foodContainersArea">
+            <div class="foodContainers" id="primaryFoodContainers">
+                <h1 class="foodContainerTitle">Primary Dishes</h1>
+                <h3 class="foodContainerSubTitle" id="primarySubTitle">You've Selected 0 Primary Dishes</h3>
+                <div class="foodContainer primaryFoodContainer" id="orangeChickenContainer"
+                    onclick="selectPrimaryFoodContainer('orangeChickenContainer')">
+                    <img src="../images/orangeChicken.jpg" alt="Image of OrangeChicken on a plate" class="foodPicture">
+    
+                    <h1 class="foodTitle">Orange Chicken</h1>
+                    <div class="foodText" id="orangeChickenFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('orangeChickenFireID')" id="orangeChickenFireID">
+                        <div class="fireIconCrossout" id="orangeChickenCrossID"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="orangeQuantityMinus"
+                                onclick="minusQuantity('orangeQuantity'), quantityMinus(event)">-</div>
+                            <div class="quantity" id="orangeQuantity">1</div>
+                            <div class="addQuantity" id="orangeQuantityPlus"
+                                onclick="addQuantity('orangeQuantity'), quantityPlus(event)">+
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="foodContainer primaryFoodContainer" id="tsoChickenContainer"
+                    onclick="selectPrimaryFoodContainer('tsoChickenContainer')">
+                    <img src="../images/tsoChicken.jpg" alt="Image of Tso's Chicken on a plate" class="foodPicture">
+                    <h1 class="foodTitle">Tso's Chicken</h1>
+                    <div class="foodText" id="tsoChickenFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('tsoChickenFireID')" id="tsoChickenFireID">
+                        <div class="fireIconCrossout" id="tsoChickenCrossID"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="tsoQuantityMinus"
+                                onclick="minusQuantity('tsoQuantity'), quantityMinus(event)">-</div>
+                            <div class="quantity" id="tsoQuantity">1</div>
+                            <div class="addQuantity" id="tsoQuantityPlus"
+                                onclick="addQuantity('tsoQuantity'), quantityPlus(event)">+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="foodContainer primaryFoodContainer" id="teriyakiChickenContainer"
+                    onclick="selectPrimaryFoodContainer('teriyakiChickenContainer')">
+                    <img src="../images/teriyakiChicken.jpg" alt="Image of Teriyaki Chicken on a plate" class="foodPicture">
+                    <h1 class="foodTitle">Teriyaki Chicken</h1>
+                    <div class="foodText" id="teriyakiChickenFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('teriyakiChickenFireID')" id="teriyakiChickenFireID">
+                        <div class="fireIconCrossout"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="teriyakiQuantityMinus"
+                                onclick="minusQuantity('teriyakiQuantity'), quantityMinus(event)">-</div>
+                            <div class="quantity" id="teriyakiQuantity">1</div>
+                            <div class="addQuantity" id="teriyakiQuantityPlus"
+                                onclick="addQuantity('teriyakiQuantity'), quantityPlus(event)">+</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="foodContainer primaryFoodContainer" id="kungPaoChickenContainer"
+                    onclick="selectPrimaryFoodContainer('kungPaoChickenContainer')">
+                    <img src="../images/kungPaoChicken.jpg" alt="Image of Kung Pao on a plate" class="foodPicture">
+                    <h1 class="foodTitle">Kung Pao Chicken</h1>
+                    <div class="foodText" id="kungPaoFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('kungPaoChickenFireID')" id="kungPaoChickenFireID">
+                        <div class="fireIconCrossout" id="kungPaoCrossID"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="kungPaoQuantityMinus"
+                                onclick="quantityMinus(event), minusQuantity('kungPaoQuantity')">-</div>
+                            <div class="quantity" id="kungPaoQuantity">1</div>
+                            <div class="addQuantity" id="kungPaoQuantityPlus"
+                                onclick="quantityPlus(event), addQuantity('kungPaoQuantity')">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Vertical Line Container -->
+            <div class="verticalLine">
+    
+            </div>
+    
+            <!-- SECONDARY FOOD CONTAINERS -->
+            <div class="foodContainers secondaryFoodContainer" id="secondaryFoodContainers">
+                <h1 class="foodContainerTitle">Secondary Dishes</h1>
+                <h3 class="foodContainerSubTitle" id="secondarySubTitle">You've Selected 0 Secondary Dishes</h3>
+                <div class="foodContainer" id="whiteRiceContainer" onclick="selectSecondaryFoodContainer('whiteRiceContainer')">
+                    <img src="../images/whiteRice.jpg" alt="Image of white rice in a wooden spoon" class="foodPicture">
+                    <h1 class="foodTitle">White Rice</h1>
+                    <div class="foodText" id="whiteRiceFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="whiteRiceQuantityMinus" onclick="quantityMinus(event), minusQuantity('whiteRiceQuantity')">-</div>
+                            <div class="quantity" id="whiteRiceQuantity">1</div>
+                            <div class="addQuantity" id="whiteRiceQuantityPlus" onclick="quantityPlus(event), addQuantity('whiteRiceQuantity')">+</div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="foodContainer secondaryFoodContainer" id="friedRiceContainer" onclick="selectSecondaryFoodContainer('friedRiceContainer')">
+                    <img src="../images/friedRice.jpg" alt="Image of fried rice in a wooden spoon" class="foodPicture">
+                    <h1 class="foodTitle">Fried Rice</h1>
+                    <div class="foodText" id="friedRiceFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="friedRiceQuantityMinus" onclick="quantityMinus(event), minusQuantity('friedRiceQuantity')">-</div>
+                            <div class="quantity" id="friedRiceQuantity">1</div>
+                            <div class="addQuantity" id="friedRiceQuantityPlus" onclick="quantityPlus(event), addQuantity('friedRiceQuantity')">+</div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="foodContainer secondaryFoodContainer" id="chowMeinContainer"
+                    onclick="selectSecondaryFoodContainer('chowMeinContainer')">
+                    <img src="../images/chowMein.jpg" alt="Image of chop suey in a wooden spoon" class="foodPicture">
+                    <h1 class="foodTitle">Chow Mein</h1>
+                    <div class="foodText" id="chowMeinFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="chowMeinQuantityMinus" onclick="quantityMinus(event), minusQuantity('chowMeinQuantity')">-</div>
+                            <div class="quantity" id="chowMeinQuantity">1</div>
+                            <div class="addQuantity" id="chowMeinQuantityPlus" onclick="quantityPlus(event), addQuantity('chowMeinQuantity')">+</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- SUBMIT BUTTON AREA -->
+        <div class="submitButtonContainer">
+            <button disabled class="plateButton buttonDisabled" id="addToCartPlate"
+                onclick="addToCart('testing'); startAnimation('addToCartPlate'); setTimeout(endAnimation, 1250, 'addToCartPlate'); setTimeout(closeCheckAnimation, 930, 'addToCartPlate')">
+                <p class="buttonText">Add to Cart</p>
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </button>
+            <div class="foodQuantityContainer" id="foodQuantityContainerID">
+                <div class="moreFoodButton" id="moreFoodID" onclick="addAmount()"></div>
+                <div class="foodQuantityButton" id="quantityButtonID">1</div>
+                <div class="lessFoodButton" id="lessFoodID" onclick="removeAmount()"></div>
+            </div>
+    
+        </div>
+    
     </div>
 
     <script src="./platter.js"></script>

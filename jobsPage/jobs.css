@@ -12,7 +12,7 @@
     src: url(../kanit/Kanit-Light.ttf);
 }
 
-#signup {
+.signup {
     border: 0px solid black;
     margin: 0% 20% 5% 20%;
     text-align: center;
@@ -29,6 +29,11 @@
     width: 800px;
 }
 
+.signup{
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
     font-family: kanit-regular;
@@ -41,14 +46,19 @@ body{
 #btn{
     border: 0px solid black;
     border-radius: 20px;
-    width: 100%;
+    width: 150px;
     background-color: red;
+    color: white;
     height: 50px;
     font-family: kanit-regular;
     font-weight: 500;
     font-size: 35px;
 }
 
+.btnCenter {
+    display: flex;
+    justify-content: center;
+}
 
 #passReqs{
     font-size: 10px;
@@ -58,6 +68,7 @@ body{
 .infoBoxes{
     width:600px;
     text-align: left;
+    padding: 20px;
 }
 
 h4{

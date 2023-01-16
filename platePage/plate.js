@@ -47,6 +47,8 @@ function selectPrimaryFoodContainer(containerID) {
         document.querySelector("#" + containerID + " .fireIconCrossout").classList.remove("fireCrossWhiteOffAnimation");
 
         document.querySelector("#" + containerID + " .quantityCounter").style.display = "flex";
+        document.querySelector("#" + containerID + " .fireIcon").style.display = "block";
+        document.querySelector("#" + containerID + " .fireIconCrossout").style.display = "block";
 
 
         // Changes the title at the top of the primary dish title to whatever the number of dishes selected is, and then turns in green if one primary dish has been selected
@@ -93,6 +95,8 @@ function selectPrimaryFoodContainer(containerID) {
         document.querySelector("#" + containerID + " .fireIcon").style.backgroundColor = 'rgba(51, 51, 51, 0)'
 
         document.querySelector("#" + document.querySelector("#" + containerID + " .foodText").id + " .quantityCounter").style.display = "none";
+        document.querySelector("#" + containerID + " .fireIcon").style.display = "none";
+        document.querySelector("#" + containerID + " .fireIconCrossout").style.display = "none";
 
         if (primaryDishesSelected == 1) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 1 Primary Dish")
@@ -109,9 +113,11 @@ function selectPrimaryFoodContainer(containerID) {
     if (primaryDishesSelected == 2 && secondaryDishesSelected == 1) {
         document.getElementById('addToCartPlate').classList.remove("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = false;
+        document.getElementById('foodQuantityContainerID').classList.add('quantityButtonEnabled');
     } else {
         document.getElementById('addToCartPlate').classList.add("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = true;
+        document.getElementById('foodQuantityContainerID').classList.remove('quantityButtonEnabled');
     }
     
     
@@ -181,9 +187,11 @@ function selectSecondaryFoodContainer(containerID) {
     if (primaryDishesSelected == 2 && secondaryDishesSelected == 1) {
         document.getElementById('addToCartPlate').classList.remove("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = false;
+        document.getElementById('foodQuantityContainerID').classList.add('quantityButtonEnabled');
     } else {
         document.getElementById('addToCartPlate').classList.add("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = true;
+        document.getElementById('foodQuantityContainerID').classList.remove('quantityButtonEnabled');
     }
 }
 
@@ -217,7 +225,7 @@ function endAnimation(buttonID2) {
     // Adds the text back into the button
     document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
 
-    // window.location.href = "../startOrderPage/startOrderPage.html"
+    window.location.href = "../startOrderPage/startOrderPage.html"
 }
 
 function closeCheckAnimation(buttonID3) {
@@ -248,8 +256,10 @@ function addToCart() {
         }
         
     }
+    for(let i = 0; i < document.getElementById('quantityButtonID').innerHTML; i++){
+        localStorage.setItem(("cartArray" + (localStorage.length + 1)), JSON.stringify(cartArray));
+    }
     
-    localStorage.setItem(("cartArray" + (localStorage.length + 1)), JSON.stringify(cartArray));
     
 }
 function clearLocalStorage() {
@@ -297,6 +307,28 @@ function addQuantity(quantityID){
         document.getElementById(quantityID).innerHTML++;
         selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
         selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+    }
+}
+
+function addAmount(){
+    if(!(document.getElementById('addToCartPlate').classList.contains('buttonDisabled'))){
+        document.getElementById('quantityButtonID').innerHTML++;
+        if(document.getElementById('quantityButtonID').innerHTML > 1){
+            document.getElementById('lessFoodID').style.borderColor = "white"
+        }
+    }
+}
+
+function removeAmount(){
+    if(!(document.getElementById('addToCartPlate').classList.contains('buttonDisabled'))){
+        if(document.getElementById('quantityButtonID').innerHTML > 1){
+            document.getElementById('quantityButtonID').innerHTML--;
+        }
+        if(document.getElementById('quantityButtonID').innerHTML > 1){
+            document.getElementById('lessFoodID').style.borderColor = "white"
+        }else{
+            document.getElementById('lessFoodID').style.borderColor = "rgb(83, 83, 83)"
+        }
     }
 }
 

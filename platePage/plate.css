@@ -155,11 +155,12 @@ body {
     position: absolute;
     display: none;
     align-items: center;
+    gap: 5px;
     width: 25px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: montserrat-regular;
     height: auto;
-    margin-left: 184px;
+    margin-left: 176px;
     margin-top: -42px;
     background-color: rgba(255, 255, 255, 0);
     width: 75px;
@@ -184,11 +185,26 @@ body {
     justify-content: center;
 }
 
+.quantity{
+    background-color: white;
+    color: #7ac142;
+    font-family: montserrat-bold;
+    font-weight: 200;
+    border-radius: 25px;
+    width: 63.29px;
+    height: 31.29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .fireIconContainer{
     position: absolute;
 }
 
 .fireIcon{
+    display: none;
     width: 25px;
     height: auto;
     background-color: rgba(51, 51, 51, 0);
@@ -196,18 +212,19 @@ body {
     border: 2px solid black;
     position: absolute;
     z-index: 15;
-    margin-left: 51px;
-    margin-top: -10px;
+    margin-left: 142px;
+    margin-top: -27px;
     cursor: pointer;
 }
 .fireIconCrossout{
+    display: none;
     width: 26px;
     height: 2px;
     z-index: 14;
     background-color: black;
     position: absolute;
-    margin-left: 153px;
-    margin-top: -17px;
+    margin-left: 144px;
+    margin-top: -15px;
     transform: rotate(45deg);
     border: 0px solid black;
 }
@@ -310,6 +327,7 @@ body {
 .submitButtonContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 25px;
     margin-bottom: 50px;
 }
@@ -327,6 +345,7 @@ body {
     border-radius: 25px;
     border-width: 0px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .plateButton:hover {
@@ -475,6 +494,54 @@ body {
     }
 }
 
+.foodQuantityContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.foodQuantityButton{
+    width: 50px;
+    height: 50px;
+    color: rgb(83, 83, 83);
+    background-color: grey;
+    font-size: 30px;
+    font-family: kanit-light;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .moreFoodButton{
+    border: solid rgb(83, 83, 83);
+    border-width: 0 3px 3px 0;
+    transform: rotate(-135deg);
+    transform-origin: center;
+    padding-bottom: 3px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.lessFoodButton{
+    border: solid rgb(83, 83, 83);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    transform-origin: center;
+    padding-bottom: 3px;
+    padding: 6px;
+    cursor: pointer;
+} 
+
+.quantityButtonEnabled > .foodQuantityButton{
+    background-color: rgb(255, 58, 58);
+    color: white;
+}
+.quantityButtonEnabled > .moreFoodButton{
+    border-color: white;
+}
+
 .selected {
     border-inline-width: 0px;
 }
@@ -524,11 +591,13 @@ body {
 @keyframes fireIconWhiteOn {
     0% {
         filter: invert(0);
+        display: none;
         /* backdrop-filter: invert(0); */
     }
 
     100% {
         filter: invert(1);
+        display: flex;
         /* backdrop-filter: invert(1); */
     }
 }
@@ -543,11 +612,13 @@ body {
 @keyframes fireIconWhiteOff {
     0% {
         filter: invert(1);
+        display: flex;
         /* backdrop-filter: invert(1); */
     }
 
     100% {
         filter: invert(0);
+        display: none;
         /* backdrop-filter: invert(0); */
     }
 }
@@ -563,11 +634,13 @@ body {
 @keyframes fireCrossWhiteOn {
     0% {
         filter: invert(0);
+        display: none;
         /* backdrop-filter: invert(0); */
     }
 
     100% {
         filter: invert(1);
+        display: flex;
         /* backdrop-filter: invert(1); */
     }
 }
@@ -582,11 +655,13 @@ body {
 @keyframes fireCrossWhiteOff {
     0% {
         filter: invert(1);
+        display: flex;
         /* backdrop-filter: invert(1); */
     }
 
     100% {
         filter: invert(0);
+        display: none;
         /* backdrop-filter: invert(0); */
     }
 }

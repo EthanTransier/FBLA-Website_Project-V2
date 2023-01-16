@@ -89,10 +89,10 @@
                         <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('orangeChickenFireID')" id="orangeChickenFireID">
                         <div class="fireIconCrossout" id="orangeChickenCrossID"></div>
                         <div class="quantityCounter">
-                            <div class="minusQuantity" id="teriyakiQuantityMinus"
-                                onclick="minusQuantity('teriyakiQuantity'), quantityMinus(event)">-</div>
-                            <div class="quantity" id="teriyakiQuantity">1</div>
-                            <div class="addQuantity" id="teriyakiQuantityPlus" onclick="addQuantity('teriyakiQuantity'), quantityPlus(event)">+
+                            <div class="minusQuantity" id="orangeQuantityMinus"
+                                onclick="minusQuantity('orangeQuantity'), quantityMinus(event)">-</div>
+                            <div class="quantity" id="orangeQuantity">1</div>
+                            <div class="addQuantity" id="orangeQuantityPlus" onclick="addQuantity('orangeQuantity'), quantityPlus(event)">+
                             </div>
                         </div>
                     </div>
@@ -108,10 +108,10 @@
                         <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon" onclick="makeSpicy(event), spicyAnimation('tsoChickenFireID')" id="tsoChickenFireID">
                         <div class="fireIconCrossout" id="tsoChickenCrossID"></div>
                         <div class="quantityCounter">
-                            <div class="minusQuantity" id="teriyakiQuantityMinus"
-                                onclick="minusQuantity('teriyakiQuantity'), quantityMinus(event)">-</div>
-                            <div class="quantity" id="teriyakiQuantity">1</div>
-                            <div class="addQuantity" id="teriyakiQuantityPlus" onclick="addQuantity('teriyakiQuantity'), quantityPlus(event)">+
+                            <div class="minusQuantity" id="tsoQuantityMinus"
+                                onclick="minusQuantity('tsoQuantity'), quantityMinus(event)">-</div>
+                            <div class="quantity" id="tsoQuantity">1</div>
+                            <div class="addQuantity" id="tsoQuantityPlus" onclick="addQuantity('tsoQuantity'), quantityPlus(event)">+
                             </div>
                         </div>
                     </div>
@@ -202,6 +202,12 @@
                     <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                 </svg>
             </button>
+            <div class="foodQuantityContainer" id="foodQuantityContainerID">
+                <div class="moreFoodButton" id="moreFoodID" onclick="addAmount()"></div>
+                <div class="foodQuantityButton" id="quantityButtonID">1</div>
+                <div class="lessFoodButton" id="lessFoodID" onclick="removeAmount()"></div>
+            </div>
+            
         </div>
 
     </div>

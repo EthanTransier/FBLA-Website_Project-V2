@@ -54,7 +54,6 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
-    height: 600px;
     max-height: fit-content;
     min-height: 600px;
     font-size: 23px;

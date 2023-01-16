@@ -26,7 +26,6 @@ function selectPrimaryFoodContainer(containerID) {
         primaryFoodContainerSelected.classList.remove("deselectAnimation");
 
         // Adds a dish to the primary dishes selected variable, which says how many primary dishes have been selected by the user, and then console logs it
-        
         if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1 && primaryDishesSelected != 2){
             primaryDishesSelected++;
         }else if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 2){
@@ -66,12 +65,8 @@ function selectPrimaryFoodContainer(containerID) {
         // Removes selected class to the container that is deselected
         document.querySelector("#" + containerID + " .foodTitle").classList.remove('selected');
 
-
-        document.querySelector("#" + containerID + " .foodTitle").classList.remove('selected');
-
         primaryFoodContainerSelected.classList.add("deselectAnimation");
         primaryFoodContainerSelected.classList.remove("selectAnimation");
-
         
         if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1){
             primaryDishesSelected--;
@@ -119,10 +114,6 @@ function selectPrimaryFoodContainer(containerID) {
         document.getElementById('addToCartPlate').disabled = true;
         document.getElementById('foodQuantityContainerID').classList.remove('quantityButtonEnabled');
     }
-    
-    
-    
-
 }
 
 var secondaryDishesSelected = 0;
@@ -252,7 +243,7 @@ function addToCart() {
             cartArray.push("Plate with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
             secondaryCartArray.length = 0;
         }else if(secondaryCartArray.length == 2 && firstCartArray.length == 2){
-            cartArray.push("Plate with Two Servings of " + secondaryCartArray[0] + " and 1 Serving of " + secondaryCartArray[1] )
+            cartArray.push("Plate With Two Servings of " + secondaryCartArray[0] + " and One Serving of " + secondaryCartArray[1] )
         }
         
     }

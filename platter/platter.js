@@ -7,6 +7,17 @@ function quantityPlus(event){
     event.stopPropagation();
     event.preventDefault();
 }
+
+function quantityMinusSecondary(event){
+    event.stopPropagation();
+    event.preventDefault();
+}
+
+function quantityPlusSecondary(event){
+    event.stopPropagation();
+    event.preventDefault();
+}
+
 const primarySelected = [];
 const secondarySelected = [];
 
@@ -110,7 +121,7 @@ function selectPrimaryFoodContainer(containerID) {
             document.getElementById("primarySubTitle").style.color = "grey";
         }
     }
-    if (primaryDishesSelected == 2 && secondaryDishesSelected == 1) {
+    if (primaryDishesSelected == 2 && secondaryDishesSelected == 2) {
         document.getElementById('addToCartPlate').classList.remove("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = false;
         document.getElementById('foodQuantityContainerID').classList.add('quantityButtonEnabled');
@@ -129,19 +140,22 @@ var secondaryDishesSelected = 0;
 function selectSecondaryFoodContainer(containerID) {
     var secondaryFoodContainerSelected = document.getElementById(containerID);
     // If the food container has not played the starting animation, it will play it and then remove the ending animation class. If the food container has played the starting animation, it will remove the starting animation class and play the ending animation class.
-    if (secondaryFoodContainerSelected.classList.contains("selectAnimation") != true && secondaryDishesSelected < 1) {
-        // Adds selected class to the container that is selected
-        
+    if (secondaryFoodContainerSelected.classList.contains("selectAnimation") != true && secondaryDishesSelected < 2) {
+        // Adds selected class to the container that is selected  
         document.querySelector("#" + containerID + " .foodTitle").classList.add('selected');
-
-
         // Adds and removes the animation class so the animation palys
         secondaryFoodContainerSelected.classList.add("selectAnimation");
         secondaryFoodContainerSelected.classList.remove("deselectAnimation");
 
         // Adds a dish to the secondary dishes selected variable, which says how many secondary dishes have been selected by the user, and then console logs it
-        secondaryDishesSelected++;
-        
+        if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1 && secondaryDishesSelected != 2){
+            secondaryDishesSelected++;
+        }else if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 2){
+            secondaryDishesSelected = 2;
+        }
+        if(document.getElementsByClassName('selected').length == 0){
+        secondaryDishesSelected = 0;
+        }
 
         // Plays the animation that changes the text in the container to white when it is selected because the red text doesn't contrast enough with the now green container
         document.querySelector("#" + containerID + " div").classList.add("foodTextSelectAnimation");
@@ -155,7 +169,7 @@ function selectSecondaryFoodContainer(containerID) {
         } else if (secondaryDishesSelected == 2 || secondaryDishesSelected == 0) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected " + secondaryDishesSelected + " Secondary Dishes")
         }
-        if (secondaryDishesSelected == 1) {
+        if (secondaryDishesSelected == 2) {
             document.getElementById("secondarySubTitle").style.color = "#659f38";
         } else {
             document.getElementById("secondarySubTitle").style.color = "grey";
@@ -166,9 +180,16 @@ function selectSecondaryFoodContainer(containerID) {
         
         secondaryFoodContainerSelected.classList.add("deselectAnimation");
         secondaryFoodContainerSelected.classList.remove("selectAnimation");
-
-        secondaryDishesSelected--;
         
+        if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 1){
+            secondaryDishesSelected--;
+        }else if(document.querySelector("#" + document.querySelector('#' + containerID + " .foodText").id + " .quantity").innerHTML == 2){
+            secondaryDishesSelected = 0;
+        }
+
+        if(document.getElementsByClassName('selected').length == 0){
+        secondaryDishesSelected = 0;
+        }
 
         document.querySelector("#" + containerID + " div").classList.remove("foodTextSelectAnimation");
         document.querySelector("#" + containerID + " div").classList.add("foodTextDeselectAnimation");
@@ -179,18 +200,18 @@ function selectSecondaryFoodContainer(containerID) {
 
         if (secondaryDishesSelected == 1) {
             document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 1 Secondary Dish")
-        } else if (secondaryDishesSelected == 0) {
-            document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected 0 Secondary Dishes")
+        } else if (secondaryDishesSelected == 2 || secondaryDishesSelected == 0) {
+            document.querySelector("#" + document.getElementById(containerID).parentElement.id + " .foodContainerSubTitle").innerHTML = ("You Have Selected " + secondaryDishesSelected + " Secondary Dishes")
         }
 
-        if (secondaryDishesSelected == 1) {
+        if (secondaryDishesSelected == 2) {
             document.getElementById("secondarySubTitle").style.color = "#659f38";
         } else {
             document.getElementById("secondarySubTitle").style.color = "grey";
         }
     }
     // If both of the primary and secondary items have the adequate number of dishes selected, the submit button at the bottom will activate
-    if (primaryDishesSelected == 2 && secondaryDishesSelected == 1) {
+    if (primaryDishesSelected == 2 && secondaryDishesSelected == 2) {
         document.getElementById('addToCartPlate').classList.remove("buttonDisabled");
         document.getElementById('addToCartPlate').disabled = false;
         document.getElementById('foodQuantityContainerID').classList.add('quantityButtonEnabled');
@@ -254,11 +275,17 @@ function addToCart() {
             secondaryCartArray.push(firstCartArray.item(i).innerHTML)
         }
 
-        if(secondaryCartArray.length == 3){
-            cartArray.push("Plate with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
+        if(secondaryCartArray.length == 4){
+            cartArray.push("Platter with " + secondaryCartArray[0] + ", " + secondaryCartArray[1] + ", and " + secondaryCartArray[2])
             secondaryCartArray.length = 0;
+        }else if(secondaryCartArray.length == 3 && firstCartArray.length == 3){
+            if(primaryDishesSelected == 1){
+                cartArray.push("Platter With Two Servings of " + secondaryCartArray[0] + " and One Serving of " + secondaryCartArray[1] + " and " + secondaryCartArray[2])
+            }else if(secondaryDishesSelected == 1){
+                cartArray.push("Platter With One Serving of " + secondaryCartArray[0] + " and " + secondaryCartArray[1] + " and Two Servings of " + secondaryCartArray[2])
+            }
         }else if(secondaryCartArray.length == 2 && firstCartArray.length == 2){
-            cartArray.push("Plate with Two Servings of " + secondaryCartArray[0] + " and 1 Serving of " + secondaryCartArray[1] )
+            cartArray.push("Platter With Two Servings of " + secondaryCartArray[0] + " and Two Servings of " + secondaryCartArray[1])
         }
         
     }
@@ -313,6 +340,21 @@ function addQuantity(quantityID){
         document.getElementById(quantityID).innerHTML++;
         selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
         selectPrimaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+    }
+}
+
+function minusQuantitySecondary(quantityID){
+    if(document.getElementById(quantityID).innerHTML == 2){
+        document.getElementById(quantityID).innerHTML--;
+        selectSecondaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+        selectSecondaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+    }
+}
+function addQuantitySecondary(quantityID){
+    if(document.getElementById(quantityID).innerHTML == 1 && secondaryDishesSelected == 1){
+        document.getElementById(quantityID).innerHTML++;
+        selectSecondaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
+        selectSecondaryFoodContainer(document.getElementById(quantityID).parentElement.parentElement.parentElement.id);
     }
 }
 

@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jī lóng | Cart</title>
-    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="../header-footer.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./cart.css">
 </head>
 <body onload="cartUpdater(); cartNotification()">
     <!-- Header, which includes the Title, the Logo, and the links -->
@@ -15,31 +16,47 @@
         <a href="../index.html" class="headerLogoContainer">
             <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
         </a>
-        <div class="titleContainer">
+        <div class="titleContainer" id="titleID" onclick="window.location.href='../index.html'">
             <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
         </div>
         <!-- Container for the links to the different pages of the website inside the header -->
-        <div class="headerLinksContainer">
-            <!-- Container for the link that goes to the home page -->
-            <div class="homeLinkContainer">
-                <a href="../index.html">Home</a>
-            </div>
-            <!-- Container for the link that goes to the menu page -->
-            <div class="menuLinkContainer">
-                <a href="../SubscritionPage/subscription.html">Jī lóng+</a>
-            </div>
-            <!-- Container for the link that goes to the Hiring page -->
-            <div class="jobs.html">
-                <a href="../jobsPage/jobs.html">Join Us</a>
+        <div class='headerDropdown' id='dropdownID'>
+            <div class='homeLinkContainer dropdownLink' onclick='openDropdown()'>
+                <a class='underlineText'>Cart</a>
+                <img src="../images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
             </div>
         </div>
-        <!-- Container for the button / link that takes you to the Ordering page -->
-        <div class="orderLinkContainer">
-            <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink">Order Now</a>
+        <div class='dropdownContent' id='dropdownContentID'>
+            <a href='../index.html' class='headerOrderLink'>Home</a>
+            <div class="horizontalLine"></div>
+            <a href='../startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
+            <div class="horizontalLine"></div>
+            <a href='../plus/plus.html' class='headerOrderLink'>Jī lóng+</a>
+            <div class="horizontalLine"></div>
+            <a href='../jobsPage/jobs.html' class='headerOrderLink'>Join Us</a>
+        </div>
+        <div class='headerLinksContainer' id='headerLinksID'>
+            <!-- Container for the link that goes to the home page -->
+            <div class='homeLinkContainer'>
+                <a href='../index.html'>Home</a>
+            </div>
+            <!-- Container for the button / link that takes you to the Ordering page -->
+            <div class='orderLinkContainer'>
+                <a href='../startOrderPage/startOrderPage.html'>Order</a>
+            </div>
+            <!-- Container for the link that goes to the menu page -->
+            <div class='menuLinkContainer'>
+                <a href='../plus/plus.html'>Jī lóng+</a>
+            </div>
+            <!-- Container for the link that goes to the Hiring page -->
+            <div class='jobs.html'>
+                <a href='../jobsPage/jobs.html'>Join Us</a>
+            </div>
         </div>
         <!-- Container for the cart icon / link -->
         <div class="cartHeaderContainer">
-            <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon">
+            <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"
+                onclick="window.location.href='../cartPage/cart.html'">
             <div class="cartRedIcon" id="cartRedIconID"></div>
         </div>
     
@@ -53,7 +70,7 @@
 
                 </div>
                 <div class="cartOrderMoreContainer">
-                    Want Extra? Click Here to Order More
+                    Click Here to Order More
                 </div>
             </div>
             <div class="verticalLine"></div>
@@ -67,7 +84,8 @@
             </div>
         </div>
     </div>
-    <button onclick="clearLocalStorage()">Clear Local Storage</button>
+    <button onclick="clearLocalStorage()">Clear Storage</button>
     <script src="./cart.js"></script>
+    <script src="../header-footer.js"></script>
 </body>
 </html>

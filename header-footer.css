@@ -17,6 +17,10 @@ a {
     color: black
 }
 
+.titleContainer{
+    cursor: pointer;
+}
+
 .headerTitle {
     font-size: clamp(1.25rem, 0.0781rem + 3.75vw, 3.125rem);
 }
@@ -44,26 +48,14 @@ a {
 
 }
 
-
-.headerOrderLink {
-    background-color: rgb(255, 58, 58);
-    border-radius: 20px;
-    border-color: rgb(255, 58, 58);
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: kanit-light;
-    color: white;
-}
-
-.headerOrderLink:hover {
-    background-color: rgb(223, 0, 0);
-    border-color: rgb(223, 0, 0);
-    border-width: 7px;
-    text-decoration: none;
-}
-
 .dragonSpanTitle {
     color: red;
+}
+
+.cartHeaderContainer {
+    position: relative;
+    width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+    height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
 }
 
 .cartIcon {

@@ -21,12 +21,14 @@ body {
 
 .backArrowContainer{
     display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .backArrowTitle{
     font-family: montserrat-light;
-    color: red;
-    font-size: 17px;
+    color: rgb(255, 58, 58);
+    font-size: 25px;
     font-weight: normal;
 }
 
@@ -149,6 +151,85 @@ body {
     font-family: montserrat-light;
 }
 
+.quantityCounter{
+    position: absolute;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    width: 25px;
+    font-size: 25px;
+    font-family: montserrat-regular;
+    height: auto;
+    margin-left: 176px;
+    margin-top: -42px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 75px;
+}
+
+.minusQuantity{
+    font-size: 40px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.addQuantity{
+    font-size: 35px;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity{
+    background-color: white;
+    color: #7ac142;
+    font-family: montserrat-bold;
+    font-weight: 200;
+    border-radius: 25px;
+    width: 63.29px;
+    height: 31.29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fireIconContainer{
+    position: absolute;
+}
+
+.fireIcon{
+    display: none;
+    width: 25px;
+    height: auto;
+    background-color: rgba(51, 51, 51, 0);
+    border-radius: 15px;
+    border: 2px solid black;
+    position: absolute;
+    z-index: 15;
+    margin-left: 142px;
+    margin-top: -27px;
+    cursor: pointer;
+}
+.fireIconCrossout{
+    display: none;
+    width: 26px;
+    height: 2px;
+    z-index: 14;
+    background-color: black;
+    position: absolute;
+    margin-left: 144px;
+    margin-top: -15px;
+    transform: rotate(45deg);
+    border: 0px solid black;
+}
+
+
 /* ANIMATIONS AREA */
 /* Animation class for when the food is selected  */
 .selectAnimation {
@@ -246,6 +327,7 @@ body {
 .submitButtonContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 25px;
     margin-bottom: 50px;
 }
@@ -263,6 +345,7 @@ body {
     border-radius: 25px;
     border-width: 0px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .plateButton:hover {
@@ -368,7 +451,6 @@ body {
 }
 
 @keyframes scale {
-
     0%,
     100% {
         transform: none;
@@ -412,6 +494,174 @@ body {
     }
 }
 
+.foodQuantityContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.foodQuantityButton{
+    width: 50px;
+    height: 50px;
+    color: rgb(83, 83, 83);
+    background-color: grey;
+    font-size: 30px;
+    font-family: kanit-light;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .moreFoodButton{
+    border: solid rgb(83, 83, 83);
+    border-width: 0 3px 3px 0;
+    transform: rotate(-135deg);
+    transform-origin: center;
+    padding-bottom: 3px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.lessFoodButton{
+    border: solid rgb(83, 83, 83);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    transform-origin: center;
+    padding-bottom: 3px;
+    padding: 6px;
+    cursor: pointer;
+} 
+
+.quantityButtonEnabled > .foodQuantityButton{
+    background-color: rgb(255, 58, 58);
+    color: white;
+}
+.quantityButtonEnabled > .moreFoodButton{
+    border-color: white;
+}
+
 .selected {
     border-inline-width: 0px;
+}
+
+/* Animation class for when the spicy option has been selected */
+.fireSelectAnimation {
+    animation: fireSelect .10s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been selected */
+@keyframes fireSelect {
+    0% {
+        background-color: rgba(51, 51, 51, 0);
+    }
+
+    100% {
+        background-color: rgb(255, 58, 58);
+    }
+}
+
+/* Animation class for when the spicy option has been deselected */
+.fireDeselectAnimation {
+    animation: fireDeselect .10s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been deselected */
+@keyframes fireDeselect {
+    0% {
+        background-color: rgb(255, 58, 58);
+    }
+
+    100% {
+        background-color: rgba(51, 51, 51, 0);
+    }
+}
+
+
+/* Animation class for when the spicy option has been selected */
+.fireIconWhiteOnAnimation {
+    animation: fireIconWhiteOn .15s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been selected */
+@keyframes fireIconWhiteOn {
+    0% {
+        filter: invert(0);
+        display: none;
+        /* backdrop-filter: invert(0); */
+    }
+
+    100% {
+        filter: invert(1);
+        display: flex;
+        /* backdrop-filter: invert(1); */
+    }
+}
+
+/* Animation class for when the spicy option has been deselected */
+.fireIconWhiteOffAnimation {
+    animation: fireIconWhiteOff .15s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been deselected */
+@keyframes fireIconWhiteOff {
+    0% {
+        filter: invert(1);
+        display: flex;
+        /* backdrop-filter: invert(1); */
+    }
+
+    100% {
+        filter: invert(0);
+        display: none;
+        /* backdrop-filter: invert(0); */
+    }
+}
+
+
+/* Animation class for when the spicy option has been selected */
+.fireCrossWhiteOnAnimation {
+    animation: fireCrossWhiteOn .15s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been selected */
+@keyframes fireCrossWhiteOn {
+    0% {
+        filter: invert(0);
+        display: none;
+        /* backdrop-filter: invert(0); */
+    }
+
+    100% {
+        filter: invert(1);
+        display: flex;
+        /* backdrop-filter: invert(1); */
+    }
+}
+
+/* Animation class for when the spicy option has been deselected */
+.fireCrossWhiteOffAnimation {
+    animation: fireCrossWhiteOff .15s;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for when the spicy option has been deselected */
+@keyframes fireCrossWhiteOff {
+    0% {
+        filter: invert(1);
+        display: flex;
+        /* backdrop-filter: invert(1); */
+    }
+
+    100% {
+        filter: invert(0);
+        display: none;
+        /* backdrop-filter: invert(0); */
+    }
 }

@@ -61,7 +61,6 @@ a {
 .cartIcon {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: auto;
-    padding-top: 10px;
 }
 
 .cartRedIcon {
@@ -75,6 +74,7 @@ a {
     border-radius: 50%;
     position: absolute;
     margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
+    margin-top: -53px;
 }
 
 .underlineText {
@@ -313,11 +313,113 @@ footer {
     100% {
         transform: rotate(360deg)
     }
+}
 
-    footer {
-        font-size: clamp(0.8vh, 8rem, 1vh);
-        padding: 2px;
-        justify-content: space-between;
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border-top-width: 3.5px;
+    border-top-color: rgb(223, 0, 0);
+    border-top-style: solid;
+    margin-top: 50px;
+    height: auto;
+    justify-content: space-around;
+    font-family: montserrat-regular;
+}
+
+.footerTitle{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.footerCopyRight{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footerIMG{
+    width: 30px;
+    height: 30px;
+    padding-right: 3px;
+}
+
+.horizontalCenter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.igLogo{
+    padding-top:6px;
+}
+
+footer {
+    font-size: clamp(0.8vh, 8rem, 1vh);
+    padding: 2px;
+    justify-content: space-between;
+}
+
+
+
+@media only screen and (max-width: 332px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerCopyRight{
+        justify-content: center;
     }
 }
 
+
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(./montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(./montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(./montserrat/static/Montserrat-Light.ttf);
+}
+
+@media only screen and (max-width: 332px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footerCopyRight{
+        justify-content: center;
+    }
+}
+
+
+/* Fonts Area */
+@font-face {
+    font-family: montserrat-regular;
+    src: url(./montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(./montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat-light;
+    src: url(./montserrat/static/Montserrat-Light.ttf);
+}

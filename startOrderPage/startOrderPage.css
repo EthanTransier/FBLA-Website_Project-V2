@@ -46,9 +46,10 @@ body {
 .topRowImagesContainer{
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 80px;
     margin-top: 30px;
-    margin-left: 50px;
 }
 /* CSS for the picture of the bowl  */
 .bowlPicture{
@@ -102,7 +103,8 @@ li span{
 .bottomRowImagesContainer{
     display: flex;
     align-items: flex-end;
-    gap: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 /* CSS for the drink container */
 .drinkContainer{
@@ -156,4 +158,76 @@ li span{
 @font-face {
     font-family: montserrat-light;
     src: url(../montserrat/static/Montserrat-Light.ttf);
+}
+
+@media only screen and (max-width: 500px) {
+    .mainContentTitle{
+        font-size: 30px;
+        padding-top: 85px;
+    }
+    .subTitle{
+        font-size: 20px;
+    }
+    
+    .bowlPicture{
+        height: 100px;
+        padding-bottom: 10px;
+    }
+    .platePicture{
+        height: 100px;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    .platterPicture{
+        height: 100px;
+        padding-bottom: 10px;
+    }
+    .optionsTitles{
+        font-size: 20px;
+        flex-direction: column;
+    }
+    .plateTitle{
+        padding-left: 0;
+    }
+    .priceText{
+        font-size: 20px;
+    }
+    .optionsSubText{
+        font-size: 12px;
+    }
+    .dash{
+        display: none;
+    }
+    .bowlContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .plateContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .platterContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .topRowImagesContainer{
+        gap: 5px;
+    }
+    .drinkPicture{
+        width: 125px;
+        height: auto;
+    }
+    .sidesPicture{
+        width: 125px;
+        height: auto;
+    }
+    .bottomRowImagesContainer{
+        gap: 5px;
+    }
 }

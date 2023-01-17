@@ -192,6 +192,12 @@ footer {
         width: 17px;
         height: 17px;
     }
+
+    .cartIcon{
+        width: clamp(2vh, 6rem, 4vh);
+        height: clamp(2vh, 6rem, 4vh);
+        padding: clamp(.17vh, 6rem, .34vh);
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -251,6 +257,12 @@ footer {
         position: absolute;
         width: 100%;
         z-index: 30;
+    }
+
+    .cartIcon{
+        width: clamp(2vh, 6rem, 4vh);
+        height: clamp(2vh, 6rem, 4vh);
+        padding: clamp(.17vh, 6rem, .34vh);
     }
 }
 

@@ -1,3 +1,4 @@
+/* Utilites */
 * {
     margin: 0px;
     padding: 0px;
@@ -11,7 +12,12 @@
     font-family: kanit-light;
     src: url(../kanit/Kanit-Light.ttf);
 }
+body{
+    background-color: rgb(51, 51, 51);
+}
 
+
+/* Modifies the page's main box */
 .signup {
     border: 0px solid black;
     text-align: center;
@@ -27,26 +33,14 @@
     padding-bottom: 10px;
     width: 800px;
 }
-
 .signupBox{
     display: flex;
     justify-content: center;
 }
-
-h1 {
-    text-align: center;
-    font-family: kanit-regular;
-}
-
-body{
-    background-color: rgb(51, 51, 51);
-}
-
 #passReqs{
     font-size: 10px;
     text-align: left;
 }
-
 .infoBoxes{
     width:600px;
     text-align: left;
@@ -57,7 +51,26 @@ h4{
     text-decoration: underline;
     color: red;
 }
+.purchase{
+    padding-top: 10px;
+}
 
+
+/* Modifies the pages' titles */
+h1 {
+    text-align: center;
+    font-family: kanit-regular;
+}
+.buyTitle{
+    font-family: kanit-regular;
+    font-size: 25px;
+}
+.purchaseTitle{
+    font-family: kanit-regular;
+    font-size: 25px;
+}
+
+/* Modifies the page's button */
 #buyBTN{
     width: 200px;
     height: 100px;
@@ -66,36 +79,20 @@ h4{
     border: 0px solid black;
     border-radius: 20px;
 }
-
 #buyBTN:hover{
     background-color:rgb(156, 0, 0);
 }
-
-.buyTitle{
-    font-family: kanit-regular;
-    font-size: 25px;
-}
-
-.purchaseTitle{
-    font-family: kanit-regular;
-    font-size: 25px;
-}
-
-.purchase{
-    padding-top: 10px;
-}
-
 .pageTitle{
     color: white;
     text-align: center;
     width: 800px;
 }
-
 .centerTitle{
     display: flex;
     justify-content: center;
 }
 
+/* 780 Media Query */
 @media only screen and (max-width: 780px){
     *{
         overflow-x: hidden;
@@ -129,6 +126,7 @@ h4{
     }
 }
 
+/* 500 Media */
 @media only screen and (max-width: 500px){
     *{
         overflow-x: hidden;

@@ -84,3 +84,80 @@ h4{
 .purchase{
     padding-top: 10px;
 }
+
+.pageTitle{
+    color: white;
+    text-align: center;
+    width: 800px;
+}
+
+.centerTitle{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 780px){
+    *{
+        overflow-x: hidden;
+    }
+
+    h1{
+        font-size: clamp(1vh, 6rem, 2vh);
+        margin-left: clamp(3vh, 6rem, 6vh);
+        margin-right: clamp(3vh, 6rem, 6vh);
+        margin-top: clamp(1vh, 6rem, 2vh);
+        margin-bottom: clamp(1vh, 6rem, 2vh);
+    }
+
+    .infoBoxes{
+        width: clamp(40vh, 6rem, 60vh);
+    }
+
+    .signup{
+        width: clamp(50vh, 6rem, 60vh);
+        font-size: clamp(1.5vh, 6rem, 2vh);
+    }
+
+    i{
+        font-size: clamp(0.2vh, 6rem, .7vh);
+    }
+
+    #buyBTN{
+        width: clamp(20vh, 6rem, 30vh);
+        height: clamp(10vh, 6rem, 15vh);
+        margin-top: clamp(1vh, 6rem, 2vh);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    *{
+        overflow-x: hidden;
+    }
+
+    h1{
+        font-size: clamp(1vh, 6rem, 2vh);
+        margin-left: clamp(3vh, 6rem, 6vh);
+        margin-right: clamp(3vh, 6rem, 6vh);
+        padding-top: clamp(3vh, 6rem, 6vh);
+        margin-bottom: clamp(1vh, 6rem, 2vh);
+    }
+
+    .infoBoxes{
+        width: clamp(30vh, 6rem, 45vh);
+    }
+
+    .signup{
+        width: clamp(40vh, 6rem, 60vh);
+        font-size: clamp(1.5vh, 6rem, 2vh);
+    }
+
+    i{
+        font-size: clamp(0.2vh, 6rem, .7vh);
+    }
+
+    #buyBTN{
+        width: clamp(20vh, 6rem, 30vh);
+        height: clamp(10vh, 6rem, 15vh);
+        margin-top: clamp(1vh, 6rem, 2vh);
+    }
+}

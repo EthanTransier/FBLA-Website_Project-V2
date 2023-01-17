@@ -25,6 +25,10 @@ body {
     font-family: kanit-light;
 }
 
+.infoBoxes{
+    border: 0px solid white;
+}
+
 .signUp{
     border: 0px solid black;
     font-family: kanit-regular;
@@ -51,8 +55,8 @@ body {
 }
 
 .signBTN{
-    width: 350px;
-    height: 100px;
+    width: clamp(30vh, 6rem, 45vh);
+    height: clamp(10vh, 6rem, 15vh);
     background-color: red;
     color:white;
     font-size: 60px;
@@ -62,6 +66,7 @@ body {
     justify-content: center;
     border: 0px solid red;
     font-family: kanit-regular;
+    margin-top: clamp(3vh, 6rem, 4vh);
 }
 .signBTN:hover {
     cursor: pointer;
@@ -82,9 +87,54 @@ h4{
     color: white;
     text-align: center;
     width: 800px;
+    font-family: kanit-regular;
 }
 
 .centerTitle{
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 780px){
+    .signUp{
+        width: clamp(50vh, 6rem, 60vh);
+        font-size: clamp(1.5vh, 6rem, 2vh);
+    }
+
+    .signBTN{
+        width: clamp(21vh, 6rem, 31.5vh);
+        height: clamp(7vh, 6rem, 10.5vh);
+        margin-top: clamp(1.5vh, 6rem, 2vh);
+        font-size: clamp(4.5vh, 6rem, 6vh);
+    }
+
+    h1{
+        font-size: clamp(1vh, 6rem, 2vh);
+        margin-left: clamp(3vh, 6rem, 6vh);
+        margin-right: clamp(3vh, 6rem, 6vh);
+        padding-top: clamp(1vh, 6rem, 2vh);
+        margin-bottom: clamp(1vh, 6rem, 2vh);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .signUp{
+        width: clamp(40vh, 6rem, 60vh);
+        font-size: clamp(1.5vh, 6rem, 2vh);
+    }
+
+    .signBTN{
+        width: clamp(10.5vh, 6rem, 15.75vh);
+        height: clamp(3.5vh, 6rem, 5.25vh);
+        margin-top: clamp(1.5vh, 6rem, 2vh);
+        font-size: clamp(1.5vh, 6rem, 2vh); 
+    }
+
+    h1{
+        font-size: clamp(1vh, 6rem, 2vh);
+        margin-left: clamp(3vh, 6rem, 6vh);
+        margin-right: clamp(3vh, 6rem, 6vh);
+        padding-top: clamp(4vh, 6rem, 8vh);
+        margin-bottom: clamp(1vh, 6rem, 2vh);
+    }
 }

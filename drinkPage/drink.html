@@ -94,6 +94,33 @@
                     </svg>
                 </button>
             </div>
+            <div class="drinkContainer" id="spriteContainer">
+                <h1 class="drinkTitle">Sprite</h1>
+                <img src="../images/sprite.jpg" alt="Image of Sprite" class="drinkImage">
+                <div class="quantitySizeContainer" id="spriteQuantitySizeContainer">
+                    <div class="sizeContainer" id="spriteSizeContainer">
+                        <button class="smallButton sizeButton" id="spriteSmall" onclick="selectedSize('spriteSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="spriteMedium"
+                            onclick="selectedSize('spriteMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="spriteLarge" onclick="selectedSize('spriteLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartspriteCola"
+                    onclick="addToCart('spriteContainer'); startAnimation('addToCartspriteCola'); setTimeout(endAnimation, 1250, 'addToCartspriteCola'); setTimeout(closeCheckAnimation, 930, 'addToCartspriteCola')">
+                    <p class="buttonText">Add to Cart</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 

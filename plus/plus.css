@@ -1,6 +1,8 @@
+/* Utilities */
 body {
     background-color: rgb(51, 51, 51);
     text-align: left;
+    font-family: kanit-light;
 }
 * {
     margin: 0px;
@@ -14,21 +16,21 @@ body {
     font-family: kanit-light;
     src: url(../kanit/Kanit-Light.ttf);
 }
-
 #homePageBackground{
     width: 100%;
     height: auto;
     
 }
-
-body {
-    font-family: kanit-light;
+.flexCenter{
+    display: flex;
+    justify-content: center;
 }
 
+
+/* Modifies the main boxes on the page */
 .infoBoxes{
     border: 0px solid white;
 }
-
 .signUp{
     border: 0px solid black;
     font-family: kanit-regular;
@@ -43,17 +45,21 @@ body {
     width: 800px;
     padding: 20px;
 }
-
-
 .signUpBox{
     display: flex;
     justify-content: center;
 }
-
 .rewards{
     text-align: left;
 }
+h4{
+    text-decoration: underline;
+    color: red;
+    text-align: left;
+}
 
+
+/* Changes the button on the page */
 .signBTN{
     width: clamp(30vh, 6rem, 45vh);
     height: clamp(10vh, 6rem, 15vh);
@@ -72,29 +78,19 @@ body {
     cursor: pointer;
 }
 
-h4{
-    text-decoration: underline;
-    color: red;
-    text-align: left;
-}
-
-.flexCenter{
-    display: flex;
-    justify-content: center;
-}
-
+/* Modifies the pages title */
 .pageTitle{
     color: white;
     text-align: center;
     width: 800px;
     font-family: kanit-regular;
 }
-
 .centerTitle{
     display: flex;
     justify-content: center;
 }
 
+/* 780 Media Query */
 @media only screen and (max-width: 780px){
     .signUp{
         width: clamp(50vh, 6rem, 60vh);
@@ -117,6 +113,7 @@ h4{
     }
 }
 
+/* 500 Media Query */
 @media only screen and (max-width: 500px){
     .signUp{
         width: clamp(40vh, 6rem, 60vh);

@@ -1,3 +1,4 @@
+/* Changes the header */
 header {
     display: flex;
     justify-content: space-evenly;
@@ -11,58 +12,47 @@ header {
     border-bottom-color: rgb(223, 0, 0);
     border-bottom-style: solid;
 }
-
 a {
     text-decoration: none;
     color: black
 }
-
 .titleContainer{
     cursor: pointer;
 }
-
 .headerTitle {
     font-size: clamp(1.25rem, 0.0781rem + 3.75vw, 3.125rem);
 }
-
 .homeLink {
     text-decoration: underline;
     text-decoration-color: black;
 }
-
 .headerLinksContainer {
     display: flex;
     gap: clamp(0.313rem, -0.186rem + 1.596vw, 1.25rem);
     font-family: kanit-light;
 }
-
 .headerLogo {
     position: relative;
     width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
     height: auto;
 }
-
 .headerLogoContainer {
     width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
     height: auto;
 
 }
-
 .dragonSpanTitle {
     color: red;
 }
-
 .cartHeaderContainer {
     position: relative;
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
 }
-
 .cartIcon {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: auto;
 }
-
 .cartRedIcon {
     width: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
     height: clamp(0.469rem, 0.393rem + 0.605vw, 0.938rem);
@@ -76,23 +66,24 @@ a {
     margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
     margin-top: -53px;
 }
-
 .underlineText {
     text-decoration: underline;
     text-decoration-color: rgb(223, 0, 0);
     text-underline-offset: 6px;
 }
-
 .headerDropdown {
     display: none;
 }
-
 .dropdownContent {
     display: none;
 }
 
+/* Chnages the footer */
 footer {
     display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: white;
     border-top-width: 3.5px;
     border-top-color: rgb(223, 0, 0);
@@ -100,14 +91,16 @@ footer {
     margin-top: 50px;
     height: auto;
     justify-content: space-around;
-    flex-wrap: wrap;
+    font-family: montserrat-regular;
+    font-size: clamp(1vh, 8rem, 2vh);
+    padding: 2px;
+    justify-content: space-between;
 }
 
 .footerTitle{
     color: red;
-    text-decoration: underline;
+    font-weight: bold;
     font-size: 20px;
-    text-align: center;
 }
 
 .footerCopyRight{
@@ -116,12 +109,12 @@ footer {
     align-items: center;
     text-decoration: none;
     margin-bottom: 5px;
-    justify-content: center;
 }
 
 .footerIMG{
     width: 30px;
     height: 30px;
+    padding-right: 3px;
 }
 
 .horizontalCenter{
@@ -131,29 +124,10 @@ footer {
 }
 
 .igLogo{
-    display: flex;
-    justify-content: center;
     padding-top:6px;
 }
 
-.fbLogo{
-    display: flex;
-    justify-content: center;
-    padding-top:6px;
-}
-
-.twLogo{
-    display: flex;
-    justify-content: center;
-    padding-top:6px;
-}
-
-.footerBox{
-    text-align: center;
-    width: 25%;
-    height: auto;
-}
-
+/* 780 Media Query */
 @media only screen and (max-width: 780px) {
     .headerTitle {
         display: none;
@@ -192,8 +166,15 @@ footer {
         width: 17px;
         height: 17px;
     }
+
+    .cartIcon{
+        width: clamp(2vh, 6rem, 4vh);
+        height: clamp(2vh, 6rem, 4vh);
+        padding: clamp(.17vh, 6rem, .34vh);
+    }
 }
 
+/* 500 Media Query */
 @media only screen and (max-width: 500px) {
     .headerDropdown {
         font-size: clamp(1.25rem, 1.042rem + 1.667vw, 1.563rem);
@@ -252,13 +233,19 @@ footer {
         width: 100%;
         z-index: 30;
     }
+
+    .cartIcon{
+        width: clamp(2vh, 6rem, 4vh);
+        height: clamp(2vh, 6rem, 4vh);
+        padding: clamp(.17vh, 6rem, .34vh);
+    }
 }
 
+/* header animations */
 .dropdownOpenAnimation {
     animation: dropdownOpen .25s;
     animation-fill-mode: forwards;
 }
-
 @keyframes dropdownOpen {
     0% {
         transform: translateY(-20%);
@@ -268,12 +255,10 @@ footer {
         transform: translateY(80%)
     }
 }
-
 .dropdownCloseAnimation {
     animation: dropdownClose .25s;
     animation-fill-mode: forwards;
 }
-
 @keyframes dropdownClose {
     0% {
         transform: translateY(80%);
@@ -289,7 +274,6 @@ footer {
     animation: arrowOpen .25s;
     animation-fill-mode: forwards;
 }
-
 @keyframes arrowOpen {
     0% {
         transform: rotate(0deg);
@@ -299,12 +283,10 @@ footer {
         transform: rotate(180deg)
     }
 }
-
 .arrowCloseAnimation {
     animation: arrowClose .25s;
     animation-fill-mode: forwards;
 }
-
 @keyframes arrowClose {
     0% {
         transform: rotate(180deg);
@@ -315,87 +297,7 @@ footer {
     }
 }
 
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
-    border-top-width: 3.5px;
-    border-top-color: rgb(223, 0, 0);
-    border-top-style: solid;
-    margin-top: 50px;
-    height: auto;
-    justify-content: space-around;
-    font-family: montserrat-regular;
-}
-
-.footerTitle{
-    color: red;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.footerCopyRight{
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-bottom: 5px;
-}
-
-.footerIMG{
-    width: 30px;
-    height: 30px;
-    padding-right: 3px;
-}
-
-.horizontalCenter{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.igLogo{
-    padding-top:6px;
-}
-
-footer {
-    font-size: clamp(0.8vh, 8rem, 1vh);
-    padding: 2px;
-    justify-content: space-between;
-}
-
-
-
-@media only screen and (max-width: 332px){
-    footer{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footerCopyRight{
-        justify-content: center;
-    }
-}
-
-
-/* Fonts Area */
-@font-face {
-    font-family: montserrat-regular;
-    src: url(./montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: montserrat-bold;
-    src: url(./montserrat/static/Montserrat-Bold.ttf);
-}
-
-@font-face {
-    font-family: montserrat-light;
-    src: url(./montserrat/static/Montserrat-Light.ttf);
-}
-
+/* 332 Media Query */
 @media only screen and (max-width: 332px){
     footer{
         flex-direction: column;

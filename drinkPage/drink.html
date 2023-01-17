@@ -87,7 +87,7 @@
                 </div>
                 <button class="addToCartButton" id="addToCartCocaCola"
                     onclick="addToCart('cocaContainer'); startAnimation('addToCartCocaCola'); setTimeout(endAnimation, 1250, 'addToCartCocaCola'); setTimeout(closeCheckAnimation, 930, 'addToCartCocaCola')">
-                    <p class="buttonText">Add to Cart</p>
+                    <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
                         <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
@@ -114,13 +114,229 @@
                 </div>
                 <button class="addToCartButton" id="addToCartspriteCola"
                     onclick="addToCart('spriteContainer'); startAnimation('addToCartspriteCola'); setTimeout(endAnimation, 1250, 'addToCartspriteCola'); setTimeout(closeCheckAnimation, 930, 'addToCartspriteCola')">
-                    <p class="buttonText">Add to Cart</p>
+                    <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
                         <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                     </svg>
                 </button>
             </div>
+
+
+            <div class="drinkContainer" id="dietCokeContainer">
+                <h1 class="drinkTitle">Diet Coke</h1>
+                <img src="../images/dietCoke.png" alt="Image of dietCoke" class="drinkImage">
+                <div class="quantitySizeContainer" id="dietCokeQuantitySizeContainer">
+                    <div class="sizeContainer" id="dietCokeSizeContainer">
+                        <button class="smallButton sizeButton" id="dietCokeSmall" onclick="selectedSize('dietCokeSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="dietCokeMedium"
+                            onclick="selectedSize('dietCokeMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="dietCokeLarge" onclick="selectedSize('dietCokeLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartdietCokeCola"
+                    onclick="addToCart('dietCokeContainer'); startAnimation('addToCartdietCokeCola'); setTimeout(endAnimation, 1250, 'addToCartdietCokeCola'); setTimeout(closeCheckAnimation, 930, 'addToCartdietCokeCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="pepsiContainer">
+                <h1 class="drinkTitle">Pepsi</h1>
+                <img src="../images/pepsi.jpg" alt="Image of pepsi" class="drinkImage">
+                <div class="quantitySizeContainer" id="pepsiQuantitySizeContainer">
+                    <div class="sizeContainer" id="pepsiSizeContainer">
+                        <button class="smallButton sizeButton" id="pepsiSmall"
+                            onclick="selectedSize('pepsiSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="pepsiMedium"
+                            onclick="selectedSize('pepsiMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="pepsiLarge"
+                            onclick="selectedSize('pepsiLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartpepsiCola"
+                    onclick="addToCart('pepsiContainer'); startAnimation('addToCartpepsiCola'); setTimeout(endAnimation, 1250, 'addToCartpepsiCola'); setTimeout(closeCheckAnimation, 930, 'addToCartpepsiCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="waterContainer">
+                <h1 class="drinkTitle">Bottled Water</h1>
+                <img src="../images/water.jpg" alt="Image of water" class="drinkImage">
+                <div class="quantitySizeContainer" id="waterQuantitySizeContainer">
+                    <div class="sizeContainer" id="waterSizeContainer">
+                        <button class="smallButton sizeButton" id="waterSmall"
+                            onclick="selectedSize('waterSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="waterMedium"
+                            onclick="selectedSize('waterMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="waterLarge"
+                            onclick="selectedSize('waterLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartwaterCola"
+                    onclick="addToCart('waterContainer'); startAnimation('addToCartwaterCola'); setTimeout(endAnimation, 1250, 'addToCartwaterCola'); setTimeout(closeCheckAnimation, 930, 'addToCartwaterCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="hi-cContainer">
+                <h1 class="drinkTitle">Hi-C Orange</h1>
+                <img src="../images/hi-c.jpg" alt="Image of hi-c" class="drinkImage">
+                <div class="quantitySizeContainer" id="hi-cQuantitySizeContainer">
+                    <div class="sizeContainer" id="hi-cSizeContainer">
+                        <button class="smallButton sizeButton" id="hi-cSmall"
+                            onclick="selectedSize('hi-cSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="hi-cMedium"
+                            onclick="selectedSize('hi-cMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="hi-cLarge"
+                            onclick="selectedSize('hi-cLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCarthi-cCola"
+                    onclick="addToCart('hi-cContainer'); startAnimation('addToCarthi-cCola'); setTimeout(endAnimation, 1250, 'addToCarthi-cCola'); setTimeout(closeCheckAnimation, 930, 'addToCarthi-cCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="fantaContainer">
+                <h1 class="drinkTitle">Orange Fanta</h1>
+                <img src="../images/fanta.jpg" alt="Image of fanta" class="drinkImage">
+                <div class="quantitySizeContainer" id="fantaQuantitySizeContainer">
+                    <div class="sizeContainer" id="fantaSizeContainer">
+                        <button class="smallButton sizeButton" id="fantaSmall"
+                            onclick="selectedSize('fantaSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="fantaMedium"
+                            onclick="selectedSize('fantaMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="fantaLarge"
+                            onclick="selectedSize('fantaLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartfantaCola"
+                    onclick="addToCart('fantaContainer'); startAnimation('addToCartfantaCola'); setTimeout(endAnimation, 1250, 'addToCartfantaCola'); setTimeout(closeCheckAnimation, 930, 'addToCartfantaCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="lemonadeContainer">
+                <h1 class="drinkTitle">Lemonade</h1>
+                <img src="../images/lemonade.jpg" alt="Image of lemonade" class="drinkImage">
+                <div class="quantitySizeContainer" id="lemonadeQuantitySizeContainer">
+                    <div class="sizeContainer" id="lemonadeSizeContainer">
+                        <button class="smallButton sizeButton" id="lemonadeSmall"
+                            onclick="selectedSize('lemonadeSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="lemonadeMedium"
+                            onclick="selectedSize('lemonadeMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="lemonadeLarge"
+                            onclick="selectedSize('lemonadeLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartlemonadeCola"
+                    onclick="addToCart('lemonadeContainer'); startAnimation('addToCartlemonadeCola'); setTimeout(endAnimation, 1250, 'addToCartlemonadeCola'); setTimeout(closeCheckAnimation, 930, 'addToCartlemonadeCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="drinkContainer" id="chocolateMilkContainer">
+                <h1 class="drinkTitle">Chocolate Milk</h1>
+                <img src="../images/chocolateMilk.jpg" alt="Image of chocolateMilk" class="drinkImage">
+                <div class="quantitySizeContainer" id="chocolateMilkQuantitySizeContainer">
+                    <div class="sizeContainer" id="chocolateMilkSizeContainer">
+                        <button class="smallButton sizeButton" id="chocolateMilkSmall"
+                            onclick="selectedSize('chocolateMilkSmall')">Small</button>
+                        <button class="mediumButton sizeButton selected" id="chocolateMilkMedium"
+                            onclick="selectedSize('chocolateMilkMedium')">Medium</button>
+                        <button class="largeButton sizeButton" id="chocolateMilkLarge"
+                            onclick="selectedSize('chocolateMilkLarge')">Large</button>
+                    </div>
+                    <div class="quantityContainer" id="colaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessCola"
+                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="quantity">1</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola"
+                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                    </div>
+                </div>
+                <button class="addToCartButton" id="addToCartchocolateMilkCola"
+                    onclick="addToCart('chocolateMilkContainer'); startAnimation('addToCartchocolateMilkCola'); setTimeout(endAnimation, 1250, 'addToCartchocolateMilkCola'); setTimeout(closeCheckAnimation, 930, 'addToCartchocolateMilkCola')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
         </div>
     </div>
 

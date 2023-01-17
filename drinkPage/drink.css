@@ -49,6 +49,10 @@ body {
 .drinksContainer{
     padding-left: 50px;
     padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
 }
 
 .drinkContainer{
@@ -66,8 +70,9 @@ body {
 }
 
 .drinkImage{
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .quantitySizeContainer{
@@ -101,7 +106,7 @@ body {
     color: white;
     font-family: montserrat-light;
     font-size: 25px;
-    width: 52px;
+    width: 55px;
 }
 
 .quantityButton{

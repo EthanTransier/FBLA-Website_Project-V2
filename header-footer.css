@@ -63,8 +63,8 @@ a {
     outline-offset: -4px;
     border-radius: 50%;
     position: absolute;
-    margin-left: clamp(1.75rem, 1.325rem + 1.811vw, 3.25rem);
-    margin-top: -53px;
+    margin-left: clamp(2.188rem, 2.063rem + 1vw, 2.938rem);
+    margin-top: clamp(-2.438rem, -2.156rem + -2.25vw, -4.125rem);
 }
 .underlineText {
     text-decoration: underline;
@@ -148,8 +148,8 @@ footer {
 
     .cartHeaderContainer {
         width: 25%;
-        display: flex;
-        justify-content: center;
+        /* display: flex;
+        justify-content: center; */
     }
 
     header {

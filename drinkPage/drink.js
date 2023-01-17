@@ -43,6 +43,7 @@ function selectedSize(sizeID){
         document.getElementById(buttons[i].id).classList.remove('selected');
     }
     document.getElementById(sizeID).classList.add('selected')
+    setPrice(document.getElementById(sizeID).parentElement.parentElement.parentElement.id, sizeID);
 }
 
 function lessQuantity(sizeContainerID){
@@ -53,4 +54,17 @@ function lessQuantity(sizeContainerID){
 
 function moreQuantity(sizeContainerID){
     document.querySelector("#" + sizeContainerID + " .quantity").innerHTML++;
+}
+
+var price;
+function setPrice(drinkContainerID, buttonSelected){
+    if(document.getElementById(buttonSelected).innerHTML == "Small"){
+        price = "$2.00"
+    }else if(document.getElementById(buttonSelected).innerHTML == "Medium"){
+        price = "$2.40"
+    }else if(document.getElementById(buttonSelected).innerHTML == "Large"){
+        price = "$2.80"
+    }
+    document.getElementById(drinkContainerID)
+    document.querySelector("#" + drinkContainerID + " .addToCartButton").innerHTML =  "Add To Cart - " + price 
 }

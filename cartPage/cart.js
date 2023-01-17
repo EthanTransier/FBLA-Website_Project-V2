@@ -18,6 +18,12 @@ function cartUpdater() {
             // If the word 'Bowl' is found in the current cart item, it will set the price to 7.99
             }else if(/Bowl/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$7.99";
+            }else if(/Large/g.test(localStorage.getItem("cartArray" + i))){
+                price = "$2.80";
+            }else if(/Medium/g.test(localStorage.getItem("cartArray" + i))){
+                price = "2.40";
+            }else if(/Small/g.test(localStorage.getItem("cartArray" + i))){
+                price = "$2.00";
             }
             // Sets the cart html list and adds whatever local storage item needs to be added, and removes the extra stuff around it and repalces it with html code, so that it displays correctly on the page.
             cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
@@ -47,18 +53,28 @@ function reorderCart(){
     // Gets all of the keys from local storage
     keys = Object.keys(localStorage);
     // Sorts the keys so they are in the correct order when comparing them to the cart array items
-    keys.sort();
-    // Iterates through the keys
+    const tempStorage = [];
     for(let i = 0; i < keys.length; i++){
+        console.log(localStorage.getItem(keys[i]))
+        tempStorage.push(localStorage.getItem(keys[i]))
+        console.log(tempStorage)
+    }
+    // Iterates through the keys
+    for(let i = 0; i < tempStorage.length; i++){
+        localStorage.clear();
+        localStorage.setItem(('cartArray' + (i + 1)), tempStorage[i])
+        console.log(localStorage)
         // If the keys item does not match up with the cart array designated item, it will reorder it
-        if(keys[i] != ('cartArray' + (i + 1))){
-            // gets whatever item is not in order
-            let currentItem = localStorage.getItem(keys[i]);
-            // removes the item that was not in order
-            localStorage.removeItem(keys[i])
-            // sets the item to the new key
-            localStorage.setItem(('cartArray' + (i + 1)), currentItem)
-        }
+        // console.log(keys[i])
+        // console.log('cartArray' + (i + 1))
+        // if(keys[i] != ('cartArray' + (i + 1))){
+        //     // gets whatever item is not in order
+        //     let currentItem = localStorage.getItem(keys[i]);
+        //     // removes the item that was not in order
+        //     localStorage.removeItem(keys[i])
+        //     // sets the item to the new key
+        //     localStorage.setItem(('cartArray' + (i + 1)), currentItem)
+        // }
     }
 }
 

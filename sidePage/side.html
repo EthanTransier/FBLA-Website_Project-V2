@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jī lóng | Sides</title>
+    <link rel="stylesheet" href="./side.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../header-footer.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header, which includes the Title, the Logo, and the links -->
+    <header>
+        <!-- Container for the title of the Resteraunt -->
+        <a href="../index.html" class="headerLogoContainer">
+            <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
+        </a>
+        <div class="titleContainer" id="titleID" onclick="window.location.href='../index.html'">
+            <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
+        </div>
+        <!-- Container for the links to the different pages of the website inside the header -->
+        <div class='headerDropdown' id='dropdownID'>
+            <div class='homeLinkContainer dropdownLink' onclick='openDropdown()'>
+                <a class='underlineText'>Order</a>
+                <img src="../images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
+            </div>
+        </div>
+        <div class='dropdownContent' id='dropdownContentID'>
+            <a href='../index.html' class='headerOrderLink'>Home</a>
+            <div class="horizontalLine"></div>
+            <a href='../plus/plus.html' class='headerOrderLink'>Jī lóng+</a>
+            <div class="horizontalLine"></div>
+            <a href='../jobsPage/jobs.html' class='headerOrderLink'>Join Us</a>
+        </div>
+        <div class='headerLinksContainer' id='headerLinksID'>
+            <!-- Container for the link that goes to the home page -->
+            <div class='homeLinkContainer'>
+                <a href='../index.html'>Home</a>
+            </div>
+            <!-- Container for the button / link that takes you to the Ordering page -->
+            <div class='orderLinkContainer'>
+                <a href='../startOrderPage/startOrderPage.html' class='underlineText'>Order</a>
+            </div>
+            <!-- Container for the link that goes to the menu page -->
+            <div class='menuLinkContainer'>
+                <a href='../plus/plus.html'>Jī lóng+</a>
+            </div>
+            <!-- Container for the link that goes to the Hiring page -->
+            <div class='jobs.html'>
+                <a href='../jobsPage/jobs.html'>Join Us</a>
+            </div>
+        </div>
+        <!-- Container for the cart icon / link -->
+        <div class="cartHeaderContainer">
+            <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"
+                onclick="window.location.href='../cartPage/cart.html'">
+            <div class="cartRedIcon" id="cartRedIconID"></div>
+        </div>
+
+    </header>
+    <div class="backArrowContainer">
+        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'"> <- Back To Order Page</h2>
+    </div>
+    <!-- Main Content Area -->
+    <div class="mainContentContainer">
+        <h1 class="mainContentTitle" id="title">Sides</h1>
+        <div class="snacksContainer">
+            <div class="snackContainer">
+                <h1 class="snackTitle">Egg Rolls</h1>
+                <img src="../images/eggRolls.jpg" alt=" Image of Egg Rolls" class="snackImage" id="eggRollImage">
+                <div class="quantityContainer"></div>
+                <button class="addToCartButton" id="addToCarteggRoll" onclick="addToCart('eggRollContainer'); startAnimation('addToCarteggRoll'); setTimeout(endAnimation, 1250, 'addToCarteggRoll'); setTimeout(closeCheckAnimation, 930, 'addToCarteggRoll')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="snackContainer">
+                <h1 class="snackTitle">Spring Rolls</h1>
+                <img src="../images/springRolls.jpg" alt=" Image of Egg Rolls" class="snackImage">
+                <div class="quantityContainer"></div>
+                <button class="addToCartButton" id="addToCartspringRoll"
+                    onclick="addToCart('springRollContainer'); startAnimation('addToCartspringRoll'); setTimeout(endAnimation, 1250, 'addToCartspringRoll'); setTimeout(closeCheckAnimation, 930, 'addToCartspringRoll')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div>
+            <p class="footerTitle">Info</p>
+            <p>Phone: (480) 132-4845</p>
+            <p>Email: glendale@jilóng.com</p>
+            <p>Location: 5171 W Bell Rd, Glendale, AZ 85308</p>
+        </div>
+
+        <div>
+            <p class="footerTitle">Social Media</p>
+            <div class="igLogo"><a href="https://www.instagram.com/">
+                    <p class="horizontalCenter"><img class="footerIMG" src="../images/igLogo.jpg"
+                            alt="Instagram Logo">@jilóng_food</p>
+                </a></div>
+            <div class="fbLogo"><a href="https://www.facebook.com/">
+                    <p class="horizontalCenter"><img class="footerIMG" src="../images/facebookLogo.jpg"
+                            alt="Facebook Logo">Ji Lóng</p>
+                </a></div>
+            <div class="twLogo"><a href="https://twitter.com/">
+                    <p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.jpg"
+                            alt="Twitter Logo">@jilóng</p>
+                </a></div>
+            <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
+            <p class="footerTitle footerCopyRight"> ⓒJī lóng</p>
+        </div>
+
+        <div>
+            <p class="footerTitle">Times</p>
+            <p>Sun: 12:00p-8:00p</p>
+            <p>Mon-Fri: 10:00a-8:00p</p>
+            <p>Sat: 9:00a-9:00p</p>
+        </div>
+
+    </footer>
+
+    <script src="./side.js"></script>
+    <script src="../header-footer.js"></script>
+</body>
+
+</html>

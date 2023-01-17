@@ -1,0 +1,215 @@
+body {
+    background-color: rgb(51, 51, 51);
+    ;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: kanit-regular;
+    src: url(../kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family: kanit-light;
+    src: url(../kanit/Kanit-Light.ttf);
+}
+
+.backArrowContainer {
+    display: flex;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.backArrowTitle {
+    font-family: montserrat-light;
+    color: rgb(255, 58, 58);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+/* MAIN CONTENT CSS */
+.mainContentContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+.mainContentTitle {
+    text-align: center;
+    color: white;
+    font-family: montserrat-bold;
+    font-size: 50px;
+}
+
+.snacksContainer{
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.snackContainer{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snackTitle{
+    color: white;
+    font-family: montserrat-light;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.snackImage{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#eggRollImage{
+    filter: saturate(1.5);
+}
+
+.addToCartButton {
+    font-size: 20px;
+    font-family: kanit-light;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 58, 58);
+    /* border-radius: 1px; */
+    border-width: 0px;
+    /* margin: 5px; */
+    cursor: pointer;
+}
+
+.addToCartButton:hover {
+    background-color: rgb(223, 0, 0);
+    color: white;
+}
+
+.addToCartButton:active {
+    color: white;
+    color: rgba(255, 255, 255, 0);
+}
+
+.addToCartButton:disabled {
+    background-color: rgb(223, 0, 0);
+    color: white;
+}
+
+.addToCartAnimationClass {
+    animation: addToCartAnimation 1.25s;
+    -webkit-animation: addToCartAnimation 1.25s;
+}
+
+@keyframes addToCartAnimation {
+    0% {
+        border-radius: 1px;
+        font-size: 0;
+        width: 100%;
+        background-color: rgb(223, 0, 0);
+    }
+
+    15% {
+        border-radius: 15px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    25% {
+        border-radius: 15px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    40% {
+        border-radius: 15px;
+        width: 30px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    75% {
+        border-radius: 15px;
+        width: 30px;
+        font-size: 0;
+        background-color: #7ac142;
+    }
+
+    100% {
+        border-radius: 1px;
+        font-size: 0;
+        width: 100%;
+        background-color: rgb(223, 0, 0);
+    }
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.1s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    display: none;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .1s ease-in-out .1s forwards, scale .1s ease-in-out .1s both;
+
+}
+
+.checkmark__check {
+    /* transform-origin: 50% 50%; */
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142;
+    }
+}

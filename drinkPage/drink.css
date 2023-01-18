@@ -73,6 +73,8 @@ body {
     width: 250px;
     height: 150px;
     object-fit: cover;
+    border-bottom: 3px rgb(255, 58, 58) solid;
+    margin-bottom: 5px;
 }
 
 .quantitySizeContainer{

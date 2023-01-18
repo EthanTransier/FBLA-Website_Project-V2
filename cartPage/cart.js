@@ -59,23 +59,16 @@ function reorderCart(){
         tempStorage.push(localStorage.getItem(keys[i]))
         console.log(tempStorage)
     }
+    localStorage.clear();
     // Iterates through the keys
     for(let i = 0; i < tempStorage.length; i++){
-        localStorage.clear();
+        
+        console.log(tempStorage[i])
         localStorage.setItem(('cartArray' + (i + 1)), tempStorage[i])
         console.log(localStorage)
         // If the keys item does not match up with the cart array designated item, it will reorder it
-        // console.log(keys[i])
-        // console.log('cartArray' + (i + 1))
-        // if(keys[i] != ('cartArray' + (i + 1))){
-        //     // gets whatever item is not in order
-        //     let currentItem = localStorage.getItem(keys[i]);
-        //     // removes the item that was not in order
-        //     localStorage.removeItem(keys[i])
-        //     // sets the item to the new key
-        //     localStorage.setItem(('cartArray' + (i + 1)), currentItem)
-        // }
     }
+    
 }
 
 function resetCartList(){

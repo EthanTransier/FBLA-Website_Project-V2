@@ -96,3 +96,7 @@ function diningSelected(buttonID) {
     document.getElementById(buttonID).classList.remove('deselected')
     document.getElementById(buttonID).classList.add('selected') 
 }
+
+
+// Javascript for the Interactable Map for users to choose where they can get their stuff delivered to
+

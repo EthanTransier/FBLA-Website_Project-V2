@@ -138,7 +138,7 @@ body {
 
 .cartCheckoutContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -300,4 +300,54 @@ body {
     .dropdownContent{
     transform: translateY(-30%);
 }
+}
+
+/* CSS for the interactable map */
+
+.checkoutFillContainer{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    flex-direction: column;
+}
+
+.addressInput{
+    margin-left: 8px;
+    padding-left: 5px;
+    font-size: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: montserrat-regular;
+    outline-color: rgb(223, 0, 0);
+}
+
+.timeContainer{
+    width: 60%;
+    display: flex;
+    margin-top: 10px;
+}
+.nowButton{
+    width: 50%;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 0;
+    background-color: rgb(255, 58, 58);
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+.laterButton{
+    width: 50%;
+    height: 60px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 0;
+    background-color: rgb(255, 58, 58);
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
 }

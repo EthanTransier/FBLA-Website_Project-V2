@@ -80,6 +80,9 @@ body {
 .quantitySizeContainer{
     display: flex;
     gap: 0;
+    margin-bottom: 5px;
+    width: 250px;
+    justify-content: space-between;
 }
 
 .sizeContainer{
@@ -101,6 +104,17 @@ body {
     background-color: #7ac142;
 }
 
+select{
+    width: 125px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px rgb(223, 0, 0) solid;
+    text-align: center;
+    background-color: white;
+    font-size: 20px;
+    font-family: montserrat-regular;
+}
+
 .quantityContainer{
     display: flex;
     justify-content: space-evenly;
@@ -108,7 +122,9 @@ body {
     color: white;
     font-family: montserrat-light;
     font-size: 25px;
-    width: 55px;
+    width: 112px;
+    border: 2px rgb(223, 0, 0) solid;
+    border-radius: 20px;
 }
 
 .quantityButton{
@@ -124,7 +140,7 @@ body {
     font-weight: bold;
     color: white;
     background-color: rgb(255, 58, 58);
-    /* border-radius: 1px; */
+    border-radius: 15px;
     border-width: 0px;
     /* margin: 5px; */
     cursor: pointer;
@@ -152,40 +168,34 @@ body {
 
 @keyframes addToCartAnimation {
     0% {
-        border-radius: 1px;
         font-size: 0;
         width: 100%;
         background-color: rgb(223, 0, 0);
     }
 
     15% {
-        border-radius: 15px;
         font-size: 0;
         background-color: #7ac142;
     }
 
     25% {
-        border-radius: 15px;
         font-size: 0;
         background-color: #7ac142;
     }
 
     40% {
-        border-radius: 15px;
         width: 30px;
         font-size: 0;
         background-color: #7ac142;
     }
 
     75% {
-        border-radius: 15px;
         width: 30px;
         font-size: 0;
         background-color: #7ac142;
     }
 
     100% {
-        border-radius: 1px;
         font-size: 0;
         width: 100%;
         background-color: rgb(223, 0, 0);

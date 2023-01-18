@@ -81,13 +81,20 @@
                     <button class="takeOutButton cartDinerButton" id="takeOut" onclick="diningSelected('takeOut')"><p class="cartDinerTitle">Take Out</p></button>
                     <button class="deliveryButton cartDinerButton" id="delivery" onclick="diningSelected('delivery')"><p class="cartDinerTitle">Delivery</p></button>
                 </div>
+                <div class="checkoutFillContainer" id="checkoutFillID">
+                    <div>
+                        <label for="address">Deliver To: </label>
+                        <input type="text" name="address" id="addressInputID" class="addressInput">
+                    </div>
+                    
+                    <div class="timeContainer">
+                        <button class="nowButton">Now</button>
+                        <button class="laterButton">Later</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <button onclick="clearLocalStorage()">Clear Storage</button>
-    <script src="./cart.js"></script>
-    <script src="../header-footer.js"></script>
-
         <!-- Footer -->
         <footer>
             <div class="footerBox">
@@ -114,5 +121,9 @@
             </div>
             
         </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="./cart.js"></script>
+    <script src="../header-footer.js"></script>
 </body>
 </html>

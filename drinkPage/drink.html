@@ -75,9 +75,15 @@
                 <img src="../images/cocaCola.jpg" alt="Image of Coca-Cola" class="drinkImage">
                 <div class="quantitySizeContainer" id="cocaQuantitySizeContainer">
                     <div class="sizeContainer" id="cocaSizeContainer">
-                        <button class="smallButton sizeButton" id="cocaSmall" onclick="selectedSize('cocaSmall')">Small</button>
+                        <select name="sizes" id="sizes">
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                        
+                        <!-- <button class="smallButton sizeButton" id="cocaSmall" onclick="selectedSize('cocaSmall')">Small</button>
                         <button class="mediumButton sizeButton selected" id="cocaMedium" onclick="selectedSize('cocaMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="cocaLarge" onclick="selectedSize('cocaLarge')">Large</button>
+                        <button class="largeButton sizeButton" id="cocaLarge" onclick="selectedSize('cocaLarge')">Large</button> -->
                     </div>
                     <div class="quantityContainer" id="colaQuantityContainer">
                         <div class="lessQuantityButton quantityButton" id="lessCola" onclick="lessQuantity('colaQuantityContainer')">-</div>

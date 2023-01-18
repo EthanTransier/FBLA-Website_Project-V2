@@ -12,10 +12,6 @@
     font-family: kanit-light;
     src: url(../kanit/Kanit-Light.ttf);
 }
-@font-face {
-    font-family: kanit-bold;
-    src: url(../kanit/Kanit-Bold.ttf);
-}
 
 /* Creates and modifies the code inside the center boxes */
 /* .signup{
@@ -70,11 +66,18 @@ h4{
 } */
 
 /* Creates and modifies the code inside the center boxes */
+.signup{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: left;
+    font-family: kanit-regular;
+    margin-left: clamp(2vh, 6rem, 4vh);
+}
 .infoBoxes{
     width: clamp(85vh, 6rem, 100vh);
     padding: clamp(1vh, 6rem, 2vh);
     font-size: clamp(2vh, 6rem, 4vh);
-    margin-left: clamp(1.5vh, 6rem, 3vh);
 }
 h1 {
     text-align: center;
@@ -84,34 +87,35 @@ body{
     background-color: rgb(51, 51, 51);
 }
 h4{
-    color: white;
-    font-family: kanit-bold;
-}
-.infoBoxes > p{
-    color: white;
-    margin-left: clamp(1vh, 6rem, 2vh);
+    text-decoration: underline;
+    color: red;
 }
 
 /* Modifies the button at the center of the page */
-.btn{
-    display: flex;
-    justify-content: center;
+#btn{
     border: 0px solid black;
     border-radius: 20px;
+    width: 150px;
     background-color: red;
     color: white;
     height: 50px;
     font-family: kanit-regular;
-    font-size: clamp(2vh, 6rem, 4vh);
-    width: clamp(40vh, 6rem, 80vh);
+    font-weight: 500;
+    font-size: 35px;
 }
-.btnCenter{
+.btnCenter {
     display: flex;
     justify-content: center;
-    padding-top: clamp(2vh, 6rem, 4vh);
 }
-.btn:hover{
+#passReqs{
+    font-size: 10px;
+    text-align: left;
+}
+#btn:hover{
     background-color: rgb(139, 0, 0);
+}
+.white{
+    color: white;
 }
 
 /* 780 Media Query */

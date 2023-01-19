@@ -38,12 +38,15 @@ function closeCheckAnimation(buttonID3) {
 
 
 function selectedSize(sizeID){
-    const buttons = document.querySelectorAll("#" + document.getElementById(sizeID).parentElement.id + " button")
-    for(let i = 0; i < buttons.length; i++){
-        document.getElementById(buttons[i].id).classList.remove('selected');
-    }
-    document.getElementById(sizeID).classList.add('selected')
-    setPrice(document.getElementById(sizeID).parentElement.parentElement.parentElement.id, sizeID);
+    // const buttons = document.querySelectorAll("#" + document.getElementById(sizeID).parentElement.id + " button")
+    // for(let i = 0; i < buttons.length; i++){
+    //     document.getElementById(buttons[i].id).classList.remove('selected');
+    // }
+    // document.getElementById(sizeID).classList.add('selected')
+    // setPrice(document.getElementById(sizeID).parentElement.parentElement.parentElement.id, sizeID);
+    console.log(document.getElementById(sizeID).value)
+    document.getElementById(sizeID).value
+    setPrice()
 }
 
 function lessQuantity(sizeContainerID){

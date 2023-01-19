@@ -48,6 +48,7 @@ a {
     position: relative;
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
     height: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);
+    cursor: pointer;
 }
 .cartIcon {
     width: clamp(1.563rem, 1.31rem + 2.016vw, 3.125rem);

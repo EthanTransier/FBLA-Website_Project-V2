@@ -1,7 +1,8 @@
 function addToCart(drinkContainerID){
     // Adds the food item to the cart
     let drink = document.querySelector("#" + drinkContainerID + " .drinkTitle").innerHTML
-    let size =  document.querySelector("#" + document.querySelector("#" + document.querySelector("#" + drinkContainerID + " .quantitySizeContainer").id + " .sizeContainer").id  + " .selected").innerHTML
+    console.log(document.querySelector("#" + document.querySelector("#" + document.querySelector("#" + drinkContainerID + " .quantitySizeContainer").id + " .sizeContainer").id  + " select").value)
+    let size =  document.querySelector("#" + document.querySelector("#" + document.querySelector("#" + drinkContainerID + " .quantitySizeContainer").id + " .sizeContainer").id  + " select").value
     
     for(let i = 0; i < document.querySelector("#" + document.querySelector("#" + document.querySelector("#" + drinkContainerID + " .quantitySizeContainer").id + " .quantityContainer").id  + " .quantity").innerHTML; i++){
         localStorage.setItem(("cartArray" + (localStorage.length + 1)), "[\"" + size + " " + drink + "\"]");
@@ -13,6 +14,8 @@ function addToCart(drinkContainerID){
 
 function startAnimation(buttonID1) {
     // sets the checkmarks display to flex
+    console.log(document.getElementById(buttonID1))
+    console.log(document.querySelector("#" + buttonID1 + " svg"))
     document.querySelector("#" + buttonID1 + " svg").style.display = 'flex';
     // Removes the Text Inside the Button
     document.querySelector("#" + buttonID1 + " .buttonText").innerHTML = '';
@@ -22,13 +25,15 @@ function startAnimation(buttonID1) {
     document.getElementById(buttonID1).disabled = true;
 }
 
-function endAnimation(buttonID2){
+function endAnimation(buttonID2, sizeID, containerID, quantityContainerID){
     // Removes the animation class from the button
     document.getElementById(buttonID2).classList.remove("addToCartAnimationClass");
     // Re-enables the button so it works again after the animation is finished
     document.getElementById(buttonID2).disabled = false;
     // Adds the text back into the button
     document.querySelector("#" + buttonID2 + " .buttonText").innerHTML = 'Add to Cart';
+
+    setPrice(sizeID, containerID, quantityContainerID)
 }
 
 function closeCheckAnimation(buttonID3) {
@@ -37,37 +42,44 @@ function closeCheckAnimation(buttonID3) {
 }
 
 
-function selectedSize(sizeID){
-    // const buttons = document.querySelectorAll("#" + document.getElementById(sizeID).parentElement.id + " button")
-    // for(let i = 0; i < buttons.length; i++){
-    //     document.getElementById(buttons[i].id).classList.remove('selected');
-    // }
-    // document.getElementById(sizeID).classList.add('selected')
-    // setPrice(document.getElementById(sizeID).parentElement.parentElement.parentElement.id, sizeID);
-    console.log(document.getElementById(sizeID).value)
-    document.getElementById(sizeID).value
-    setPrice()
-}
-
-function lessQuantity(sizeContainerID){
-    if(document.querySelector("#" + sizeContainerID + " .quantity").innerHTML > 1){
-        document.querySelector("#" + sizeContainerID + " .quantity").innerHTML--;
+function lessQuantity(sizeID, containerID, quantityContainerID){
+    if(document.querySelector("#" + quantityContainerID + " .quantity").innerHTML > 1){
+        document.querySelector("#" + quantityContainerID + " .quantity").innerHTML--;
+        document.querySelector("#" + quantityContainerID + " .lessQuantityButton").style.color = 'white';
+    }else{
+        document.querySelector("#" + quantityContainerID + " .lessQuantityButton").style.color = 'grey';
     }
+    setPrice(sizeID, containerID, quantityContainerID)
 }
 
-function moreQuantity(sizeContainerID){
-    document.querySelector("#" + sizeContainerID + " .quantity").innerHTML++;
-}
-
-var price;
-function setPrice(drinkContainerID, buttonSelected){
-    if(document.getElementById(buttonSelected).innerHTML == "Small"){
-        price = "$2.00"
-    }else if(document.getElementById(buttonSelected).innerHTML == "Medium"){
-        price = "$2.40"
-    }else if(document.getElementById(buttonSelected).innerHTML == "Large"){
-        price = "$2.80"
+function moreQuantity(sizeID, containerID, quantityContainerID){
+    document.querySelector("#" + quantityContainerID + " .quantity").innerHTML++;
+    if(document.querySelector("#" + quantityContainerID + " .quantity").innerHTML > 1){
+        document.querySelector("#" + quantityContainerID + " .lessQuantityButton").style.color = 'white';
+    }else{
+        document.querySelector("#" + quantityContainerID + " .lessQuantityButton").style.color = 'grey';
     }
-    document.getElementById(drinkContainerID)
-    document.querySelector("#" + drinkContainerID + " .addToCartButton").innerHTML =  "Add To Cart - " + price 
+    setPrice(sizeID, containerID, quantityContainerID)
 }
+
+
+function setPrice(sizeID, containerID, quantityContainerID){
+    let price = 0;
+    
+    if(document.getElementById(sizeID).value == "Small"){
+        for(let i = 0; i < document.querySelector("#" + quantityContainerID + " .quantity").innerHTML; i++){
+            price += 2.00
+        }
+        
+    }else if(document.getElementById(sizeID).value == "Medium"){
+        for(let i = 0; i < document.querySelector("#" + quantityContainerID + " .quantity").innerHTML; i++){
+            price += 2.40
+        }
+    }else if(document.getElementById(sizeID).value == "Large"){
+        for(let i = 0; i < document.querySelector("#" + quantityContainerID + " .quantity").innerHTML; i++){
+            price += 2.80
+        }
+    }
+    document.querySelector("#" + document.querySelector("#" + containerID + " .addToCartButton").id + " .buttonText").innerHTML =  "Add To Cart - $" + (Math.round(price * 100) / 100).toFixed(2); 
+}
+

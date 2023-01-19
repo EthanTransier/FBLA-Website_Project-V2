@@ -125,7 +125,17 @@ footer {
 
 .igLogo{
     padding-top:6px;
+    padding-bottom: clamp(.4vh, 6rem, .8vh);
 }
+.fbLogo{
+    padding-top:6px;
+    padding-bottom: clamp(.4vh, 6rem, .8vh);
+}
+.twLogo{
+    padding-top:6px;
+    padding-bottom: clamp(.4vh, 6rem, .8vh);
+}
+
 
 /* 780 Media Query */
 @media only screen and (max-width: 780px) {

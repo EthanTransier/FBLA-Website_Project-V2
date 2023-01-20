@@ -16,6 +16,13 @@
     font-family: kanit-bold;
     src: url(../kanit/Kanit-Bold.ttf);
 }
+@font-face {
+    font-family: montserrat-regular;
+    src: url(../montserrat/static/Montserrat-Regular.ttf);
+}
+body{
+    overflow-x: hidden;
+}
 
 /* Creates and modifies the code inside the center boxes */
 /* .signup{
@@ -71,10 +78,15 @@ h4{
 
 /* Creates and modifies the code inside the center boxes */
 .infoBoxes{
-    width: clamp(85vh, 6rem, 100vh);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding: clamp(1vh, 6rem, 2vh);
-    font-size: clamp(2vh, 6rem, 4vh);
+    font-size: clamp(1.75vh, 6rem, 3.5vh);
     margin-left: clamp(1.5vh, 6rem, 3vh);
+    margin-right: clamp(1.5vh, 6rem, 3vh);
+    border-bottom: 2px solid red;
+    padding-bottom: clamp(1vh, 6rem, 2vh);
 }
 h1 {
     text-align: center;
@@ -86,10 +98,22 @@ body{
 h4{
     color: white;
     font-family: kanit-bold;
+    font-size: clamp(2.25vh, 6rem, 4.5vh);
 }
-.infoBoxes > p{
+.infoBoxes > div{
     color: white;
+    font-family: montserrat-regular;
     margin-left: clamp(1vh, 6rem, 2vh);
+    margin-right: clamp(1vh, 6rem, 2vh);
+}
+.infoBoxes > img{
+    padding: clamp(1vh, 6rem, 2vh);
+    width: 300px;
+    height: auto;
+}
+#specIMG{
+    width: clamp(60vh, 6rem, 90vh);
+    height: auto;
 }
 
 /* Modifies the button at the center of the page */
@@ -117,32 +141,45 @@ h4{
 /* 780 Media Query */
 @media only screen and (max-width: 780px){
     .infoBoxes{
-        background-color: white;
-        width: clamp(50vh, 6rem, 60vh);
-        padding: clamp(0.5vh, 6rem, 1vh);
+        padding: clamp(1vh, 6rem, 2vh);
+        font-size: clamp(1vh, 6rem, 2vh);
+        margin-left: clamp(0.75vh, 6rem, 1.5vh);
+        margin-right: clamp(.55vh, 6rem, 1.5vh);
+        border-bottom: 2px solid red;
+        padding-bottom: clamp(1vh, 6rem, 2vh);
     }
 
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
-        padding-top: clamp(1vh, 6rem, 2vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
+    h4{
+        font-size: clamp(1.5vh, 6rem, 3vh); 
     }
 }
 /* 500 Media Query */
 @media only screen and (max-width: 500px){
     .infoBoxes{
-        background-color: white;
-        width: clamp(40vh, 6rem, 60vh);
-        font-size: clamp(1.5vh, 6rem, 2vh);
+        padding: clamp(1vh, 6rem, 2vh);
+        font-size: clamp(0.75vh, 6rem, 1.5vh);
+        margin-left: clamp(0.75vh, 6rem, 1.5vh);
+        margin-right: clamp(.55vh, 6rem, 1.5vh);
+        border-bottom: 2px solid red;
+        padding-bottom: clamp(1vh, 6rem, 2vh);
     }
 
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
+    .infoBoxes > img{
+        width: clamp(24vh, 6rem, 48vh);
+        height: auto;
+        float: right;
+    }
+
+    .marginTop{
         padding-top: clamp(4vh, 6rem, 8vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
+    }
+
+    h4{
+        font-size: clamp(1.5vh, 6rem, 3vh); 
+    }
+    
+    #specIMG{
+        width: clamp(40vh, 6rem, 60vh);
+        height: auto;
     }
 }

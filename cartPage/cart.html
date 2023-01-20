@@ -84,12 +84,12 @@
                 <div class="checkoutFillContainer" id="checkoutFillID">
                     <div>
                         <label for="address">Deliver To: </label>
-                        <input type="text" name="address" id="addressInputID" class="addressInput">
+                        <input type="text" name="address" id="addressInputID" class="addressInput" placeholder="Street Address">
                     </div>
                     
                     <div class="timeContainer">
-                        <button class="nowButton">Now</button>
-                        <button class="laterButton">Later</button>
+                        <button class="nowButton" onclick="buttonSelected('nowID')" id="nowID">Now</button>
+                        <button class="laterButton" onclick="buttonSelected('laterID')" id="laterID">Later</button>
                     </div>
                 </div>
             </div>
@@ -105,9 +105,9 @@
       
             <div class="footerBox">
                 <p class="footerTitle">Social Medias</p>
-                <div class="igLogo"><a href="https://www.instagram.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/igLogo.jpg" alt="Instagram Logo">@jilóng_food</p></a></div>
-                <div class="fbLogo"><a href="https://www.facebook.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/facebookLogo.jpg" alt="Facebook Logo">Ji Lóng</p></a></div>
-                <div class="twLogo"><a href="https://twitter.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/twitterLogo.jpg" alt="Twitter Logo">@jilóng</p></a></div>
+                <div class="igLogo"><a href="https://www.instagram.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/igLogo.jpg" alt="Instagram Logo">@jilóng_food</p></a></div>
+                <div class="fbLogo"><a href="https://www.facebook.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/facebookLogo.jpg" alt="Facebook Logo">Ji Lóng</p></a></div>
+                <div class="twLogo"><a href="https://twitter.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.jpg" alt="Twitter Logo">@jilóng</p></a></div>
                 <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
                 <p class="footerTitle footerCopyRight"> ⓒJī lóng</p> 
             </div>
@@ -120,8 +120,6 @@
             </div>
             
         </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script src="./cart.js"></script>
     <script src="../header-footer.js"></script>
 </body>

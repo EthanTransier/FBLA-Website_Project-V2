@@ -38,7 +38,7 @@ body {
     margin-top: 95px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .verticalLine{
@@ -158,6 +158,20 @@ body {
     font-family: montserrat-bold;
 }
 
+/* .removeCartAnimation{
+    animation: removeCart 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes removeCart {
+    0%{
+
+    }
+    100%{
+
+    }
+} */
+
 .cartDinerButton{
     width: 125px;
     height: 125px;
@@ -223,6 +237,7 @@ body {
     }
     .cartContainer{
         flex-direction: column;
+        align-items: center;
     }
     .cartItemsContainer{
         height:fit-content;
@@ -321,7 +336,14 @@ body {
     padding-top: 1px;
     padding-bottom: 1px;
     font-family: montserrat-regular;
-    outline-color: rgb(223, 0, 0);
+    outline-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: rgb(212, 0, 0) 2px solid;
+    padding-bottom: 2px;
+}
+
+.addressInput:focus{
+    border-bottom: rgb(255, 58, 58) 3px solid;
 }
 
 .timeContainer{
@@ -331,23 +353,23 @@ body {
 }
 .nowButton{
     width: 50%;
-    height: 60px;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     border: 0;
     background-color: rgb(255, 58, 58);
-    font-size: 26px;
+    font-size: 23px;
     color: white;
     cursor: pointer;
 }
 .laterButton{
     width: 50%;
-    height: 60px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     border: 0;
     background-color: rgb(255, 58, 58);
-    font-size: 26px;
+    font-size: 23px;
     color: white;
     cursor: pointer;
 }

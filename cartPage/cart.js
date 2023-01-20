@@ -21,7 +21,7 @@ function cartUpdater() {
             }else if(/Large/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.80";
             }else if(/Medium/g.test(localStorage.getItem("cartArray" + i))){
-                price = "2.40";
+                price = "$2.40";
             }else if(/Small/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.00";
             }

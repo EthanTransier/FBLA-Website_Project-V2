@@ -75,24 +75,20 @@
                 <img src="../images/cocaCola.jpg" alt="Image of Coca-Cola" class="drinkImage">
                 <div class="quantitySizeContainer" id="cocaQuantitySizeContainer">
                     <div class="sizeContainer" id="cocaSizeContainer">
-                        <select name="sizes" id="sizes">
+                        <select name="sizes" id="cocaSizes" onchange="setPrice('cocaSizes', 'cocaContainer', 'colaQuantityContainer')">
                             <option value="Small">Small</option>
-                            <option value="Medium">Medium</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
                             <option value="Large">Large</option>
                         </select>
-                        
-                        <!-- <button class="smallButton sizeButton" id="cocaSmall" onclick="selectedSize('cocaSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="cocaMedium" onclick="selectedSize('cocaMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="cocaLarge" onclick="selectedSize('cocaLarge')">Large</button> -->
                     </div>
                     <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola" onclick="lessQuantity('colaQuantityContainer')">-</div>
+                        <div class="lessQuantityButton quantityButton" id="lessCola" onclick="lessQuantity('cocaSizes', 'cocaContainer', 'colaQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola" onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="moreCola" onclick="moreQuantity('cocaSizes', 'cocaContainer', 'colaQuantityContainer')">+</div>
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartCocaCola"
-                    onclick="addToCart('cocaContainer'); startAnimation('addToCartCocaCola'); setTimeout(endAnimation, 1250, 'addToCartCocaCola'); setTimeout(closeCheckAnimation, 930, 'addToCartCocaCola')">
+                    onclick="addToCart('cocaContainer'); startAnimation('addToCartCocaCola'); setTimeout(endAnimation, 1250, 'addToCartCocaCola', 'cocaSizes', 'cocaContainer', 'colaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartCocaCola')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -105,21 +101,22 @@
                 <img src="../images/sprite.jpg" alt="Image of Sprite" class="drinkImage">
                 <div class="quantitySizeContainer" id="spriteQuantitySizeContainer">
                     <div class="sizeContainer" id="spriteSizeContainer">
-                        <button class="smallButton sizeButton" id="spriteSmall" onclick="selectedSize('spriteSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="spriteMedium"
-                            onclick="selectedSize('spriteMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="spriteLarge" onclick="selectedSize('spriteLarge')">Large</button>
+                        <select name="sizes" id="spriteSizes" onchange="setPrice('spriteSizes', 'spriteContainer', 'spriteQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="spriteQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesssprite"
+                            onclick="lessQuantity('spriteSizes', 'spriteContainer', 'spriteQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="moresprite"
+                            onclick="moreQuantity('spriteSizes', 'spriteContainer', 'spriteQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartspriteCola"
-                    onclick="addToCart('spriteContainer'); startAnimation('addToCartspriteCola'); setTimeout(endAnimation, 1250, 'addToCartspriteCola'); setTimeout(closeCheckAnimation, 930, 'addToCartspriteCola')">
+                <button class="addToCartButton" id="addToCartsprite"
+                    onclick="addToCart('spriteContainer'); startAnimation('addToCartsprite'); setTimeout(endAnimation, 1250, 'addToCartsprite', 'spriteSizes', 'spriteContainer', 'spriteQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartsprite')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -134,21 +131,22 @@
                 <img src="../images/dietCoke.png" alt="Image of dietCoke" class="drinkImage">
                 <div class="quantitySizeContainer" id="dietCokeQuantitySizeContainer">
                     <div class="sizeContainer" id="dietCokeSizeContainer">
-                        <button class="smallButton sizeButton" id="dietCokeSmall" onclick="selectedSize('dietCokeSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="dietCokeMedium"
-                            onclick="selectedSize('dietCokeMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="dietCokeLarge" onclick="selectedSize('dietCokeLarge')">Large</button>
+                        <select name="sizes" id="dietCokeSizes" onchange="setPrice('dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCoke"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="dietCokeQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessdietCoke"
+                            onclick="lessQuantity('dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="moredietCoke"
+                            onclick="moreQuantity('dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartdietCokeCola"
-                    onclick="addToCart('dietCokeContainer'); startAnimation('addToCartdietCokeCola'); setTimeout(endAnimation, 1250, 'addToCartdietCokeCola'); setTimeout(closeCheckAnimation, 930, 'addToCartdietCokeCola')">
+                <button class="addToCartButton" id="addToCartdietCoke"
+                    onclick="addToCart('dietCokeContainer'); startAnimation('addToCartdietCoke'); setTimeout(endAnimation, 1250, 'addToCartdietCoke', 'dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartdietCoke')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -163,23 +161,22 @@
                 <img src="../images/pepsi.jpg" alt="Image of pepsi" class="drinkImage">
                 <div class="quantitySizeContainer" id="pepsiQuantitySizeContainer">
                     <div class="sizeContainer" id="pepsiSizeContainer">
-                        <button class="smallButton sizeButton" id="pepsiSmall"
-                            onclick="selectedSize('pepsiSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="pepsiMedium"
-                            onclick="selectedSize('pepsiMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="pepsiLarge"
-                            onclick="selectedSize('pepsiLarge')">Large</button>
+                        <select name="sizes" id="pepsiSizes" onchange="setPrice('pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="pepsiQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesspepsi"
+                            onclick="lessQuantity('pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morepepsi"
+                            onclick="moreQuantity('pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartpepsiCola"
-                    onclick="addToCart('pepsiContainer'); startAnimation('addToCartpepsiCola'); setTimeout(endAnimation, 1250, 'addToCartpepsiCola'); setTimeout(closeCheckAnimation, 930, 'addToCartpepsiCola')">
+                <button class="addToCartButton" id="addToCartpepsi"
+                    onclick="addToCart('pepsiContainer'); startAnimation('addToCartpepsi'); setTimeout(endAnimation, 1250, 'addToCartpepsi', 'pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartpepsi')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -194,23 +191,22 @@
                 <img src="../images/water.jpg" alt="Image of water" class="drinkImage">
                 <div class="quantitySizeContainer" id="waterQuantitySizeContainer">
                     <div class="sizeContainer" id="waterSizeContainer">
-                        <button class="smallButton sizeButton" id="waterSmall"
-                            onclick="selectedSize('waterSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="waterMedium"
-                            onclick="selectedSize('waterMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="waterLarge"
-                            onclick="selectedSize('waterLarge')">Large</button>
+                        <select name="sizes" id="waterSizes" onchange="setPrice('waterSizes', 'waterContainer', 'waterQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="waterQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesswater"
+                            onclick="lessQuantity('waterSizes', 'waterContainer', 'waterQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morewater"
+                            onclick="moreQuantity('waterSizes', 'waterContainer', 'waterQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartwaterCola"
-                    onclick="addToCart('waterContainer'); startAnimation('addToCartwaterCola'); setTimeout(endAnimation, 1250, 'addToCartwaterCola'); setTimeout(closeCheckAnimation, 930, 'addToCartwaterCola')">
+                <button class="addToCartButton" id="addToCartwater"
+                    onclick="addToCart('waterContainer'); startAnimation('addToCartwater'); setTimeout(endAnimation, 1250, 'addToCartwater', 'waterSizes', 'waterContainer', 'waterQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartwater')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -225,23 +221,22 @@
                 <img src="../images/hi-c.jpg" alt="Image of hi-c" class="drinkImage">
                 <div class="quantitySizeContainer" id="hi-cQuantitySizeContainer">
                     <div class="sizeContainer" id="hi-cSizeContainer">
-                        <button class="smallButton sizeButton" id="hi-cSmall"
-                            onclick="selectedSize('hi-cSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="hi-cMedium"
-                            onclick="selectedSize('hi-cMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="hi-cLarge"
-                            onclick="selectedSize('hi-cLarge')">Large</button>
+                        <select name="sizes" id="hi-cSizes" onchange="setPrice('hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="hi-cQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesshi-c"
+                            onclick="lessQuantity('hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morehi-c"
+                            onclick="moreQuantity('hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCarthi-cCola"
-                    onclick="addToCart('hi-cContainer'); startAnimation('addToCarthi-cCola'); setTimeout(endAnimation, 1250, 'addToCarthi-cCola'); setTimeout(closeCheckAnimation, 930, 'addToCarthi-cCola')">
+                <button class="addToCartButton" id="addToCarthi-c"
+                    onclick="addToCart('hi-cContainer'); startAnimation('addToCarthi-c'); setTimeout(endAnimation, 1250, 'addToCarthi-c', 'hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarthi-c')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -256,23 +251,22 @@
                 <img src="../images/fanta.jpg" alt="Image of fanta" class="drinkImage">
                 <div class="quantitySizeContainer" id="fantaQuantitySizeContainer">
                     <div class="sizeContainer" id="fantaSizeContainer">
-                        <button class="smallButton sizeButton" id="fantaSmall"
-                            onclick="selectedSize('fantaSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="fantaMedium"
-                            onclick="selectedSize('fantaMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="fantaLarge"
-                            onclick="selectedSize('fantaLarge')">Large</button>
+                        <select name="sizes" id="cocaSizes" onchange="setPrice('fantaSizes', 'fantaContainer', 'fantaQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="fantaQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lessfanta"
+                            onclick="lessQuantity('fantaSizes', 'fantaContainer', 'fantaQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morefanta"
+                            onclick="moreQuantity('fantaSizes', 'fantaContainer', 'fantaQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartfantaCola"
-                    onclick="addToCart('fantaContainer'); startAnimation('addToCartfantaCola'); setTimeout(endAnimation, 1250, 'addToCartfantaCola'); setTimeout(closeCheckAnimation, 930, 'addToCartfantaCola')">
+                <button class="addToCartButton" id="addToCartfanta"
+                    onclick="addToCart('fantaContainer'); startAnimation('addToCartfanta'); setTimeout(endAnimation, 1250, 'addToCartfanta', 'fantaSizes', 'fantaContainer', 'fantaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartfanta')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -287,23 +281,22 @@
                 <img src="../images/lemonade.jpg" alt="Image of lemonade" class="drinkImage">
                 <div class="quantitySizeContainer" id="lemonadeQuantitySizeContainer">
                     <div class="sizeContainer" id="lemonadeSizeContainer">
-                        <button class="smallButton sizeButton" id="lemonadeSmall"
-                            onclick="selectedSize('lemonadeSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="lemonadeMedium"
-                            onclick="selectedSize('lemonadeMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="lemonadeLarge"
-                            onclick="selectedSize('lemonadeLarge')">Large</button>
+                        <select name="sizes" id="lemonadeSizes" onchange="setPrice('lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="lemonadeQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesslemonade"
+                            onclick="lessQuantity('lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morelemonade"
+                            onclick="moreQuantity('lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartlemonadeCola"
-                    onclick="addToCart('lemonadeContainer'); startAnimation('addToCartlemonadeCola'); setTimeout(endAnimation, 1250, 'addToCartlemonadeCola'); setTimeout(closeCheckAnimation, 930, 'addToCartlemonadeCola')">
+                <button class="addToCartButton" id="addToCartlemonade"
+                    onclick="addToCart('lemonadeContainer'); startAnimation('addToCartlemonade'); setTimeout(endAnimation, 1250, 'addToCartlemonade', 'lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartlemonade')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -318,23 +311,22 @@
                 <img src="../images/chocolateMilk.jpg" alt="Image of chocolateMilk" class="drinkImage">
                 <div class="quantitySizeContainer" id="chocolateMilkQuantitySizeContainer">
                     <div class="sizeContainer" id="chocolateMilkSizeContainer">
-                        <button class="smallButton sizeButton" id="chocolateMilkSmall"
-                            onclick="selectedSize('chocolateMilkSmall')">Small</button>
-                        <button class="mediumButton sizeButton selected" id="chocolateMilkMedium"
-                            onclick="selectedSize('chocolateMilkMedium')">Medium</button>
-                        <button class="largeButton sizeButton" id="chocolateMilkLarge"
-                            onclick="selectedSize('chocolateMilkLarge')">Large</button>
+                        <select name="sizes" id="cocaSizes" onchange="setPrice('chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer')">
+                            <option value="Small">Small</option>
+                            <option value="Medium" selected="selectedS">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
                     </div>
-                    <div class="quantityContainer" id="colaQuantityContainer">
-                        <div class="lessQuantityButton quantityButton" id="lessCola"
-                            onclick="lessQuantity('colaQuantityContainer')">-</div>
+                    <div class="quantityContainer" id="chocolateMilkQuantityContainer">
+                        <div class="lessQuantityButton quantityButton" id="lesschocolateMilk"
+                            onclick="lessQuantity('chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer')">-</div>
                         <div class="quantity">1</div>
-                        <div class="moreQuantityButton quantityButton" id="moreCola"
-                            onclick="moreQuantity('colaQuantityContainer')">+</div>
+                        <div class="moreQuantityButton quantityButton" id="morechocolateMilk"
+                            onclick="moreQuantity('chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer')">+</div>
                     </div>
                 </div>
-                <button class="addToCartButton" id="addToCartchocolateMilkCola"
-                    onclick="addToCart('chocolateMilkContainer'); startAnimation('addToCartchocolateMilkCola'); setTimeout(endAnimation, 1250, 'addToCartchocolateMilkCola'); setTimeout(closeCheckAnimation, 930, 'addToCartchocolateMilkCola')">
+                <button class="addToCartButton" id="addToCartchocolateMilk"
+                    onclick="addToCart('chocolateMilkContainer'); startAnimation('addToCartchocolateMilk'); setTimeout(endAnimation, 1250, 'addToCartchocolateMilk', 'chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartchocolateMilk')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />

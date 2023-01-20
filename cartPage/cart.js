@@ -46,18 +46,24 @@ function removeCartItem(cartItemID){
     console.log(/Plate/g.test(document.getElementById(cartItemID).innerHTML))
     if(/Plate/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 9.49;
+        deliverClock()
     // If the word 'Platter' is found in the current cart item, it will set the price to 10.99
     }else if(/Platter/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 10.99;
+        deliverClock()
     // If the word 'Bowl' is found in the current cart item, it will set the price to 7.99
     }else if(/Bowl/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 7.99;
+        deliverClock()
     }else if(/Large/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.80;
+        deliverClock()
     }else if(/Medium/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.40;
+        deliverClock()
     }else if(/Small/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.00;
+        deliverClock()
     }
     
     // Removes the entire element of the removed item from the html
@@ -120,14 +126,25 @@ function diningSelected(buttonID) {
         buttons[i].classList.add('deselected')
     }
     document.getElementById(buttonID).classList.remove('deselected')
-    document.getElementById(buttonID).classList.add('selected') 
+    document.getElementById(buttonID).classList.add('selected')
+    if(document.getElementById('delivery').classList.contains('selected')){
+        document.getElementById('checkoutFillID').innerHTML = '<div class="inputsContainer"><div><label for="firstname">First Name: *</label><input type="text" name="firstname" id="nameInputID" class="nameInput" placeholder="John"></div><div><label for="lastname">Last Name: *</label><input type="text" name="lastname" id="nameInputID" class="nameInput" placeholder="Doe"></div><div><label for="address" class="deliveryLabel">Deliver To: *</label><input type="text" name="address" id="addressInputID" class="addressInput" placeholder="Street Address"></div></div><div class="timeContainer"><button class="nowButton timeSelected"  id="nowID" onclick="buttonSelected(\'nowID\')">ASAP</button><button class="laterButton" onclick="buttonSelected(\'laterID\')" id="laterID">Specified</button></div><div class="timeDeliveredContainer" id="timeID">Est. Time of Arrival: <span class="redText" id="estTime">0:00</span></div><div class="checkoutBox"><div class="checkTitle">Subtotal</div><div class="checkPrice" id="subPrice">0</div><div class="checkTitle deliveryTitle">Delivery & Fees</div><div class="checkPrice deliveryTitle" id="deliveryPrice">0</div><div class="checkTitle taxTitle">Tax</div><div class="checkPrice taxTitle" id="taxPrice">0</div><div class="checkTitle totalTitle">Total</div><div class="checkPrice totalTitle" id="totalPrice">0</div></div><div class="proceedButtonContainer"><button class="proceedButton">Checkout</button></div>'
+    }
+    deliverClock();
 }
 
 function buttonSelected(timeButtonID){
     document.getElementById('nowID').classList.remove('timeSelected')
     document.getElementById('laterID').classList.remove('timeSelected')
     document.getElementById(timeButtonID).classList.add('timeSelected')
+    if(document.getElementById('nowID').classList.contains('timeSelected')){
+        document.getElementById('timeID').innerHTML = "Est. Time of Arrival: <span class='redText' id='estTime'>0:00</span>"
+    }else if(document.getElementById('laterID').classList.contains('timeSelected')){
+        document.getElementById('timeID').innerHTML = "<label for='text'>What Time Would You Like It? *</label><input type='text' name='text' placeholder='0:00 AM' class='timeInput'></input>"
+    }
 }
+
+var finalPrice = 0;
 
 function deliverClock(){
     let currentDate = new Date();
@@ -146,8 +163,17 @@ function deliverClock(){
         minutes = "0" + minutes
     }
     if(document.getElementById('delivery').classList.contains('selected')){
-        document.getElementById('estTime').innerHTML = (hours + ':' + minutes + " " + ampm)
+        if(document.getElementById('nowID').classList.contains('timeSelected')){
+            document.getElementById('estTime').innerHTML = (hours + ':' + minutes + " " + ampm)
+        }
+        
         document.getElementById('subPrice').innerHTML = "$" + totalPrice
+        
+        document.getElementById('deliveryPrice').innerHTML = "$" + 4.58
+        document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
+
+        finalPrice = totalPrice + 4.58 + (totalPrice * .083)
+        document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
     }
     
     setTimeout(deliverClock, 1000)

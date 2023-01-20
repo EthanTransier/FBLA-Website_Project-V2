@@ -36,6 +36,7 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     margin-top: 95px;
+    padding-bottom: 75px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -337,7 +338,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     flex-direction: column;
 }
 
@@ -352,10 +353,60 @@ body {
     border: none;
     border-bottom: rgb(212, 0, 0) 2px solid;
     padding-bottom: 2px;
+    background-color: #f9f9f9;
+    
+}
+
+.deliveryLabel{
+    padding-left: 5px;
+}
+
+.inputsContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nameInput{
+    margin-left: 2px;
+    padding-left: 5px;
+    font-size: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: montserrat-regular;
+    outline-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: rgb(212, 0, 0) 2px solid;
+    padding-bottom: 2px;
+    background-color: #f9f9f9;
+}
+
+.nameInput:focus {
+    outline-color: #f9f9f9;
+    border-bottom: rgb(255, 58, 58) 3px solid;
+    background-color: #f9f9f9;
+}
+
+.addressInput {
+    margin-left: 8px;
+    padding-left: 5px;
+    font-size: 18px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: montserrat-regular;
+    outline-color: rgb(223, 0, 0);
+    outline-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: rgb(212, 0, 0) 2px solid;
+    padding-bottom: 2px;
+    background-color: #f9f9f9;
 }
 
 .addressInput:focus{
+    outline-color: #f9f9f9;
     border-bottom: rgb(255, 58, 58) 3px solid;
+    background-color: #f9f9f9;
 }
 
 .timeContainer{
@@ -393,19 +444,33 @@ body {
     padding-top: 17px;
 }
 
+.timeInput{
+    width: 100px;
+    font-family: montserrat-regular;
+    outline-color: rgb(223, 0, 0);
+    outline-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: rgb(212, 0, 0) 2px solid;
+    padding-bottom: 2px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
 .redText{
     color: rgb(223, 0, 0)
 }
 
 .checkoutBox{
-    margin-top: 20px;
-    font-size: 19px;
+    margin-top: 25px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 90%;
     font-family: montserrat-bold;
     border-top:rgb(255, 58, 58) 2px solid;
     padding-top: 10px;
+    gap: 5px;
     
 }
 .checkTitle{
@@ -413,9 +478,38 @@ body {
     text-align: left;
     padding-left: 5%;
 }
+.taxTitle{
+    color: rgb(59, 59, 59);
+    font-size: 18px;
+}
+.deliveryTitle{
+    font-size: 17px;
+}
+.totalTitle{
+    font-size: 21px;
+    padding-top: 10px;
+}
 .checkPrice{
     width: 40%;
     text-align: right;
     font-family: montserrat-regular;
     padding-right: 5%;
+}
+
+.proceedButtonContainer{
+    width: 70%;
+    margin-top:  30px;
+}
+.proceedButton{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 58, 58);
+    color: white;
+    font-family: montserrat-bold;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.proceedButton:hover{
+    background-color: rgb(255, 29, 29)
 }

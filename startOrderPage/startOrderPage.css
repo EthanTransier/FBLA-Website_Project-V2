@@ -105,6 +105,9 @@ li span{
     align-items: flex-end;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 60px;
+    gap: 125px;
+
 }
 /* CSS for the drink container */
 .drinkContainer{
@@ -114,7 +117,7 @@ li span{
 }
 /* CSS for the picture of the drink */
 .drinkPicture{
-    height: 275px;
+    height: 175px;
     width: auto;
 }
 /* CSS for the sides container */
@@ -125,7 +128,7 @@ li span{
 }
 /* CSS for the picture of the egg rolls */
 .sidesPicture{
-    width: 230px;
+    width: 200px;
     height: auto;
 }
 

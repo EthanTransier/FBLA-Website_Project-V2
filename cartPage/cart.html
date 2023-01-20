@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./cart.css">
 </head>
-<body onload="cartUpdater(); cartNotification()">
+<body onload="cartUpdater(); cartNotification(); deliverClock()">
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
@@ -82,14 +82,18 @@
                     <button class="deliveryButton cartDinerButton" id="delivery" onclick="diningSelected('delivery')"><p class="cartDinerTitle">Delivery</p></button>
                 </div>
                 <div class="checkoutFillContainer" id="checkoutFillID">
-                    <div>
-                        <label for="address">Deliver To: </label>
-                        <input type="text" name="address" id="addressInputID" class="addressInput" placeholder="Street Address">
-                    </div>
                     
                     <div class="timeContainer">
-                        <button class="nowButton" onclick="buttonSelected('nowID')" id="nowID">Now</button>
-                        <button class="laterButton" onclick="buttonSelected('laterID')" id="laterID">Later</button>
+                        <button class="nowButton timeSelected" onclick="buttonSelected('nowID')" id="nowID">ASAP</button>
+                        <button class="laterButton" onclick="buttonSelected('laterID')" id="laterID">Specified</button>
+                    </div>
+
+                    <div class="timeDeliveredContainer">
+                        Est. Time of Arrival: <span class="redText" id="estTime">0:00</span>
+                    </div>
+
+                    <div class="checkoutBox">
+                        <div class="checkTitle">Subtotal</div><div class="checkPrice" id="subPrice">12308</div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 var cartHTMLList = "";
+var totalPrice = 0;
 
 function cartUpdater() {
     // If their are no things in the local storage, it displays that the cart is empty
@@ -12,18 +13,24 @@ function cartUpdater() {
             // If the word 'Plate' is found in the current cart item, it will set the price to 9.49
             if(/Plate/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$9.49";
+                totalPrice += 9.49;
             // If the word 'Platter' is found in the current cart item, it will set the price to 10.99
             }else if(/Platter/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$10.99";
+                totalPrice += 10.99;
             // If the word 'Bowl' is found in the current cart item, it will set the price to 7.99
             }else if(/Bowl/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$7.99";
+                totalPrice += 7.99;
             }else if(/Large/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.80";
+                totalPrice += 2.80;
             }else if(/Medium/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.40";
+                totalPrice += 2.40;
             }else if(/Small/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.00";
+                totalPrice += 2.00;
             }
             // Sets the cart html list and adds whatever local storage item needs to be added, and removes the extra stuff around it and repalces it with html code, so that it displays correctly on the page.
             cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
@@ -36,10 +43,29 @@ function cartUpdater() {
 
 // Called whenever someone removes an item from their cart
 function removeCartItem(cartItemID){
+    console.log(/Plate/g.test(document.getElementById(cartItemID).innerHTML))
+    if(/Plate/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 9.49;
+    // If the word 'Platter' is found in the current cart item, it will set the price to 10.99
+    }else if(/Platter/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 10.99;
+    // If the word 'Bowl' is found in the current cart item, it will set the price to 7.99
+    }else if(/Bowl/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 7.99;
+    }else if(/Large/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 2.80;
+    }else if(/Medium/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 2.40;
+    }else if(/Small/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 2.00;
+    }
+    
     // Removes the entire element of the removed item from the html
     document.getElementById(cartItemID).remove();
     // removes whatever item was removed from local storage
     localStorage.removeItem(cartItemID);
+
+    
     // Reorders the cart
     reorderCart();
     // Resets the cart List
@@ -97,6 +123,33 @@ function diningSelected(buttonID) {
     document.getElementById(buttonID).classList.add('selected') 
 }
 
+function buttonSelected(timeButtonID){
+    document.getElementById('nowID').classList.remove('timeSelected')
+    document.getElementById('laterID').classList.remove('timeSelected')
+    document.getElementById(timeButtonID).classList.add('timeSelected')
+}
 
-// Javascript for the Interactable Map for users to choose where they can get their stuff delivered to
+function deliverClock(){
+    let currentDate = new Date();
+    let hours = currentDate.getHours();
+    let minutes = currentDate.getMinutes() + 20;
+    let ampm = 'AM'
+    if(minutes >= 60){
+        minutes -= 60;
+        hours ++;
+    }
+    if(hours > 12){
+        hours -= 12;
+        ampm = "PM"
+    }
+    if(minutes < 10){
+        minutes = "0" + minutes
+    }
+    if(document.getElementById('delivery').classList.contains('selected')){
+        document.getElementById('estTime').innerHTML = (hours + ':' + minutes + " " + ampm)
+        document.getElementById('subPrice').innerHTML = "$" + totalPrice
+    }
+    
+    setTimeout(deliverClock, 1000)
+}
 

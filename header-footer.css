@@ -87,23 +87,24 @@ a {
 footer {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
-    border-top-width: 3.5px;
-    border-top-color: rgb(223, 0, 0);
-    border-top-style: solid;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(24, 24, 24);
     margin-top: 50px;
     height: auto;
     justify-content: space-around;
     font-family: montserrat-regular;
     font-size: clamp(1vh, 8rem, 2vh);
-    padding: 2px;
     justify-content: space-between;
+    color: white;
+    padding-top: 10px;
+}
+
+footer a {
+    color: white;
 }
 
 .footerTitle{
-    color: red;
     font-weight: bold;
     font-size: 20px;
 }

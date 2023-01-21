@@ -181,7 +181,10 @@ function deliverClock(){
      if(selectedItems.length > 0){
         document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
         
-        document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
+        if(totalPrice.toFixed(2) > 0){
+            document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
+        }
+        
         document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
 
         finalPrice = totalPrice + 4.49 + (totalPrice * .083)

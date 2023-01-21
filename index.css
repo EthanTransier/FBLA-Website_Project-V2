@@ -250,6 +250,7 @@ body {
     font-weight: bold;
     font-size: 45px;
     color: red;
+    padding-top: clamp(2vh, 6rem, 3vh);
 }
 
 #giftALT {

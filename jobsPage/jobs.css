@@ -1,27 +1,27 @@
 /* Utiliteies */
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: montserrat-regular;
+  margin: 0px;
+  padding: 0px;
+  font-family: montserrat-regular;
 }
 @font-face {
-    font-family: kanit-regular;
-    src: url(../kanit/Kanit-Regular.ttf);
+  font-family: kanit-regular;
+  src: url(../kanit/Kanit-Regular.ttf);
 }
 @font-face {
-    font-family: kanit-light;
-    src: url(../kanit/Kanit-Light.ttf);
+  font-family: kanit-light;
+  src: url(../kanit/Kanit-Light.ttf);
 }
 @font-face {
-    font-family: kanit-bold;
-    src: url(../kanit/Kanit-Bold.ttf);
+  font-family: kanit-bold;
+  src: url(../kanit/Kanit-Bold.ttf);
 }
 @font-face {
-    font-family: montserrat-regular;
-    src: url(../montserrat/static/Montserrat-Regular.ttf);
+  font-family: montserrat-regular;
+  src: url(../montserrat/static/Montserrat-Regular.ttf);
 }
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 /* Creates and modifies the code inside the center boxes */
@@ -77,131 +77,136 @@ h4{
 } */
 
 /* Creates and modifies the code inside the center boxes */
-.infoBoxes{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: clamp(1vh, 6rem, 2vh);
-    font-size: clamp(1.75vh, 6rem, 3.5vh);
-    margin-left: clamp(1.5vh, 6rem, 3vh);
-    margin-right: clamp(1.5vh, 6rem, 3vh);
-    border-bottom: 2px solid red;
-    padding-bottom: clamp(1vh, 6rem, 2vh);
+.infoBoxes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: clamp(1vh, 6rem, 2vh);
+  font-size: clamp(1.75vh, 6rem, 3.5vh);
+  margin-left: clamp(1.5vh, 6rem, 3vh);
+  margin-right: clamp(1.5vh, 6rem, 3vh);
+  border-bottom: 2px solid red;
+  padding-bottom: clamp(1vh, 6rem, 2vh);
 }
 h1 {
-    text-align: center;
-    font-family: kanit-regular;
+  text-align: center;
+  font-family: kanit-regular;
 }
-body{
-    background-color: rgb(51, 51, 51);
+body {
+  background-color: rgb(51, 51, 51);
 }
-h4{
-    color: white;
-    font-family: kanit-bold;
-    font-size: clamp(2.25vh, 6rem, 4.5vh);
+h4 {
+  color: white;
+  font-family: kanit-bold;
+  font-size: clamp(2.25vh, 6rem, 4.5vh);
 }
-.infoBoxes > div{
-    color: white;
-    font-family: montserrat-regular;
-    margin-left: clamp(1vh, 6rem, 2vh);
-    margin-right: clamp(1vh, 6rem, 2vh);
+.infoBoxes > div {
+  color: white;
+  font-family: montserrat-regular;
+  margin-left: clamp(1vh, 6rem, 2vh);
+  margin-right: clamp(1vh, 6rem, 2vh);
 }
-.infoBoxes > img{
-    padding: clamp(1vh, 6rem, 2vh);
-    width: 300px;
-    height: auto;
+.infoBoxes > img {
+  padding: clamp(1vh, 6rem, 2vh);
+  width: 300px;
+  height: auto;
 }
-#specIMG{
-    width: clamp(60vh, 6rem, 90vh);
-    height: auto;
+#specIMG {
+  width: clamp(60vh, 6rem, 90vh);
+  height: auto;
 }
 
 /* Modifies the button at the center of the page */
-.btn{
-    display: flex;
-    justify-content: center;
-    border: 0px solid black;
-    border-radius: 20px;
-    background-color: red;
-    color: white;
-    height: 50px;
-    font-family: kanit-regular;
-    font-size: clamp(2vh, 6rem, 4vh);
-    width: clamp(40vh, 6rem, 80vh);
+.btn {
+  display: flex;
+  justify-content: center;
+  border: 0px solid black;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+  height: 50px;
+  font-family: kanit-regular;
+  font-size: clamp(2vh, 6rem, 4vh);
+  width: clamp(40vh, 6rem, 80vh);
 }
-.btnCenter{
-    display: flex;
-    justify-content: center;
-    padding-top: clamp(2vh, 6rem, 4vh);
+.btnCenter {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(2vh, 6rem, 4vh);
 }
-.btn:hover{
-    background-color: rgb(139, 0, 0);
+.btn:hover {
+  background-color: rgb(139, 0, 0);
 }
 
 /* 780 Media Query */
-@media only screen and (max-width: 780px){
-    .infoBoxes{
-        padding: clamp(1vh, 6rem, 2vh);
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(0.75vh, 6rem, 1.5vh);
-        margin-right: clamp(.55vh, 6rem, 1.5vh);
-        border-bottom: 2px solid red;
-        padding-bottom: clamp(1vh, 6rem, 2vh);
-    }
+@media only screen and (max-width: 780px) {
+  .infoBoxes {
+    padding: clamp(1vh, 6rem, 2vh);
+    font-size: clamp(1vh, 6rem, 2vh);
+    margin-left: clamp(0.75vh, 6rem, 1.5vh);
+    margin-right: clamp(0.55vh, 6rem, 1.5vh);
+    border-bottom: 2px solid red;
+    padding-bottom: clamp(1vh, 6rem, 2vh);
+  }
 
-    h4{
-        font-size: clamp(1.5vh, 6rem, 3vh); 
-    }
+  h4 {
+    font-size: clamp(1.5vh, 6rem, 3vh);
+  }
 
-    #specIMG{
-        width: clamp(30vh, 6rem, 45vh);
-        height: auto;
-    }
+  #specIMG {
+    width: clamp(30vh, 6rem, 45vh);
+    height: auto;
+  }
 }
 /* 500 Media Query */
-@media only screen and (max-width: 500px){
-    .infoBoxes{
-        padding: clamp(1vh, 6rem, 2vh);
-        font-size: clamp(0.75vh, 6rem, 1.5vh);
-        margin-left: clamp(0.75vh, 6rem, 1.5vh);
-        margin-right: clamp(.55vh, 6rem, 1.5vh);
-        border-bottom: 2px solid red;
-        padding-bottom: clamp(1vh, 6rem, 2vh);
-        flex-direction: column;
-    }
+@media only screen and (max-width: 500px) {
+  .infoBoxes {
+    padding: clamp(1vh, 6rem, 2vh);
+    font-size: clamp(0.75vh, 6rem, 1.5vh);
+    margin-left: clamp(0.75vh, 6rem, 1.5vh);
+    margin-right: clamp(0.55vh, 6rem, 1.5vh);
+    border-bottom: 2px solid red;
+    padding-bottom: clamp(1vh, 6rem, 2vh);
+    flex-direction: column;
+  }
 
-    .infoBoxes > img{
-        width: clamp(24vh, 6rem, 48vh);
-        height: auto;
-        float: right;
-    }
+  .infoBoxes > img {
+    width: clamp(24vh, 6rem, 48vh);
+    height: auto;
+    float: right;
+  }
 
-    .marginTop{
-        padding-top: clamp(4vh, 6rem, 8vh);
-    }
+  .marginTop {
+    padding-top: clamp(4vh, 6rem, 8vh);
+  }
 
-    h4{
-        font-size: clamp(1.5vh, 6rem, 3vh);
-        text-align:center;
-    }
-    p{
-        text-align: center;
-    }
-    
-    #specIMG{
-        width: clamp(25vh, 6rem, 35vh);
-        height: auto;
-    }
-    .btnCenter{
-        width: 100%
-    }
-    a{
-        width: 80%
-    }
-    .btn{
-        width: 100%;
-        font-size: clamp(1.25rem, 0.313rem + 7.5vw, 2.188rem);
-        display: flex;
-        align-items: center;
-    }
+  h4 {
+    font-size: clamp(1.5vh, 6rem, 3vh);
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
+  #specIMG {
+    width: clamp(25vh, 6rem, 35vh);
+    height: auto;
+  }
+  .btnCenter {
+    width: 100%;
+  }
+  a {
+    width: 80%;
+  }
+  .btn {
+    width: 100%;
+    font-size: clamp(1.25rem, 0.313rem + 7.5vw, 2.188rem);
+    display: flex;
+    align-items: center;
+  }
+}
+/* for the credits page */
+ul {
+  list-style: none;
+  font-family: kanit-regular;
 }

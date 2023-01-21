@@ -177,7 +177,8 @@ function deliverClock(){
         }
 
     }
-     if(document.getElementsByClassName('selected') > 0){
+    const selectedItems = document.getElementsByClassName('selected')
+     if(selectedItems.length > 0){
         document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
         
         document.getElementById('deliveryPrice').innerHTML = "$" + 4.49

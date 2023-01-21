@@ -1,8 +1,70 @@
+*{
+  font-family: montserrat-regular;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
 ul {
   list-style: none;
   font-family: kanit-regular;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+li{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+header{
+  font-family: kanit-regular;
+}
+.headerTitle{
+  color: black;
+  font-family: kanit-regular;
+}
+.dragonSpanTitle{
+  font-family: kanit-regular;
+}
+.headerLinksContainer{
+  font-family: kanit-light;
+}
+a{
+  font-family: kanit-light;
+}
+body{
+  background-color: rgb(51, 51, 51);
+}
+h1{
+  padding-left: 5%;
 }
 @font-face {
   font-family: kanit-regular;
   src: url(../kanit/Kanit-Regular.ttf);
+}
+@font-face {
+  font-family: kanit-light;
+  src: url(../kanit/Kanit-Light.ttf);
+}
+/* Fonts Area */
+@font-face {
+  font-family: montserrat-regular;
+  src: url(../montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: montserrat-bold;
+  src: url(../montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: montserrat-light;
+  src: url(../montserrat/static/Montserrat-Light.ttf);
+}
+
+@media only screen and (max-width: 500px) {
+  h1{
+    padding-top: 75px;
+  }
+  li{
+    word-break: break-all;
+  }
 }

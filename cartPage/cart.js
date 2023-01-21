@@ -31,6 +31,9 @@ function cartUpdater() {
             }else if(/Small/g.test(localStorage.getItem("cartArray" + i))){
                 price = "$2.00";
                 totalPrice += 2.00;
+            }else if(/Side/g.test(localStorage.getItem("cartArray" + i))){
+                price = "$2.40";
+                totalPrice += 2.40;
             }
             // Sets the cart html list and adds whatever local storage item needs to be added, and removes the extra stuff around it and repalces it with html code, so that it displays correctly on the page.
             cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
@@ -43,7 +46,6 @@ function cartUpdater() {
 
 // Called whenever someone removes an item from their cart
 function removeCartItem(cartItemID){
-    console.log(/Plate/g.test(document.getElementById(cartItemID).innerHTML))
     if(/Plate/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 9.49;
         deliverClock()
@@ -63,6 +65,9 @@ function removeCartItem(cartItemID){
         deliverClock()
     }else if(/Small/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.00;
+        deliverClock()
+    }else if(/Side/g.test(document.getElementById(cartItemID).innerHTML)){
+        totalPrice -= 2.40;
         deliverClock()
     }
     
@@ -87,17 +92,13 @@ function reorderCart(){
     // Sorts the keys so they are in the correct order when comparing them to the cart array items
     const tempStorage = [];
     for(let i = 0; i < keys.length; i++){
-        console.log(localStorage.getItem(keys[i]))
         tempStorage.push(localStorage.getItem(keys[i]))
-        console.log(tempStorage)
     }
     localStorage.clear();
     // Iterates through the keys
     for(let i = 0; i < tempStorage.length; i++){
         
-        console.log(tempStorage[i])
         localStorage.setItem(('cartArray' + (i + 1)), tempStorage[i])
-        console.log(localStorage)
         // If the keys item does not match up with the cart array designated item, it will reorder it
     }
     
@@ -124,12 +125,20 @@ function diningSelected(buttonID) {
     let buttons = document.getElementsByClassName('cartDinerButton')
     for(let i = 0; i < buttons.length; i++){
         buttons[i].classList.add('deselected')
+        buttons[i].classList.remove('selected')
     }
     document.getElementById(buttonID).classList.remove('deselected')
     document.getElementById(buttonID).classList.add('selected')
     if(document.getElementById('delivery').classList.contains('selected')){
         document.getElementById('checkoutFillID').innerHTML = '<div class="inputsContainer"><div class="inputContainer" ><label for="firstname">First Name: *</label><input type="text" name="firstname" id="nameInputID" class="nameInput" placeholder="John"></div><div class="inputContainer"><label for="lastname">Last Name: *</label><input type="text" name="lastname" id="nameInputID" class="nameInput" placeholder="Doe"></div><div class="inputContainer"><label for="address" class="deliveryLabel">Deliver To: *</label><input type="text" name="address" id="addressInputID" class="addressInput" placeholder="Street Address"></div></div><div class="timeContainer"><button class="nowButton timeSelected"  id="nowID" onclick="buttonSelected(\'nowID\')">ASAP</button><button class="laterButton" onclick="buttonSelected(\'laterID\')" id="laterID">Specified</button></div><div class="timeDeliveredContainer" id="timeID">Est. Time of Arrival: <span class="redText" id="estTime">0:00</span></div><div class="checkoutBox"><div class="checkTitle">Subtotal</div><div class="checkPrice" id="subPrice">0</div><div class="checkTitle deliveryTitle">Delivery & Fees</div><div class="checkPrice deliveryTitle" id="deliveryPrice">0</div><div class="checkTitle taxTitle">Tax</div><div class="checkPrice taxTitle" id="taxPrice">0</div><div class="checkTitle totalTitle">Total</div><div class="checkPrice totalTitle" id="totalPrice">0</div></div><div class="proceedButtonContainer"><button class="proceedButton">Checkout</button></div>'
+    }else if(document.getElementById('takeOut').classList.contains('selected')){
+        document.getElementById('checkoutFillID').innerHTML = '<div class="inputsContainer"> <div class="inputContainer"> <label for="firstname">First Name: *</label> <input type="text" name="firstname" id="nameInputID" class="nameInput" placeholder="John"> </div> <div class="inputContainer"> <label for="lastname">Last Name: *</label> <input type="text" name="lastname" id="nameInputID" class="nameInput" placeholder="Doe"> </div> </div> <div class="timeContainer">When Will You Arrive?</div> <input type="text" name="text" placeholder="" class="timeInput timeInputTakeout"></input> <div class="checkoutBox"> <div class="checkTitle">Subtotal</div> <div class="checkPrice" id="subPrice">0</div> <div class="checkTitle deliveryTitle">Delivery & Fees</div> <div class="checkPrice deliveryTitle" id="deliveryPrice">0</div> <div class="checkTitle taxTitle">Tax</div> <div class="checkPrice taxTitle" id="taxPrice">0</div> <div class="checkTitle totalTitle">Total</div> <div class="checkPrice totalTitle" id="totalPrice">0</div> </div> <div class="proceedButtonContainer"><button class="proceedButton">Checkout</button></div>'
+    }else if(document.getElementById('dineIn').classList.contains('selected')){
+        document.getElementById('checkoutFillID').innerHTML = '<div class="inputsContainer"> <div class="inputContainer"> <label for="firstname">First Name: *</label> <input type="text" name="firstname" id="nameInputID" class="nameInput" placeholder="John"> </div> <div class="inputContainer"> <label for="lastname">Last Name: *</label> <input type="text" name="lastname" id="nameInputID" class="nameInput" placeholder="Doe"> </div> </div> <div class="timeContainer">When Will You Arrive?</div> <input type="text" name="text" placeholder="" class="timeInput timeInputTakeout"></input> <div class="reserveContainer"> <label for="reserve">Reserve a Spot?</label> <input type="radio" name="reserve" class="reserve"> </div> <div class="checkoutBox"> <div class="checkTitle">Subtotal</div> <div class="checkPrice" id="subPrice">0</div> <div class="checkTitle deliveryTitle">Delivery & Fees</div> <div class="checkPrice deliveryTitle" id="deliveryPrice">0</div> <div class="checkTitle taxTitle">Tax</div> <div class="checkPrice taxTitle" id="taxPrice">0</div> <div class="checkTitle totalTitle">Total</div> <div class="checkPrice totalTitle" id="totalPrice">0</div> </div> <div class="proceedButtonContainer"><button class="proceedButton">Checkout</button></div>'
     }
+
+
+
     deliverClock();
 }
 
@@ -166,15 +175,16 @@ function deliverClock(){
         if(document.getElementById('nowID').classList.contains('timeSelected')){
             document.getElementById('estTime').innerHTML = (hours + ':' + minutes + " " + ampm)
         }
-        
-        document.getElementById('subPrice').innerHTML = "$" + totalPrice
-        
-        document.getElementById('deliveryPrice').innerHTML = "$" + 4.58
-        document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
 
-        finalPrice = totalPrice + 4.58 + (totalPrice * .083)
-        document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
     }
+        
+    document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
+        
+    document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
+    document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
+
+    finalPrice = totalPrice + 4.49 + (totalPrice * .083)
+    document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
     
     setTimeout(deliverClock, 1000)
 }

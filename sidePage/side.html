@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body onload="cartNotification()">
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
@@ -69,11 +69,16 @@
     <div class="mainContentContainer">
         <h1 class="mainContentTitle" id="title">Sides</h1>
         <div class="snacksContainer">
-            <div class="snackContainer">
+            <div class="snackContainer" id="eggRollContainer">
                 <h1 class="snackTitle">Egg Rolls</h1>
                 <img src="../images/eggRolls.jpg" alt=" Image of Egg Rolls" class="snackImage" id="eggRollImage">
-                <div class="quantityContainer"></div>
-                <button class="addToCartButton" id="addToCarteggRoll" onclick="addToCart('eggRollContainer'); startAnimation('addToCarteggRoll'); setTimeout(endAnimation, 1250, 'addToCarteggRoll'); setTimeout(closeCheckAnimation, 930, 'addToCarteggRoll')">
+                <div class="quantityContainer" id="eggRollQuantityContainer">
+                    <div class="lessQuantityButton quantityButton" id="lesseggRoll" onclick="lessQuantity('eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer')">-</div>
+                    <div class="quantity">1</div>
+                    <div class="moreQuantityButton quantityButton" id="moreeggRoll"
+                        onclick="moreQuantity('eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer')">+</div>
+                </div>
+                <button class="addToCartButton" id="addToCarteggRoll" onclick="addToCart('eggRollContainer'); startAnimation('addToCarteggRoll'); setTimeout(endAnimation, 1250, 'addToCarteggRoll', 'eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarteggRoll')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -82,12 +87,37 @@
                 </button>
             </div>
 
-            <div class="snackContainer">
+            <div class="snackContainer" id="springRollContainer">
                 <h1 class="snackTitle">Spring Rolls</h1>
                 <img src="../images/springRolls.jpg" alt=" Image of Egg Rolls" class="snackImage">
-                <div class="quantityContainer"></div>
+                <div class="quantityContainer" id="springRollQuantityContainer">
+                    <div class="lessQuantityButton quantityButton" id="lessspringRoll"
+                        onclick="lessQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">-</div>
+                    <div class="quantity">1</div>
+                    <div class="moreQuantityButton quantityButton" id="morespringRoll"
+                        onclick="moreQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">+</div>
+                </div>
                 <button class="addToCartButton" id="addToCartspringRoll"
                     onclick="addToCart('springRollContainer'); startAnimation('addToCartspringRoll'); setTimeout(endAnimation, 1250, 'addToCartspringRoll'); setTimeout(closeCheckAnimation, 930, 'addToCartspringRoll')">
+                    <p class="buttonText">Add To Cart - $2.40</p>
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </button>
+            </div>
+            <div class="snackContainer" id="wontonContainer">
+                <h1 class="snackTitle">Wonton Chips</h1>
+                <img src="../images/wontons.jpg" alt=" Image of Egg Rolls" class="snackImage">
+                <div class="quantityContainer" id="wontonQuantityContainer">
+                    <div class="lessQuantityButton quantityButton" id="lesswonton"
+                        onclick="lessQuantity('wontonSizes', 'wontonContainer', 'wontonQuantityContainer')">-</div>
+                    <div class="quantity">1</div>
+                    <div class="moreQuantityButton quantityButton" id="morewonton"
+                        onclick="moreQuantity('wontonSizes', 'wontonContainer', 'wontonQuantityContainer')">+</div>
+                </div>
+                <button class="addToCartButton" id="addToCartwonton"
+                    onclick="addToCart('wontonContainer'); startAnimation('addToCartwonton'); setTimeout(endAnimation, 1250, 'addToCartwonton'); setTimeout(closeCheckAnimation, 930, 'addToCartwonton')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />

@@ -1,7 +1,6 @@
 let dropdownOpened = false;
 
 function openDropdown() {
-    console.log('worked')
     if (dropdownOpened == false){
         document.getElementById("dropdownContentID").classList.remove('dropdownCloseAnimation');
         document.getElementById("dropdownContentID").classList.add('dropdownOpenAnimation');
@@ -19,3 +18,10 @@ function openDropdown() {
     }
 }
 
+function cartNotification() {
+    if(localStorage.length > 0){
+        document.getElementById("cartRedIconID").style.display = "block";
+    }else{
+        document.getElementById("cartRedIconID").style.display = "none";
+    }
+}

@@ -69,7 +69,7 @@
                 <div id="cartItemsID" class="cartItemsClass">
 
                 </div>
-                <div class="cartOrderMoreContainer">
+                <div class="cartOrderMoreContainer" onclick="window.location.href = '../startOrderPage/startOrderPage.html'">
                     Click Here to Order More
                 </div>
             </div>
@@ -82,32 +82,7 @@
                     <button class="deliveryButton cartDinerButton" id="delivery" onclick="diningSelected('delivery')"><p class="cartDinerTitle">Delivery</p></button>
                 </div>
                 <div class="checkoutFillContainer" id="checkoutFillID">
-                    <div class="inputsContainer">
-                        <div class="inputContainer">
-                            <label for="firstname">First Name: *</label>
-                            <input type="text" name="firstname" id="nameInputID" class="nameInput" placeholder="John">
-                        </div>
-                        <div class="inputContainer">
-                            <label for="lastname">Last Name: *</label>
-                            <input type="text" name="lastname" id="nameInputID" class="nameInput" placeholder="Doe">
-                        </div>
-                    </div>
-                    <div class="timeContainer"><button class="nowButton timeSelected" id="nowID"
-                            onclick="buttonSelected('nowID')">ASAP</button><button class="laterButton"
-                            onclick="buttonSelected('laterID')" id="laterID">Specified</button></div>
-                    <div class="timeDeliveredContainer" id="timeID">Est. Time of Arrival: <span class="redText" id="estTime">0:00</span>
-                    </div>
-                    <div class="checkoutBox">
-                        <div class="checkTitle">Subtotal</div>
-                        <div class="checkPrice" id="subPrice">0</div>
-                        <div class="checkTitle deliveryTitle">Delivery & Fees</div>
-                        <div class="checkPrice deliveryTitle" id="deliveryPrice">0</div>
-                        <div class="checkTitle taxTitle">Tax</div>
-                        <div class="checkPrice taxTitle" id="taxPrice">0</div>
-                        <div class="checkTitle totalTitle">Total</div>
-                        <div class="checkPrice totalTitle" id="totalPrice">0</div>
-                    </div>
-                    <div class="proceedButtonContainer"><button class="proceedButton">Checkout</button></div>
+                    
                 </div>
             </div>
         </div>

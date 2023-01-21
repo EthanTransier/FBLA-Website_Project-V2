@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body onload="cartNotification()">
     <!-- Header, which includes the Title, the Logo, and the links -->
     <header>
         <!-- Container for the title of the Resteraunt -->
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartCocaCola"
-                    onclick="addToCart('cocaContainer'); startAnimation('addToCartCocaCola'); setTimeout(endAnimation, 1250, 'addToCartCocaCola', 'cocaSizes', 'cocaContainer', 'colaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartCocaCola')">
+                    onclick="addToCart('cocaContainer'); startAnimation('addToCartCocaCola'); setTimeout(endAnimation, 1250, 'addToCartCocaCola', 'cocaSizes', 'cocaContainer', 'colaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartCocaCola'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartsprite"
-                    onclick="addToCart('spriteContainer'); startAnimation('addToCartsprite'); setTimeout(endAnimation, 1250, 'addToCartsprite', 'spriteSizes', 'spriteContainer', 'spriteQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartsprite')">
+                    onclick="addToCart('spriteContainer'); startAnimation('addToCartsprite'); setTimeout(endAnimation, 1250, 'addToCartsprite', 'spriteSizes', 'spriteContainer', 'spriteQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartsprite'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -146,7 +146,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartdietCoke"
-                    onclick="addToCart('dietCokeContainer'); startAnimation('addToCartdietCoke'); setTimeout(endAnimation, 1250, 'addToCartdietCoke', 'dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartdietCoke')">
+                    onclick="addToCart('dietCokeContainer'); startAnimation('addToCartdietCoke'); setTimeout(endAnimation, 1250, 'addToCartdietCoke', 'dietCokeSizes', 'dietCokeContainer', 'dietCokeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartdietCoke'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartpepsi"
-                    onclick="addToCart('pepsiContainer'); startAnimation('addToCartpepsi'); setTimeout(endAnimation, 1250, 'addToCartpepsi', 'pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartpepsi')">
+                    onclick="addToCart('pepsiContainer'); startAnimation('addToCartpepsi'); setTimeout(endAnimation, 1250, 'addToCartpepsi', 'pepsiSizes', 'pepsiContainer', 'pepsiQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartpepsi'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -206,7 +206,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartwater"
-                    onclick="addToCart('waterContainer'); startAnimation('addToCartwater'); setTimeout(endAnimation, 1250, 'addToCartwater', 'waterSizes', 'waterContainer', 'waterQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartwater')">
+                    onclick="addToCart('waterContainer'); startAnimation('addToCartwater'); setTimeout(endAnimation, 1250, 'addToCartwater', 'waterSizes', 'waterContainer', 'waterQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartwater'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -236,7 +236,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCarthi-c"
-                    onclick="addToCart('hi-cContainer'); startAnimation('addToCarthi-c'); setTimeout(endAnimation, 1250, 'addToCarthi-c', 'hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarthi-c')">
+                    onclick="addToCart('hi-cContainer'); startAnimation('addToCarthi-c'); setTimeout(endAnimation, 1250, 'addToCarthi-c', 'hi-cSizes', 'hi-cContainer', 'hi-cQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarthi-c'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -266,7 +266,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartfanta"
-                    onclick="addToCart('fantaContainer'); startAnimation('addToCartfanta'); setTimeout(endAnimation, 1250, 'addToCartfanta', 'fantaSizes', 'fantaContainer', 'fantaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartfanta')">
+                    onclick="addToCart('fantaContainer'); startAnimation('addToCartfanta'); setTimeout(endAnimation, 1250, 'addToCartfanta', 'fantaSizes', 'fantaContainer', 'fantaQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartfanta'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -296,7 +296,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartlemonade"
-                    onclick="addToCart('lemonadeContainer'); startAnimation('addToCartlemonade'); setTimeout(endAnimation, 1250, 'addToCartlemonade', 'lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartlemonade')">
+                    onclick="addToCart('lemonadeContainer'); startAnimation('addToCartlemonade'); setTimeout(endAnimation, 1250, 'addToCartlemonade', 'lemonadeSizes', 'lemonadeContainer', 'lemonadeQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartlemonade'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -326,7 +326,7 @@
                     </div>
                 </div>
                 <button class="addToCartButton" id="addToCartchocolateMilk"
-                    onclick="addToCart('chocolateMilkContainer'); startAnimation('addToCartchocolateMilk'); setTimeout(endAnimation, 1250, 'addToCartchocolateMilk', 'chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartchocolateMilk')">
+                    onclick="addToCart('chocolateMilkContainer'); startAnimation('addToCartchocolateMilk'); setTimeout(endAnimation, 1250, 'addToCartchocolateMilk', 'chocolateMilkSizes', 'chocolateMilkContainer', 'chocolateMilkQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCartchocolateMilk'); cartNotification()">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />

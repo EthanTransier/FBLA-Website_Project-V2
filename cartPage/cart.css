@@ -240,6 +240,7 @@ body {
 
 .cartOrderMoreContainer{
     text-align: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 670px) {
@@ -392,6 +393,7 @@ body {
 .timeContainer{
     width: 60%;
     display: flex;
+    justify-content: center;
     margin-top: 30px;
 }
 .nowButton{
@@ -434,10 +436,29 @@ body {
     padding-bottom: 2px;
     font-size: 18px;
     margin-left: 5px;
+    background-color: #f9f9f9;
+}
+
+.timeInputTakeout{
+    width: 60%;
 }
 
 .redText{
     color: rgb(223, 0, 0)
+}
+
+.reserveContainer{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+}
+
+.reserve{
+    accent-color:rgb(255, 58, 58);
+    width: 15px;
+    height: 15px;
 }
 
 .checkoutBox{

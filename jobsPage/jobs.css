@@ -2,7 +2,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: kanit-regular;
+    font-family: montserrat-regular;
 }
 @font-face {
     font-family: kanit-regular;
@@ -167,6 +167,7 @@ h4{
         margin-right: clamp(.55vh, 6rem, 1.5vh);
         border-bottom: 2px solid red;
         padding-bottom: clamp(1vh, 6rem, 2vh);
+        flex-direction: column;
     }
 
     .infoBoxes > img{
@@ -180,11 +181,27 @@ h4{
     }
 
     h4{
-        font-size: clamp(1.5vh, 6rem, 3vh); 
+        font-size: clamp(1.5vh, 6rem, 3vh);
+        text-align:center;
+    }
+    p{
+        text-align: center;
     }
     
     #specIMG{
         width: clamp(25vh, 6rem, 35vh);
         height: auto;
+    }
+    .btnCenter{
+        width: 100%
+    }
+    a{
+        width: 80%
+    }
+    .btn{
+        width: 100%;
+        font-size: clamp(1.25rem, 0.313rem + 7.5vw, 2.188rem);
+        display: flex;
+        align-items: center;
     }
 }

@@ -1,90 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="jobs.css">
-    <link rel="stylesheet" href="../header-footer.css">
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="jobs.css" />
+    <link rel="stylesheet" href="../header-footer.css" />
+    <link rel="stylesheet" href="credits.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
     <title>Jī lóng | Jobs</title>
-</head>
-<body>
-   <!-- Header, which includes the Title, the Logo, and the links -->
-  <header onload="cartNotification()">
-    <!-- Container for the title of the Resteraunt -->
-    <a href="../index.html" class="headerLogoContainer">
-      <img src="../images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
-    </a>
-    <div class="titleContainer" id="titleID">
-      <h1 class="headerTitle"><span class="dragonSpanTitle">Jī lóng</span> Grill</h1>
-    </div>
-    <!-- Container for the links to the different pages of the website inside the header -->
-    <div class='headerDropdown' id='dropdownID'>
-      <div class='homeLinkContainer dropdownLink' onclick='openDropdown()'>
-        <a class='underlineText'>Join Us</a>
-        <img src="../images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
+  </head>
+  <body>
+    <!-- Header, which includes the Title, the Logo, and the links -->
+    <header onload="cartNotification()">
+      <!-- Container for the title of the Resteraunt -->
+      <a href="../index.html" class="headerLogoContainer">
+        <img
+          src="../images/newLOGO.png"
+          alt="Logo for chinese resteraunt"
+          class="headerLogo"
+        />
+      </a>
+      <div class="titleContainer" id="titleID">
+        <h1 class="headerTitle">
+          <span class="dragonSpanTitle">Jī lóng</span> Grill
+        </h1>
       </div>
-    </div>
-    <div class='dropdownContent' id='dropdownContentID'>
-      <a href='../index.html' class='headerOrderLink'>Home</a>
-      <div class="horizontalLine"></div>
-      <a href='../startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
-      <div class="horizontalLine"></div>
-      <a href='../plus/plus.html' class='headerOrderLink'>Jī lóng+</a>
-    </div>
-    <div class='headerLinksContainer' id='headerLinksID'>
-      <!-- Container for the link that goes to the home page -->
-      <div class='homeLinkContainer'>
-        <a href='../index.html'>Home</a>
+      <!-- Container for the links to the different pages of the website inside the header -->
+      <div class="headerDropdown" id="dropdownID">
+        <div class="homeLinkContainer dropdownLink" onclick="openDropdown()">
+          <a class="underlineText">Join Us</a>
+          <img
+            src="../images/arrow.svg"
+            alt="imgae of an arrow"
+            class="dropdownArrow"
+            id="arrowID"
+          />
+        </div>
       </div>
-      <!-- Container for the button / link that takes you to the Ordering page -->
-      <div class='orderLinkContainer'>
-        <a href='../startOrderPage/startOrderPage.html'>Order</a>
+      <div class="dropdownContent" id="dropdownContentID">
+        <a href="../index.html" class="headerOrderLink">Home</a>
+        <div class="horizontalLine"></div>
+        <a href="../startOrderPage/startOrderPage.html" class="headerOrderLink"
+          >Order</a
+        >
+        <div class="horizontalLine"></div>
+        <a href="../plus/plus.html" class="headerOrderLink">Jī lóng+</a>
       </div>
-      <!-- Container for the link that goes to the menu page -->
-      <div class='menuLinkContainer'>
-        <a href='../plus/plus.html'>Jī lóng+</a>
+      <div class="headerLinksContainer" id="headerLinksID">
+        <!-- Container for the link that goes to the home page -->
+        <div class="homeLinkContainer">
+          <a href="../index.html">Home</a>
+        </div>
+        <!-- Container for the button / link that takes you to the Ordering page -->
+        <div class="orderLinkContainer">
+          <a href="../startOrderPage/startOrderPage.html">Order</a>
+        </div>
+        <!-- Container for the link that goes to the menu page -->
+        <div class="menuLinkContainer">
+          <a href="../plus/plus.html">Jī lóng+</a>
+        </div>
+        <!-- Container for the link that goes to the Hiring page -->
+        <div class="jobs.html">
+          <a href="../jobsPage/jobs.html" class="underlineText">Join Us</a>
+        </div>
       </div>
-      <!-- Container for the link that goes to the Hiring page -->
-      <div class='jobs.html'>
-        <a href='../jobsPage/jobs.html' class='underlineText'>Join Us</a>
+      <!-- Container for the cart icon / link -->
+      <div class="cartHeaderContainer">
+        <img
+          src="../images/cartIcon.png"
+          alt="icon of a shopping cart"
+          class="cartIcon"
+          onclick="window.location.href='../cartPage/cart.html'"
+        />
+        <div class="cartRedIcon" id="cartRedIconID"></div>
       </div>
-    </div>
-    <!-- Container for the cart icon / link -->
-    <div class="cartHeaderContainer">
-      <img src="../images/cartIcon.png" alt="icon of a shopping cart" class="cartIcon"
-        onclick="window.location.href='../cartPage/cart.html'">
-      <div class="cartRedIcon" id="cartRedIconID"></div>
-    </div>
-  
-  </header>
+    </header>
+    <h1>Credits to images</h1>
+    <ul>
+      <li>001.png - https://www.uchusushi.com/our-menu-copy</li>
+      <li>
+        59252082.png - https://asimplepantry.com/chicken-cheesesteak-egg-rolls/
+      </li>
+      <li>
+        Bowl.png - https://www.pinterest.com/foodeverest/asian-food-photography/
+      </li>
+      <li>car .png - https://www.flaticon.com/free-icons/moving-car</li>
+      <li>cards.png - self made</li>
+      <li>
+        cartIcon.png - https://stock.adobe.com/search?k=shopping+cart+icon+white
+      </li>
+      <li>
+        Chicken-Chow-Mein-3-1024x1536.png -
+        https://natashaskitchen.com/chicken-chow-mein/
+      </li>
+      <li>
+        chocolateMilk.png -
+        https://www.costco.com/nestle-nesquik-low-fat-chocolate-milk%2C-14-oz%2C-12-count.product.100589927.html
+        https://www.amazon.com/Nestle-Nesquik-Milk-Chocolate-Ounce/dp/B00BN2ROMG?th=1
+      </li>
+      <li>
+        Chop-suey-recipe.png -
+        https://www.howtocook.recipes/homemade-chop-suey-recipe/
+      </li>
+      <li>chowMein.png - https://www.istockphoto.com/photos/chinese-food</li>
+      <li>
+        cocaCola.png - https://www.ebay.com/b/Coca-Cola-Bottles/13603/bn_3117489
+      </li>
+      <li>
+        Crab-Rangoon-Wide.png -
+        https://www.doordash.com/store/happy-wok-livonia-238491/
+      </li>
+      <li>dietCoke.png - https://www.cleanpng.com/free/coca-cola-light.html</li>
+      <li>
+        Download.png -
+        https://recipes.timesofindia.com/us/recipes/chicken-in-hot-garlic-sauce/rs75289430.cms
+      </li>
+      <li>Dink.png - https://www.cleanpng.com/free/coca-cola.html</li>
+      <li>
+        eggRolls.png - https://www.allrecipes.com/recipe/14704/best-egg-rolls/
+        facebooklogo.jpg -
+        https://www.eleconomista.es/emprendedores-pymes/noticias/5834065/06/14/30-millones-de-pymes-ya-tienen-pagina-en-Facebook.html
+      </li>
+      <li>
+        Fanta.jpg -
+        https://www.mcdonalds.com/us/en-us/product/fanta-orange-small.html
+      </li>
+      <li>Favicon.png - self made</li>
+      <li>
+        friedRice.png -
+        https://www.swiggy.com/restaurants/shivangi-kitchen-one-hundred-fourchandra-nath-roy-rd-ruby-area-kolkata-604391
+      </li>
+      <li>
+        General-Tso-Chicken-5.jpg -
+        https://www.seamless.com/menu/taste-of-thailand-restaurant-9502-potranco-rd-san-antonio/3354478
+        grilled-chicken-breast-11-2022.jpg -
+        https://healthyrecipesblogs.com/grilled-chicken-breast/
+      </li>
+      <li>
+        Hi-c.jpg -
+        https://www.mcdonalds.com/us/en-us/product/hi-c-orange-lavaburst-small.html
+      </li>
+      <li>homeBG.jpg - https://unsplash.com/s/photos/chinese-dish</li>
+      <li>
+        homeFood2.png -
+        https://www.chinahighlights.com/travelguide/chinese-food/eight-chinese-dishes.htm
+      </li>
+      <li>
+        homePackageBackground.jpg -
+        https://www.pxfuel.com/en/query?q=food+dishes&page=6
+      </li>
+      <li>
+        HONEY-WALNUT-SHRIMP-2.jpg -
+        https://tornadoughalli.com/honey-walnut-shrimp/
+      </li>
+      <li>
+        igLogo.jpg - https://postgrain.com/blog/instagram-atualizacao-visual/
+      </li>
+      <li>
+        informationIcon.png - https://www.symbols.com/symbol/on-off-symbol
+      </li>
+      <li>Instant-pot-beef-and-broccli-1.png -</li>
+      <li>
+        Jpg.jpg -
+        https://www.nspirement.com/2020/04/04/a-history-of-dumplings-plus-bonus-peking-pork-dumpling-recipe2.html
+      </li>
+      <li>
+        kungPaoChicken.jpg -
+        https://www.cheffaq.com/popular-dishes-to-order-from-chinese-takeaway/
+      </li>
+      <li>Lemonade.jpg - none</li>
+      <li>newLOGO.png - self made</li>
+      <li>
+        orangeChicken.jpg -
+        https://www.grubhub.com/restaurant/china-fortune-2112-n-hill-field-rd-ste-3-layton/1240617
+      </li>
+      <li>
+        Pepsi.jpg - https://www.dreamstime.com/photos-images/pepsi-can.html
+      </li>
+      <li>
+        Plate.png -
+        https://www.bonappetit.com/gallery/lunar-new-year-menu-lisa-cheng-smith
+      </li>
+      <li>
+        Platter.png -
+        https://www.pinterest.com/rodrigopaulcruz/promociones-restaurant/
+      </li>
+      <li>plusLOGO.png - self made</li>
+      <li>plusLogoIMG.png - self made</li>
+      <li>
+        Sides.png -
+        https://www.vhv.rs/viewpic/iiRxiTw_egg-chicken-roll-png-transparent-png/
+      </li>
+      <li>springRolls.jpg - https://www.loveandlemons.com/spring-rolls/</li>
+      <li>
+        Sprite.jpg - https://www.walmart.ca/en/ip/Sprite-2L-Bottle/6000096432612
+      </li>
+      <li>
+        Takeout.png -
+        https://thenounproject.com/browse/icons/term/chinese-takeout/
+      </li>
+      <li>
+        teriyakiChicken.jpg - https://www.likeachef.fr/recettes-de-chefs/poulet
+      </li>
+      <li>tsoChicken.jpg - https://hi-in.facebook.com/larobataofficial/</li>
+      <li>twitterLogo.jpg - https://holyspiritfremont.org/twitter-logo/</li>
+      <li>
+        Veggie-Spring-Rolls.jpg -
+        https://www.indianhealthyrecipes.com/baked-vegetable-spring-rolls-recipe-crusty-oven-baked-vegetable-spring-rolls/
+      </li>
+      <li>
+        Water.jpg -
+        https://order.tacotimenw.com/menu/issaquah-north-issaquah?showInfoModal=true
+      </li>
+      <li>
+        whiteRice.jpg - https://www.flickr.com/photos/30478819@N08/45909507155
+      </li>
+      <li>Wontons.jpg - https://stripedspatula.com/fried-wonton-strips/</li>
+      <li>
+        Xiaolongbao-breakfast.jpg -
+        https://www.shop-changman.lu/A-la-vapeur-c112030337
+      </li>
+    </ul>
 
     <!-- Footer -->
     <footer>
       <div class="footerBox">
-          <p class="footerTitle">Info</p>
-          <p>Phone: (480) 132-4845</p>
-          <p>Email: glendale@jilóng.com</p>
+        <p class="footerTitle">Info</p>
+        <p>Phone: (480) 132-4845</p>
+        <p>Email: glendale@jilóng.com</p>
       </div>
 
       <div class="footerBox">
-          <p class="footerTitle">Social Medias</p>
-          <div class="igLogo"><a href="https://www.instagram.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/igLogo.jpg" alt="Instagram Logo">@jilóng_food</p></a></div>
-          <div class="fbLogo"><a href="https://www.facebook.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/facebookLogo.jpg" alt="Facebook Logo">Ji Lóng</p></a></div>
-          <div class="twLogo"><a href="https://twitter.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.jpg" alt="Twitter Logo">@jilóng</p></a></div>
-          <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
-          <p class="footerTitle footerCopyRight"> ⓒJī lóng</p> 
+        <p class="footerTitle">Social Medias</p>
+        <div class="igLogo">
+          <a href="https://www.instagram.com/"
+            ><p class="horizontalCenter">
+              <img
+                class="footerIMG"
+                src="../images/igLogo.jpg"
+                alt="Instagram Logo"
+              />@jilóng_food
+            </p></a
+          >
+        </div>
+        <div class="fbLogo">
+          <a href="https://www.facebook.com/"
+            ><p class="horizontalCenter">
+              <img
+                class="footerIMG"
+                src="../images/facebookLogo.jpg"
+                alt="Facebook Logo"
+              />Ji Lóng
+            </p></a
+          >
+        </div>
+        <div class="twLogo">
+          <a href="https://twitter.com/"
+            ><p class="horizontalCenter">
+              <img
+                class="footerIMG"
+                src="../images/twitterLogo.jpg"
+                alt="Twitter Logo"
+              />@jilóng
+            </p></a
+          >
+        </div>
+        <a class="footerTitle footerCopyRight" href="../credits/credits.html"
+          >Credits</a
+        >
+        <p class="footerTitle footerCopyRight">ⓒJī lóng</p>
       </div>
 
       <div class="footerBox">
-          <p class="footerTitle">Times</p>
-          <p>Sun: 12:00p-8:00p</p>
-          <p>Mon-Fri: 10:00a-8:00p</p>
-          <p>Sat: 9:00a-9:00p</p>
+        <p class="footerTitle">Times</p>
+        <p>Sun: 12:00p-8:00p</p>
+        <p>Mon-Fri: 10:00a-8:00p</p>
+        <p>Sat: 9:00a-9:00p</p>
       </div>
-      
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>

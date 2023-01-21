@@ -1,0 +1,8 @@
+ul {
+  list-style: none;
+  font-family: kanit-regular;
+}
+@font-face {
+  font-family: kanit-regular;
+  src: url(../kanit/Kanit-Regular.ttf);
+}

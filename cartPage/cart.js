@@ -177,14 +177,16 @@ function deliverClock(){
         }
 
     }
+     if(document.getElementsByClassName('selected') > 0){
+        document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
         
-    document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
-        
-    document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
-    document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
+        document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
+        document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
 
-    finalPrice = totalPrice + 4.49 + (totalPrice * .083)
-    document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
+        finalPrice = totalPrice + 4.49 + (totalPrice * .083)
+        document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
+     }   
+    
     
     setTimeout(deliverClock, 1000)
 }

@@ -14,7 +14,7 @@
 }
 
 /* Creates and modifies the code inside the center boxes */
-/* .signup{
+.signup{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -23,61 +23,8 @@
 }
 .infoBoxes{
     background-color: white;
-    width: clamp(85vh, 6rem, 100vh);
+    width: clamp(100vh, 6rem, 150vh);
     padding: clamp(1vh, 6rem, 2vh);
-}
-h1 {
-    text-align: center;
-    font-family: kanit-regular;
-}
-body{
-    background-color: rgb(51, 51, 51);
-}
-h4{
-    text-decoration: underline;
-    color: red;
-} */
-
-/* Modifies the button at the center of the page */
-/* #btn{
-    border: 0px solid black;
-    border-radius: 20px;
-    width: 150px;
-    background-color: red;
-    color: white;
-    height: 50px;
-    font-family: kanit-regular;
-    font-weight: 500;
-    font-size: 35px;
-}
-.btnCenter {
-    display: flex;
-    justify-content: center;
-}
-#passReqs{
-    font-size: 10px;
-    text-align: left;
-}
-#btn:hover{
-    background-color: rgb(139, 0, 0);
-}
-.white{
-    color: white;
-} */
-
-/* Creates and modifies the code inside the center boxes */
-.signup{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: left;
-    font-family: kanit-regular;
-    margin-left: clamp(2vh, 6rem, 4vh);
-}
-.infoBoxes{
-    width: clamp(85vh, 6rem, 100vh);
-    padding: clamp(1vh, 6rem, 2vh);
-    font-size: clamp(2vh, 6rem, 4vh);
 }
 h1 {
     text-align: center;
@@ -116,6 +63,61 @@ h4{
 }
 .white{
     color: white;
+}
+
+/* Creates and modifies the code inside the center boxes */
+.signup{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: left;
+    font-family: kanit-regular;
+    margin-left: clamp(2vh, 6rem, 4vh);
+}
+.infoBoxes{
+    width: clamp(70vh, 6rem, 85vh);
+    padding: clamp(1vh, 6rem, 2vh);
+    font-size: clamp(2vh, 6rem, 4vh);
+    padding-left: clamp(2.5vh, 6rem, 5vh);
+}
+h1 {
+    text-align: center;
+    font-family: kanit-regular;
+}
+body{
+    background-color: rgb(51, 51, 51);
+}
+h4{
+    text-decoration: underline;
+    color: red;
+}
+
+/* Modifies the button at the center of the page */
+#btn{
+    border: 0px solid black;
+    border-radius: 20px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    height: 50px;
+    font-family: kanit-regular;
+    font-weight: 500;
+    font-size: 35px;
+}
+.btnCenter {
+    display: flex;
+    justify-content: center;
+}
+#passReqs{
+    font-size: 10px;
+    text-align: left;
+}
+#btn:hover{
+    background-color: rgb(139, 0, 0);
+}
+.white{
+    color: white;
+    padding: clamp(2vh, 6rem, 4vh);
 }
 
 /* 780 Media Query */

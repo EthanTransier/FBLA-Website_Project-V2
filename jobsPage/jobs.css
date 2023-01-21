@@ -152,6 +152,11 @@ h4{
     h4{
         font-size: clamp(1.5vh, 6rem, 3vh); 
     }
+
+    #specIMG{
+        width: clamp(30vh, 6rem, 45vh);
+        height: auto;
+    }
 }
 /* 500 Media Query */
 @media only screen and (max-width: 500px){
@@ -179,7 +184,7 @@ h4{
     }
     
     #specIMG{
-        width: clamp(40vh, 6rem, 60vh);
+        width: clamp(25vh, 6rem, 35vh);
         height: auto;
     }
 }

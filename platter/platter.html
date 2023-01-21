@@ -162,6 +162,49 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="foodContainer primaryFoodContainer" id="beijingBeefContainer"
+                    onclick="selectPrimaryFoodContainer('beijingBeefContainer')">
+                    <img src="../images/beijingBeef.jpg" alt="Image of Beijing Beef on a plate" class="foodPicture">
+                    <h1 class="foodTitle">Beijing Beef</h1>
+                    <div class="foodText" id="beijingBeefFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('beijingBeefFireID')" id="beijingBeefFireID">
+                        <div class="fireIconCrossout" id="beijingBeefCrossID"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="beijingBeefMinus"
+                                onclick="quantityMinus(event), minusQuantity('beijingBeefQuantity')">-</div>
+                            <div class="quantity" id="beijingBeefQuantity">1</div>
+                            <div class="addQuantity" id="beijingBeefQuantityPlus"
+                                onclick="quantityPlus(event), addQuantity('beijingBeefQuantity')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="foodContainer primaryFoodContainer" id="broccoliBeefContainer"
+                    onclick="selectPrimaryFoodContainer('broccoliBeefContainer')">
+                    <img src="../images/broccoliBeef.jpg" alt="Image of Broccoli Beef on a plate" class="foodPicture">
+                    <h1 class="foodTitle">Broccoli Beef</h1>
+                    <div class="foodText" id="broccoliBeefFoodText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
+                            onclick="makeSpicy(event), spicyAnimation('broccoliBeefFireID')" id="broccoliBeefFireID">
+                        <div class="fireIconCrossout" id="broccoliBeefCrossID"></div>
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="broccoliBeefMinus"
+                                onclick="quantityMinus(event), minusQuantity('broccoliBeefQuantity')">-</div>
+                            <div class="quantity" id="broccoliBeefQuantity">1</div>
+                            <div class="addQuantity" id="broccoliBeefQuantityPlus"
+                                onclick="quantityPlus(event), addQuantity('broccoliBeefQuantity')">+</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <!-- Vertical Line Container -->
             <div class="verticalLine">
@@ -220,6 +263,23 @@
                     </div>
                     
                 </div>
+
+                <div class="foodContainer secondaryFoodContainer" id="veggiesContainer"
+                    onclick="selectSecondaryFoodContainer('veggiesContainer')">
+                    <img src="../images/vegtables.jpg" alt="Image of vegtables" class="foodPicture">
+                    <h1 class="foodTitle">Vegtables</h1>
+                    <div class="foodText" id="veggiesText">
+                        Serving Size: 6oz
+                        <br>
+                        545 Calories
+                        <div class="quantityCounter">
+                            <div class="minusQuantity" id="veggiesMinus" onclick="quantityMinusSecondary(event), minusQuantitySecondary('veggiesQuantity')">-</div>
+                            <div class="quantity" id="veggiesQuantity">1</div>
+                            <div class="addQuantity" id="veggiesQuantityPlus" onclick="quantityPlusSecondary(event), addQuantitySecondary('veggiesQuantity')">+</div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
         <!-- SUBMIT BUTTON AREA -->
@@ -252,9 +312,9 @@
   
         <div class="footerBox">
             <p class="footerTitle">Social Medias</p>
-            <div class="igLogo"><a href="https://www.instagram.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/igLogo.jpg" alt="Instagram Logo">@jilóng_food</p></a></div>
-            <div class="fbLogo"><a href="https://www.facebook.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/facebookLogo.jpg" alt="Facebook Logo">Ji Lóng</p></a></div>
-            <div class="twLogo"><a href="https://twitter.com/"><p class="horizontalCenter"><img class="footerIMG" src="./images/twitterLogo.jpg" alt="Twitter Logo">@jilóng</p></a></div>
+            <div class="igLogo"><a href="https://www.instagram.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/igLogo.jpg" alt="Instagram Logo">@jilóng_food</p></a></div>
+            <div class="fbLogo"><a href="https://www.facebook.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/facebookLogo.jpg" alt="Facebook Logo">Ji Lóng</p></a></div>
+            <div class="twLogo"><a href="https://twitter.com/"><p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.jpg" alt="Twitter Logo">@jilóng</p></a></div>
             <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
             <p class="footerTitle footerCopyRight"> ⓒJī lóng</p> 
         </div>

@@ -171,7 +171,13 @@ body {
     line-height: 1.35;
 }
 
+.plusContainer{
+    padding-top: 30px;
+}
 
+.plusTextContainer{
+    padding-right: clamp(0.313rem, -0.521rem + 6.667vw, 1.563rem);
+}
 
 /* plus box */
 #plus {

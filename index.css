@@ -19,24 +19,78 @@
     src: url("./kanit/Kanit-Bold.ttf");
 }
 
-/* general changers */
-body {
-    background-color: rgb(51, 51, 51);
+body{
+    overflow-x: hidden;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+.mainContentContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    overflow: hidden;
 }
 
-@media only screen and (max-width: 780px) {
-    .headerTitle {
-        display: none;
-    }
+#carousel {
+    position: absolute;
+    width: 3000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: ease-in-out 1s all;
+    /* transform: translateX(600px); */
+}
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    width: 4000px;
+}
+
+.slide {
+    flex: 1;
+    width: 300px;
+    height: 300px;
+    color: white;
+    font-family: montserrat-regular;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    transition: ease-in-out 1s all;
+}
+
+.slideImage{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;;
+}
+
+.slide.active {
+    z-index: 2;
+}
+
+#prev-button,
+#next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev-button {
+    left: 0;
+}
+
+#next-button {
+    right: 0;
 }
 
 /* page opening */
-.opening {
+/* .opening {
     color: white;
     font-size: 30px;
     font-family: kanit-light;
@@ -46,9 +100,9 @@ body {
     background-position: left;
     width: 100%;
     height: auto;
-}
+} */
 /* Holds The Title and the Order Now Button */
-.openingTitleAndButtonContainer {
+/* .openingTitleAndButtonContainer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -56,17 +110,17 @@ body {
     align-content: flex-start;
     gap: 30px;
     
-}
+} */
 /* Title for the Website in the content area */
-.openingText {
+/* .openingText {
     font-weight: bolder;
     font-family: montserrat-regular;
     font-size: clamp(2.188rem, 1.719rem + 1.5vw, 3.125rem);
     margin-top: clamp(5rem, -1.5rem + 52vw, 13.125rem);
     margin-right: 65px;
-}
+} */
 /* Button for the order page */
-.startOrder {
+/* .startOrder {
     width: clamp(9.375rem, 3.125rem + 50vw, 18.75rem);
     height: auto;
     font-family: kanit-regular;
@@ -77,14 +131,14 @@ body {
     border: 0px solid black;
     margin-right: 65px;
     cursor: pointer;
-}
+} */
 /* Container for the Plus section of the opening */
-.plusIntroContainer {
+/* .plusIntroContainer {
     padding-left: 50px;
     padding-top: 50px;
-}
+} */
 /* Holds the text and the image for the Plus section of the opening */
-.plusINTRO {
+/* .plusINTRO {
     display: flex;
     align-items: center;
     font-size: clamp(1.563rem, 0.938rem + 2vw, 2.813rem);
@@ -92,63 +146,63 @@ body {
     margin-top: -50px;
     padding-bottom: 200px;
     margin-left: 0px;
-}
-/* Image for the Plus section */
+} */
+/* Image for the Plus section
 .plusLOGO {
     width: clamp(6.25rem, 3.125rem + 10vw, 12.5rem);
     height: auto;
-}
+} */
 /* Text for the Plus section */
-.plusIntroP {
+/* .plusIntroP {
     padding-left: 20px;
     font-family: montserrat-light;
     font-weight: 700;
     letter-spacing: -1px;
-}
+} */
 /* Makes Ji Long Plus red for the plus text section */
-.redText {
+/* .redText {
     color: rgb(223, 0, 0);
     font-weight: bold;
-}
+} */
 /* Main content container for the stuff under the page opener */
-.mainContentContainer {
+/* .mainContentContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
-}
+} */
 /* giftcard box */
-.giftCardContainer {
+/* .giftCardContainer {
     color: black;
     display: flex;
     font-size: 35px;
     height: clamp(6.25rem, 3.365rem + 23.077vw, 25rem);
     width: clamp(18.75rem, 10.096rem + 69.231vw, 75rem);
     text-align: center;
-}
+} */
 /* Image for the giftcard box */
-.giftCardImage {
+/* .giftCardImage {
     width: clamp(9.844rem, 5.3rem + 36.346vw, 39.375rem);
     height: clamp(6.25rem, 3.365rem + 23.077vw, 25rem);
-}
+} */
 /* Darker vertical line to the left */
-.verticalLine1 {
+/* .verticalLine1 {
     width: clamp(0.234rem, 0.126rem + 0.865vw, 0.938rem);
     height: clamp(6.25rem, 3.365rem + 23.077vw, 25rem);
     position: relative;
     background-color: rgb(223, 0, 0);
     z-index: 9;
-}
+} */
 /* Lighter vertical line to the right */
-.verticalLine2 {
+/* .verticalLine2 {
     width: clamp(0.234rem, 0.126rem + 0.865vw, 0.938rem);
     height: clamp(6.25rem, 3.365rem + 23.077vw, 25rem);
     position: relative;
     background-color: rgb(255, 58, 58);
     z-index: 9;
-}
+} */
 
-.giftTextContainer {
+/* .giftTextContainer {
     height: clamp(6.25rem, 3.365rem + 23.077vw, 25rem);
     width: clamp(7.813rem, 4.207rem + 28.846vw, 31.25rem);
     text-decoration: none;
@@ -156,16 +210,14 @@ body {
     align-items: center;
     font-family: montserrat-regular;
     font-weight: 700;
-    
     font-size: clamp(0.688rem, 0.37rem + 2.538vw, 2.75rem);
-    /* padding-left: 30px; */
     z-index: 10;
     color: white;
     display: flex;
     padding-left: clamp(0.313rem, -0.521rem + 6.667vw, 1.563rem);
-}
+} */
 
-.giftTEXT {
+/* .giftTEXT {
     position: relative;
     width: 100%;
     line-height: 1.35;
@@ -177,9 +229,9 @@ body {
 
 .plusTextContainer{
     padding-right: clamp(0.313rem, -0.521rem + 6.667vw, 1.563rem);
-}
+} */
 
-/* plus box */
+/* plus box
 #plus {
     background-color: rgb(255, 255, 255);
     color: black;
@@ -217,10 +269,10 @@ body {
 
 #plusINTRO a:hover {
     text-decoration: none;
-}
+} */
 
 /* about box */
-#about {
+/* #about {
     background-color: rgb(255, 255, 255);
     color: black;
     margin-top: 0%;
@@ -261,7 +313,7 @@ body {
     align-items: center;
     font-family: kanit-italic;
     font-size: 48px;
-}
+} */
 
 
 
@@ -288,7 +340,7 @@ body {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
      .openingTitleAndButtonContainer{
         align-content: center;
         padding-left: 0px;
@@ -348,4 +400,4 @@ body {
         height: auto;
         padding-top: 10px;
     }
-}
+} */

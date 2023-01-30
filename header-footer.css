@@ -1,3 +1,13 @@
+/* general changers */
+body {
+    background-color: rgb(51, 51, 51);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* Changes the header */
 header {
     display: flex;

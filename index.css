@@ -38,61 +38,29 @@ body {
 /* page opening */
 .opening {
     color: white;
-    font-size: 30px;
+    font-size: 3.5rem;
     font-family: kanit-light;
+    letter-spacing: 3.5px;
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(51, 51, 51, 1)), url("https://ihcbyclubwyndham.com/app/uploads/2020/10/AdobeStock_264005197-scaled.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
     width: 100%;
-    height: auto;
+    height: 80vh;
 }
-/* Holds The Title and the Order Now Button */
-.openingTitleAndButtonContainer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    align-content: flex-start;
-    gap: 30px;
-    
-}
-/* Title for the Website in the content area */
-.openingText {
-    font-weight: bolder;
-    font-family: montserrat-regular;
-    font-size: clamp(2.188rem, 1.719rem + 1.5vw, 3.125rem);
-    margin-top: clamp(5rem, -1.5rem + 52vw, 13.125rem);
-    margin-right: 65px;
-}
-/* Button for the order page */
-.startOrder {
-    width: clamp(9.375rem, 3.125rem + 50vw, 18.75rem);
-    height: auto;
-    font-family: kanit-regular;
-    color: white;
-    background-color: rgb(223, 0, 0);
-    border-radius: 15px;
-    font-size: 30px;
-    border: 0px solid black;
-    margin-right: 65px;
-    cursor: pointer;
-}
-/* Container for the Plus section of the opening */
-.plusIntroContainer {
-    padding-left: 50px;
-    padding-top: 50px;
-}
-/* Holds the text and the image for the Plus section of the opening */
-.plusINTRO {
+
+.openingText{
+    width: 40%;
+    height: 80vh;
+    font-family: montserrat-bold;
+    font-weight: 400;
+    padding-left: 2%;
     display: flex;
     align-items: center;
-    font-size: clamp(1.563rem, 0.938rem + 2vw, 2.813rem);
-    color: white;
-    margin-top: -50px;
-    padding-bottom: 200px;
-    margin-left: 0px;
+    justify-content: center;
+    line-height: 110%;
 }
+
 /* Image for the Plus section */
 .plusLOGO {
     width: clamp(6.25rem, 3.125rem + 10vw, 12.5rem);

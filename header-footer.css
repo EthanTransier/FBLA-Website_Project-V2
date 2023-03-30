@@ -11,6 +11,8 @@ header {
     border-bottom-width: 3.5px;
     border-bottom-color: rgb(223, 0, 0);
     border-bottom-style: solid;
+    position: fixed;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -29,7 +31,7 @@ a {
 .headerLinksContainer {
     display: flex;
     gap: clamp(0.313rem, -0.186rem + 1.596vw, 1.25rem);
-    font-family: kanit-light;
+    font-family: montserrat-regular;
 }
 .headerLogo {
     position: relative;
@@ -37,9 +39,11 @@ a {
     height: auto;
 }
 .headerLogoContainer {
-    width: clamp(3.125rem, 1.463rem + 5.319vw, 6.25rem);
+    width: 30%;
     height: auto;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .dragonSpanTitle {
     color: red;

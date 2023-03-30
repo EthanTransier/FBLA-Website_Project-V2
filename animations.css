@@ -1,0 +1,17 @@
+/* .opening{
+    animation-name: homeBackgroundStart;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-position: 80% 0%;
+}
+
+@keyframes homeBackgroundStart {
+    from{
+        background-position: 80% 0%;
+    }
+    to{
+        background-position: 0% 70%;
+    }
+} */

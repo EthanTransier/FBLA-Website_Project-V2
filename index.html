@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
   </head>
-  <body onload="cartNotification()">
-    <header onload="()=>cartNotification()">
+  <body >
+    <header>
       <!-- Container for the title of the Resteraunt -->
       <a href="./index.html" class="headerLogoContainer">
         <img src="./images/newLOGO.png" alt="Logo for chinese resteraunt" class="headerLogo" />
@@ -26,13 +26,23 @@
           <img src="./images/arrow.svg" alt="imgae of an arrow" class="dropdownArrow" id="arrowID">
         </div>
       </div>
-      <!-- Container for the button / link that takes you to the Ordering page -->
-      <div class='orderLinkContainer'>
-        <a href='./startOrderPage/startOrderPage.html' class='headerOrderLink'>Order</a>
-      </div>
-      <!-- Container for the link that goes to the menu page -->
-      <div class='menuLinkContainer'>
-        <a href='./plus/plus.html'>Jī lóng+</a>
+      <div class='headerLinksContainer' id='headerLinksID'>
+        <!-- Container for the link that goes to the home page -->
+        <div class='homeLinkContainer'>
+          <a href='./index.html' class='underlineText'>Home</a>
+        </div>
+        <!-- Container for the button / link that takes you to the Ordering page -->
+        <div class='orderLinkContainer'>
+          <a href='./startOrderPage/startOrderPage.html'>Order</a>
+        </div>
+        <!-- Container for the link that goes to the menu page -->
+        <div class='menuLinkContainer'>
+          <a href='./plus/plus.html'>Jī lóng+</a>
+        </div>
+        <!-- Container for the link that goes to the Hiring page -->
+        <div class='jobs.html'>
+          <a href='./jobsPage/jobs.html'>Join Us</a>
+        </div>
       </div>
       <!-- Container for the cart icon / link -->
       <div class="cartHeaderContainer">
@@ -175,7 +185,7 @@
   </footer>
 
   <script src="./index.js"></script>
-  <script src="./header-footer.js"></script>
+  <!-- <script src="./header-footer.js"></script> -->
 </body>
 
 </html>

@@ -4,6 +4,23 @@ const parallax = document.getElementById("opening");
 
 console.log('running')
 
+window.onload = function() {
+    if(localStorage.length > 0){
+        document.getElementById("cartRedIconID").style.display = "block";
+    }else{
+        document.getElementById("cartRedIconID").style.display = "none";
+    }
+
+    let clientHeight = header.clientHeight;
+    console.log(clientHeight)
+
+    console.log(document.getElementById("opening").style)
+    document.getElementById("opening").style.marginTop = (clientHeight + 'px');
+
+    console.log("margin top" + header.clientHeight)
+    console.log(document.getElementById("opening").style.marginTop)
+}
+
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
@@ -12,18 +29,3 @@ window.addEventListener("scroll", function () {
 });
 
 
-function cartNotification() {
-    console.log('running 2');
-    
-    if(localStorage.length > 0){
-        document.getElementById("cartRedIconID").style.display = "block";
-    }else{
-        document.getElementById("cartRedIconID").style.display = "none";
-    }
-
-    console.log('running 3')
-
-    parallax.style.marginTop = header.clientHeight;
-
-    console.log('worked')
-}

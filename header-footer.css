@@ -13,6 +13,7 @@ header {
     border-bottom-style: solid;
     position: fixed;
     width: 100%;
+    top: 0;
 }
 a {
     text-decoration: none;

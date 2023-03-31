@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="join.css">
-    <link rel="stylesheet" href="../header-footer.css">
-    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
-    <title>Jī lóng | Jobs</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="join.css">
+  <link rel="stylesheet" href="../header-footer.css">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <title>Jī lóng | Jobs</title>
 </head>
+
 <body onload="cartNotification()">
-   <!-- Header, which includes the Title, the Logo, and the links -->
+  <!-- Header, which includes the Title, the Logo, and the links -->
   <header>
     <!-- Container for the title of the Resteraunt -->
     <a href="../index.html" class="headerLogoContainer">
@@ -56,103 +58,112 @@
         onclick="window.location.href='../cartPage/cart.html'">
       <div class="cartRedIcon" id="cartRedIconID"></div>
     </div>
-  
+
   </header>
 
     <!-- title of the page -->
     <h1 class="white mainContentContainer">Would you like to join our team? If so fill out the following information:</h1>
 
-    <!-- signup sheet -->
-    <div class="signup">
+  <!-- signup sheet -->
+  <div class="signup">
 
-            <!-- user info -->
-            <div class="infoBoxes">
-            <h4>Enter your user info:</h4>
-            <label>Enter your email: </label><input type="email" name="account" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/><required><br>
-            <label>Enter your phone number: </label><input type="email" name="account"/><required><br>
-            <label>Enter your name: </label><input type="text" name="account" required><br>
-            </div>
+    <!-- user info -->
+    <div class="infoBoxes">
+      <h4>Enter your user info:</h4>
+      <label>Enter your email: </label><input type="email" name="account"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+      <required><br>
+        <label>Enter your phone number: </label><input type="email" name="account" />
+        <required><br>
+          <label>Enter your name: </label><input type="text" name="account" required><br>
+    </div>
 
-            <!-- password info -->
-            <div class="infoBoxes">
-            <h4>Create a password</h4>
-            <label id="passReqs" name="account"><em>*Your password must be at least 8 character long, have one upercase letter, lowercase letter, a number, and a special symbol.</em></label><br>
-            <label>Create a password: </label><input type="password" name="account" id="password" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
-            <label>Verify your password: </label><input type="password" name="account" id="password" minlength="8" required>
-            </div>
+    <!-- password info -->
+    <div class="infoBoxes">
+      <h4>Create a password</h4>
+      <label id="passReqs" name="account"><em>*Your password must be at least 8 character long, have one upercase
+          letter, lowercase letter, a number, and a special symbol.</em></label><br>
+      <label>Create a password: </label><input type="password" name="account" id="password" minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+      <label>Verify your password: </label><input type="password" name="account" id="password" minlength="8" required>
+    </div>
 
-            <!-- job info -->
-            <div class="infoBoxes">
-            <h4>Enter your desired job:</h4>
-            <input type="radio" name="occupation" required><label>Cook</label><br>
-            <input type="radio" name="occupation" required><label>Waiter/Waitress</label><br>
-            <input type="radio" name="occupation" required><label>Cashier</label><br>
-            <input type="radio" name="occupation" required><label>Cleaner</label><br>
-            <input type="radio" name="occupation" required><label>Resteraunt Manager</label><br>
-            <input type="radio" name="occupation" required><label>Kitchen Manager</label>
-            </div>
-            
-            <!-- notifaction info -->
-            <div class="infoBoxes">
-            <h4>Would you like to recieve text or email?</h4>
-            <input type="radio" name="notifications" name="account"><label>Email</label><br>
-            <input type="radio" name="notifications" name="account"><label>Text Message</label>
-            </div>
-            
+    <!-- job info -->
+    <div class="infoBoxes">
+      <h4>Enter your desired job:</h4>
+      <input type="radio" name="occupation" required><label>Cook</label><br>
+      <input type="radio" name="occupation" required><label>Waiter/Waitress</label><br>
+      <input type="radio" name="occupation" required><label>Cashier</label><br>
+      <input type="radio" name="occupation" required><label>Cleaner</label><br>
+      <input type="radio" name="occupation" required><label>Resteraunt Manager</label><br>
+      <input type="radio" name="occupation" required><label>Kitchen Manager</label>
+    </div>
 
-            <!-- allergy info -->
-            <div class="infoBoxes">
-            <h4>Check any boxes for allergy information:</h4>
-            <input type="checkbox"><label>Nuts</label><br>
-            <input type="checkbox"><label>Eggs</label><br>
-            <input type="checkbox"><label>Dairy</label><br>
-            <input type="checkbox"><label>Other: <input type="text"></input></label>
-            </div>
-            
-            <!--other comments and submit button -->
-            <div class="infoBoxes">
-            <h4>Put any other comments or notes:</h4>
-            <textarea rows="6" placeholder="Enter any other information here" id="extra"></textarea><br>
-            <p><em>*Please note that it will take at least 2 buisness days to get back to you</em></p><br>
-            <a href="index.html"><div class="btnCenter"><button type="submit" id="btn">Submit</button></a></div>
-            </div>
-          
-          </div>
+    <!-- notifaction info -->
+    <div class="infoBoxes">
+      <h4>Would you like to recieve text or email?</h4>
+      <input type="radio" name="notifications" name="account"><label>Email</label><br>
+      <input type="radio" name="notifications" name="account"><label>Text Message</label>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footerBox">
-        <p class="footerTitle">Info</p>
-        <p>Phone: (480) 132-4845</p>
-        <p>Email: glendale@jilóng.com</p>
-      </div>
-    
-      <div class="footerBox">
-        <p class="footerTitle">Social Media</p>
-        <div class="igLogo"><a href="https://www.instagram.com/">
-            <p class="horizontalCenter"><img class="footerIMG" src="../images/instagram.png"
-                alt="Instagram Logo">@jilóng_food</p>
-          </a></div>
-        <div class="fbLogo"><a href="https://www.facebook.com/">
-            <p class="horizontalCenter"><img class="footerIMG" src="../images/facebbokLogo.png" alt="Facebook Logo">Ji Lóng
-            </p>
-          </a></div>
-        <div class="twLogo"><a href="https://twitter.com/">
-            <p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.png" alt="Twitter Logo">@jilóng
-            </p>
-          </a></div>
-        <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
-        <p class="footerTitle footerCopyRight"> ⓒJī lóng</p>
-      </div>
-    
-      <div class="footerBox">
-        <p class="footerTitle">Times</p>
-        <p>Sun: 12:00p-8:00p</p>
-        <p>Mon-Fri: 10:00a-8:00p</p>
-        <p>Sat: 9:00a-9:00p</p>
-      </div>
-    
-    </footer>
-<script src="../header-footer.js"></script>
+
+    <!-- allergy info -->
+    <div class="infoBoxes">
+      <h4>Check any boxes for allergy information:</h4>
+      <input type="checkbox"><label>Nuts</label><br>
+      <input type="checkbox"><label>Eggs</label><br>
+      <input type="checkbox"><label>Dairy</label><br>
+      <input type="checkbox"><label>Other: <input type="text"></input></label>
+    </div>
+
+    <!--other comments and submit button -->
+    <div class="infoBoxes">
+      <h4>Put any other comments or notes:</h4>
+      <textarea rows="6" placeholder="Enter any other information here" id="extra"></textarea><br>
+      <p><em>*Please note that it will take at least 2 buisness days to get back to you</em></p><br>
+      <a href="index.html">
+        <div class="btnCenter"><button type="submit" id="btn">Submit</button>
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footerBox">
+      <p class="footerTitle">Info</p>
+      <p>Phone: (480) 132-4845</p>
+      <p>Email: glendale@jilóng.com</p>
+    </div>
+
+    <div class="footerBox">
+      <p class="footerTitle">Social Media</p>
+      <div class="igLogo"><a href="https://www.instagram.com/">
+          <p class="horizontalCenter"><img class="footerIMG" src="../images/instagram.png"
+              alt="Instagram Logo">@jilóng_food</p>
+        </a></div>
+      <div class="fbLogo"><a href="https://www.facebook.com/">
+          <p class="horizontalCenter"><img class="footerIMG" src="../images/facebbokLogo.png" alt="Facebook Logo">Ji
+            Lóng
+          </p>
+        </a></div>
+      <div class="twLogo"><a href="https://twitter.com/">
+          <p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.png" alt="Twitter Logo">@jilóng
+          </p>
+        </a></div>
+      <p class="footerTitle footerCopyRight"> ⓒ 2000-2023, Jī lóng.com, Inc. or its affiliates</p>
+    </div>
+
+    <div class="footerBox">
+      <p class="footerTitle">Times</p>
+      <p>Sun: 12:00p-8:00p</p>
+      <p>Mon-Fri: 10:00a-8:00p</p>
+      <p>Sat: 9:00a-9:00p</p>
+    </div>
+
+  </footer>
+  <script src="../header-footer.js"></script>
 </body>
+
 </html>

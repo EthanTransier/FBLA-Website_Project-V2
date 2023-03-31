@@ -62,7 +62,8 @@
 
     </header>
     <div class="backArrowContainer">
-        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'"> <- Back To Order Page</h2>
+        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'">
+            <- Back To Order Page</h2>
     </div>
     <!-- Main Content Area -->
     <div class="mainContentContainer">
@@ -72,12 +73,14 @@
                 <h1 class="snackTitle">Egg Rolls</h1>
                 <img src="../images/eggRolls.jpg" alt=" Image of Egg Rolls" class="snackImage" id="eggRollImage">
                 <div class="quantityContainer" id="eggRollQuantityContainer">
-                    <div class="lessQuantityButton quantityButton" id="lesseggRoll" onclick="lessQuantity('eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer')">-</div>
+                    <div class="lessQuantityButton quantityButton" id="lesseggRoll"
+                        onclick="lessQuantity('eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer')">-</div>
                     <div class="quantity">1</div>
                     <div class="moreQuantityButton quantityButton" id="moreeggRoll"
                         onclick="moreQuantity('eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer')">+</div>
                 </div>
-                <button class="addToCartButton" id="addToCarteggRoll" onclick="addToCart('eggRollContainer'); startAnimation('addToCarteggRoll'); setTimeout(endAnimation, 1250, 'addToCarteggRoll', 'eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarteggRoll')">
+                <button class="addToCartButton" id="addToCarteggRoll"
+                    onclick="addToCart('eggRollContainer'); startAnimation('addToCarteggRoll'); setTimeout(endAnimation, 1250, 'addToCarteggRoll', 'eggRollSizes', 'eggRollContainer', 'eggRollQuantityContainer'); setTimeout(closeCheckAnimation, 930, 'addToCarteggRoll')">
                     <p class="buttonText">Add To Cart - $2.40</p>
                     <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
                         <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
@@ -91,10 +94,12 @@
                 <img src="../images/springRolls.jpg" alt=" Image of Egg Rolls" class="snackImage">
                 <div class="quantityContainer" id="springRollQuantityContainer">
                     <div class="lessQuantityButton quantityButton" id="lessspringRoll"
-                        onclick="lessQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">-</div>
+                        onclick="lessQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">
+                        -</div>
                     <div class="quantity">1</div>
                     <div class="moreQuantityButton quantityButton" id="morespringRoll"
-                        onclick="moreQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">+</div>
+                        onclick="moreQuantity('springRollSizes', 'springRollContainer', 'springRollQuantityContainer')">
+                        +</div>
                 </div>
                 <button class="addToCartButton" id="addToCartspringRoll"
                     onclick="addToCart('springRollContainer'); startAnimation('addToCartspringRoll'); setTimeout(endAnimation, 1250, 'addToCartspringRoll'); setTimeout(closeCheckAnimation, 930, 'addToCartspringRoll')">
@@ -125,7 +130,7 @@
                 </button>
             </div>
         </div>
-        
+
     </div>
 
     <!-- footer -->
@@ -135,7 +140,7 @@
             <p>Phone: (480) 132-4845</p>
             <p>Email: glendale@jilóng.com</p>
         </div>
-    
+
         <div class="footerBox">
             <p class="footerTitle">Social Media</p>
             <div class="igLogo"><a href="https://www.instagram.com/">
@@ -150,17 +155,16 @@
                     <p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.png"
                             alt="Twitter Logo">@jilóng</p>
                 </a></div>
-            <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
-            <p class="footerTitle footerCopyRight"> ⓒJī lóng</p>
+            <p class="footerTitle footerCopyRight"> ⓒ 2000-2023, Jī lóng.com, Inc. or its affiliates</p>
         </div>
-    
+
         <div class="footerBox">
             <p class="footerTitle">Times</p>
             <p>Sun: 12:00p-8:00p</p>
             <p>Mon-Fri: 10:00a-8:00p</p>
             <p>Sat: 9:00a-9:00p</p>
         </div>
-    
+
     </footer>
 
     <script src="./side.js"></script>

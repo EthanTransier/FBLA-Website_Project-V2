@@ -1,4 +1,4 @@
-const header = document.getElementsByTagName('header')[0];
+
 
 const parallax = document.getElementById("opening");
 
@@ -12,19 +12,14 @@ window.onload = function() {
     }
 
     let clientHeight = header.clientHeight;
-    console.log(clientHeight)
-
-    console.log(document.getElementById("opening").style)
     document.getElementById("opening").style.marginTop = (clientHeight + 'px');
-
-    console.log("margin top" + header.clientHeight)
-    console.log(document.getElementById("opening").style.marginTop)
 }
 
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
-  parallax.style.backgroundPositionY = offset * 0.7 + "px";
+  parallax.style.backgroundPosition = " 0px 0px, " + "0px " + offset * 0.7 + "px";
+  console.log('parrlax style position y: ' + parallax.style.backgroundPositionY)
   // DIV 1 background will move slower than other elements on scroll.
 });
 

@@ -1,3 +1,5 @@
+console.log('check')
+
 let dropdownOpened = false;
 
 function openDropdown() {
@@ -18,10 +20,19 @@ function openDropdown() {
     }
 }
 
-function cartNotification() {
+const header = document.getElementsByTagName('header')[0];
+
+window.addEventListener('load', (event) =>  {
     if(localStorage.length > 0){
         document.getElementById("cartRedIconID").style.display = "block";
     }else{
         document.getElementById("cartRedIconID").style.display = "none";
     }
-}
+
+    let clientHeight = header.clientHeight;
+    if(document.getElementById("opening") == null){
+        document.getElementsByClassName("mainContentContainer")[0].style.marginTop = (clientHeight + 'px');
+    }else {
+        document.getElementById("opening").style.marginTop = (clientHeight + 'px');
+    }
+})

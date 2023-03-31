@@ -1,3 +1,5 @@
+console.log(localStorage)
+
 var cartHTMLList = "";
 var totalPrice = 0;
 

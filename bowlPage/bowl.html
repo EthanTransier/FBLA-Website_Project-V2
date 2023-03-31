@@ -58,17 +58,17 @@
                 onclick="window.location.href='../cartPage/cart.html'">
             <div class="cartRedIcon" id="cartRedIconID"></div>
         </div>
-    
+
     </header>
     <div class="backArrowContainer">
-        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'"> <- Back To Order
-                Page</h2>
+        <h2 class="backArrowTitle" onclick="window.location.href='../startOrderPage/startOrderPage.html'">
+            <- Back To Order Page</h2>
     </div>
     <!-- Main Content Area -->
     <div class="mainContentContainer">
         <!-- Text/Link that you can click on to go back to the start order page -->
         <div class="backText">
-    
+
         </div>
         <h1 class="mainContentTitle" id="title">Bowl</h1>
         <h3 class="subTitle">Select 1 Primary Dish and 1 Secondary Dish</h3>
@@ -80,7 +80,7 @@
                 <div class="foodContainer primaryFoodContainer" id="orangeChickenContainer"
                     onclick="selectPrimaryFoodContainer('orangeChickenContainer')">
                     <img src="../images/orangeChicken.jpg" alt="Image of OrangeChicken on a plate" class="foodPicture">
-    
+
                     <h1 class="foodTitle">Orange Chicken</h1>
                     <div class="foodText" id="orangeChickenFoodText">
                         Serving Size: 6oz
@@ -90,7 +90,7 @@
                             onclick="makeSpicy(event), spicyAnimation('orangeChickenFireID')" id="orangeChickenFireID">
                         <div class="fireIconCrossout" id="orangeChickenCrossID"></div>
                     </div>
-    
+
                 </div>
                 <div class="foodContainer primaryFoodContainer" id="tsoChickenContainer"
                     onclick="selectPrimaryFoodContainer('tsoChickenContainer')">
@@ -105,21 +105,23 @@
                         <div class="fireIconCrossout" id="tsoChickenCrossID"></div>
                     </div>
                 </div>
-    
+
                 <div class="foodContainer primaryFoodContainer" id="teriyakiChickenContainer"
                     onclick="selectPrimaryFoodContainer('teriyakiChickenContainer')">
-                    <img src="../images/teriyakiChicken.jpg" alt="Image of Teriyaki Chicken on a plate" class="foodPicture">
+                    <img src="../images/teriyakiChicken.jpg" alt="Image of Teriyaki Chicken on a plate"
+                        class="foodPicture">
                     <h1 class="foodTitle">Teriyaki Chicken</h1>
                     <div class="foodText" id="teriyakiChickenFoodText">
                         Serving Size: 6oz
                         <br>
                         545 Calories
                         <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
-                            onclick="makeSpicy(event), spicyAnimation('teriyakiChickenFireID')" id="teriyakiChickenFireID">
+                            onclick="makeSpicy(event), spicyAnimation('teriyakiChickenFireID')"
+                            id="teriyakiChickenFireID">
                         <div class="fireIconCrossout"></div>
                     </div>
                 </div>
-    
+
                 <div class="foodContainer primaryFoodContainer" id="kungPaoChickenContainer"
                     onclick="selectPrimaryFoodContainer('kungPaoChickenContainer')">
                     <img src="../images/kungPaoChicken.jpg" alt="Image of Kung Pao on a plate" class="foodPicture">
@@ -129,16 +131,17 @@
                         <br>
                         545 Calories
                         <img src="../images/fire.svg" alt="Icon of fire" class="fireIcon"
-                            onclick="makeSpicy(event), spicyAnimation('kungPaoChickenFireID')" id="kungPaoChickenFireID">
+                            onclick="makeSpicy(event), spicyAnimation('kungPaoChickenFireID')"
+                            id="kungPaoChickenFireID">
                         <div class="fireIconCrossout" id="kungPaoCrossID"></div>
                     </div>
                 </div>
             </div>
             <!-- Vertical Line Container -->
             <div class="verticalLine">
-    
+
             </div>
-    
+
             <!-- SECONDARY FOOD CONTAINERS -->
             <div class="foodContainers secondaryFoodContainer" id="secondaryFoodContainers">
                 <h1 class="foodContainerTitle">Secondary Dishes</h1>
@@ -153,7 +156,7 @@
                         545 Calories
                     </div>
                 </div>
-    
+
                 <div class="foodContainer secondaryFoodContainer" id="friedRiceContainer"
                     onclick="selectSecondaryFoodContainer('friedRiceContainer')">
                     <img src="../images/friedRice.jpg" alt="Image of fried rice in a wooden spoon" class="foodPicture">
@@ -164,7 +167,7 @@
                         545 Calories
                     </div>
                 </div>
-    
+
                 <div class="foodContainer secondaryFoodContainer" id="chowMeinContainer"
                     onclick="selectSecondaryFoodContainer('chowMeinContainer')">
                     <img src="../images/chowMein.jpg" alt="Image of chop suey in a wooden spoon" class="foodPicture">
@@ -187,27 +190,27 @@
                     </div>
                 </div>
 
-                </div>
             </div>
         </div>
-        <!-- SUBMIT BUTTON AREA -->
-        <div class="submitButtonContainer">
-            <button disabled class="plateButton buttonDisabled" id="addToCartPlate"
-                onclick="addToCart('testing'); startAnimation('addToCartPlate'); setTimeout(endAnimation, 1250, 'addToCartPlate'); setTimeout(closeCheckAnimation, 930, 'addToCartPlate')">
-                <p class="buttonText">Add to Cart</p>
-                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                </svg>
-            </button>
-            <div class="foodQuantityContainer" id="foodQuantityContainerID">
-                <div class="moreFoodButton" id="moreFoodID" onclick="addAmount()"></div>
-                <div class="foodQuantityButton" id="quantityButtonID">1</div>
-                <div class="lessFoodButton" id="lessFoodID" onclick="removeAmount()"></div>
-            </div>
-    
+    </div>
+    <!-- SUBMIT BUTTON AREA -->
+    <div class="submitButtonContainer">
+        <button disabled class="plateButton buttonDisabled" id="addToCartPlate"
+            onclick="addToCart('testing'); startAnimation('addToCartPlate'); setTimeout(endAnimation, 1250, 'addToCartPlate'); setTimeout(closeCheckAnimation, 930, 'addToCartPlate')">
+            <p class="buttonText">Add to Cart</p>
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        </button>
+        <div class="foodQuantityContainer" id="foodQuantityContainerID">
+            <div class="moreFoodButton" id="moreFoodID" onclick="addAmount()"></div>
+            <div class="foodQuantityButton" id="quantityButtonID">1</div>
+            <div class="lessFoodButton" id="lessFoodID" onclick="removeAmount()"></div>
         </div>
-    
+
+    </div>
+
     </div>
 
     <!-- Footer -->
@@ -217,7 +220,7 @@
             <p>Phone: (480) 132-4845</p>
             <p>Email: glendale@jilóng.com</p>
         </div>
-    
+
         <div class="footerBox">
             <p class="footerTitle">Social Media</p>
             <div class="igLogo"><a href="https://www.instagram.com/">
@@ -232,17 +235,16 @@
                     <p class="horizontalCenter"><img class="footerIMG" src="../images/twitterLogo.png"
                             alt="Twitter Logo">@jilóng</p>
                 </a></div>
-            <a class="footerTitle footerCopyRight" href="../credits/credits.html">Credits</a>
-            <p class="footerTitle footerCopyRight"> ⓒJī lóng</p>
+            <p class="footerTitle footerCopyRight"> ⓒ 2000-2023, Jī lóng.com, Inc. or its affiliates</p>
         </div>
-    
+
         <div class="footerBox">
             <p class="footerTitle">Times</p>
             <p>Sun: 12:00p-8:00p</p>
             <p>Mon-Fri: 10:00a-8:00p</p>
             <p>Sat: 9:00a-9:00p</p>
         </div>
-    
+
     </footer>
 
     <script src="./bowl.js"></script>

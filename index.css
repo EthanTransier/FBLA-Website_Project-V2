@@ -322,6 +322,10 @@ body {
     .plusTextContainer {
         padding-left: 0;
     }
+
+    .openingText {
+        font-size: clamp(2.5rem, 1.702rem + 2.553vw, 4rem);
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -354,5 +358,11 @@ body {
         width: 70%;
         height: auto;
         padding-top: 10px;
+    }
+
+    .openingText {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
     }
 }

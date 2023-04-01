@@ -16,113 +16,91 @@ body{
     background-color: rgb(51, 51, 51);
 }
 
-
-/* Modifies the page's main box */
-.signup {
-    border: 0px solid black;
-    text-align: center;
-    font-family: kanit-regular;
-    font-size: 20px;
-    font-weight: 200;
-    background-color: #FFFFFF;
+.benefitsAndSignUp{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
     align-items: center;
-    padding-bottom: 10px;
-    width: 800px;
-}
-.signupBox{
-    display: flex;
     justify-content: center;
-}
-#passReqs{
-    font-size: 10px;
-    text-align: left;
-}
-.infoBoxes{
-    width:600px;
-    text-align: left;
-    padding: 10px 0 10px 0;
-}
-
-h4{
-    text-decoration: underline;
-    color: red;
-}
-.purchase{
-    padding-top: 10px;
-}
-
-
-/* Modifies the pages' titles */
-h1 {
-    text-align: center;
-    font-family: kanit-regular;
-}
-.buyTitle{
-    font-family: kanit-regular;
-    font-size: 25px;
-}
-.purchaseTitle{
-    font-family: kanit-regular;
-    font-size: 25px;
-}
-
-/* Modifies the page's button */
-#buyBTN{
-    width: 200px;
-    height: 100px;
-    background-color: red;
-    color:white;
-    border: 0px solid black;
-    border-radius: 20px;
-}
-#buyBTN:hover{
-    background-color:rgb(156, 0, 0);
-}
-.pageTitle{
     color: white;
-    text-align: center;
-    width: 800px;
 }
-.centerTitle{
+
+.goldTitle{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background-size: 75%;
+    background-position: center right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-family: montserrat-regular;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 5rem;
+    animation-name: goldTitleAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    letter-spacing: 8px;
+}
+
+.benefitsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: montserrat-regular;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.benefitsTitle{
+    font-size: 2rem;
+}
+
+.benefits{
+    margin: 2.5rem;
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 3.5rem;
+    list-style-type: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.checkmark{
+    filter: invert(1);
+    width: 2.5rem;
+    height: auto;
+}
+
+.signUpContainer{
+    width: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-/* 780 Media Query */
-@media only screen and (max-width: 780px){
-    *{
-        overflow-x: hidden;
+@keyframes goldTitleAnimation {
+    0%{
+        background-position: top right;
     }
-
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
-        margin-top: clamp(1vh, 6rem, 2vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
+    25%{
+        background-position: top left;
     }
-
-    .infoBoxes{
-        width: clamp(40vh, 6rem, 60vh);
+    50%{
+        background-position: bottom left;
     }
-
-    .signup{
-        width: clamp(50vh, 6rem, 60vh);
-        font-size: clamp(1.5vh, 6rem, 2vh);
+    75%{
+        background-position: bottom right;
     }
-
-    i{
-        font-size: clamp(0.2vh, 6rem, .7vh);
-    }
-
-    #buyBTN{
-        width: clamp(20vh, 6rem, 30vh);
-        height: clamp(10vh, 6rem, 15vh);
-        margin-top: clamp(1vh, 6rem, 2vh);
+    100%{
+        background-position: top right;
     }
 }
 
@@ -130,32 +108,5 @@ h1 {
 @media only screen and (max-width: 500px){
     *{
         overflow-x: hidden;
-    }
-
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
-        padding-top: clamp(3vh, 6rem, 6vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
-    }
-
-    .infoBoxes{
-        width: clamp(30vh, 6rem, 45vh);
-    }
-
-    .signup{
-        width: clamp(40vh, 6rem, 60vh);
-        font-size: clamp(1.5vh, 6rem, 2vh);
-    }
-
-    i{
-        font-size: clamp(0.2vh, 6rem, .7vh);
-    }
-
-    #buyBTN{
-        width: clamp(20vh, 6rem, 30vh);
-        height: clamp(10vh, 6rem, 15vh);
-        margin-top: clamp(1vh, 6rem, 2vh);
     }
 }

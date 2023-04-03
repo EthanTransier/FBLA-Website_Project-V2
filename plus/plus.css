@@ -1,137 +1,200 @@
-/* Utilities */
-body {
-    background-color: rgb(51, 51, 51);
-    text-align: left;
-    font-family: kanit-light;
-}
+/* Utilites */
 * {
     margin: 0px;
     padding: 0px;
 }
+
 @font-face {
     font-family: kanit-regular;
     src: url(../kanit/Kanit-Regular.ttf);
 }
+
 @font-face {
     font-family: kanit-light;
     src: url(../kanit/Kanit-Light.ttf);
 }
-#homePageBackground{
+
+body {
+    background-color: rgb(51, 51, 51);
+}
+
+.benefitsAndSignUp {
     width: 100%;
-    height: auto;
-    
-}
-.flexCenter{
-    display: flex;
-    justify-content: center;
-}
-
-
-/* Modifies the main boxes on the page */
-.infoBoxes{
-    border: 0px solid white;
-}
-.signUp{
-    border: 0px solid black;
-    font-family: kanit-regular;
-    font-size: 20px;
-    font-weight: 200;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: left;
-    width: 800px;
-    padding: 20px;
-}
-.signUpBox{
-    display: flex;
-    justify-content: center;
-}
-.rewards{
-    text-align: left;
-}
-h4{
-    text-decoration: underline;
-    color: red;
-    text-align: left;
-}
-
-
-/* Changes the button on the page */
-.signBTN{
-    width: clamp(30vh, 6rem, 45vh);
-    height: clamp(10vh, 6rem, 15vh);
-    background-color: red;
-    color:white;
-    font-size: 60px;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0px solid red;
-    font-family: kanit-regular;
-    margin-top: clamp(3vh, 6rem, 4vh);
-}
-.signBTN:hover {
-    cursor: pointer;
-}
-
-/* Modifies the pages title */
-.pageTitle{
     color: white;
-    text-align: center;
-    width: 800px;
-    font-family: kanit-regular;
 }
-.centerTitle{
+
+.goldTitle {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #ffd82a 0%, #ffc655 8%, #e7b038 30%, #efb327 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #ffffba 8%, #f0ce71 25%, #fecb56 62.5%, #d5a126 100%);
+    background-size: 75%;
+    background-position: center right;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    animation-name: goldTitleAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.benefitsContainer {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: montserrat-regular;
+    margin-top: 2rem;
+    text-align: center;
 }
 
-/* 780 Media Query */
-@media only screen and (max-width: 780px){
-    .signUp{
-        width: clamp(50vh, 6rem, 60vh);
-        font-size: clamp(1.5vh, 6rem, 2vh);
+.benefitsTitle {
+    font-size: 3.5rem;
+    width: 75%;
+    text-align: left;
+    margin-left: 3.5rem;
+}
+
+.redText{
+    color: rgb(255, 58, 58);
+}
+
+.benefits {
+    margin: 2.5rem;
+    font-size: 1.1rem;
+    text-align: left;
+    line-height: 3.5rem;
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    color: black;
+    border-radius: 9999px;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    margin: 1rem;
+    width: max-content;
+}
+
+.checkmark {
+    filter: invert(1);
+    width: 2.25rem;
+    height: auto;
+    padding: .5rem;
+    margin-right: .75rem;
+    background-color: #00c5c5;
+    border-radius: 50%;
+}
+
+.signUpContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #a62727;
+    min-height: 90vh;
+    font-family: montserrat-regular;
+}
+
+.signUpLogo{
+    width: 6rem;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.signUpTitle{
+    font-size: 3rem;
+}
+
+.signUpSubTitle{
+    font-size: 1rem;
+}
+
+.divider{
+    width: 5%;
+    height: 0.5vh;
+    background-color: white;
+    border-radius: 1.5vh;
+}
+
+
+.inputContainer{
+    width: auto;
+    height: fit-content;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.emailInput{
+    padding: 1rem;
+    background-color: #ecf2ff;
+    border: none;
+    outline: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    font-weight: 500;
+    height: 28px;
+}
+
+.subscribeButton{
+    background-color: white;
+    color: rgb(255, 58, 58);
+    outline: none;
+    border: none;
+    border-left: 2px solid rgb(255, 58, 58);
+    height: 60px;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.plusFooter{
+    margin-top: 0;
+}
+
+@keyframes goldTitleAnimation {
+    0% {
+        background-position: top right;
     }
 
-    .signBTN{
-        width: clamp(21vh, 6rem, 31.5vh);
-        height: clamp(7vh, 6rem, 10.5vh);
-        margin-top: clamp(1.5vh, 6rem, 2vh);
-        font-size: clamp(4.5vh, 6rem, 6vh);
+    25% {
+        background-position: top left;
     }
 
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
-        padding-top: clamp(1vh, 6rem, 2vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
+    50% {
+        background-position: bottom left;
+    }
+
+    75% {
+        background-position: bottom right;
+    }
+
+    100% {
+        background-position: top right;
     }
 }
 
-/* 500 Media Query */
-@media only screen and (max-width: 500px){
-    .signUp{
-        width: clamp(40vh, 6rem, 60vh);
-        font-size: clamp(1.5vh, 6rem, 2vh);
-    }
-
-    .signBTN{
-        width: clamp(10.5vh, 6rem, 15.75vh);
-        height: clamp(3.5vh, 6rem, 5.25vh);
-        margin-top: clamp(1.5vh, 6rem, 2vh);
-        font-size: clamp(1.5vh, 6rem, 2vh); 
-    }
-
-    h1{
-        font-size: clamp(1vh, 6rem, 2vh);
-        margin-left: clamp(3vh, 6rem, 6vh);
-        margin-right: clamp(3vh, 6rem, 6vh);
-        padding-top: clamp(4vh, 6rem, 8vh);
-        margin-bottom: clamp(1vh, 6rem, 2vh);
+/* 500 Media */
+@media only screen and (max-width: 500px) {
+    * {
+        overflow-x: hidden;
     }
 }

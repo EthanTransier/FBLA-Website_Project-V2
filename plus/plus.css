@@ -164,6 +164,7 @@ li {
     border-bottom-right-radius: 7px;
     font-size: 1.25rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .plusFooter{

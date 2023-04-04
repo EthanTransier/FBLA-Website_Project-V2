@@ -515,6 +515,17 @@ body {
     background-color: rgb(255, 29, 29)
 }
 
+.emptyButton{
+    background-color: rgb(255, 58, 58);
+    width: 30%;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 1000px) {
     .verticalLine {

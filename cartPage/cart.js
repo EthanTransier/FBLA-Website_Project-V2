@@ -1,3 +1,5 @@
+let removingCartItem = false;
+
 console.log(localStorage)
 
 var cartHTMLList = "";
@@ -9,11 +11,13 @@ function cartUpdater() {
         document.getElementById("cartItemsID").innerHTML = "Your Cart is Empty";
     }else{
         // Iterates through each item of local storage
-        for(let i = 1; i <= localStorage.length; i++){
+        if(removingCartItem == false){
+            for(let i = 1; i <= localStorage.length; i++){
             // Gets a price variable
             let price;
             // If the word 'Plate' is found in the current cart item, it will set the price to 9.49
             if(/Plate/g.test(localStorage.getItem("cartArray" + i))){
+                console.log('added stuff')
                 price = "$9.49";
                 totalPrice += 9.49;
             // If the word 'Platter' is found in the current cart item, it will set the price to 10.99
@@ -38,16 +42,24 @@ function cartUpdater() {
                 totalPrice += 2.40;
             }
             // Sets the cart html list and adds whatever local storage item needs to be added, and removes the extra stuff around it and repalces it with html code, so that it displays correctly on the page.
-            cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
+            
             
         }
+        }
+        // else{
+        //     cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
+        // }
+        
         // At the end, sets the cart box on the page to whatever is in the cartHTMLList, which contains all of the cart stuff in html
         document.getElementById("cartItemsID").innerHTML = cartHTMLList;
     }
 }
 
+
+
 // Called whenever someone removes an item from their cart
 function removeCartItem(cartItemID){
+    
     if(/Plate/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 9.49;
         deliverClock()
@@ -73,11 +85,13 @@ function removeCartItem(cartItemID){
         deliverClock()
     }
     
+    console.log(totalPrice);
     // Removes the entire element of the removed item from the html
     document.getElementById(cartItemID).remove();
     // removes whatever item was removed from local storage
     localStorage.removeItem(cartItemID);
 
+    removingCartItem = true;
     
     // Reorders the cart
     reorderCart();
@@ -87,6 +101,11 @@ function removeCartItem(cartItemID){
     cartUpdater();
     // Cart Notification in the header
     cartNotification();
+
+    removingCartItem = false;
+    console.log(cartItemID)
+    console.log(document.getElementById(cartItemID))
+    
 }
 function reorderCart(){
     // Gets all of the keys from local storage
@@ -113,6 +132,8 @@ function resetCartList(){
 
 function clearLocalStorage() {
     localStorage.clear();
+    totalPrice = 0;
+    deliverClock();
 }
 
 function cartNotification() {
@@ -158,6 +179,7 @@ function buttonSelected(timeButtonID){
 var finalPrice = 0;
 
 function deliverClock(){
+    finalPrice = 0;
     let currentDate = new Date();
     let hours = currentDate.getHours();
     let minutes = currentDate.getMinutes() + 20;
@@ -179,6 +201,7 @@ function deliverClock(){
         }
 
     }
+    console.log(totalPrice);
     const selectedItems = document.getElementsByClassName('selected')
      if(selectedItems.length > 0){
         document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
@@ -191,9 +214,9 @@ function deliverClock(){
 
         finalPrice = totalPrice + 4.49 + (totalPrice * .083)
         document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
-     }   
+     }
+    console.log(totalPrice);
     
-    
-    setTimeout(deliverClock, 1000)
+    // setTimeout(deliverClock, 1000)
 }
 

@@ -53,10 +53,10 @@ body {
 }
 
 .benefitsTitle {
-    font-size: 3.5rem;
+    font-size: clamp(3rem, 2.2rem + 1.6vw, 3.5rem);
     width: 75%;
     text-align: left;
-    margin-left: 3.5rem;
+    margin-left: clamp(1.5rem, -1.423rem + 4.923vw, 3.5rem);
 }
 
 .redText{
@@ -64,8 +64,8 @@ body {
 }
 
 .benefits {
-    margin: 2.5rem;
-    font-size: 1.1rem;
+    margin: clamp(0.5rem, -2.423rem + 4.923vw, 2.5rem);
+    font-size: clamp(0.8rem, 0.2rem + 1.2vw, 1.1rem);
     text-align: left;
     line-height: 3.5rem;
     list-style-type: none;
@@ -80,16 +80,18 @@ li {
     color: black;
     border-radius: 9999px;
     padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: clamp(0rem, -1rem + 2vw, 0.5rem);
+    padding-bottom: clamp(0rem, -1rem + 2vw, 0.5rem);
     padding-left: 0.5rem;
     margin: 1rem;
     width: max-content;
 }
 
+
+
 .checkmark {
     filter: invert(1);
-    width: 2.25rem;
+    width: clamp(0.8rem, 0.2rem + 1.2vw, 1.1rem);;
     height: auto;
     padding: .5rem;
     margin-right: .75rem;
@@ -197,5 +199,36 @@ li {
 @media only screen and (max-width: 500px) {
     * {
         overflow-x: hidden;
+    }
+}
+
+@media (max-width: 950px) {
+    .benefitsAndSignUp {
+        flex-direction: column;
+    }
+
+    .benefitsContainer {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+        height: 65vh;
+    }
+
+    .benefitsTitle {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .signUpContainer {
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: clamp(0.7rem, 0.4rem + 1.6vw, 1.35rem);
     }
 }

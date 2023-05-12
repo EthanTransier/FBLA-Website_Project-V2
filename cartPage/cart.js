@@ -4,19 +4,19 @@ console.log(localStorage)
 
 var cartHTMLList = "";
 var totalPrice = 0;
-
+var price;
 function cartUpdater() {
     // If their are no things in the local storage, it displays that the cart is empty
     if(localStorage.length == 0){
         document.getElementById("cartItemsID").innerHTML = "Your Cart is Empty";
     }else{
         // Iterates through each item of local storage
-        if(removingCartItem == false){
+        
             for(let i = 1; i <= localStorage.length; i++){
             // Gets a price variable
-            let price;
             // If the word 'Plate' is found in the current cart item, it will set the price to 9.49
-            if(/Plate/g.test(localStorage.getItem("cartArray" + i))){
+            if(removingCartItem == false){
+                if(/Plate/g.test(localStorage.getItem("cartArray" + i))){
                 console.log('added stuff')
                 price = "$9.49";
                 totalPrice += 9.49;
@@ -41,14 +41,16 @@ function cartUpdater() {
                 price = "$2.40";
                 totalPrice += 2.40;
             }
+            
+            }
+            console.log(totalPrice)
             // Sets the cart html list and adds whatever local storage item needs to be added, and removes the extra stuff around it and repalces it with html code, so that it displays correctly on the page.
+                cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
             
             
+            
+    
         }
-        }
-        // else{
-        //     cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
-        // }
         
         // At the end, sets the cart box on the page to whatever is in the cartHTMLList, which contains all of the cart stuff in html
         document.getElementById("cartItemsID").innerHTML = cartHTMLList;
@@ -59,31 +61,46 @@ function cartUpdater() {
 
 // Called whenever someone removes an item from their cart
 function removeCartItem(cartItemID){
-    
+    removingCartItem = true;
+let price2;
+
     if(/Plate/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 9.49;
+        price = '$9.49';
         deliverClock()
     // If the word 'Platter' is found in the current cart item, it will set the price to 10.99
     }else if(/Platter/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 10.99;
+        price = '$10.99';
         deliverClock()
     // If the word 'Bowl' is found in the current cart item, it will set the price to 7.99
     }else if(/Bowl/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 7.99;
+        price = '$7.99';
         deliverClock()
     }else if(/Large/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.80;
+        price = '$2.99'
         deliverClock()
     }else if(/Medium/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.40;
+        price = '$2.40'
         deliverClock()
     }else if(/Small/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.00;
+        price = '$2.00'
         deliverClock()
     }else if(/Side/g.test(document.getElementById(cartItemID).innerHTML)){
         totalPrice -= 2.40;
+        price = '$2.40'
         deliverClock()
     }
+    console.log(price2)
+    // for(let i = 1; i <= localStorage.length; i++){
+    //     cartHTMLList = cartHTMLList + localStorage.getItem("cartArray" + i).replace(/\["/g,'<div class="cartItems" id= ' + ('cartArray' + i) + '><div class="cartItemText">').replace(/"\]/g,'<span class="priceText"> - ' + price2 +'</span></div><div class="removeCartItem" onclick="removeCartItem(\'' + ('cartArray' + i) + '\')"><div class="removeCartItemSign"></div></div></div>'); 
+    // }
+
+    
     
     console.log(totalPrice);
     // Removes the entire element of the removed item from the html
@@ -91,7 +108,7 @@ function removeCartItem(cartItemID){
     // removes whatever item was removed from local storage
     localStorage.removeItem(cartItemID);
 
-    removingCartItem = true;
+    
     
     // Reorders the cart
     reorderCart();
@@ -204,15 +221,25 @@ function deliverClock(){
     console.log(totalPrice);
     const selectedItems = document.getElementsByClassName('selected')
      if(selectedItems.length > 0){
-        document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
+        
         
         if(totalPrice.toFixed(2) > 0){
             document.getElementById('deliveryPrice').innerHTML = "$" + 4.49
+            document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
+            document.getElementById('subPrice').innerHTML = "$" + totalPrice.toFixed(2)
+        }else{
+            document.getElementById('deliveryPrice').innerHTML = "$0.00"
+            document.getElementById('taxPrice').innerHTML  = "$0.00"
+            document.getElementById('subPrice').innerHTML = "$0.00"
         }
         
-        document.getElementById('taxPrice').innerHTML  = "$" + (totalPrice * .083).toFixed(2)
-
-        finalPrice = totalPrice + 4.49 + (totalPrice * .083)
+        
+        if(totalPrice > 0){
+            finalPrice = totalPrice + 4.49 + (totalPrice * .083)
+        }else{
+            finalPrice = 0.00
+        }
+        
         document.getElementById('totalPrice').innerHTML  = "$" + finalPrice.toFixed(2)
      }
     console.log(totalPrice);
